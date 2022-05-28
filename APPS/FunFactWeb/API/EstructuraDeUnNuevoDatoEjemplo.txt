@@ -1,0 +1,17 @@
+,
+
+    {
+        "No": "0",
+        "Imagen": "link",
+        "URLAutorImagen": "EnlaceALaPagina",
+        "AutorImagen":"NombreDelFotógrafo",
+        "Info":"Información",
+        "Fuente":"Título de la fuente",
+        "URLFuente":"Fuente",
+        "Credito": "-"
+    }
+
+Y para revisar uno, se usa:
+TraerEspecífico(NumElegido)
+
+TraerEspecífico()

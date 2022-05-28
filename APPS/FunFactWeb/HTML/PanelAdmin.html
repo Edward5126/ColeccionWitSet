@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración | Fun Fact</title>
+    <!-- <meta name="description" content="El mundo está lleno de cosas curiosas y muy interesantes, ¿Qué datos curiosos conocerás hoy? ¡Descúbre algo nuevo cada día en la web de Fun Fact!"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link id="HojadeEstilo" rel="stylesheet" href="../CSS/styles.css">
+    <link rel="preload" href="../CSS/stylesLight.css" as="style">
+    <link rel="preload" href="../IMG/IllustracionOnErrorPorUnDraw.svg" as="image">
+    <link rel="preload" href="../IMG/IllustracionOnErrorPorUnDrawLM.svg" as="image">
+    <link rel="stylesheet" href="../LIBS/PersonalIconCollection-v1.0/style.css">
+    <link rel="shortcut icon" href="../IMG/LogoSolo[FF].svg" type="image/x-icon">
+    <!-- <link rel="manifest" href="../manifest.webmanifest"> -->
+
+</head>
+<body>
+    <header>
+            <nav>
+                    <img id="LogoDeCabecera" src="../IMG/LogoHorizontalDM[FF].svg" alt="Logo de FunFact en modo oscuro">
+                    <button class="btnmenu" aria-label="Abrir menú" id="AbrirMenu"><i class="icon icon-menu interfaz"></i></button>
+                <ul class="NavList">
+                    <button class="btnmenu" id="CerrarMenu" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
+                    <li class="Separador" id="PrimerSeparador"><b>|</b></li>
+                    <li><a href="#" id="Enlace1">Vista Previa</a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="#SobreFunFact" id="Enlace2">Detalles</a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="#Colaborar" id="Enlace3">Json</a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="#Más" id="Enlace4">Más</a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="" title="Activar narración" id="ToggleVoice"><i class="icon icon-narradoron"></i></a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="" title="Cambiar estilo" id="ToggleMode"><i class="icon icon-cambiar-estilo"></i></a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <h1 hidden>Vista Previa</h1>
+        <div id="PresentacionDelDato">
+            <div id="ContenedorGeneralImagenDato">
+            <div id="ContenedorImagenTooltip">
+                <div id="Carga" class="NoCargando"></div>
+                <div id="ContenedorCarga"></div>
+                <img id="ImagenDelDato" src="../IMG/IllustracionporUnSplash.svg" alt="" onerror="ErrorImagen();">
+                <span class="tooltip" id="CreditosDeLaFotoDelDato"><span id="TituloTooltipxd">¿Preparado(a) para explorar?</span><a id="URLCreditosTooltip" target="_blank"></a></span>
+            </div>
+            </div>
+            <div id="InformacionDelDato">
+                <p id="TituloOSubtitulo">
+                    <b id="TituloDelDato">Dato Curioso:</b> <br>
+                    <div id="DatoPresentado">
+                    <br>
+                    Visita la página cada mañana para descubrir más datos curiosos.
+                    <br>
+                    ¡Da click en los botones para comenzar a explorar!
+                    </div>
+                </p>
+            </div>
+        <div>
+            <p id="TituloOSubtitulo"><span class="TextoNota">Fuente: </span><span><a id="FuentePresentada" class="TextoNota" href="#" target="_blank">¡Muchas fuentes!</a></span><br>
+            <span id="CreditosDelDato" class="TextoNota">-</span></p>
+        </div>
+        <div>
+            <a href="#" target="_self" id="DatoAnterior" onclick="TraerAnterior(); document.getElementById('NumeroDato').value = DatoActual;"><button class="btnprn" id="BotonAnterior" disabled title="Dato anterior (Flecha izquierda)"><i class="icon icon-flecha-izq"></i></button></a>
+            <a href="#" target="_self" id="SiguienteDato" onclick="TraerRandom(); document.getElementById('NumeroDato').value = DatoActual;"><button class="btnprn" id="BotonRandom" title="Dato aleatorio (R)"><i class="icon icon-aleatorio"></i></button></a>
+            <a href="#" target="_self" id="DatoSiguiente" onclick="TraerSiguiente(); document.getElementById('NumeroDato').value = DatoActual;"><button class="btnprn" id="BotonSiguiente" title="Dato siguiente (Flecha derecha)"><i class="icon icon-flecha-der"></i></i></button></a>
+        </div>
+        </div>
+    </main>
+
+    <section class="Seccion" id="SobreFunFact" style="height: auto;">
+        <div style="margin: 4em 0;">
+            <h2> Detalles </h2>
+            <form action="" method="post" id="Formulario" autocomplete="off" name="ColaborarFF" style="max-height:none; margin: 0 15%;">
+                <div style="width: 80%;">
+                    <h3>Detalles del dato curioso:</h3>
+                    <div class="Pregunta">
+                        <input  id="NumeroDato" name="Numero" type="number" required placeholder="(Posición en la lista)" value="0" min="0">
+                        <label for="NumeroDato" id="LabelNumero">Número</label>
+                    </div>
+                    <div class="Pregunta">
+                        <input  id="ImagenSugerida" name="Imagen" type="text" required placeholder="(URL a la imagen)">
+                        <label for="ImagenSugerida">Imagen</label>
+                    </div>
+                    <div class="Pregunta">
+                        <input  id="URLCreditosImagen" name="URLdeCreditosdeImagen" type="text" required placeholder="(URL a la página donde el fotógrafo publicó su imagen)">
+                        <label for="URLCreditosImagen">URL de los créditos de la imagen</label>
+                    </div>
+                    <div class="Pregunta">
+                        <input  id="CreditosImagen" name="CreditosdeImagen" type="text" required placeholder="(Nombre de la persona o institución)">
+                        <label for="CreditosImagen">Nombre del fotógrafo</label>
+                    </div>
+                    <div class="Pregunta">
+                        <textarea  name="Info" id="DatoCuriosoSugerido" cols="41" rows="5" maxlength="400" required placeholder="(Máximo 400 caracteres)"></textarea>
+                        <label for="DatoCuriosoSugerido">Información</label>
+                    </div>
+                    <div class="Pregunta">
+                        <input  id="FuenteDeDatoSugerido" name="Fuente" type="text" required placeholder="(Nombre del artículo, persona, libro o página web)">                  
+                        <label for="FuenteDeDatoSugerido">Nombre de la fuente</label>
+                    </div>
+                    <div class="Pregunta">
+                        <input  id="URLFuenteDeDatoSugerido" name="URLFuente" type="text" required placeholder="(Enlace o bibliografía)">                  
+                        <label for="URLFuenteDeDatoSugerido">URL de la fuente</label>
+                    </div>
+                    <div class="Pregunta">
+                        <input  id="CreditoDelAporte" name="Credito" type="text" maxlength="15" required placeholder="(Nombre o apodo)">                  
+                        <label for="CreditoDelAporte">Crédito del dato</label>
+                    </div>
+                    <div class="Pregunta" style="margin-bottom: 7px;">
+                    <label style="pointer-events: all; -webkit-user-select: none;"><input style="width: 14px; display: inline-block; " type="checkbox" id="EstadoBorrador"> Habilitar borrado</label><br>
+                    </div>
+                    <div class="Pregunta" style="margin-top: 7px;">
+                    <label style="pointer-events: all; -webkit-user-select: none;"><input style="width: 14px; display: inline-block; " type="checkbox" id="EstadoAgregador"> Habilitar agregado</label><br>
+                    </div>
+                    <h4 id="FormRespuesta"></h4>
+                    <div style="text-align: center; display: flex; flex-wrap: wrap; justify-content: space-between;">
+                        <button id="ObtenerDetallesDelDato" style="margin: 7px 0; min-width: 125px;">Obtener</button>
+                        <button id="Borrador" style="margin: 7px 0; min-width: 125px;" disabled>Borrar</button>
+                        <button id="NuevaEntrada" style="margin: 7px 0; min-width: 125px;">Nuevo</button>
+                        <button id="ProbarDetallesDelDato" style="margin: 7px 0; min-width: 125px;">Probar</button>
+                        <button id="AgregarDato" style="margin: 7px 0; min-width: 125px;" disabled>Agregar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="Seccion" id="Colaborar" style="align-items: center;">
+        <h2 id="TituloColaborar">JSON Generado</h2>
+        <div class="CuadroDeTexto" style="box-shadow: 0 4px 12px #00000014, 0 0 1px #0100001a; width: 70vw;">
+<!-- <pre style="min-height: 50vh; width: 75vw; overflow-x: auto; max-width: 100%;" id="JSONaCopiar"> -->
+<textarea style="min-height: 50vh; margin-bottom: 20px;" id="ContenedorJSON" cols="999" placeholder=',
+
+{
+    "No": "",
+    "Imagen": "",
+    "URLAutorImagen": "",
+    "AutorImagen":"",
+    "Info":"",
+    "Fuente":"",
+    "URLFuente":"",
+    "Credito": ""
+} '>
+</textarea>
+<!-- </pre> -->
+    <a href="#Colaborar" target="_self" class="enlacesContacto" id="copiarJSONGenerado" title="Copiar JSON al portapapeles" style="padding-top: 2em;"><span><i class="icon icon-portapapeles logoRedSocial" style="padding-right: 10px;"></i></span> <span>Copiar código</span></a>
+    </div>
+
+    </section>
+    <span style="opacity: 0; pointer-events: none; font-size: 0.1em;" id="linkDeEstaPagina">https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/</span>
+    <footer id="Más">
+        <div class="Pie">
+            <a href="https://www.instagram.com/funfact_web/" target="_blank" class="enlacesContacto"><i class="icon icon-instagram logoRedSocial"></i></a>
+            <p>© Fun Fact 2022 - Todos los derechos reservados<br><br>Hecho con&nbsp&nbsp<i class="icon icon-corazon"></i>&nbsp&nbspy&nbsp&nbsp<i class="icon icon-taza-cafe"></i>&nbsp&nbsppor <i>E-nnova Design</i></i></p>
+            
+                <details class="ContenedorPie2">
+                    <summary class="enlacesContacto"><b>Compartir</b></summary>
+                    <div id="Enlaces">
+                        <a href="https://api.whatsapp.com/send?text=Explora datos curiosos en Fun Fact Web: https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-whatsapp-cuadro logoRedSocial"></i></a>
+                        <a href="https://www.facebook.com/sharer.php?u=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-facebook-cuadro logoRedSocial"></i></a>
+                        <a href="https://www.twitter.com/intent/tweet?text=Explora datos curiosos en la web de Fun Fact: &url=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/&hashtags=FunFactWeb,ProyectoSTEAMTorch" target="_blank" class="enlacesContacto"><i class="icon icon-twitter-cuadro  logoRedSocial"></i></a>
+                        <a href="#copiarEnlaceCompartir" target="_self" class="enlacesContacto" id="copiarEnlaceCompartir" title="Copiar enlace al portapapeles"><i class="icon icon-portapapeles logoRedSocial"></i></a>
+                    </div>
+                    <span id="RespuestaCopiado"></span>
+                </details>
+                <details class="ContenedorPie2">
+                    <summary class="enlacesContacto"><b>Donar</b></summary>
+                    <div id="Enlaces">
+                        <a href="https://www.buymeacoffee.com/EnnovaDesign" target="_blank" class="enlacesContacto" title="Buy Me A Coffe"><i class="icon icon-buymeacoffee  logoRedSocial"></i></a>
+                        <a href="https://paypal.me/EdChan5126?country.x=MX&locale.x=es_XC" target="_blank" class="enlacesContacto" title="PayPal"><i class="icon icon-paypal  logoRedSocial"></i></a>
+                    </div>
+                </details>
+                <!-- <details class="ContenedorPie2">
+                    <summary><b>Configuración</b></summary>
+                    <div id="Enlaces">
+                        <a href="" class="enlacesContacto" title="Cambiar estilo" id="ToggleMode"><i class="icon icon-cambiar-estilo"></i></a>
+                        <a href="" class="enlacesContacto" title="Activar narración" id="ToggleVoice"><i class="icon icon-cambiar-estilo"></i></a>
+                    </div>
+                </details> -->
+            <div class="ContenedorPie">
+                <p>Conoce las otras partes del proyecto <b><i>STEAM Torch</i></b>:</p>
+                <div id="Proyecto">
+                    <a href=""><img src="../IMG/LogoHorizontalDM[ST].svg" alt="Visita el blog STEAM Torch" class="ProyectoEnlaces" id="LogoDeIndex"></a>
+                    <a href=""><img src="../IMG/LogoHorizontalDM[II].svg" alt="Visita Internet Index" class="ProyectoEnlaces" id="LogoDeTorch"></a>
+                </div>
+            </div>
+            <p>¿Algo no anda bien? ¿Eres autor de algún contenido mostrado y deseas que sea removido? Escríbenos en Instagram</p>
+        </div>
+    </footer>
+</body>
+
+<script src="../JS/Script.js"></script>
+<script src="../JS/ScriptDelFormulario.js"></script>
+<script src="../JS/ScriptFuncionesIndividuales.js"></script>
+<script>
+    var BotonCopiarJSON = document.getElementById("copiarJSONGenerado"),
+    urlJSON = document.getElementById("ContenedorJSON");
+
+    
+
+    setTimeout(e => {
+        document.getElementById("NumeroDato").setAttribute('max', DatosTotales);
+      }, 1000);
+      
+    
+    BotonCopiarJSON.addEventListener("click", function() {
+    //   var Rango = document.createRange(),
+    //       Seleccion = window.getSelection();
+    //       Seleccion.removeAllRanges();
+    //       Rango.selectNodeContents(urlJSON);
+    //       Seleccion.addRange(Rango);
+        urlJSON.select();
+          document.execCommand('copy');
+        //   Seleccion.removeAllRanges();
+          document.getElementById("copiarJSONGenerado").innerHTML='<i class="icon icon-portapapeles-ok logoRedSocial"></i>';
+          setTimeout(function() {
+            document.getElementById("copiarJSONGenerado").innerHTML='<i class="icon icon-portapapeles logoRedSocial"></i>';
+          }, 5000);
+    }, false);
+        
+    var NumeroDatoVar;
+
+        document.getElementById("ObtenerDetallesDelDato").addEventListener('click',  e => {
+        e.preventDefault();
+
+        NumeroDatoVar = document.getElementById("NumeroDato").value;
+        console.log(NumeroDatoVar);
+
+        FetchCambiarDato(NumeroDatoVar);
+        setTimeout(ObtenerDetalles, 100);
+
+        DatoActual = parseInt(NumeroDatoVar);
+
+        RevisarInicioFin();
+        });
+
+        document.getElementById("ProbarDetallesDelDato").addEventListener('click', e => {
+            e.preventDefault();
+
+            EnviarDetalles();
+        })
+
+        document.getElementById("NuevaEntrada").addEventListener('click', e => {
+            e.preventDefault();
+            document.getElementById("NumeroDato").value = document.getElementById("NumeroDato").max;
+            document.getElementById("LabelNumero").innerHTML = "Número (Nueva entrada)";
+            document.getElementById("ObtenerDetallesDelDato").setAttribute("disabled", "");
+        })
+
+        document.getElementById("Borrador").addEventListener('click', e => {
+            e.preventDefault();
+
+            document.getElementById("Formulario").reset();
+            document.getElementById("Borrador").setAttribute("disabled", "");
+        })
+
+        document.getElementById("AgregarDato").addEventListener('click', e => {
+            e.preventDefault();
+
+            document.getElementById("EstadoAgregador").checked = false;
+            document.getElementById("AgregarDato").toggleAttribute("disabled");
+
+            var MaximoNuevo =  parseInt(document.getElementById("NumeroDato").max) + 1;
+
+            document.getElementById("NumeroDato").setAttribute('max', MaximoNuevo);
+
+            GenerarJson();
+
+            document.getElementById("LabelNumero").innerHTML = "Número (Nueva entrada agregada)";
+        })
+
+    function ObtenerDetalles(){
+        document.getElementById("ImagenSugerida").value = document.getElementById("ImagenDelDato").src;
+        document.getElementById("URLCreditosImagen").value = document.getElementById("URLCreditosTooltip").href;
+        document.getElementById("CreditosImagen").value = document.getElementById("URLCreditosTooltip").textContent;
+        document.getElementById("DatoCuriosoSugerido").value = document.getElementById("DatoPresentado").outerHTML.slice(25, -6);
+        document.getElementById("FuenteDeDatoSugerido").value = document.getElementById("FuentePresentada").textContent;
+        document.getElementById("URLFuenteDeDatoSugerido").value = document.getElementById("FuentePresentada").href;
+        document.getElementById("CreditoDelAporte").value = document.getElementById("CreditosDelDato").textContent;
+    }
+
+    function EnviarDetalles(){
+        document.getElementById("ImagenDelDato").src = document.getElementById("ImagenSugerida").value;
+        document.getElementById("TituloTooltipxd").innerHTML = "Imagen: ";
+        document.getElementById("URLCreditosTooltip").href = document.getElementById("URLCreditosImagen").value;
+        document.getElementById("URLCreditosTooltip").innerHTML = document.getElementById("CreditosImagen").value;
+        document.getElementById("DatoPresentado").innerHTML = document.getElementById("DatoCuriosoSugerido").value;
+        document.getElementById("FuentePresentada").innerHTML = document.getElementById("FuenteDeDatoSugerido").value;
+        document.getElementById("FuentePresentada").href = document.getElementById("URLFuenteDeDatoSugerido").value;
+        document.getElementById("CreditosDelDato").innerHTML = document.getElementById("CreditoDelAporte").value;
+
+    }
+
+    function GenerarJson() {
+        var JSONNuevo;
+
+        var Numero = document.getElementById("NumeroDato").value;
+        var Imagen = document.getElementById("ImagenSugerida").value;
+        var URLImagen = document.getElementById("URLCreditosImagen").value;
+        var CreditoImagen = document.getElementById("CreditosImagen").value;
+        var Informacion = document.getElementById("DatoCuriosoSugerido").value;
+        var NombreFuente = document.getElementById("FuenteDeDatoSugerido").value;
+        var URLFuente = document.getElementById("URLFuenteDeDatoSugerido").value;
+        var CreditoDato = document.getElementById("CreditoDelAporte").value;
+
+        var JSONString = '\t{\n\t\t"No": "' + Numero + '",\n\t\t "Imagen": "' + Imagen + '",\n\t\t "URLAutorImagen": "' + URLImagen + '",\n\t\t "AutorImagen":"' + CreditoImagen + '",\n\t\t "Info":"' + Informacion + '",\n\t\t "Fuente":"' + NombreFuente + '",\n\t\t "URLFuente":"' + URLFuente + '",\n\t\t "Credito": "' + CreditoDato + '"\n\t}';
+
+        // JSONNuevo = JSON.parse(JSONString);
+        // console.log(JSONNuevo);
+        document.getElementById("ContenedorJSON").value += ",\n\n" + JSONString;
+    }
+
+    document.getElementById("NumeroDato").oninput = function() {
+        if(document.getElementById("NumeroDato").value == document.getElementById("NumeroDato").max){
+            document.getElementById("LabelNumero").innerHTML += " (Nueva entrada)";
+            document.getElementById("ObtenerDetallesDelDato").setAttribute("disabled", "");
+        } else {
+            document.getElementById("LabelNumero").innerHTML = "Número";
+            document.getElementById("ObtenerDetallesDelDato").removeAttribute("disabled");
+        }
+    };
+
+    document.getElementById("EstadoBorrador").oninput = function() {
+        console.log(document.getElementById("EstadoBorrador").checked);
+
+        if (document.getElementById("EstadoBorrador").checked == true) {
+            document.getElementById("Borrador").removeAttribute("disabled");
+        } else {
+            document.getElementById("Borrador").setAttribute("disabled", "");
+        }
+    };
+
+    document.getElementById("EstadoAgregador").oninput = function() {
+        document.getElementById("AgregarDato").toggleAttribute("disabled");
+    }
+
+</script>
+<!-- <script> 
+if (navigator.serviceWorker.controller) { 
+     console.log("ServiceWorker activo encontrado, no se necesita registrarlo"); 
+}else{ 
+ // Register the service worker 
+navigator.serviceWorker.register("../serviceworker.js", { scope: "./" }).then(function (reg) { 
+    console.log("ServiceWorker registrado"); 
+});
+}
+</script> -->
+
+</html>

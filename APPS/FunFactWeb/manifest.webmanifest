@@ -1,0 +1,28 @@
+{
+    "name": "Fun Fact: Algo nuevo cada día",
+    "short_name": "Fun Fact",
+    "description": "¿Aburrido o curioso? Para cualquier caso, conoce todo tipo de datos curiosos cortos, aleatorios y en español con Fun Fact. ;)",
+    "start_url": "https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/",
+    "lang": "Spanish",
+    "display": "standalone",
+    "theme_color": "#2b2b2b",
+    "background_color": "#2b2b2b",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "IMG/LogoSoloFF.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "IMG/LogoSoloFF.png",
+        "sizes": "129x129",
+        "type": "image/png"
+      },
+      {
+        "src": "IMG/LogoSolo[FF].svg",
+        "sizes": "36x36 48x48 57x57 60x60 72x72 76x76 96x96 114x114 120x120 128x128 144x144 152x152 180x180 192x192 256x256 384x384 512x512",
+        "type": "image/svg+xml"
+      }
+    ]
+  }
