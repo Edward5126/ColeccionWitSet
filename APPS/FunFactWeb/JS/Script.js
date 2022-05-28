@@ -10,7 +10,7 @@ SetUpDatos(); // Se realiza el primer fetch para contar cuántos datos existen.
 
 // Se escribe la función encargada de inicializar el conteo de datos y la revisión de la posición del dato actual.
 function SetUpDatos() {
-  fetch("https://github.com/Edward5126/WitSet/APPS/FunFactWeb/API/Datos.json")
+  fetch("API/Datos.json")
     .then(function (response) {
       return response.json();
     })
@@ -93,7 +93,7 @@ function TransicionCarga() {
 function FetchCambiarDato(NumeroDato) {
   var NumeroDato;
 
-  fetch("https://github.com/Edward5126/WitSet/APPS/FunFactWeb/API/Datos.json")
+  fetch("API/Datos.json")
     .then(function (response) {
       return response.json();
     })
