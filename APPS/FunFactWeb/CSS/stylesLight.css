@@ -31,7 +31,7 @@
     margin: 0%;
     color: var(--LM-Texto-Principal);
     background: linear-gradient(to top, #232526, #414345);
-    background: #f5f5f5 url(../IMG/FondoLight.jpg) center center
+    background: #f5f5f5 url(../../../IMG/FondoLight.jpg) center center
       no-repeat fixed;
     background-size: cover;
   }
@@ -585,7 +585,7 @@
     color: var(--LM-Texto-Principal);
     font-size: 1em;
     background: linear-gradient(to top, #232526, #414345);
-    background: #f5f5f5 url(../IMG/FondoLight.jpg) center center
+    background: #f5f5f5 url(../../../IMG/FondoLight.jpg) center center
       no-repeat fixed;
     background-size: cover;
   }
@@ -1131,7 +1131,7 @@
     color: var(--LM-Texto-Principal);
     font-size: 1em;
     background: linear-gradient(to top, #232526, #414345);
-    background: #f5f5f5 url(../IMG/FondoLight.jpg) center center
+    background: #f5f5f5 url(../../../IMG/FondoLight.jpg) center center
       no-repeat fixed;
     background-size: cover;
   }
