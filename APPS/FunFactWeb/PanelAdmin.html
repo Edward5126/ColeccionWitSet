@@ -110,20 +110,23 @@
                         <label for="URLFuenteDeDatoSugerido">URL de la fuente</label>
                     </div>
                     <div class="Pregunta">
-                        <input  id="CreditoDelAporte" name="Credito" type="text" maxlength="15" required placeholder="(Nombre o apodo)">                  
+                        <input  id="CreditoDelAporte" name="Credito" type="text" maxlength="15" required placeholder="(Nombre o apodo)" value="-">                  
                         <label for="CreditoDelAporte">Crédito del dato</label>
                     </div>
-                    <div class="Pregunta" style="margin-bottom: 7px;">
-                    <label style="pointer-events: all; -webkit-user-select: none;"><input style="width: 14px; display: inline-block; " type="checkbox" id="EstadoBorrador"> Habilitar borrado</label><br>
+                    <div class="Pregunta" style="margin-bottom: 10px;">
+                    <label class="CheckButton"><input type="checkbox" id="EstadoBorrador"><span class="CheckCheck"></span>Habilitar borrado</label><br>
                     </div>
-                    <div class="Pregunta" style="margin-top: 7px;">
-                    <label style="pointer-events: all; -webkit-user-select: none;"><input style="width: 14px; display: inline-block; " type="checkbox" id="EstadoAgregador"> Habilitar agregado</label><br>
+                    <div class="Pregunta" style="margin-top: 10px; margin-bottom: 10px;">
+                    <label class="CheckButton"><input type="checkbox" id="EstadoAgregador"><span class="CheckCheck"></span>Habilitar agregado</label><br>
+                    </div>
+                    <div class="Pregunta" style="margin-top: 10px;">
+                    <label class="CheckButton"><input type="checkbox" id="EstadoNuevo"><span class="CheckCheck"></span>Habilitar nuevo</label><br>
                     </div>
                     <h4 id="FormRespuesta"></h4>
                     <div style="text-align: center; display: flex; flex-wrap: wrap; justify-content: space-between;">
                         <button id="ObtenerDetallesDelDato" style="margin: 7px 0; min-width: 125px;">Obtener</button>
                         <button id="Borrador" style="margin: 7px 0; min-width: 125px;" disabled>Borrar</button>
-                        <button id="NuevaEntrada" style="margin: 7px 0; min-width: 125px;">Nuevo</button>
+                        <button id="NuevaEntrada" style="margin: 7px 0; min-width: 125px;" disabled>Nuevo</button>
                         <button id="ProbarDetallesDelDato" style="margin: 7px 0; min-width: 125px;">Probar</button>
                         <button id="AgregarDato" style="margin: 7px 0; min-width: 125px;" disabled>Agregar</button>
                     </div>
@@ -249,6 +252,9 @@
 
         document.getElementById("NuevaEntrada").addEventListener('click', e => {
             e.preventDefault();
+            document.getElementById("NuevaEntrada").toggleAttribute("disabled");
+            document.getElementById("Formulario").reset();
+
             document.getElementById("NumeroDato").value = document.getElementById("NumeroDato").max;
             document.getElementById("LabelNumero").innerHTML = "Número (Nueva entrada)";
             document.getElementById("ObtenerDetallesDelDato").setAttribute("disabled", "");
@@ -328,18 +334,17 @@
     };
 
     document.getElementById("EstadoBorrador").oninput = function() {
-        console.log(document.getElementById("EstadoBorrador").checked);
-
-        if (document.getElementById("EstadoBorrador").checked == true) {
-            document.getElementById("Borrador").removeAttribute("disabled");
-        } else {
-            document.getElementById("Borrador").setAttribute("disabled", "");
-        }
+        document.getElementById("Borrador").toggleAttribute("disabled");
     };
 
     document.getElementById("EstadoAgregador").oninput = function() {
         document.getElementById("AgregarDato").toggleAttribute("disabled");
     }
+
+    document.getElementById("EstadoNuevo").oninput = function() {
+        document.getElementById("NuevaEntrada").toggleAttribute("disabled");
+    }
+
 
 </script>
 <!-- <script> 
