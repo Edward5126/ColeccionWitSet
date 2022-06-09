@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Wit Set Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link id="HojadeEstilo" rel="stylesheet" href="../../CSS/styles.css">
+    <link rel="stylesheet" href="../LIBS/PersonalIconCollection-v1.0/style.css">
+    <link rel="shortcut icon" href="../../IMG/Miniaturas/LogoSolo[WS].svg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="LogoDeCabecera" src="../IMG/Horizontales/LogoHorizontalDM[WS].svg" alt="Logo de Wit Set">
+            <a href="../../" title="Volver a Wit Set"><i class="icon icon-home"></i></a>
+        </nav>
+    </header>
+    <main class="Seccion" id="Colaborar">
+        <h2 id="TituloColaborar" style="margin-top: 0;">Contacto</h2>
+        <form action="" method="post" id="Formulario" autocomplete="off" name="ColaborarNI">
+            <div class="Formulario">
+                <!-- <h3>Si conoces o tienes algún sitio web útil, <br> Aquí puedes compartirlo:</h3> -->
+                <div class="Pregunta">
+                    <input  id="Asunto" name="Asunto" type="text" required placeholder="(Ej. 'Retirar contenido', 'Retroalimentacion', 'Opinión', 'Error con...')">
+                    <label for="Asunto">Asunto</label>
+                </div>
+                <div class="Pregunta">
+                    <input  id="email" name="email" type="text" required>
+                    <label for="email">Dirección e-mail</label>
+                </div>
+                <div class="Pregunta">
+                    <textarea  name="Mensaje" id="Mensaje" cols="41" rows="5" required></textarea>
+                    <label for="Mensaje">Mensaje</label>
+                </div>
+                <!-- <div class="Pregunta">
+                    <input  id="CreditoDelAporte" name="Credito" type="text" maxlength="15" required placeholder="(¡Para darte los créditos del aporte!)">                  
+                    <label for="CreditoDelAporte">Anota tu nombre o apodo</label>
+                </div> -->
+                <!-- <div class="Pregunta">
+                    <input  id="URLSitioSugerido" name="URL" type="text" required placeholder="(URL o enlace)">                  
+                    <label for="URLSitioSugerido">Agrega su URL</label>
+                </div> -->
+                <h4 id="FormRespuesta"></h4>
+                <div id="EnviarDatoSugerido">
+                    <button type="submit" id="EnviarSitioSugeridob"><b>Enviar mensaje</b></button>
+                </div>
+            </div>
+        </form>
+    
+    </main>
+    <footer id="Más">
+        <div class="Pie">
+            <!-- <a href="https://www.instagram.com/funfact_web/" target="_blank" class="enlacesContacto"><i class="icon icon-instagram logoRedSocial"></i></a> -->
+            <p>© Wit Set 2022<br><br>Hecho con&nbsp&nbsp<i class="icon icon-corazon"></i>&nbsp&nbspy&nbsp&nbsp<i class="icon icon-taza-cafe"></i>&nbsp&nbsppor <i>E-nnova Design</i></i></p>
+            
+                <details class="ContenedorPie2" id="BotonListaCompartir">
+                    <summary class="enlacesContacto"><b>Compartir</b></summary>
+                    <div id="Enlaces">
+                        <a href="https://api.whatsapp.com/send?text=Explora todo tipo de funciones en Wit Set Project: https://edward5126.github.io/WitSet/" target="_blank" class="enlacesContacto"><i class="icon icon-whatsapp-cuadro logoRedSocial"></i></a>
+                        <a href="https://www.facebook.com/sharer.php?u=https://edward5126.github.io/WitSet/" target="_blank" class="enlacesContacto"><i class="icon icon-facebook-cuadro logoRedSocial"></i></a>
+                        <a href="https://www.twitter.com/intent/tweet?text=Explora todo tipo de funciones en Wit Set Project: &url=https://edward5126.github.io/WitSet/&hashtags=WitSetProject" target="_blank" class="enlacesContacto"><i class="icon icon-twitter-cuadro  logoRedSocial"></i></a>
+                        <!-- <a href="#copiarEnlaceCompartir" target="_self" class="enlacesContacto" id="copiarEnlaceCompartir" title="Copiar enlace al portapapeles"><i class="icon icon-portapapeles logoRedSocial"></i></a> -->
+                    </div>
+                    <span id="RespuestaCopiado"></span>
+                </details>
+                <details class="ContenedorPie2">
+                    <summary class="enlacesContacto"><b>Donar</b></summary>
+                    <div id="Enlaces">
+                        <a href="https://www.buymeacoffee.com/EnnovaDesign" target="_blank" class="enlacesContacto" title="Buy Me A Coffe"><i class="icon icon-buymeacoffee  logoRedSocial"></i></a>
+                        <a href="https://paypal.me/EdChan5126?country.x=MX&locale.x=es_XC" target="_blank" class="enlacesContacto" title="PayPal"><i class="icon icon-paypal  logoRedSocial"></i></a>
+                    </div>
+                </details>
+            
+            <!-- <div class="ContenedorPie">
+                <p>Conoce las otras partes del proyecto <b><i>Wit Set</i></b>:</p>
+                <div id="Proyecto">
+                    <a href=""><img src="IMG/LogoHorizontalDM[ST].svg" alt="Visita el blog STEAM Torch" class="ProyectoEnlaces" id="LogoDeIndex"></a>
+                    <a href=""><img src="IMG/LogoHorizontalDM[II].svg" alt="Visita Internet Index" class="ProyectoEnlaces" id="LogoDeTorch"></a>
+                </div>
+            </div> -->
+            <!-- <p>¿Algo no anda bien? ¿Eres autor de algún contenido mostrado y deseas que sea removido? Contáctanos.</p> -->
+        </div>
+    </footer>
+</body>
+<script src="../JS/ScriptWS.js"></script>
+</html>

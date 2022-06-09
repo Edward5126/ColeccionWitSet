@@ -15,6 +15,7 @@ function Fallo(){
   Respuesta.innerHTML="¡Oh no! Algo salió mal, verifica tu conexión e inténtalo de nuevo.";
   document.getElementById("EnviarDatoSugeridob").removeAttribute("disabled");
   setTimeout(Borrar, 10000);
+  console.error("Dato no enviado");
   // alert("¡Oh no!\n\nAlgo salió mal, inténtalo de nuevo.")
 }
 
@@ -39,7 +40,7 @@ function ConexionFormulario() {
   } else {
     Respuesta.innerHTML="Conéctate a Internet para enviar tus propios datos.";
     document.getElementById("EnviarDatoSugeridob").setAttribute("disabled","");
-    console.log("Conexión a Internet perdida");
+    console.warn("Conexión a Internet perdida");
   }
 }
 

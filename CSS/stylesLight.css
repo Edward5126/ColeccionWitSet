@@ -1,21 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 :root {
-  --LM-Texto-Principal: #2b2b2b;
-  --LM-Texto-Contrario: #f5f5f5;
+  --Texto-Principal: #2b2b2b;
+  --Texto-Contrario: #f5f5f5;
 
-  --LM-Texto-Resaltado: #000000c0;
+  --Texto-Resaltado: #000000c0;
 
-  --LM-Texto-Nota: #00000075;
-  --LM-Separadores: #00000039;
-  --LM-Fondo-Nota: #ffffffce;
+  --Texto-Nota: #00000075;
+  --Separadores: #00000039;
+  --Fondo-Nota: #ffffffce;
 
-  --Degradado-Secundario: linear-gradient(to top, #5c5c5c, #9a9a9a);
-  --LM-Degradado-Principal: linear-gradient(to top, #000000, #434343);
+  --Degradado-Color: linear-gradient(to top, #5c5c5c, #9a9a9a);
+  --Degradado-Principal: linear-gradient(to top, #000000, #434343);
   --Degradado-Click: linear-gradient(to top, #5e5e5e7a, #5d5d5d79);
 
-  --LM-Scrollbars: #0501015a;
-  --LM-Cuadro-Texto: #f5f5f5;
+  --Scrollbars: #0501015a;
+  --Cuadro-Texto: #f5f5f5;
 }
 /* --------------------------------------------------------------------------------------------------------------------------------------- Vista para celulares */
 @media only screen and (max-width: 800px) {
@@ -29,7 +29,7 @@
   body {
     font-family: "Montserrat";
     margin: 0%;
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
     background: linear-gradient(to top, #232526, #414345);
     background: #f5f5f5 url(../IMG/FondoLight.jpg) center center
       no-repeat fixed;
@@ -83,7 +83,7 @@
 
   /* Lista de la barra de navegación */
   .NavList {
-    background-color: var(--LM-Fondo-Nota);
+    background-color: var(--Fondo-Nota);
     backdrop-filter: blur(5px);
     flex-direction: column;
     display: flex;
@@ -133,14 +133,14 @@
   .btnmenu {
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
   }
 
   /* Enlaces de la barra de navegación: Al pasar el cursor */
   .NavList > li > a:hover,
   .enlacesContacto:hover,
   .btnmenu:hover {
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
   }
 
   /* Enlaces de la barra de navegación: Al hacer click */
@@ -151,7 +151,7 @@
 
   /* Caracter separador de la lista de la barra de navegación "|" */
   .Separador {
-    color: var(--LM-Separadores);
+    color: var(--Separadores);
     visibility: hidden;
     font-size: 0.05em;
   }
@@ -182,7 +182,7 @@
 
   .SobreLaPagina {
     box-shadow: 0 0px 12px #00000014, 0 0 1px #0100001a;
-    background-color: var(--LM-Cuadro-Texto);
+    background-color: var(--Cuadro-Texto);
     padding: 20px 0;
     backdrop-filter: blur(1px);
   }
@@ -201,7 +201,7 @@
   }
 
   #ContenedorCarga {
-    background-color: var(--LM-Fondo-Nota);
+    background-color: var(--Fondo-Nota);
     max-height: 35vh;
     max-width: 90vw;
     height: 100%;
@@ -250,7 +250,7 @@
   }
 
   .tooltip {
-    background-color: var(--LM-Fondo-Nota);
+    background-color: var(--Fondo-Nota);
     backdrop-filter: blur(5px);
     border-radius: 5px;
     padding: 5px 15px;
@@ -268,12 +268,12 @@
 
   a {
     text-decoration: none;
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
     transition: all 0.3s ease 0s;
   }
 
   a:hover {
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
   }
 
   #ContenedorImagenTooltip:hover .tooltip {
@@ -312,7 +312,7 @@
   /* Contenedor general de la informacion del dato */
   .InformacionDeLaPagina {
     box-shadow: 0 0px 12px #00000014, 0 0 1px #0100001a;
-    background-color: var(--LM-Cuadro-Texto);
+    background-color: var(--Cuadro-Texto);
     border-radius: 15px;
     padding: 0.2px;
     margin-left: 2%;
@@ -329,7 +329,7 @@
 
   /* Botones: Normal */
   button {
-    background: var(--LM-Degradado-Principal);
+    background: var(--Degradado-Principal);
     padding: 9px 25px;
     font-family: Montserrat;
     border: none;
@@ -337,14 +337,15 @@
     cursor: pointer;
     transition: all 0.3s ease 0s;
     letter-spacing: 1px;
-    color: var(--LM-Texto-Contrario);
+    color: var(--Texto-Contrario);
   }
 
   /* Botones: Al pasar el cursor */
   button:hover {
-    background: var(--Degradado-Secundario);
+    background: var(--Degradado-Color
+);
     transform: scale(10px);
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
   }
 
   /* Botones: Al hacer click */
@@ -353,7 +354,7 @@
   }
 
   button:disabled {
-    background: var(--LM-Scrollbars);
+    background: var(--Scrollbars);
   }
 
   .Btndisabled {
@@ -364,7 +365,7 @@
   /* Nota de los créditos de la imagen del fondo y de la fuente*/
   .TextoNota {
     text-decoration: none;
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
     font-size: 10px;
     line-height: 1em;
   }
@@ -381,7 +382,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: var(--LM-Cuadro-Texto);
+    background-color: var(--Cuadro-Texto);
     border-radius: 15px;
     padding: 10px;
     padding-bottom: 20px;
@@ -395,19 +396,19 @@
     width: 100%;
     border: none;
     background: none;
-    border-bottom: 1px solid var(--LM-Texto-Principal);
+    border-bottom: 1px solid var(--Texto-Principal);
     font-family: "Montserrat";
     font-size: 14px;
     outline: none;
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
     resize: none;
   }
 
   /* Barras del formulario: Al hacer click/seleccionar */
   input:focus,
   textarea:focus {
-    color: var(--LM-Texto-Nota);
-    border-bottom: 1px solid var(--LM-Texto-Resaltado);
+    color: var(--Texto-Nota);
+    border-bottom: 1px solid var(--Texto-Resaltado);
   }
 
   textarea::placeholder,
@@ -427,7 +428,7 @@
 
   /* Indicaciones del formulario: Normal */
   label {
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
     position: absolute;
     left: 0px;
     top: -5px;
@@ -445,7 +446,7 @@
     top: -30px;
     left: 5px;
     font-size: 15px;
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
   }
 
   /* Contenedor del botón "enviar" del formulario */
@@ -459,7 +460,7 @@
     margin: 14px;
     font-size: 15px;
     text-align: center;
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
     font-family: "Montserrat";
   }
 
@@ -473,7 +474,7 @@
 
   /* Formato de los cuadros de texto */
   .CuadroDeTexto {
-    background-color: var(--LM-Cuadro-Texto);
+    background-color: var(--Cuadro-Texto);
     border-radius: 15px;
     padding: 2%;
     margin: 0% 1%;
@@ -489,7 +490,7 @@
   }
 
   .item {
-    background-color: var(--LM-Cuadro-Texto);
+    background-color: var(--Cuadro-Texto);
     box-shadow: 0 0px 12px #00000014, 0 0 1px #0100001a;
     border-radius: 15px;height: 15vh;
     padding: 1.5%;
@@ -505,6 +506,7 @@
   .imgItem {
     height: 64px;
     margin-right: 14px;
+    border-radius: 5px;
   }
 
   .NombreItem {
@@ -572,7 +574,7 @@
   }
 
   #NotaCopia {
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
   }
 
   #Proyecto {
@@ -617,7 +619,7 @@
   body {
     font-family: "Montserrat";
     margin: 0%;
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
     font-size: 1em;
     background: linear-gradient(to top, #232526, #414345);
     background: #f5f5f5 url(../IMG/FondoLight.jpg) center center
@@ -686,13 +688,13 @@
   .enlacesContacto {
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
   }
 
   /* Enlaces de la barra de navegación: Al pasar el cursor */
   .NavList > li > a:hover,
   .enlacesContacto:hover {
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
   }
 
   /* Enlaces de la barra de navegación: Al hacer click */
@@ -702,7 +704,7 @@
 
   /* Caracter separador de la lista de la barra de navegación "|" */
   .Separador {
-    color: var(--LM-Separadores);
+    color: var(--Separadores);
   }
 
   #PrimerSeparador {
@@ -751,7 +753,7 @@
   }
 
   #ContenedorCarga {
-    background-color: var(--LM-Fondo-Nota);
+    background-color: var(--Fondo-Nota);
     max-height: 38vh;
     max-width: 90vw;
     height: 100%;
@@ -809,7 +811,7 @@
   }
 
   .tooltip {
-    background-color: var(--LM-Fondo-Nota);
+    background-color: var(--Fondo-Nota);
     backdrop-filter: blur(5px);
     border-radius: 5px;
     padding: 5px 15px;
@@ -826,12 +828,12 @@
 
   a {
     text-decoration: none;
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
     transition: all 0.3s ease 0s;
   }
 
   a:hover {
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
   }
 
   #ContenedorImagenTooltip:hover .tooltip {
@@ -859,7 +861,7 @@
   /* Contenedor general de la informacion del dato */
   .InformacionDeLaPagina {
     box-shadow: 0 0px 12px #00000014, 0 0 1px #0100001a;
-    background-color: var(--LM-Cuadro-Texto);
+    background-color: var(--Cuadro-Texto);
     border-radius: 15px;
     padding: 1px;
     margin: 2% 5% 2% 5%;
@@ -872,7 +874,7 @@
 
   /* Botones: Normal */
   button {
-    background: var(--LM-Degradado-Principal);
+    background: var(--Degradado-Principal);
     padding: 9px 25px;
     font-family: Montserrat;
     border: none;
@@ -880,14 +882,15 @@
     cursor: pointer;
     transition: all 0.3s ease 0s;
     letter-spacing: 1px;
-    color: var(--LM-Texto-Contrario);
+    color: var(--Texto-Contrario);
   }
 
   /* Botones: Al pasar el cursor */
   button:hover {
-    background: var(--Degradado-Secundario);
+    background: var(--Degradado-Color
+);
     transform: scale(10px);
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
   }
 
   /* Botones: Al hacer click */
@@ -896,7 +899,7 @@
   }
 
   button:disabled {
-    background: var(--LM-Scrollbars);
+    background: var(--Scrollbars);
   }
 
   .Btndisabled {
@@ -922,7 +925,7 @@
   /* Nota de los créditos de la imagen del fondo */
   .TextoNota {
     text-decoration: none;
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
     font-size: 0.8em;
   }
 
@@ -945,7 +948,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: var(--LM-Cuadro-Texto);
+    background-color: var(--Cuadro-Texto);
     border-radius: 15px;
     padding: 10px;
     padding-bottom: 20px;
@@ -962,19 +965,19 @@
     width: 100%;
     border: none;
     background: none;
-    border-bottom: 1px solid var(--LM-Texto-Principal);
+    border-bottom: 1px solid var(--Texto-Principal);
     font-family: "Montserrat";
     font-size: 1em;
     outline: none;
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
     resize: none;
   }
 
   /* Barras del formulario: Al hacer click/seleccionar */
   input:focus,
   textarea:focus {
-    color: var(--LM-Texto-Nota);
-    border-bottom: 1px solid var(--LM-Texto-Resaltado);
+    color: var(--Texto-Nota);
+    border-bottom: 1px solid var(--Texto-Resaltado);
   }
 
   textarea::placeholder,
@@ -994,7 +997,7 @@
 
   /* Indicaciones del formulario: Normal */
   label {
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
     position: absolute;
     left: 10px;
     top: -25px;
@@ -1011,7 +1014,7 @@
     top: -30px;
     left: 5px;
     font-size: 0.9em;
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
   }
 
   /* Contenedor del botón "enviar" del formulario */
@@ -1025,7 +1028,7 @@
     margin: 14px;
     font-size: 15px;
     text-align: center;
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
     font-family: "Montserrat";
   }
 
@@ -1036,7 +1039,7 @@
 
   /* Formato de los cuadros de texto */
   .CuadroDeTexto {
-    background: var(--LM-Cuadro-Texto);
+    background: var(--Cuadro-Texto);
     display: flex;
     min-width: 40%;
     max-width: 85%;
@@ -1071,6 +1074,7 @@
   .imgItem {
     height: 64px;
     margin-right: 14px;
+    border-radius: 5px;
   }
 
   .NombreItem {
@@ -1138,7 +1142,7 @@
   }
 
   #NotaCopia {
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
   }
 
   #Proyecto {
@@ -1193,7 +1197,7 @@
   #Formulario::-webkit-scrollbar-thumb,
   #DatoCuriosoSugerido::-webkit-scrollbar-thumb,
   #JSONaCopiar::-webkit-scrollbar-thumb {
-    background-color: var(--LM-Scrollbars);
+    background-color: var(--Scrollbars);
     border-radius: 5px;
   }
 
@@ -1202,7 +1206,7 @@
   body {
     font-family: "Montserrat";
     margin: 0%;
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
     font-size: 1em;
     background: linear-gradient(to top, #232526, #414345);
     background: #f5f5f5 url(../IMG/FondoLight.jpg) center center
@@ -1272,13 +1276,13 @@
   .enlacesContacto {
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
   }
 
   /* Enlaces de la barra de navegación: Al pasar el cursor */
   .NavList > li > a:hover,
   .enlacesContacto:hover {
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
   }
 
   /* Enlaces de la barra de navegación: Al hacer click */
@@ -1293,7 +1297,7 @@
 
   /* Caracter separador de la lista de la barra de navegación "|" */
   .Separador {
-    color: var(--LM-Separadores);
+    color: var(--Separadores);
   }
 
   /* Contenedor general del contenido principal: el dato curioso del día */
@@ -1321,14 +1325,14 @@
 
   .SobreLaPagina {
     box-shadow: 0 0px 12px #00000014, 0 0 1px #0100001a;
-    background-color: var(--LM-Cuadro-Texto);
+    background-color: var(--Cuadro-Texto);
     backdrop-filter: blur(5px);
   }
 
   /* Contenedor de la presentación de la página: ilustracion e info */
   .PresentacionDeLaPagina {
     width: 100%;
-    padding-top: 70px;
+    /* padding-top: 70px; */
   }
 
   /* Imagen del dato: normal */
@@ -1340,7 +1344,7 @@
   }
 
   #ContenedorCarga {
-    background-color: var(--LM-Fondo-Nota);
+    background-color: var(--Fondo-Nota);
     height: 300px;
     width: 100%;
     position: absolute;
@@ -1388,7 +1392,7 @@
   }
 
   .tooltip {
-    background-color: var(--LM-Fondo-Nota);
+    background-color: var(--Fondo-Nota);
     backdrop-filter: blur(5px);
     border-radius: 5px;
     padding: 5px 15px;
@@ -1405,12 +1409,12 @@
 
   a {
     text-decoration: none;
-    color: var(--LM-Texto-Principal);
+    color: var(--Texto-Principal);
     transition: all 0.3s ease 0s;
   }
 
   a:hover {
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
   }
 
   #ContenedorImagenTooltip:hover .tooltip {
@@ -1433,7 +1437,7 @@
   /* Contenedor general de la informacion del dato */
   .InformacionDeLaPagina {
     min-height: 8em;
-    background-color: var(--LM-Cuadro-Texto);
+    background-color: var(--Cuadro-Texto);
     border-radius: 15px;
     padding: 0.2px;
     margin-left: 15%;
@@ -1450,7 +1454,7 @@
 
   /* Botones: Normal */
   button {
-    background: var(--LM-Degradado-Principal);
+    background: var(--Degradado-Principal);
     padding: 9px 25px;
     font-family: Montserrat;
     border: none;
@@ -1458,12 +1462,13 @@
     cursor: pointer;
     transition: all 0.3s ease 0s;
     letter-spacing: 1px;
-    color: var(--LM-Texto-Contrario);
+    color: var(--Texto-Contrario);
   }
 
   /* Botones: Al pasar el cursor */
   button:hover {
-    background: var(--Degradado-Secundario);
+    background: var(--Degradado-Color
+);
     transform: scale(10px);
     color: whitesmoke;
   }
@@ -1474,7 +1479,7 @@
   }
 
   button:disabled {
-    background: var(--LM-Scrollbars);
+    background: var(--Scrollbars);
   }
 
   .Btndisabled {
@@ -1501,7 +1506,7 @@
   /* Nota de los créditos de la imagen del fondo */
   .TextoNota {
     text-decoration: none;
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
     font-size: 0.8em;
   }
 
@@ -1509,11 +1514,12 @@
   #Formulario {
     box-shadow: 0 4px 12px #00000014, 0 0 1px #0100001a;
     max-height: 85vh;
+    min-width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: var(--LM-Cuadro-Texto);
+    background-color: var(--Cuadro-Texto);
     border-radius: 15px;
     padding: 0;
     padding-bottom: 20px;
@@ -1525,6 +1531,10 @@
     overflow-y: auto;
   }
 
+  .Formulario {
+    width: 100%;
+  }
+
   /* Campos de texto del formulario: Normal */
 
   input,
@@ -1533,19 +1543,19 @@
     width: 100%;
     border: none;
     background: none;
-    border-bottom: 1px solid var(--LM-Texto-Principal);
+    border-bottom: 1px solid var(--Texto-Principal);
     font-family: "Montserrat";
     font-size: 1em;
     outline: none;
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
     resize: none;
   }
 
   /* Barras del formulario: Al hacer click/seleccionar */
   input:focus,
   textarea:focus {
-    color: var(--LM-Texto-Nota);
-    border-bottom: 1px solid var(--LM-Texto-Resaltado);
+    color: var(--Texto-Nota);
+    border-bottom: 1px solid var(--Texto-Resaltado);
   }
 
   textarea::placeholder,
@@ -1565,7 +1575,7 @@
 
   /* Indicaciones del formulario: Normal */
   label {
-    color: var(--LM-Texto-Nota);
+    color: var(--Texto-Nota);
     position: absolute;
     left: 10px;
     top: 1px;
@@ -1582,7 +1592,7 @@
     top: -20px;
     left: 5px;
     font-size: 0.9em;
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
   }
 
   /* Contenedor del botón "enviar" del formulario */
@@ -1593,7 +1603,7 @@
   #FormRespuesta {
     margin: 14px;
     text-align: center;
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
     font-family: "Montserrat";
   }
 
@@ -1604,7 +1614,7 @@
 
   /* Formato de los cuadros de texto */
   .CuadroDeTexto {
-    background: var(--LM-Cuadro-Texto);
+    background: var(--Cuadro-Texto);
     display: flex;
     min-width: 40%;
     max-width: 85%;
@@ -1639,6 +1649,7 @@
   .imgItem {
     height: 64px;
     margin-right: 14px;
+    border-radius: 5px;
   }
 
   .NombreItem {
@@ -1706,7 +1717,7 @@
   }
 
   #NotaCopia {
-    color: var(--LM-Texto-Resaltado);
+    color: var(--Texto-Resaltado);
     max-width: 100%;
   }
 

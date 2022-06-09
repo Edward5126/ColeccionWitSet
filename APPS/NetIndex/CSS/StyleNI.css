@@ -1,0 +1,36 @@
+:root {
+    --Degradado-Color: linear-gradient(to top, #ae3140, #ce493d);
+
+    --Texto-Resaltado: #ce493d;
+    --Texto-Seleccionado: #ff7367;
+}
+
+#CajaPrincipal {
+    margin-top: 2.5em;
+}
+
+#BusquedaPrincipal {
+    background-color: #f5f5f5;
+    color: #2b2b2b;
+    padding-left: 14px;
+    height: 2.5em;
+    width: 40vw;
+    border-radius: 4px 0px 0px 4px;
+    box-shadow: 0 0px 12px #00000014, 0 0 1px #0100001a;
+}
+
+#BusquedaPrincipal::placeholder {
+    text-align: left;
+    visibility: visible;
+}
+
+#CuadroDeBusqueda {
+    display: flex;
+    justify-content: center;
+}
+
+#BtnBuscar {
+    border-radius: 0px 4px 4px 0px;
+    margin-left: 10px;
+    height: 100%;
+}

@@ -1,0 +1,16 @@
+,
+    {
+        "id": 0,
+        "nombre": "",
+        "info": "",
+        "img": "",
+        "autorimg": "",
+        "URLAutorimg": "",
+        "claves": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    }

@@ -11,8 +11,8 @@
   --Separadores: #ffffff39;
   --Fondo-Nota: #0f0f0f9d;
 
-  --Degradado-Principal: linear-gradient(to top, #656565da, #535353e2);
-  --Degradado-Blanco: linear-gradient(to top, #a3a3a3, #FFFFFF);
+  --Degradado-Color: linear-gradient(to top, #656565da, #535353e2);
+  --Degradado-Principal: linear-gradient(to top, #a3a3a3, #FFFFFF);
   --Degradado-Click: linear-gradient(to top, #6565657a, #53535379);
 
   --Scrollbars: #adadad5a;
@@ -328,7 +328,7 @@
 
   /* Botones: Normal */
   button {
-    background: var(--Degradado-Blanco);
+    background: var(--Degradado-Principal);
     padding: 9px 25px;
     font-family: Montserrat;
     border: none;
@@ -344,7 +344,7 @@
 
   /* Botones: Al pasar el cursor */
   button:hover {
-    background: var(--Degradado-Principal);
+    background: var(--Degradado-Color);
     transform: scale(10px);
     color: var(--Texto-Principal);
   }
@@ -506,6 +506,7 @@
   .imgItem {
     height: 64px;
     margin-right: 14px;
+    border-radius: 5px;
   }
 
   .NombreItem {
@@ -878,7 +879,7 @@
 
   /* Botones: Normal */
   button {
-    background: var(--Degradado-Blanco);
+    background: var(--Degradado-Principal);
     padding: 9px 25px;
     font-family: Montserrat;
     border: none;
@@ -890,7 +891,7 @@
 
   /* Botones: Al pasar el cursor */
   button:hover {
-    background: var(--Degradado-Principal);
+    background: var(--Degradado-Color);
     transform: scale(10px);
     color: var(--Texto-Principal);
   }
@@ -1075,6 +1076,7 @@
   .imgItem {
     height: 64px;
     margin-right: 14px;
+    border-radius: 5px;
   }
 
   .NombreItem {
@@ -1336,7 +1338,7 @@
   /* Contenedor de la presentación de la página: Ilustracion e info */
   .PresentacionDeLaPagina {
     width: 100%;
-    padding-top: 70px;
+    /* padding-top: 70px; */
   }
 
   /* Imagen del dato: normal */
@@ -1458,7 +1460,7 @@
 
   /* Botones: Normal */
   button {
-    background: var(--Degradado-Blanco);
+    background: var(--Degradado-Principal);
     padding: 9px 25px;
     font-family: Montserrat;
     border: none;
@@ -1470,7 +1472,7 @@
 
   /* Botones: Al pasar el cursor */
   button:hover {
-    background: var(--Degradado-Principal);
+    background: var(--Degradado-Color);
     transform: scale(10px);
     color: whitesmoke;
   }
@@ -1515,6 +1517,7 @@
   /* Contenedor general del formulario */
   #Formulario {
     max-height: 85vh;
+    min-width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1529,6 +1532,10 @@
     margin-bottom: 0%;
 
     overflow-y: auto;
+  }
+
+  .Formulario {
+    width: 100%;
   }
 
   /* Campos de texto del formulario: Normal */
@@ -1645,6 +1652,7 @@
   .imgItem {
     height: 64px;
     margin-right: 14px;
+    border-radius: 5px;
   }
 
   .NombreItem {

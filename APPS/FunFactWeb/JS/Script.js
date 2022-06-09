@@ -15,13 +15,14 @@ function SetUpDatos() {
       return response.json();
     })
     .then(function (ListaDatos) {
-      console.log(ListaDatos);
+      console.log("Lista de datos cargada.");
       DatosTotales = Object.keys(ListaDatos).length;
     })
     .catch(function (error) {
       alert(
         "Algo parece andar mal... Te agradeceríamos si nos notificas que existe un error. :)"
       );
+      console.error("Fetch fallido");
     });
 
   //FetchCambiarDato(25);
@@ -65,7 +66,6 @@ function RevisarInicioFin() {
     document.getElementById("BotonSiguiente").removeAttribute("disabled");
     document.getElementById("DatoSiguiente").removeAttribute("class");
   }
-
   console.log("Dato Actual: " + DatoActual);
 }
 
@@ -99,10 +99,11 @@ function FetchCambiarDato(NumeroDato) {
     })
     .then(function (ListaDatos) {
       CambiarDatos(ListaDatos, NumeroDato);
-      console.log(ListaDatos);
+      console.log("Fetch exitoso");
     })
     .catch(function (error) {
       alert("Algo parece andar mal, pero pronto estará arreglado. :)");
+      console.error("Fetch fallido");
     });
 }
 
@@ -218,10 +219,11 @@ function RevisarVoces() {
     return;
   }
   var Voces = speechSynthesis.getVoices();
-  console.log(Voces);
   VocesNarrador = Voces.length;
-  console.log(VocesNarrador);
 
+  if (VocesNarrador > 0) {
+    console.log("Voces disponibles encontradas");
+  }
   NarradorSetUp();
 }
 

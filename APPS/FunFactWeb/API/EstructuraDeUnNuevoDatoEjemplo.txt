@@ -15,3 +15,15 @@ Y para revisar uno, se usa:
 TraerEspecífico(NumElegido)
 
 TraerEspecífico()
+
+,
+    {
+        "No": "36",
+        "Imagen": "https://www.clickittech.com.mx/wp-content/uploads/2017/01/Sin-t%C3%ADtulo-1_0002_Objeto-inteligente-vectorial.png",
+        "URLAutorImagen": "https://www.clickittech.com.mx/",
+        "AutorImagen": "ClickIt Tech",
+        "Info": "FunFact surgió de la mente y del corazón de su propio creador, pero los conocimientos y prácticas necesarias para su creación fueron gracias a la beca que FutureED y Huawei otorgaron con su curso ´Fundamentos de Programación Web´. ¡Especiales gracias al LDI. Marcos García!",
+        "Fuente": "FutureED & Fun Fact",
+        "URLFuente": "https://futureed.com/",
+        "Credito": "-" 
+    }

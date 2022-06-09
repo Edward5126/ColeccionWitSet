@@ -21,12 +21,12 @@
     },
     {
         "No": "2",
-        "Imagen": "https://www.clickittech.com.mx/wp-content/uploads/2017/01/Sin-t%C3%ADtulo-1_0002_Objeto-inteligente-vectorial.png",
-        "URLAutorImagen": "https://www.clickittech.com.mx/",
-        "AutorImagen": "ClickIt Tech",
-        "Info": "FunFact surgió de la mente y del corazón de su propio creador, pero los conocimientos y prácticas necesarias para su creación fueron gracias a la beca que FutureED y Huawei otorgaron con su curso ´Fundamentos de Programación Web´. ¡Especiales gracias al LDI. Marcos García!",
-        "Fuente": "FutureED & Fun Fact",
-        "URLFuente": "https://futureed.com/",
+        "Imagen": "https://images.unsplash.com/photo-1588522271915-53e06779abac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "URLAutorImagen": "https://unsplash.com/es/fotos/KwhhPV00G1k",
+        "AutorImagen": "Dorothea OLDANI",
+        "Info": "Que no te engañe la foto, este amiguito mide al rededor de doce metros. Se trata del <b>Tiburón Ballena</b>, el pez más grande del mar. Pero no te preocupes, solo se alimenta de plancton y de pequeños peces y además es muy dócil, a veces permite que buceadores naden muy cerca de él.",
+        "Fuente": "National Geographic",
+        "URLFuente": "https://www.nationalgeographic.es/animales/tiburon-ballena",
         "Credito": "-"
     },
     {
@@ -95,7 +95,7 @@
         "URLAutorImagen": "https://medium.com/creating-on-demand/why-many-creators-are-talking-about-buy-me-a-coffee-db148ff19881",
         "AutorImagen": "Casimiro Designer",
         "Info": "Si te gusta el contenido de <b><i>Fun Fact</i></b>, quizá quieras demostrar tu apoyo en Buy Me A Coffee, donde puedes ofrecer las donaciones que quieras. Encuentra el enlace en la sección 'Más'.<br>¡Cualquier apoyo se agradece mucho!",
-        "Fuente": "Buy Me A Coffee & Fun Fact",
+        "Fuente": "Fun Fact",
         "URLFuente": "https://www.buymeacoffee.com/EnnovaDesign",
         "Credito": "-"
     },
@@ -358,16 +358,6 @@
         "Info": "Esta criatura no es una piedra, es el <b>Pez Piedra</b>, reconocido como el más venenoso que existe y que gracias a su efectivo mimetismo es fácil de pisar por accidente. Las personas que desafortunadamente lo hacen, inmediatamente sufren un agónico y lacerante dolor que incluso ha llevado a algunas víctimas a perder la cordura. Si la picadura no es tratada, puede causar la muerte en seis horas.",
         "Fuente": "El País - <i>El feo e infame pez piedra</i>",
         "URLFuente": "https://elpais.com/elpais/2017/07/06/viajero_astuto/1499331156_385736.html",
-        "Credito": "-"
-    },
-    {
-        "No": "36",
-        "Imagen": "https://images.unsplash.com/photo-1588522271915-53e06779abac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        "URLAutorImagen": "https://unsplash.com/es/fotos/KwhhPV00G1k",
-        "AutorImagen": "Dorothea OLDANI",
-        "Info": "Que no te engañe la foto, este amiguito mide al rededor de doce metros. Se trata del <b>Tiburón Ballena</b>, el pez más grande del mar. Pero no te preocupes, solo se alimenta de plancton y de pequeños peces y además es muy dócil, a veces permite que buceadores naden muy cerca de él.",
-        "Fuente": "National Geographic",
-        "URLFuente": "https://www.nationalgeographic.es/animales/tiburon-ballena",
         "Credito": "-"
     }
 ]
