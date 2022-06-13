@@ -60,13 +60,13 @@ var ModoActual = "Oscuro";
 function ActivarEstiloLight() {
   StyleSheet.href = "../../CSS/stylesLight.css";
   LogoPrincipal.src = "../../IMG/Horizontales/LogoHorizontalLM[NI].svg";
-  Ilustracion.src = "IMG/IllustracionPorUndrawLM.svg";
+  Ilustracion.src = "IMG/IllustracionPorUnDrawLM.svg";
 }
 
 function ActivarEstiloDark() {
   StyleSheet.href = "../../CSS/styles.css";
   LogoPrincipal.src = "../../IMG/Horizontales/LogoHorizontalDM[NI].svg";
-  Ilustracion.src = "IMG/IllustracionPorUndraw.svg";
+  Ilustracion.src = "IMG/IllustracionPorUnDraw.svg";
 }
 
 // Script para la función de compartir

@@ -1569,6 +1569,23 @@
     font-size: 0.8em;
   }
 
+  select {
+    background: none;
+    border: none;
+    color: var(--Texto-Principal);
+    width: 100%;
+    border-bottom: 1px solid var(--Texto-Principal);
+    padding-bottom: 5px;
+  }
+
+  select:focus{
+    outline: none;
+  }
+
+  option {
+    color: #2b2b2b;
+  }
+
   textarea:focus::placeholder,
   input:focus::placeholder {
     text-align: right;
@@ -1580,8 +1597,8 @@
   label {
     color: var(--Texto-Nota);
     position: absolute;
-    left: 10px;
-    top: 1px;
+    left: 2px;
+    top: -5px;
     transition: 0.3s ease-in-out all;
     pointer-events: none;
   }

@@ -19,9 +19,18 @@
     </header>
     <main class="Seccion" id="Colaborar">
         <h2 id="TituloColaborar" style="margin-top: 0;">Contacto</h2>
-        <form action="" method="post" id="Formulario" autocomplete="off" name="ColaborarNI">
+        <form action="PHP/Form.php" method="POST" id="Formulario" autocomplete="off" name="ColaborarNI">
             <div class="Formulario">
                 <!-- <h3>Si conoces o tienes algún sitio web útil, <br> Aquí puedes compartirlo:</h3> -->
+                <div class="Pregunta">
+                    <!-- <input  id="App" name="App" type="" required placeholder="(Ej. 'Retirar contenido', 'Retroalimentacion', 'Opinión', 'Error con...')">-->
+                    <select name="App" id="App" required>
+                        <option value="0" hidden>Elige una aplicación web de Wit Set</option>
+                        <option value="WS">Wit Set</option>
+                        <option value="FF">Fun Fact</option>
+                        <option value="NI">Net Index</option>
+                    </select>
+                </div>
                 <div class="Pregunta">
                     <input  id="Asunto" name="Asunto" type="text" required placeholder="(Ej. 'Retirar contenido', 'Retroalimentacion', 'Opinión', 'Error con...')">
                     <label for="Asunto">Asunto</label>

@@ -5,6 +5,7 @@ const BtnMenu2 = document.getElementById("CerrarMenu");
 const Enlace1 = document.getElementById("Enlace1");
 const Enlace2 = document.getElementById("Enlace2");
 const Enlace3 = document.getElementById("Enlace3");
+const Enlace4 = document.getElementById("Enlace4");
 
 function MenuMovil() {
   NavList.classList.toggle("MenuAbierto");
@@ -15,6 +16,7 @@ BtnMenu2.addEventListener("click", MenuMovil);
 Enlace1.addEventListener("click", MenuMovil);
 Enlace2.addEventListener("click", MenuMovil);
 Enlace3.addEventListener("click", MenuMovil);
+Enlace4.addEventListener("click", MenuMovil);
 
 // Para el cambio de estilos
 // false = light

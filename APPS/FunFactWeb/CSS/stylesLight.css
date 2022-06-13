@@ -1559,8 +1559,8 @@
   label {
     color: var(--LM-Texto-Nota);
     position: absolute;
-    left: 10px;
-    top: 1px;
+    left: 2px;
+    top: -5px;
     transition: 0.3s ease-in-out all;
     pointer-events: none;
   }
