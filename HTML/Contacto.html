@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
     <link id="HojadeEstilo" rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../LIBS/PersonalIconCollection-v1.0/style.css">
-    <link rel="shortcut icon" href="../../IMG/Miniaturas/LogoSolo[WS].svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../IMG/Miniaturas/LogoSolo[WS].svg" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -19,7 +19,7 @@
     </header>
     <main class="Seccion" id="Colaborar">
         <h2 id="TituloColaborar" style="margin-top: 0;">Contacto</h2>
-        <form action="../PHP/Form.php" method="POST" id="Formulario" autocomplete="off" name="ColaborarNI">
+        <form id="Formulario" autocomplete="off" name="ContactoWS">
             <div class="Formulario">
                 <!-- <h3>Si conoces o tienes algún sitio web útil, <br> Aquí puedes compartirlo:</h3> -->
                 <div class="Pregunta">
@@ -32,7 +32,16 @@
                     </select>
                 </div>
                 <div class="Pregunta">
-                    <input  id="Asunto" name="Asunto" type="text" required placeholder="(Ej. 'Retirar contenido', 'Retroalimentacion', 'Opinión', 'Error con...')">
+                    <select name="Categoria" id="Categoria" required>
+                        <option value="0" hidden>Categoria</option>
+                        <option value="Queja">Queja</option>
+                        <option value="Retiro">Retirar contenido</option>
+                        <option value="Reporte">Reportar error</option>
+                        <option value="Otro">Comentarios y otros</option>
+                    </select>
+                </div>
+                <div class="Pregunta">
+                    <input  id="Asunto" name="Asunto" type="text" required>
                     <label for="Asunto">Asunto</label>
                 </div>
                 <div class="Pregunta">
@@ -53,7 +62,7 @@
                 </div> -->
                 <h4 id="FormRespuesta"></h4>
                 <div id="EnviarDatoSugerido">
-                    <button type="submit" id="EnviarSitioSugeridob"><b>Enviar mensaje</b></button>
+                    <button type="submit" id="EnviarMensajeb"><b>Enviar mensaje</b></button>
                 </div>
             </div>
         </form>
@@ -92,5 +101,6 @@
             <!-- <p>¿Algo no anda bien? ¿Eres autor de algún contenido mostrado y deseas que sea removido? Contáctanos.</p> -->
         </div>
     </footer>
+    <script src="../JS/ScriptFormContact.js"></script>
 </body>
 </html>

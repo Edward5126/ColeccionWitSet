@@ -9,7 +9,7 @@ $Correo = 'e-mail: ' . $eMail . '\r\n Asunto: ' . $Asunto . '\r\n App relacionad
 $Destinatario = 'Eduardochan_cach@hotmail.com';
 $AsuntoPrincipal = 'Mensaje de contacto de ' . $App;
 
-mail($Destinatario, $AsuntoPrincipal, utf8_decode($Correo), $header);
+mail($Destinatario, $AsuntoPrincipal, utf8_decode($Mensaje), $header);
 
 header('<Location:Contacto.html');
 ?>
