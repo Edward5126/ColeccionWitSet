@@ -11,5 +11,5 @@ $AsuntoPrincipal = 'Mensaje de contacto de ' . $App;
 
 mail($Destinatario, $AsuntoPrincipal, utf8_decode($Correo), $header);
 
-header('Location:Contacto.html');
+header('<Location:Contacto.html');
 ?>
