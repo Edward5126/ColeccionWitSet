@@ -1,12 +1,14 @@
 ,
     {
-        "id": 0,
-        "nombre": "",
-        "info": "",
-        "img": "",
-        "autorimg": "",
-        "URLAutorimg": "",
-        "claves": [
+        "id" : 0,
+        "nombre" : "",
+        "url" : "",
+        "info" : "",
+        "img" : "",
+        "spanish" : "",
+        "colaborador" : "",
+        "revision" : "",
+        "claves" : [
             "",
             "",
             "",

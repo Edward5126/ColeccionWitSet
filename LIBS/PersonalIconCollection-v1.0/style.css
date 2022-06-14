@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'PersonalIconCollection';
   src:
-    url('fonts/PersonalIconCollection.ttf?r9nah6') format('truetype'),
-    url('fonts/PersonalIconCollection.woff?r9nah6') format('woff'),
-    url('fonts/PersonalIconCollection.svg?r9nah6#PersonalIconCollection') format('svg');
+    url('fonts/PersonalIconCollection.ttf?lg7ifc') format('truetype'),
+    url('fonts/PersonalIconCollection.woff?lg7ifc') format('woff'),
+    url('fonts/PersonalIconCollection.svg?lg7ifc#PersonalIconCollection') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-info:before {
+  content: "\e918";
+}
 .icon-lupa:before {
   content: "\e917";
 }

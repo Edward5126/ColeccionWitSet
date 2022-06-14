@@ -5,12 +5,16 @@
         "url" : "https://edward5126.github.io/WitSet/",
         "info" : "Un set de aplicaciones para diferentes propósitos relacionados al conocimiento y la curiosidad, el origen de Net Index.",
         "img" : "../../IMG/Miniaturas/LogoSolo[WS].svg",
+        "spanish" : "Sí",
+        "colaborador" : "-",
+        "revision" : "14 de Junio del 2022",
         "claves" : [
             "aplicaciones",
             "entretenimiento",
             "conocimiento",
             "wit set project",
-            "wit set"
+            "wit set",
+            "*"
         ]
     },
     {
@@ -19,6 +23,9 @@
         "url" : "https://edward5126.github.io/WitSet/APPS/FunFactWeb",
         "info" : "Una coleccion de datos curiosos de todo tipo. Disfruta de datos curiosos en español aleatorios que aumentan constantemente.",
         "img" : "../../IMG/Miniaturas/LogoSolo[FF].svg",
+        "spanish" : "Sí",
+        "colaborador" : "-",
+        "revision" : "14 de Junio del 2022",
         "claves" : [
             "aplicaciones",
             "entretenimiento",
@@ -31,7 +38,8 @@
             "datos curiosos",
             "pasatiempo",
             "wit set project",
-            "wit set"
+            "wit set",
+            "*"
         ]
     },
     {
@@ -40,12 +48,16 @@
         "url" : "https://unsplash.com/es",
         "info": "Un banco de imagenes que cualquier persona puede usar tanto con fines personales como comerciales.",
         "img": "https://images.unsplash.com/photo-1549706844-23f9ee754ce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80",
+        "spanish" : "Sí",
+        "colaborador" : "-",
+        "revision" : "14 de Junio del 2022",
         "claves": [
             "banco",
             "imágenes",
             "imagen",
             "gratis",
-            "unsplash"
+            "unsplash",
+            "*"
         ]
     },
     {
@@ -54,13 +66,17 @@
         "url" : "https://www.pinterest.com/",
         "info": "Una red social donde puedes ver y publicar imagenes inspiradoras, creativas, casuales o las que quieras.",
         "img": "https://i.pinimg.com/originals/74/53/fe/7453fed2ef9ecb826714de157e6a9287.png",
+        "spanish" : "Sí",
+        "colaborador" : "-",
+        "revision" : "14 de Junio del 2022",
         "claves": [
             "red",
             "imágenes",
             "imagen",
             "gratis",
             "pinterest",
-            "inspiración"
+            "inspiración",
+            "*"
         ]
     }
 ]

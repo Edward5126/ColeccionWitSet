@@ -44,11 +44,23 @@ const filtrar = ()=> {
         if (Clave.indexOf(parametro) !== -1) {
             Cajon.innerHTML += `
             <div class="item">
-            <img class="imgItem" src="${Pagina.img}" alt="">
-            <div> <a href="${Pagina.url}" target="_blank">
-                <p><b class="NombreItem">${Pagina.nombre}</b><br><br>
-                ${Pagina.info}</p>
-            </a></div>
+                <a href="#Resultados" onclick="VerPreview(${Pagina.id})">
+                    <div class="MasInfoItem">
+                        <div class="MasInfoB">
+                            <i class="icon icon-lupa"></i>
+                        </div>
+                        <img class="imgItem" src="${Pagina.img}" alt="">
+                    </div>
+                </a>
+                <a href="${Pagina.url}" target="_blank" rel="noopener noreferrer">
+                <div>
+                    <p>
+                        <b class="NombreItem">${Pagina.nombre}</b>
+                        <br><br>
+                        ${Pagina.info}.
+                    </p>
+                </div>
+                </a>
             </div>
             `
         }
@@ -60,3 +72,32 @@ const filtrar = ()=> {
 }
 
 BotonBusqueda.addEventListener("click", filtrar);
+
+function VerPreview(Sitio) {
+    document.getElementById("Preview").innerHTML = `
+    <div class="CuadroDeTexto" id="CajonPreview">
+        <div class="DetallesPreview">
+            <div id="InfoPreview">
+                <img src="${Lista[Sitio].img}" alt="" class="ImgPreview">        
+                <div>
+                    <h3 class="TituloPreview">${Lista[Sitio].nombre}</h3>
+                    <p>${Lista[Sitio].info}</p>
+                </div>
+            </div>
+            <div class="ListaDetalles">
+                <div><span class="PiezaDetallePreview">URL: <br></span><a href="${Lista[Sitio].url}" target="_blank" rel="noopener noreferrer">${Lista[Sitio].url}</a> <br></div>
+                <div><span class="PiezaDetallePreview">Última revisión: <br></span> ${Lista[Sitio].revision} <br></div>
+                <div><span class="PiezaDetallePreview">Disponible en español: <br></span> ${Lista[Sitio].spanish} <br> </div>
+                <div><span class="PiezaDetallePreview">Compartido por: <br></span> ${Lista[Sitio].colaborador} <br></div>
+            </div>
+        </div>
+    </div>
+    `   
+}
+
+window.onkeydown = () => {
+    if (document.activeElement.id === "BusquedaPrincipal" && event.keyCode == 13 && document.getElementById("BtnBuscar").attributes.length == 1) {
+        filtrar();
+        document.getElementById("Resultados").scrollIntoView();
+    }
+}
