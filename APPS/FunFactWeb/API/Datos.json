@@ -359,5 +359,55 @@
         "Fuente": "El País - <i>El feo e infame pez piedra</i>",
         "URLFuente": "https://elpais.com/elpais/2017/07/06/viajero_astuto/1499331156_385736.html",
         "Credito": "-"
+    },
+    {
+        "No": "36",
+        "Imagen": "https://images.unsplash.com/photo-1559036211-1c89b9aafc1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "URLAutorImagen": "https://unsplash.com/es/fotos/UEl-FlbhfHc",
+        "AutorImagen": "Egle Sidaraviciute",
+        "Info": "La mayoría de las personas creen que el pavo real no puede volar, pero la verdad es que sí pueden hacerlo., aunque con limitaciones debido al tamaño de su cuerpo. Se considera que pueden alcanzar hasta una altura de 25 metros y una distancia horizontal de 100 metros. En verdad es un animal majestuoso.",
+        "Fuente": "Feria de Aves",
+        "URLFuente": "https://feriadeaves.com.ar/pavos/volar-pavo-real/",
+        "Credito": "-"
+    },
+    {
+        "No": "37",
+        "Imagen": "https://images.unsplash.com/photo-1592849151221-89a0966b8a37?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "URLAutorImagen": "https://unsplash.com/es/fotos/Bc3NijdkdaU",
+        "AutorImagen": "Thomas Bormans",
+        "Info": "El <b>albinismo</b> es un trastorno genético hereditario que tiene como principal característica la ausencia de melanina en la piel, pelaje e iris del animal que lo padece, causando una apariencia total o parcialmente blanca. También causa algunas deficiencias de salud, pero no suele significar un riesgo grave para la vida del individuo. Se da en varias especies animales, incluyendo humanos.",
+        "Fuente": "Experto Animal",
+        "URLFuente": "https://www.expertoanimal.com/animales-albinos-informacion-ejemplos-y-fotos-24569.html",
+        "Credito": "-"
+    },
+    {
+        "No": "38",
+        "Imagen": "https://images.unsplash.com/photo-1562551475-dc679d40823a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
+        "URLAutorImagen": "https://unsplash.com/es/fotos/iUNYlWlr6fo",
+        "AutorImagen": "Juan Camilo Guarin P",
+        "Info": "En contraparte al albinismo, el <b>melanismo</b> es una condición genética que también aparece en varias especies animales y provoca un exceso de pigmentación, otorgándole al individuo que lo padece una apariencia totalmente negra. A diferencia del primero, esta condición no supone un problema de salud, al contrario, puede venir acompañada de una mayor resistencia.",
+        "Fuente": "Experto Animal",
+        "URLFuente": "https://www.expertoanimal.com/que-es-el-melanismo-en-los-animales-22350.html",
+        "Credito": "-"
+    },
+    {
+        "No": "39",
+        "Imagen": "https://images.unsplash.com/photo-1574597511074-059a3af86926?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "URLAutorImagen": "https://unsplash.com/es/fotos/szk9kP8psu0",
+        "AutorImagen": "Iwona Castiello d'Antonio",
+        "Info": "De seguro en algún momento de tu vida has visto algún gato, perro o incluso persona con los ojos de diferente color. Esta rara y majestuosa condición se denomina heterocromía y si bien puede no significar ningún problema de salud, también puede indicar algún trastorno subyacente, por lo que se recomienda visitar un oftalmólogo para verificarlo.",
+        "Fuente": "Ocumed",
+        "URLFuente": "https://ocumed.es/heterocromia-iris-ojos-diferente-color/",
+        "Credito": "-"
+    },
+    {
+        "No": "40",
+        "Imagen": "https://images.unsplash.com/photo-1653645065498-a52a1046d3e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "URLAutorImagen": "https://unsplash.com/es/fotos/yq5oq09njMs",
+        "AutorImagen": "Wild Spirit",
+        "Info": "¿Sabías que si encuentras un gato de tres colores es casi imposible que sea macho? Esto se debe a la genética que indica los colores de los gatos, ya que <q>es necesario que se combinen dos genes naranjas (uno dominante y otro recesivo) para dar lugar al tricolor. Y esta combinación solamente es posible en XX, es decir, en las hembras</q>. Existen excepciones, pero son muy raras.",
+        "Fuente": "Cosas de Gatos",
+        "URLFuente": "https://www.cosasdegatos.es/curiosidades-gatos/solo-gatas-hembra-tricolores-gatos-macho-tricolor",
+        "Credito": "-"
     }
 ]

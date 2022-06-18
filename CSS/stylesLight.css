@@ -4,7 +4,7 @@
   --Texto-Principal: #2b2b2b;
   --Texto-Contrario: #f5f5f5;
 
-  --Texto-Resaltado: #000000c0;
+  --LM-Texto-Resaltado: #000000c0;
 
   --Texto-Nota: #00000075;
   --Separadores: #00000039;
@@ -40,7 +40,6 @@
   h2 {
     text-align: center;
     font-size: 35px;
-    padding-top: 75px;
   }
 
   /* Subtítulos */
@@ -61,6 +60,7 @@
     position: fixed;
     width: 100%;
     z-index: 9999;
+    transition: top 0.3s;
   }
 
   /* Pues el logo de la cabecera... */
@@ -140,7 +140,7 @@
   .NavList > li > a:hover,
   .enlacesContacto:hover,
   .btnmenu:hover {
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
   }
 
   /* Enlaces de la barra de navegación: Al hacer click */
@@ -408,7 +408,7 @@
   input:focus,
   textarea:focus {
     color: var(--Texto-Nota);
-    border-bottom: 1px solid var(--Texto-Resaltado);
+    border-bottom: 1px solid var(--LM-Texto-Resaltado);
   }
 
   textarea::placeholder,
@@ -446,7 +446,7 @@
     top: -30px;
     left: 5px;
     font-size: 15px;
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
   }
 
   /* Contenedor del botón "enviar" del formulario */
@@ -460,7 +460,7 @@
     margin: 14px;
     font-size: 15px;
     text-align: center;
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
     font-family: "Montserrat";
   }
 
@@ -599,7 +599,7 @@
   }
 
   #NotaCopia {
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
   }
 
   #Proyecto {
@@ -656,7 +656,6 @@
   h2 {
     text-align: center;
     font-size: 3em;
-    padding: 0%;
     margin: 0px;
     margin-bottom: 20px;
   }
@@ -677,6 +676,12 @@
     top: 0;
     right: 0;
     z-index: 9999;
+    transition: top 0.3s;
+  }
+
+  #EnlacesNav {
+    position: relative;
+    transition: top 0.5s;
   }
 
   /* Pues el logo de la cabecera... */
@@ -719,7 +724,7 @@
   /* Enlaces de la barra de navegación: Al pasar el cursor */
   .NavList > li > a:hover,
   .enlacesContacto:hover {
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
   }
 
   /* Enlaces de la barra de navegación: Al hacer click */
@@ -1002,7 +1007,7 @@
   input:focus,
   textarea:focus {
     color: var(--Texto-Nota);
-    border-bottom: 1px solid var(--Texto-Resaltado);
+    border-bottom: 1px solid var(--LM-Texto-Resaltado);
   }
 
   textarea::placeholder,
@@ -1039,7 +1044,7 @@
     top: -30px;
     left: 5px;
     font-size: 0.9em;
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
   }
 
   /* Contenedor del botón "enviar" del formulario */
@@ -1053,7 +1058,7 @@
     margin: 14px;
     font-size: 15px;
     text-align: center;
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
     font-family: "Montserrat";
   }
 
@@ -1192,7 +1197,7 @@
   }
 
   #NotaCopia {
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
   }
 
   #Proyecto {
@@ -1268,7 +1273,6 @@
   h2 {
     text-align: center;
     font-size: 45px;
-    margin-top: 80px;
   }
 
   /* Subtítulos */
@@ -1278,9 +1282,10 @@
 
   /* Cabecera */
   header {
-    box-shadow: 0 4px 12px #00000014, 0 0 1px #0100001a;
+    /* box-shadow: 0 4px 12px #00000014, 0 0 1px #0100001a;
+    background: #f5f5f5; */
+    background: linear-gradient(to bottom, #f5f5f552, rgba(255, 255, 255, 0));
     padding: 0% 5%;
-    background: #f5f5f5;
     position: fixed;
     left: 0;
     top: 0;
@@ -1289,8 +1294,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: top 0.3s;
 
     z-index: 9999;
+  }
+
+  #EnlacesNav {
+    position: relative;
+    transition: top 0.5s;
   }
 
   /* Pues el logo de la cabecera... */
@@ -1332,7 +1343,7 @@
   /* Enlaces de la barra de navegación: Al pasar el cursor */
   .NavList > li > a:hover,
   .enlacesContacto:hover {
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
   }
 
   /* Enlaces de la barra de navegación: Al hacer click */
@@ -1605,7 +1616,7 @@
   input:focus,
   textarea:focus {
     color: var(--Texto-Nota);
-    border-bottom: 1px solid var(--Texto-Resaltado);
+    border-bottom: 1px solid var(--LM-Texto-Resaltado);
   }
 
   textarea::placeholder,
@@ -1642,7 +1653,7 @@
     top: -20px;
     left: 5px;
     font-size: 0.9em;
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
   }
 
   /* Contenedor del botón "enviar" del formulario */
@@ -1653,7 +1664,7 @@
   #FormRespuesta {
     margin: 14px;
     text-align: center;
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
     font-family: "Montserrat";
   }
 
@@ -1792,7 +1803,7 @@
   }
 
   #NotaCopia {
-    color: var(--Texto-Resaltado);
+    color: var(--LM-Texto-Resaltado);
     max-width: 100%;
   }
 

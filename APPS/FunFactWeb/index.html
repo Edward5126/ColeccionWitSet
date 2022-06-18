@@ -7,8 +7,9 @@
     <title>Fun Fact | Algo nuevo cada día</title>
     <meta name="description" content="El mundo está lleno de cosas curiosas y muy interesantes, ¿Qué datos curiosos conocerás hoy? ¡Descúbre algo nuevo cada día en la web de Fun Fact!">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-    <link id="HojadeEstilo" rel="stylesheet" href="CSS/styles.css">
-    <link rel="preload" href="CSS/stylesLight.css" as="style">
+    <link id="HojadeEstilo" rel="stylesheet" href="../../CSS/styles.css">
+    <link rel="stylesheet" href="CSS/stylesFF.css">
+    <link rel="preload" href="../../CSS/stylesLight.css" as="style">
     <link rel="preload" href="IMG/IllustracionOnErrorPorUnDraw.svg" as="image">
     <link rel="preload" href="IMG/IllustracionOnErrorPorUnDrawLM.svg" as="image">
     <link rel="stylesheet" href="../../LIBS/PersonalIconCollection-v1.0/style.css">
@@ -23,17 +24,17 @@
     <header>
             <nav>
                 <img id="LogoDeCabecera" src="../../IMG/Horizontales/LogoHorizontalDM[FF].svg" alt="Logo de FunFact en modo oscuro">
-                    <button class="btnmenu" aria-label="Abrir menú" id="AbrirMenu"><i class="icon icon-menu interfaz"></i></button>
-                <ul class="NavList">
-                    <button class="btnmenu" id="CerrarMenu" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
+                    <button class="btnmenu linkAncla" aria-label="Abrir menú" id="AbrirMenu"><i class="icon icon-menu interfaz"></i></button>
+                <ul class="NavList" id="EnlacesNav">
+                    <button class="btnmenu linkAncla" id="CerrarMenu" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
                     <li class="Separador" id="PrimerSeparador"><b>|</b></li>
-                    <li><a href="#" id="Enlace1">Inicio</a></li>
+                    <li><a href="#" class="linkAncla">Inicio</a></li>
                     <li class="Separador"><b>|</b></li>
-                    <li><a href="#SobreFunFact" id="Enlace2">Sobre Fun Fact</a></li>
+                    <li><a href="#SobreFunFact" class="linkAncla">Sobre Fun Fact</a></li>
                     <li class="Separador"><b>|</b></li>
-                    <li><a href="#Colaborar" id="Enlace3">Colaborar</a></li>
+                    <li><a href="#Colaborar" class="linkAncla">Colaborar</a></li>
                     <li class="Separador"><b>|</b></li>
-                    <li><a href="#Más" id="Enlace4">Más</a></li>
+                    <li><a href="#Más" class="linkAncla">Más</a></li>
                     <li class="Separador"><b>|</b></li>
                     <li><a href="" title="Tu dispositivo no es compatible con el narrador" id="ToggleVoice" style="pointer-events:none;"><i class="icon icon-nonarrador"></i></a></li>
                     <li class="Separador"><b>|</b></li>
@@ -46,19 +47,19 @@
 
     <main>
         <h1 hidden>Dato Curioso del Día</h1>
-        <div id="PresentacionDelDato">
+        <div class="PresentacionDeLaPagina">
             <div id="ContenedorGeneralImagenDato">
             <div id="ContenedorImagenTooltip">
                 <div id="Carga" class="NoCargando"></div>
                 <div id="ContenedorCarga"></div>
-                <img id="ImagenDelDato" src="IMG/IllustracionporUnSplash.svg" alt="" onerror="ErrorImagen();">
+                <img id="ImagenDelDato" class="IlustracionPrincipalDeLaPagina" src="IMG/IllustracionporUnSplash.svg" alt="" onerror="ErrorImagen();">
                 <span class="tooltip" id="CreditosDeLaFotoDelDato"><span id="TituloTooltipxd">¿Preparado(a) para explorar?</span><a id="URLCreditosTooltip" target="_blank"></a></span>
             </div>
             </div>
-            <div id="InformacionDelDato">
-                <p id="TituloOSubtitulo">
-                    <b id="TituloDelDato">Dato Curioso:</b> <br>
-                    <div id="DatoPresentado">
+            <div class="InformacionDeLaPagina">
+                <p class="TituloOSubtitulo">
+                    <b class="SaludoPrincipal">Dato Curioso:</b> <br>
+                    <div id="DatoPresentado" class="ExplicacionDeLaPagina">
                     <br>
                     Visita la página cada mañana para descubrir más datos curiosos.
                     <br>
@@ -67,7 +68,7 @@
                 </p>
             </div>
         <div>
-            <p id="TituloOSubtitulo"><span class="TextoNota">Fuente: </span><span><a id="FuentePresentada" class="TextoNota" href="#" target="_blank">¡Muchas fuentes!</a></span><br>
+            <p id="TituloOSubtitulo"><span class="TextoNota">Fuente: </span><span><a id="FuentePresentada" class="TextoNota" href="#" target="_blank" rel="noopener noreferrer">¡Muchas fuentes!</a></span><br>
             <span id="CreditosDelDato" class="TextoNota">-</span></p>
         </div>
         <div>
@@ -78,7 +79,7 @@
         </div>
     </main>
 
-    <section class="Seccion" id="SobreFunFact">
+    <section class="Seccion SobreLaPagina" id="SobreFunFact">
         <h2> Sobre Fun Fact </h2>
         <div id="Explicacion">
         <div class="CuadroDeTexto">
@@ -163,14 +164,14 @@
                     <a href=""><img src="IMG/LogoHorizontalDM[II].svg" alt="Visita Internet Index" class="ProyectoEnlaces" id="LogoDeTorch"></a>
                 </div>
             </div> -->
-            <p>¿Algo no anda bien? ¿Eres autor de algún contenido mostrado y deseas que sea removido? <a href="../../HTML/Contacto.html" target="_blank" rel="noopener noreferrer">Contáctanos aquí</a>.</p>
+            <p>¿Algo no anda bien? ¿Encontraste un error? ¿Eres autor de algún contenido mostrado y deseas que sea removido? <a href="../../HTML/Contacto.html" target="_blank" rel="noopener noreferrer">Contáctanos aquí</a>.</p>
         </div>
     </footer>
 </body>
 
 <script src="JS/Script.js"></script>
 <script src="JS/ScriptDelFormulario.js"></script>
-<script src="JS/ScriptFuncionesIndividuales.js"></script>
+<script src="../../JS/ScriptGlobal.js"></script>
 <!-- <script> 
 if (navigator.serviceWorker.controller) { 
      console.log("ServiceWorker activo encontrado, no se necesita registrarlo"); 

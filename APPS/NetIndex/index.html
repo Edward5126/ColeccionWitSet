@@ -14,22 +14,22 @@
     <link rel="shortcut icon" href="../../IMG/Miniaturas/LogoSolo[NI].svg" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <header >
         <nav>
             <img id="LogoDeCabecera" src="../../IMG/Horizontales/LogoHorizontalDM[NI].svg" alt="Logo de Net Index">
-                <button class="btnmenu" aria-label="Abrir menú" id="AbrirMenu"><i class="icon icon-menu interfaz"></i></button>
-            <ul class="NavList">
-                <button class="btnmenu" id="CerrarMenu" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
+                <button class="btnmenu linkAncla" aria-label="Abrir menú" id="AbrirMenu"><i class="icon icon-menu interfaz"></i></button>
+            <ul class="NavList" id="EnlacesNav">
+                <button class="btnmenu linkAncla" id="CerrarMenu" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
                 <li class="Separador" id="PrimerSeparador"><b>|</b></li>
-                <li><a href="#" id="Enlace1">Inicio</a></li>
+                <li><a href="#" id="Enlace1" class="linkAncla">Inicio</a></li>
                 <li class="Separador"><b>|</b></li>
-                <li><a href="#SobreNetIndex" id="Enlace2">Sobre Net Index</a></li>
+                <li><a href="#SobreNetIndex" id="Enlace2" class="linkAncla">Sobre Net Index</a></li>
                 <li class="Separador"><b>|</b></li>
-                <li><a href="#Resultados" id="Enlace3">Resultados</a></li>
+                <li><a href="#Resultados" id="Enlace3" class="linkAncla">Resultados</a></li>
                 <li class="Separador"><b>|</b></li>
-                <li><a href="#Colaborar" id="Enlace4">Colaborar</a></li>
+                <li><a href="#Colaborar" id="Enlace4" class="linkAncla">Colaborar</a></li>
                 <li class="Separador"><b>|</b></li>
-                <li><a href="#Más" id="Enlace5">Más</a></li>
+                <li><a href="#Más" id="Enlace5"  class="linkAncla">Más</a></li>
                 <li class="Separador"><b>|</b></li>
                 <li><a href="" title="Cambiar estilo" id="ToggleMode"><i class="icon icon-cambiar-estilo"></i></a></li>
                 <li class="Separador"><b>|</b></li>
@@ -143,6 +143,7 @@
     </footer>
 </body>
 <script src="JS/ScriptNI.js"></script>
+<script src="../../JS/ScriptGlobal.js"></script>
 <script src="JS/ScriptBusquedaNI.js"></script>
 <script src="JS/ScriptFormNI.js"></script>
 </html>

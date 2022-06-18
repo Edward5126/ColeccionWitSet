@@ -6,6 +6,10 @@ var Narrador;
 var RunNav = true;
 var VocesNarrador;
 
+ImagenesRecursos = ["../../CSS/styles.css", "../../CSS/stylesLight.css", "../../IMG/Horizontales/LogoHorizontalDM[FF].svg", "../../IMG/Horizontales/LogoHorizontalLM[FF].svg", "IMG/IllustracionPorUnSplash.svg", "IMG/IllustracionPorUnSplashLM.svg"];
+
+// ImagenesSelectores.push("", "");
+
 SetUpDatos(); // Se realiza el primer fetch para contar cuántos datos existen.
 
 // Se escribe la función encargada de inicializar el conteo de datos y la revisión de la posición del dato actual.
@@ -108,7 +112,9 @@ function FetchCambiarDato(NumeroDato) {
 }
 
 function CambiarDatos(ListaDatos, NumeroDato) {
-  document.getElementById("ImagenDelDato").src = ListaDatos[NumeroDato].Imagen;
+  document.getElementById("ImagenDelDato").src = 
+  ListaDatos[NumeroDato].Imagen;
+  document.getElementById("ImagenDelDato").classList.add("ImgNoToggleMode");  
   document.getElementById("ImagenDelDato").alt =
     "Imagen ilustrativa del dato - Créditos a sus respectivos autores";
 
@@ -196,10 +202,11 @@ function NavTeclas() {
 
 window.onkeydown = NavTeclas;
 
-function ErrorImagen() {
-  const LogoDeCabecera = document.getElementById("LogoDeCabecera");
 
-  if (LogoDeCabecera.alt == "Logo de FunFact en modo oscuro") {
+function ErrorImagen() {
+  console.log(Modo);
+
+  if (Modo == true) {
     document.getElementById("ImagenDelDato").src =
       "IMG/IllustracionOnErrorPorUnDraw.svg";
   } else {
