@@ -1,12 +1,22 @@
 // Se declaran variables globales
 var DatoActual = -1; //Se inicia en la posición de presentación. Ningún dato mostrado.
 var DatosTotales; //Variable para contar cuántos datos existen.
+var ImgActual = 0;
+var ImgSubTotales;
 var Texto = new SpeechSynthesisUtterance();
 var Narrador;
 var RunNav = true;
 var VocesNarrador;
+var ListaExterna = [];
 
-ImagenesRecursos = ["../../CSS/styles.css", "../../CSS/stylesLight.css", "../../IMG/Horizontales/LogoHorizontalDM[FF].svg", "../../IMG/Horizontales/LogoHorizontalLM[FF].svg", "IMG/IllustracionPorUnSplash.svg", "IMG/IllustracionPorUnSplashLM.svg"];
+ImagenesRecursos = [
+  "../../CSS/styles.css",
+  "../../CSS/stylesLight.css",
+  "../../IMG/Horizontales/LogoHorizontalDM[FF].svg",
+  "../../IMG/Horizontales/LogoHorizontalLM[FF].svg",
+  "IMG/IllustracionPorUnSplash.svg",
+  "IMG/IllustracionPorUnSplashLM.svg",
+];
 
 // ImagenesSelectores.push("", "");
 
@@ -20,6 +30,7 @@ function SetUpDatos() {
     })
     .then(function (ListaDatos) {
       console.log("Lista de datos cargada.");
+      ListaExterna = ListaDatos;
       DatosTotales = Object.keys(ListaDatos).length;
     })
     .catch(function (error) {
@@ -29,7 +40,8 @@ function SetUpDatos() {
       console.error("Fetch fallido");
     });
 
-  //FetchCambiarDato(25);
+  // FetchCambiarDato(37);
+  // DatoActual = 37;
 
   document.getElementById("BotonRandom").focus();
   RevisarInicioFin();
@@ -112,17 +124,31 @@ function FetchCambiarDato(NumeroDato) {
 }
 
 function CambiarDatos(ListaDatos, NumeroDato) {
-  document.getElementById("ImagenDelDato").src = 
-  ListaDatos[NumeroDato].Imagen;
-  document.getElementById("ImagenDelDato").classList.add("ImgNoToggleMode");  
+  document.getElementById("ImagenDelDato").src =
+    ListaDatos[NumeroDato].Imagenes[0].url;
+  document.getElementById("ImagenDelDato").classList.add("ImgNoToggleMode");
   document.getElementById("ImagenDelDato").alt =
     "Imagen ilustrativa del dato - Créditos a sus respectivos autores";
 
   document.getElementById("TituloTooltipxd").innerHTML = "Imagen: ";
   document.getElementById("URLCreditosTooltip").href =
-    ListaDatos[NumeroDato].URLAutorImagen;
+    ListaDatos[NumeroDato].Imagenes[0].urlOrig;
   document.getElementById("URLCreditosTooltip").innerHTML =
-    ListaDatos[NumeroDato].AutorImagen;
+    ListaDatos[NumeroDato].Imagenes[0].Autor;
+
+  if (ListaDatos[NumeroDato].Imagenes.length > 1) {
+    document.getElementById("NavImg").classList.add("MasImg");
+
+    ImgSubTotales = ListaDatos[NumeroDato].Imagenes.length;
+
+    if (ImgActual == 0) {
+      document.getElementById("CambiarIMGIzq").style.color =
+        "var(--Texto-Nota)";
+      document.getElementById("CambiarIMGIzq").style.pointerEvents = "none";
+    }
+  } else {
+    document.getElementById("NavImg").classList.remove("MasImg");
+  }
 
   document.getElementById("DatoPresentado").innerHTML =
     ListaDatos[NumeroDato].Info;
@@ -161,7 +187,7 @@ function TraerRandom() {
   RevisarInicioFin();
 
   document.getElementById("linkDeEstaPagina").innerHTML =
-  window.location + "?dato=" + DatoActual;
+    window.location + "?dato=" + DatoActual;
 }
 
 function TraerSiguiente() {
@@ -171,7 +197,7 @@ function TraerSiguiente() {
   RevisarInicioFin();
 
   document.getElementById("linkDeEstaPagina").innerHTML =
-  window.location + "?dato=" + DatoActual;
+    window.location + "?dato=" + DatoActual;
 }
 
 function NavTeclas() {
@@ -179,9 +205,9 @@ function NavTeclas() {
     TeclaPresionada = event.keyCode;
     if (RunNav == true) {
       RunNav = false;
-      setTimeout(function() {
+      setTimeout(function () {
         RunNav = true;
-      }, 250)
+      }, 250);
       if (TeclaPresionada == 37 && DatoActual != -1 && DatoActual != 0) {
         document.getElementById("BotonAnterior").focus();
         TraerAnterior();
@@ -202,7 +228,6 @@ function NavTeclas() {
 
 window.onkeydown = NavTeclas;
 
-
 function ErrorImagen() {
   console.log(Modo);
 
@@ -222,7 +247,7 @@ function ErrorImagen() {
 }
 
 function RevisarVoces() {
-  if(typeof speechSynthesis === 'undefined') {
+  if (typeof speechSynthesis === "undefined") {
     return;
   }
   var Voces = speechSynthesis.getVoices();
@@ -235,17 +260,19 @@ function RevisarVoces() {
 }
 
 RevisarVoces();
-  if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = RevisarVoces;
-  }
-
-  
+if (
+  typeof speechSynthesis !== "undefined" &&
+  speechSynthesis.onvoiceschanged !== undefined
+) {
+  speechSynthesis.onvoiceschanged = RevisarVoces;
+}
 
 function NarradorSetUp() {
   if ("speechSynthesis" in window && VocesNarrador > 0) {
     document.getElementById("ToggleVoice").style.pointerEvents = "all";
     document.getElementById("ToggleVoice").title = "Activar narrador";
-    document.getElementById("ToggleVoice").innerHTML = '<i class="icon icon-narradoroff"></i>';
+    document.getElementById("ToggleVoice").innerHTML =
+      '<i class="icon icon-narradoroff"></i>';
   }
 
   Texto.lang = "es-Mx";
@@ -268,10 +295,54 @@ document.getElementById("ToggleVoice").addEventListener("click", (e) => {
 
   if (Narrador == false) {
     document.getElementById("ToggleVoice").title = "Activar narración";
-    document.getElementById("ToggleVoice").innerHTML = '<i class="icon icon-narradoroff"></i>';
+    document.getElementById("ToggleVoice").innerHTML =
+      '<i class="icon icon-narradoroff"></i>';
     window.speechSynthesis.cancel();
   } else {
     document.getElementById("ToggleVoice").title = "Desactivar narración";
-    document.getElementById("ToggleVoice").innerHTML = '<i class="icon icon-narradoron"></i>';
+    document.getElementById("ToggleVoice").innerHTML =
+      '<i class="icon icon-narradoron"></i>';
   }
 });
+
+function PrevIMG() {
+  TransicionCarga();
+  document.getElementById("CambiarIMGDer").style.color =
+    "var(--Texto-Principal)";
+  document.getElementById("CambiarIMGDer").style.pointerEvents = "all";
+
+  document.getElementById("ImagenDelDato").src =
+    ListaExterna[DatoActual].Imagenes[ImgActual - 1].url;
+  document.getElementById("URLCreditosTooltip").href =
+    ListaExterna[DatoActual].Imagenes[ImgActual - 1].urlOrig;
+  document.getElementById("URLCreditosTooltip").innerHTML =
+    ListaExterna[DatoActual].Imagenes[ImgActual - 1].Autor;
+
+  ImgActual -= 1;
+
+  if (ImgActual == 0) {
+    document.getElementById("CambiarIMGIzq").style.color = "var(--Texto-Nota)";
+    document.getElementById("CambiarIMGIzq").style.pointerEvents = "none";
+  }
+}
+
+function SigIMG() {
+  TransicionCarga();
+  document.getElementById("CambiarIMGIzq").style.color =
+    "var(--Texto-Principal)";
+  document.getElementById("CambiarIMGIzq").style.pointerEvents = "all";
+
+  document.getElementById("ImagenDelDato").src =
+    ListaExterna[DatoActual].Imagenes[ImgActual + 1].url;
+  document.getElementById("URLCreditosTooltip").href =
+    ListaExterna[DatoActual].Imagenes[ImgActual + 1].urlOrig;
+  document.getElementById("URLCreditosTooltip").innerHTML =
+    ListaExterna[DatoActual].Imagenes[ImgActual + 1].Autor;
+
+  ImgActual += 1;
+
+  if (ImgActual == ImgSubTotales - 1) {
+    document.getElementById("CambiarIMGDer").style.color = "var(--Texto-Nota)";
+    document.getElementById("CambiarIMGDer").style.pointerEvents = "none";
+  }
+}

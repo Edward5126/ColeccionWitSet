@@ -11,6 +11,36 @@
         "Credito": "-"
     }
 
+
+
+
+
+,
+    {
+        "No": "",
+        "Imagenes": [
+            {
+                "url": "",
+                "Autor": "",
+                "urlOrig": ""
+            }
+        ],
+        "Info": "",
+        "Fuente": "",
+        "URLFuente": "",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "",
+            ""
+        ]
+    }
+
+
+
+
+
 Y para revisar uno, se usa:
 TraerEspecífico(NumElegido)
 
@@ -27,3 +57,15 @@ TraerEspecífico()
         "URLFuente": "https://futureed.com/",
         "Credito": "-" 
     }
+
+
+Categorías:
+Algas
+Animales
+Astronomía
+Competencias
+Condiciones
+Educación
+Generales
+Lugares
+Plantas

@@ -6,3 +6,7 @@
     --Degradado-Color: linear-gradient(to top, #56ab2f, #a8e063);
     --Degradado-Click: linear-gradient(to top, #305f1a7a, #43582879);
 }
+
+#AdminForm {
+    max-height: none;
+}
