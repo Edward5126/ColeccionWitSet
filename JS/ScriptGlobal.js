@@ -12,12 +12,12 @@ Enlaces.forEach((element) => {
 });
 
 // PARA LA FUNCIÓN DE COMPARTIR
+
+document.getElementById("linkDeEstaPagina").innerHTML = window.location;
 var BotonCopiarEnlace = document.getElementById("copiarEnlaceCompartir"),
     url = document.getElementById("linkDeEstaPagina");
 
     BotonCopiarEnlace.addEventListener("click", function() {
-
-      url.innerHTML = window.location;
 
       var Rango = document.createRange(),
           Seleccion = window.getSelection();
@@ -45,7 +45,7 @@ var BotonCopiarEnlace = document.getElementById("copiarEnlaceCompartir"),
     document.getElementById("BotonListaCompartir").addEventListener("click", e => {
       if (navigator.share) {
         e.preventDefault();
-        url.innerHTML = window.location;
+        // url.innerHTML = window.location;
 
         navigator.share({
           url: document.getElementById("linkDeEstaPagina").textContent,

@@ -557,6 +557,8 @@
   }
 
   .imgItem {
+    width: 64px;
+    object-fit: cover;
     height: 64px;
     border-radius: 5px;
   }
@@ -682,7 +684,35 @@
 
   summary {
     cursor: pointer;
-  }
+  }#CajaPrincipal {
+    margin-top: 2.5em;
+}
+
+#BusquedaPrincipal {
+    background-color: #f5f5f5;
+    color: #2b2b2b;
+    padding-left: 14px;
+    height: 2.5em;
+    width: 40vw;
+    border-radius: 4px 0px 0px 4px;
+    box-shadow: 0 0px 12px #00000014, 0 0 1px #0100001a;
+}
+
+#BusquedaPrincipal::placeholder {
+    text-align: left;
+    visibility: visible;
+}
+
+#CuadroDeBusqueda {
+    display: flex;
+    justify-content: center;
+}
+
+#BtnBuscar {
+    border-radius: 0px 4px 4px 0px;
+    margin-left: 10px;
+    height: 100%;
+}
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------- Vista para tablets*/
@@ -1208,6 +1238,8 @@
   }
 
   .imgItem {
+    width: 64px;
+    object-fit: cover;
     height: 64px;
     border-radius: 5px;
   }
@@ -1333,7 +1365,35 @@
 
   summary {
     cursor: pointer;
-  }
+  }#CajaPrincipal {
+    margin-top: 2.5em;
+}
+
+#BusquedaPrincipal {
+    background-color: #f5f5f5;
+    color: #2b2b2b;
+    padding-left: 14px;
+    height: 2.5em;
+    width: 40vw;
+    border-radius: 4px 0px 0px 4px;
+    box-shadow: 0 0px 12px #00000014, 0 0 1px #0100001a;
+}
+
+#BusquedaPrincipal::placeholder {
+    text-align: left;
+    visibility: visible;
+}
+
+#CuadroDeBusqueda {
+    display: flex;
+    justify-content: center;
+}
+
+#BtnBuscar {
+    border-radius: 0px 4px 4px 0px;
+    margin-left: 10px;
+    height: 100%;
+}
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------- Vista para computadoras*/
@@ -1865,6 +1925,8 @@
   }
 
   .imgItem {
+    width: 64px;
+    object-fit: cover;
     height: 64px;
     border-radius: 5px;
   }
@@ -1984,5 +2046,33 @@
 
   summary {
     cursor: pointer;
-  }
+  }#CajaPrincipal {
+    margin-top: 2.5em;
+}
+
+#BusquedaPrincipal {
+    background-color: #f5f5f5;
+    color: #2b2b2b;
+    padding-left: 14px;
+    height: 2.5em;
+    width: 40vw;
+    border-radius: 4px 0px 0px 4px;
+    box-shadow: 0 0px 12px #00000014, 0 0 1px #0100001a;
+}
+
+#BusquedaPrincipal::placeholder {
+    text-align: left;
+    visibility: visible;
+}
+
+#CuadroDeBusqueda {
+    display: flex;
+    justify-content: center;
+}
+
+#BtnBuscar {
+    border-radius: 0px 4px 4px 0px;
+    margin-left: 10px;
+    height: 100%;
+}
 }

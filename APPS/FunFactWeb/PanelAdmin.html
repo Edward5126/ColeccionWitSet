@@ -31,6 +31,8 @@
                 <li class="Separador"><b>|</b></li>
                 <li><a href="#JSON" class="linkAncla">JSON</a></li>
                 <li class="Separador"><b>|</b></li>
+                <li><a href="#Buscar" class="linkAncla">Búsqueda</a></li>
+                <li class="Separador"><b>|</b></li>
                 <li><a href="#Más" class="linkAncla">Más</a></li>
                 <li class="Separador"><b>|</b></li>
                 <li><a href="" title="Tu dispositivo no es compatible con el narrador" id="ToggleVoice" style="pointer-events:none;"><i class="icon icon-nonarrador"></i></a></li>
@@ -80,66 +82,6 @@
         </div>
     </main>
 
-    <!-- <section class="Seccion SobreLaPagina" id="SobreFunFact">
-        <div>
-            <h2> Detalles </h2>
-            <form action="" method="post" id="Formulario" autocomplete="off" name="ColaborarFF" style="max-height:none;">
-                <div">
-                    <h3>Detalles del dato curioso:</h3>
-                    <div class="Pregunta">
-                        <input  id="NumeroDato" name="Numero" type="number" required placeholder="(Posición en la lista)" value="0" min="0">
-                        <label for="NumeroDato" id="LabelNumero">Número</label>
-                    </div>
-                    <div class="Pregunta">
-                        <input  id="ImagenSugerida" name="Imagen" type="text" required placeholder="(URL a la imagen)">
-                        <label for="ImagenSugerida">Imagen</label>
-                    </div>
-                    <div class="Pregunta">
-                        <input  id="URLCreditosImagen" name="URLdeCreditosdeImagen" type="text" required placeholder="(URL a la página donde el fotógrafo publicó su imagen)">
-                        <label for="URLCreditosImagen">URL de los créditos de la imagen</label>
-                    </div>
-                    <div class="Pregunta">
-                        <input  id="CreditosImagen" name="CreditosdeImagen" type="text" required placeholder="(Nombre de la persona o institución)">
-                        <label for="CreditosImagen">Nombre del fotógrafo</label>
-                    </div>
-                    <div class="Pregunta">
-                        <textarea  name="Info" id="DatoCuriosoSugerido" cols="41" rows="5" maxlength="400" required placeholder="(Máximo 400 caracteres)"></textarea>
-                        <label for="DatoCuriosoSugerido">Información</label>
-                    </div>
-                    <div class="Pregunta">
-                        <input  id="FuenteDeDatoSugerido" name="Fuente" type="text" required placeholder="(Nombre del artículo, persona, libro o página web)">                  
-                        <label for="FuenteDeDatoSugerido">Nombre de la fuente</label>
-                    </div>
-                    <div class="Pregunta">
-                        <input  id="URLFuenteDeDatoSugerido" name="URLFuente" type="text" required placeholder="(Enlace o bibliografía)">                  
-                        <label for="URLFuenteDeDatoSugerido">URL de la fuente</label>
-                    </div>
-                    <div class="Pregunta">
-                        <input  id="CreditoDelAporte" name="Credito" type="text" maxlength="15" required placeholder="(Nombre o apodo)" value="-">                  
-                        <label for="CreditoDelAporte">Crédito del dato</label>
-                    </div>
-                    <div class="Pregunta" style="margin-bottom: 10px;">
-                    <label class="CheckButton"><input type="checkbox" id="EstadoBorrador"><span class="CheckCheck"></span>Habilitar borrado</label><br>
-                    </div>
-                    <div class="Pregunta" style="margin-top: 10px; margin-bottom: 10px;">
-                    <label class="CheckButton"><input type="checkbox" id="EstadoAgregador"><span class="CheckCheck"></span>Habilitar agregado</label><br>
-                    </div>
-                    <div class="Pregunta" style="margin-top: 10px;">
-                    <label class="CheckButton"><input type="checkbox" id="EstadoNuevo"><span class="CheckCheck"></span>Habilitar nuevo</label><br>
-                    </div>
-                    <h4 id="FormRespuesta"></h4>
-                    <div style="text-align: center; display: flex; flex-wrap: wrap; justify-content: space-between;">
-                        <button id="ObtenerDetallesDelDato" style="margin: 7px 0; min-width: 125px;">Obtener</button>
-                        <button id="Borrador" style="margin: 7px 0; min-width: 125px;" disabled>Borrar</button>
-                        <button id="NuevaEntrada" style="margin: 7px 0; min-width: 125px;" disabled>Nuevo</button>
-                        <button id="ProbarDetallesDelDato" style="margin: 7px 0; min-width: 125px;">Probar</button>
-                        <button id="AgregarDato" style="margin: 7px 0; min-width: 125px;" disabled>Agregar</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section> -->
-
     <section class="Seccion SobreLaPagina" id="Detalles" style="padding-bottom: 50px;">
         <h2 id="TituloColaborar">Detalles</h2>
         <form action="" method="post" id="Formulario" autocomplete="off" name="ColaborarFF" style="max-height:none; min-width: 80%;">
@@ -187,15 +129,7 @@
                     <div class="Pregunta">
                         <select name="Categoria" id="Categoria" required>
                             <option value="0" hidden>Categoria</option>
-                            <option value="Algas">Algas</option>
-                            <option value="Animales">Animales</option>
-                            <option value="Astronomía">Astronomía</option>
-                            <option value="Competencias">Competencias</option>
-                            <option value="Condiciones">Condiciones</option>
-                            <option value="Educación">Educación</option>
-                            <option value="Generales">Generales</option>
-                            <option value="Lugares">Lugares</option>
-                            <option value="Plantas">Plantas</option>
+                            <option value="+">[Agregar otra]</option>
                         </select>
                     </div>
                     <div class="Pregunta">
@@ -230,25 +164,30 @@
     <section class="Seccion" id="JSON" style="align-items: center;">
         <h2 id="TituloColaborar">JSON Generado</h2>
         <div class="CuadroDeTexto" style="box-shadow: 0 4px 12px #00000014, 0 0 1px #0100001a; width: 80%;  flex-direction: column; padding: 25px;">
-<!-- <pre style="min-height: 50vh; width: 75vw; overflow-x: auto; max-width: 100%;" id="JSONaCopiar"> -->
-<textarea style="min-height: 50vh; margin-bottom: 20px;" id="ContenedorJSON" cols="999" placeholder=',
-
-{
-    "No": "",
-    "Imagen": "",
-    "URLAutorImagen": "",
-    "AutorImagen":"",
-    "Info":"",
-    "Fuente":"",
-    "URLFuente":"",
-    "Credito": ""
-} '>
+        <textarea style="min-height: 50vh; margin-bottom: 20px;" id="ContenedorJSON" cols="999" placeholder='xd'>
 </textarea>
 <!-- </pre> -->
     <a href="#Colaborar" target="_self" class="enlacesContacto" id="copiarJSONGenerado" title="Copiar JSON al portapapeles" style="padding-top: 2em;"><span><i class="icon icon-portapapeles logoRedSocial" style="padding-right: 10px;"></i></span> <span>Copiar código</span></a>
     </div>
 
     </section>
+
+    <section class="Seccion" id="Buscar" style="text-align: center; gap: 50px;">
+        <div  id="CajaPrincipal">
+            <p class="TituloOSubtitulo">
+                <b class="SaludoPrincipal">Búsqueda de datos curiosos por palabras clave</b>
+            </p>
+            <div id="CuadroDeBusqueda">
+                <input type="text" name="" id="BusquedaPrincipal" placeholder="Por ejemplo: “San valentín, nutrias, melanina, Halloween...”">
+                <a href="#Buscar" class="Btndisabled" id="ABtnBuscar"><button id="BtnBuscar" disabled><i class="icon icon-lupa"></i></button></a>
+            </div>
+        </div>
+
+        <div class="CuadroDeTexto" id="CajonApps">
+            <p>Realiza una <a href="#">búsqueda</a> con palabras clave para encontrar resultados</p>
+        </div>
+    </section>
+
     <span style="opacity: 0; pointer-events: none; font-size: 0.1em;" id="linkDeEstaPagina">https://edward5126.github.io/WitSet/APPS/FunFactWeb/</span>
     <footer id="Más">
         <div class="Pie">
@@ -272,14 +211,6 @@
                         <a href="https://paypal.me/EdChan5126?country.x=MX&locale.x=es_XC" target="_blank" class="enlacesContacto" title="PayPal"><i class="icon icon-paypal  logoRedSocial"></i></a>
                     </div>
                 </details>
-            
-            <!-- <div class="ContenedorPie">
-                <p>Conoce las otras partes del proyecto <b><i>STEAM Torch</i></b>:</p>
-                <div id="Proyecto">
-                    <a href=""><img src="IMG/LogoHorizontalDM[ST].svg" alt="Visita el blog STEAM Torch" class="ProyectoEnlaces" id="LogoDeIndex"></a>
-                    <a href=""><img src="IMG/LogoHorizontalDM[II].svg" alt="Visita Internet Index" class="ProyectoEnlaces" id="LogoDeTorch"></a>
-                </div>
-            </div> -->
             <p>¿Algo no anda bien? ¿Encontraste un error? ¿Eres autor de algún contenido mostrado y deseas que sea removido? <a href="../../HTML/Contacto.html" target="_blank" rel="noopener noreferrer">Contáctanos aquí</a>.</p>
         </div>
     </footer>
@@ -288,501 +219,7 @@
 <script src="JS/Script.js"></script>
 <script src="JS/ScriptDelFormulario.js"></script>
 <script src="../../JS/ScriptGlobal.js"></script>
-<script>
-    var JSONP;
-    var ConteoImg = 1;
-    var BotonCopiarJSON = document.getElementById("copiarJSONGenerado"),
-    urlJSON = document.getElementById("ContenedorJSON");
-
-    
-
-    setTimeout(e => {
-        document.getElementById("NumeroDato").setAttribute('max', DatosTotales);
-      }, 1000);
-      
-    
-    BotonCopiarJSON.addEventListener("click", function() {
-    //   var Rango = document.createRange(),
-    //       Seleccion = window.getSelection();
-    //       Seleccion.removeAllRanges();
-    //       Rango.selectNodeContents(urlJSON);
-    //       Seleccion.addRange(Rango);
-        urlJSON.select();
-          document.execCommand('copy');
-        //   Seleccion.removeAllRanges();
-          document.getElementById("copiarJSONGenerado").innerHTML='<i class="icon icon-portapapeles-ok logoRedSocial"></i>';
-          setTimeout(function() {
-            document.getElementById("copiarJSONGenerado").innerHTML='<i class="icon icon-portapapeles logoRedSocial"></i>';
-          }, 5000);
-    }, false);
-        
-    var NumeroDatoVar;
-
-        document.getElementById("ObtenerDetallesDelDato").addEventListener('click',  e => {
-        e.preventDefault();
-
-        NumeroDatoVar = document.getElementById("NumeroDato").value;
-        console.log(NumeroDatoVar);
-
-        FetchCambiarDato(NumeroDatoVar);
-        setTimeout(ObtenerDetalles, 100);
-
-        DatoActual = parseInt(NumeroDatoVar);
-
-        RevisarInicioFin();
-        });
-
-        document.getElementById("ProbarDetallesDelDato").addEventListener('click', e => {
-            e.preventDefault();
-
-            EnviarDetalles();
-        })
-
-        document.getElementById("NuevaEntrada").addEventListener('click', e => {
-            e.preventDefault();
-            document.getElementById("NuevaEntrada").toggleAttribute("disabled");
-            document.getElementById("Formulario").reset();
-            document.getElementById("ListaImagenes").innerHTML = `
-            <div class="ConjuntoImg">
-                                <div class="Pregunta">
-                                    <input  id="ImagenSugerida1" name="Imagen" type="text" required placeholder="(URL a la imagen)">
-                                    <label for="ImagenSugerida1">Imagen</label>
-                                </div>
-                                <div class="Pregunta">
-                                    <input  id="URLCreditosImagen1" name="URLdeCreditosdeImagen" type="text" required placeholder="(URL a la página donde el fotógrafo publicó su imagen)">
-                                    <label for="URLCreditosImagen1">URL de publicación</label>
-                                </div>
-                                <div class="Pregunta">
-                                    <input  id="CreditosImagen1" name="CreditosdeImagen" type="text" required placeholder="(Nombre de la persona o institución)">
-                                    <label for="CreditosImagen1">Nombre del fotógrafo</label>
-                                </div>
-                            </div>
-            `
-            ConteoImg = 1;
-
-            document.getElementById("NumeroDato").value = document.getElementById("NumeroDato").max;
-            document.getElementById("LabelNumero").innerHTML = "Número (Nueva entrada)";
-            document.getElementById("ObtenerDetallesDelDato").setAttribute("disabled", "");
-            document.getElementById("CajonEtiquetas").innerHTML = `
-            <button id="AgregarEtiqueta" onclick="AgregarEt(event)">+</button>
-            <span class="Etiqueta">*</span>
-            `;
-        })
-
-        document.getElementById("Borrador").addEventListener('click', e => {
-            e.preventDefault();
-
-            document.getElementById("Formulario").reset();
-            document.getElementById("ListaImagenes").innerHTML = `
-            <div class="ConjuntoImg">
-                                <div class="Pregunta">
-                                    <input  id="ImagenSugerida1" name="Imagen" type="text" required placeholder="(URL a la imagen)">
-                                    <label for="ImagenSugerida1">Imagen</label>
-                                </div>
-                                <div class="Pregunta">
-                                    <input  id="URLCreditosImagen1" name="URLdeCreditosdeImagen" type="text" required placeholder="(URL a la página donde el fotógrafo publicó su imagen)">
-                                    <label for="URLCreditosImagen1">URL de publicación</label>
-                                </div>
-                                <div class="Pregunta">
-                                    <input  id="CreditosImagen1" name="CreditosdeImagen" type="text" required placeholder="(Nombre de la persona o institución)">
-                                    <label for="CreditosImagen1">Nombre del fotógrafo</label>
-                                </div>
-                            </div>
-            `
-            document.getElementById("Borrador").setAttribute("disabled", "");
-            document.getElementById("CajonEtiquetas").innerHTML = '<button id="AgregarEtiqueta" onclick="AgregarEt(event)">+</button>';
-        })
-
-        document.getElementById("AgregarDato").addEventListener('click', e => {
-            e.preventDefault();
-
-            document.getElementById("EstadoAgregador").checked = false;
-            document.getElementById("AgregarDato").toggleAttribute("disabled");
-
-            var MaximoNuevo =  parseInt(document.getElementById("NumeroDato").max) + 1;
-
-            document.getElementById("NumeroDato").setAttribute('max', MaximoNuevo);
-
-            let JSONP = CrearObjetoPrueba();
-
-            document.getElementById("ContenedorJSON").value += ", " + JSON.stringify(JSONP);
-
-            document.getElementById("LabelNumero").innerHTML = "Número (Nueva entrada agregada)";
-        })
-
-    function ObtenerDetalles(){
-        // document.getElementById("ImagenSugerida").value = document.getElementById("ImagenDelDato").src;
-        // document.getElementById("URLCreditosImagen").value = document.getElementById("URLCreditosTooltip").href;
-        // document.getElementById("CreditosImagen").value = document.getElementById("URLCreditosTooltip").textContent;
-
-        ConteoImg = 0;
-
-        document.getElementById("ListaImagenes").innerHTML = ""; 
-        ListaExterna[DatoActual].Imagenes.forEach(element => {
-            // if(ConteoImg > 1) {
-            // document.getElementById("QuitarImagen").removeAttribute("disabled");
-            // }
-            ConteoImg++; 
-            if (ConteoImg == 1) {
-                document.getElementById("QuitarImagen").setAttribute("disabled", "");
-                document.getElementById("ListaImagenes").innerHTML += `
-        <div class="ConjuntoImg" id="Img${ConteoImg}">
-                            <div class="Pregunta">
-                                <input  id="ImagenSugerida${ConteoImg}" name="Imagen" type="text" required placeholder="(URL a la imagen)" value="${element.url}">
-                                <label for="ImagenSugerida${ConteoImg}">Imagen ${ConteoImg}</label>
-                            </div>
-                            <div class="Pregunta">
-                                <input  id="URLCreditosImagen${ConteoImg}" name="URLdeCreditosdeImagen" type="text" required placeholder="(URL a la página donde el fotógrafo publicó su imagen)"  value="${element.urlOrig}">
-                                <label for="URLCreditosImagen${ConteoImg}">URL de publicación ${ConteoImg}</label>
-                            </div>
-                            <div class="Pregunta">
-                                <input  id="CreditosImagen${ConteoImg}" name="CreditosdeImagen" type="text" required placeholder="(Nombre de la persona o institución)" value="${element.Autor}">
-                                <label for="CreditosImagen${ConteoImg}">Nombre del fotógrafo ${ConteoImg}</label>
-                            </div>
-                        </div>
-        `
-            } else if (ConteoImg > 1) {
-                document.getElementById("QuitarImagen").removeAttribute("disabled");
-
-                document.getElementById("ListaImagenes").innerHTML += `
-        <div class="ConjuntoImg" id="Img${ConteoImg}">
-            <hr>
-                            <div class="Pregunta">
-                                <input  id="ImagenSugerida${ConteoImg}" name="Imagen" type="text" required placeholder="(URL a la imagen)" value="${element.url}">
-                                <label for="ImagenSugerida${ConteoImg}">Imagen ${ConteoImg}</label>
-                            </div>
-                            <div class="Pregunta">
-                                <input  id="URLCreditosImagen${ConteoImg}" name="URLdeCreditosdeImagen" type="text" required placeholder="(URL a la página donde el fotógrafo publicó su imagen)"  value="${element.urlOrig}">
-                                <label for="URLCreditosImagen${ConteoImg}">URL de publicación ${ConteoImg}</label>
-                            </div>
-                            <div class="Pregunta">
-                                <input  id="CreditosImagen${ConteoImg}" name="CreditosdeImagen" type="text" required placeholder="(Nombre de la persona o institución)" value="${element.Autor}">
-                                <label for="CreditosImagen${ConteoImg}">Nombre del fotógrafo ${ConteoImg}</label>
-                            </div>
-                        </div>
-        `
-            }
-        });
-
-        document.getElementById("DatoCuriosoSugerido").value = ListaExterna[DatoActual].Info;
-        document.getElementById("FuenteDeDatoSugerido").value = ListaExterna[DatoActual].Fuente;
-        document.getElementById("URLFuenteDeDatoSugerido").value = ListaExterna[DatoActual].URLFuente;
-        document.getElementById("CreditoDelAporte").value = ListaExterna[DatoActual].Credito;
-        document.getElementById("Categoria").value = ListaExterna[DatoActual].Categoría;
-
-        document.getElementById("CajonEtiquetas").innerHTML = '<button id="AgregarEtiqueta" onclick="AgregarEt(event)">+</button>';
-        ListaExterna[DatoActual].Claves.forEach(element => {
-            document.getElementById("CajonEtiquetas").innerHTML += `
-        <span class="Etiqueta">${element}</span>
-        `;
-        });
-    }
-
-    function EnviarDetalles(){
-
-        JSONP = CrearObjetoPrueba();
-
-        document.getElementById("ImagenDelDato").src =
-    JSONP.Imagenes[0].url;
-  document.getElementById("ImagenDelDato").classList.add("ImgNoToggleMode");
-  document.getElementById("ImagenDelDato").alt =
-    "Imagen ilustrativa del dato - Créditos a sus respectivos autores";
-
-  document.getElementById("TituloTooltipxd").innerHTML = "Imagen: ";
-  document.getElementById("URLCreditosTooltip").href =
-    JSONP.Imagenes[0].urlOrig;
-  document.getElementById("URLCreditosTooltip").innerHTML =
-    JSONP.Imagenes[0].Autor;
-
-  if (JSONP.Imagenes.length > 1) {
-    document.getElementById("NavImg").classList.add("MasImg");
-
-    ImgSubTotales = JSONP.Imagenes.length;
-
-    if (ImgActual == 0) {
-      document.getElementById("CambiarIMGIzq").style.color =
-        "var(--Texto-Nota)";
-      document.getElementById("CambiarIMGIzq").style.pointerEvents = "none";
-    }
-  } else {
-    document.getElementById("NavImg").classList.remove("MasImg");
-  }
-
-  document.getElementById("DatoPresentado").innerHTML =
-    JSONP.Info;
-  document.getElementById("FuentePresentada").href =
-    JSONP.URLFuente;
-  document.getElementById("FuentePresentada").innerHTML =
-    JSONP.Fuente;
-  document.getElementById("CreditosDelDato").innerHTML =
-    JSONP.Credito;
-
-  setTimeout(NarradorPlay, 50);
-        
-
-
-        // document.getElementById("ImagenDelDato").src = document.getElementById("ImagenSugerida").value;
-        // document.getElementById("TituloTooltipxd").innerHTML = "Imagen: ";
-        // document.getElementById("URLCreditosTooltip").href = document.getElementById("URLCreditosImagen").value;
-        // document.getElementById("URLCreditosTooltip").innerHTML = document.getElementById("CreditosImagen").value;
-        // document.getElementById("DatoPresentado").innerHTML = document.getElementById("DatoCuriosoSugerido").value;
-        // document.getElementById("FuentePresentada").innerHTML = document.getElementById("FuenteDeDatoSugerido").value;
-        // document.getElementById("FuentePresentada").href = document.getElementById("URLFuenteDeDatoSugerido").value;
-        // document.getElementById("CreditosDelDato").innerHTML = document.getElementById("CreditoDelAporte").value;
-
-    }
-
-    function CrearObjetoPrueba() {
-        var JSONNuevo = new Object();
-        JSONNuevo.No = document.getElementById("NumeroDato").value;
-        JSONNuevo.Imagenes = [];
-        for (let i = 0; i < document.querySelectorAll(".ConjuntoImg").length; i++) {
-            const element = document.querySelectorAll(".ConjuntoImg")[i];
-            let Simg = "ImagenSugerida" + (i+1);
-            let Surl = "URLCreditosImagen" + (i+1);
-            let SAutor = "CreditosImagen" + (i+1);
-
-            JSONNuevo.Imagenes[i] = {};
-            JSONNuevo.Imagenes[i].url = document.getElementById(Simg).value;
-            JSONNuevo.Imagenes[i].Autor = document.getElementById(SAutor).value;
-            JSONNuevo.Imagenes[i].urlOrig = document.getElementById(Surl).value;
-        }
-        JSONNuevo.Info = document.getElementById("DatoCuriosoSugerido").value;
-        JSONNuevo.Fuente = document.getElementById("FuenteDeDatoSugerido").value;
-        JSONNuevo.URLFuente = document.getElementById("URLFuenteDeDatoSugerido").value;
-        JSONNuevo.Credito = document.getElementById("CreditoDelAporte").value;
-        JSONNuevo.Categoría = document.getElementById("Categoria").value;
-
-        JSONNuevo.Claves = [];
-        for (let i = 0; i < document.querySelectorAll(".Etiqueta").length; i++) {
-            const element = document.querySelectorAll(".Etiqueta")[i];
-            JSONNuevo.Claves.push(element.innerHTML);
-        }
-        
-        console.log(JSONNuevo);
-        console.log("," + JSON.stringify(JSONNuevo));
-
-        return JSONNuevo;
-    }
-
-    function GenerarJson() {
-        // var Numero = document.getElementById("NumeroDato").value;
-
-        // var Imagen = document.getElementById("ImagenSugerida").value;
-        // var URLImagen = document.getElementById("URLCreditosImagen").value;
-        // var CreditoImagen = document.getElementById("CreditosImagen").value;
-
-        // var Informacion = document.getElementById("DatoCuriosoSugerido").value;
-        // var NombreFuente = document.getElementById("FuenteDeDatoSugerido").value;
-        // var URLFuente = document.getElementById("URLFuenteDeDatoSugerido").value;
-        // var CreditoDato = document.getElementById("CreditoDelAporte").value;
-        // var Categoria = document.getElementById("Categoria").value;
-
-        // var JSONString = '\t{\n\t\t"No": "' + Numero + '",\n\t\t "Imagen": "' + Imagen + '",\n\t\t "URLAutorImagen": "' + URLImagen + '",\n\t\t "AutorImagen":"' + CreditoImagen + '",\n\t\t "Info":"' + Informacion + '",\n\t\t "Fuente":"' + NombreFuente + '",\n\t\t "URLFuente":"' + URLFuente + '",\n\t\t "Credito": "' + CreditoDato + '"\n\t}';
-
-        // // JSONNuevo = JSON.parse(JSONString);
-        // console.log(JSONNuevo);
-        // document.getElementById("ContenedorJSON").value += ",\n\n" + JSONString;
-    }
-
-    document.getElementById("NumeroDato").oninput = function() {
-        if(document.getElementById("NumeroDato").value == document.getElementById("NumeroDato").max){
-            document.getElementById("LabelNumero").innerHTML += " (Nueva entrada)";
-            document.getElementById("ObtenerDetallesDelDato").setAttribute("disabled", "");
-        } else {
-            document.getElementById("LabelNumero").innerHTML = "Número";
-            document.getElementById("ObtenerDetallesDelDato").removeAttribute("disabled");
-        }
-    };
-
-    document.getElementById("EstadoBorrador").oninput = function() {
-        document.getElementById("Borrador").toggleAttribute("disabled");
-    };
-
-    document.getElementById("EstadoAgregador").oninput = function() {
-        document.getElementById("AgregarDato").toggleAttribute("disabled");
-    }
-
-    document.getElementById("EstadoNuevo").oninput = function() {
-        document.getElementById("NuevaEntrada").toggleAttribute("disabled");
-    }
-
-    // document.querySelectorAll(".btnprn").forEach(element => {
-    //     element.addEventListener("click", function() {
-    //     document.getElementById("NumeroDato").value = DatoActual;
-    // })
-    // });
-
-    function AgregarIMG(e) {
-        e.preventDefault();
-
-        document.getElementById("QuitarImagen").removeAttribute("disabled");
-        
-        ConteoImg++; 
-
-        let Fragmento = document.createDocumentFragment();
-        let DivSup = document.createElement("div");
-        Fragmento.appendChild(DivSup);
-        DivSup.setAttribute("class", "ConjuntoImg");
-        DivSup.setAttribute("id", `Img${ConteoImg}`);
-
-        let Salto = document.createElement("hr");
-        DivSup.appendChild(Salto);
-
-        let PregImg1 = document.createElement("div");
-        PregImg1.setAttribute("class", "Pregunta");
-        DivSup.appendChild(PregImg1);
-
-        let Input1 = document.createElement("input");
-        Input1.setAttribute("id", `ImagenSugerida${ConteoImg}`);
-        Input1.setAttribute("name", "Imagen");
-        Input1.setAttribute("type", "text");
-        Input1.setAttribute("required", "");
-        Input1.setAttribute("placeholder", "(URL a la imagen)");
-        PregImg1.appendChild(Input1);
-
-        let Label1 = document.createElement("label");
-        Label1.setAttribute("for",`ImagenSugerida${ConteoImg}`);
-        Label1.textContent = `Imagen ${ConteoImg}`;
-        PregImg1.appendChild(Label1);
-
-        let PregImg2 = document.createElement("div");
-        PregImg2.setAttribute("class", "Pregunta");
-        DivSup.appendChild(PregImg2);
-
-        let Input2 = document.createElement("input");
-        Input2.setAttribute("id", `URLCreditosImagen${ConteoImg}`);
-        Input2.setAttribute("name", "URLdeCreditosdeImagen");
-        Input2.setAttribute("type", "text");
-        Input2.setAttribute("required", "");
-        Input2.setAttribute("placeholder", "(URL a la página donde el fotógrafo publicó su imagen)");
-        PregImg2.appendChild(Input2);
-
-        let Label2 = document.createElement("label");
-        Label2.setAttribute("for",`URLCreditosImagen${ConteoImg}`);
-        Label2.textContent = `URL de publicación ${ConteoImg}`;
-        PregImg2.appendChild(Label2);
-
-        let PregImg3 = document.createElement("div");
-        PregImg3.setAttribute("class", "Pregunta");
-        DivSup.appendChild(PregImg3);
-
-        let Input3 = document.createElement("input");
-        Input3.setAttribute("id", `CreditosImagen${ConteoImg}`);
-        Input3.setAttribute("name", "CreditosdeImagen");
-        Input3.setAttribute("type", "text");
-        Input3.setAttribute("required", "");
-        Input3.setAttribute("placeholder", "(Nombre de la persona o institución)");
-        PregImg3.appendChild(Input3);
-
-        let Label3 = document.createElement("label");
-        Label3.setAttribute("for",`CreditosImagen${ConteoImg}`);
-        Label3.textContent = `Nombre del fotógrafo ${ConteoImg}`;
-        PregImg3.appendChild(Label3);
-
-        document.getElementById("ListaImagenes").appendChild(Fragmento);
-
-        // document.getElementById("ListaImagenes").innerHTML += `
-        // <div class="ConjuntoImg" id="Img${ConteoImg}">
-        //     <hr>
-        //                     <div class="Pregunta">
-        //                         <input  id="ImagenSugerida${ConteoImg}" name="Imagen" type="text" required placeholder="(URL a la imagen)">
-        //                         <label for="ImagenSugerida${ConteoImg}">Imagen ${ConteoImg}</label>
-        //                     </div>
-        //                     <div class="Pregunta">
-        //                         <input  id="URLCreditosImagen${ConteoImg}" name="URLdeCreditosdeImagen" type="text" required placeholder="(URL a la página donde el fotógrafo publicó su imagen)">
-        //                         <label for="URLCreditosImagen${ConteoImg}">URL de publicación ${ConteoImg}</label>
-        //                     </div>
-        //                     <div class="Pregunta">
-        //                         <input  id="CreditosImagen${ConteoImg}" name="CreditosdeImagen" type="text" required placeholder="(Nombre de la persona o institución)">
-        //                         <label for="CreditosImagen${ConteoImg}">Nombre del fotógrafo ${ConteoImg}</label>
-        //                     </div>
-        //                 </div>
-        // `
-    }
-
-    function QuitarIMG(e) {
-        e.preventDefault();
-
-        if (confirm("¿Borrar última imagen?")){
-        document.getElementById(`Img${ConteoImg}`).remove();
-        ConteoImg--;
-        }
-
-        if(ConteoImg == 1) {
-            document.getElementById("QuitarImagen").setAttribute("disabled","");
-        }
-    }
-
-    document.querySelectorAll(".Etiqueta").forEach(element => {
-        element.addEventListener("click", e => {
-            if (confirm("¿Eliminar esta etiqueta?")) {
-                element.remove();
-            }
-        })        
-    });
-
-    function AgregarEt(e) {
-        e.preventDefault();
-
-        let Et = prompt("Etiqueta a añadir:");
-        if (Et != "" && Et != null) {
-        document.getElementById("CajonEtiquetas").innerHTML += `
-        <span class="Etiqueta">${Et}</span>
-        `;
-
-        document.querySelectorAll(".Etiqueta").forEach(element => {
-        element.addEventListener("click", e => {
-            if (confirm("¿Eliminar esta etiqueta?")) {
-                element.remove();
-            }
-        })        
-        });
-        }
-    }
-
-    function PPrevIMG() {
-  TransicionCarga();
-  document.getElementById("CambiarIMGDer").style.color =
-    "var(--Texto-Principal)";
-  document.getElementById("CambiarIMGDer").style.pointerEvents = "all";
-
-  document.getElementById("ImagenDelDato").src =
-    JSONP.Imagenes[ImgActual - 1].url;
-  document.getElementById("URLCreditosTooltip").href =
-    JSONP.Imagenes[ImgActual - 1].urlOrig;
-  document.getElementById("URLCreditosTooltip").innerHTML =
-    JSONP.Imagenes[ImgActual - 1].Autor;
-
-  ImgActual -= 1;
-
-  if (ImgActual == 0) {
-    document.getElementById("CambiarIMGIzq").style.color = "var(--Texto-Nota)";
-    document.getElementById("CambiarIMGIzq").style.pointerEvents = "none";
-  }
-}
-
-function PSigIMG() {
-  TransicionCarga();
-  document.getElementById("CambiarIMGIzq").style.color =
-    "var(--Texto-Principal)";
-  document.getElementById("CambiarIMGIzq").style.pointerEvents = "all";
-
-  document.getElementById("ImagenDelDato").src =
-    JSONP.Imagenes[ImgActual + 1].url;
-  document.getElementById("URLCreditosTooltip").href =
-    JSONP.Imagenes[ImgActual + 1].urlOrig;
-  document.getElementById("URLCreditosTooltip").innerHTML =
-    JSONP.Imagenes[ImgActual + 1].Autor;
-
-  ImgActual += 1;
-
-  if (ImgActual == ImgSubTotales - 1) {
-    document.getElementById("CambiarIMGDer").style.color = "var(--Texto-Nota)";
-    document.getElementById("CambiarIMGDer").style.pointerEvents = "none";
-  }
-}
-</script>
+<script src="JS/ScriptAdmin.js"></script>
 <!-- <script> 
 if (navigator.serviceWorker.controller) { 
      console.log("ServiceWorker activo encontrado, no se necesita registrarlo"); 
@@ -793,5 +230,4 @@ navigator.serviceWorker.register("../serviceworker.js", { scope: "./" }).then(fu
 });
 }
 </script> -->
-
 </html>
