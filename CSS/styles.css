@@ -32,7 +32,7 @@
     margin: 0%;
     color: var(--Texto-Principal);
     background: linear-gradient(to top, #232526, #414345);
-    background: #2b2b2b url(../IMG/Fondo.jpg) center center
+    background: #2b2b2b url(../IMG/Fondo2.png) center center
       no-repeat fixed;
     background-size: cover;
   }
@@ -773,7 +773,7 @@
     color: snow;
     font-size: 1em;
     background: linear-gradient(to top, #232526, #414345);
-    background: #2b2b2b url(../IMG/Fondo.jpg) center center
+    background: #2b2b2b url(../IMG/Fondo2.png) center center
       no-repeat fixed;
     background-size: cover;
   }
@@ -1512,7 +1512,7 @@
     color: snow;
     font-size: 1em;
     background: linear-gradient(to top, #232526, #414345);
-    background: #2b2b2b url(../IMG/Fondo.jpg) center center
+    background: #2b2b2b url(../IMG/Fondo2.png) center center
       no-repeat fixed;
     background-size: cover;
   }
