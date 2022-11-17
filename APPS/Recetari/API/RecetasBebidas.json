@@ -1,0 +1,48 @@
+[
+    {
+        "id": 0,
+        "nombre": "Licuado de plátano",
+        "ingredientes" : [
+            "Plátano",
+            "Leche",
+            "Azúcar",
+            "Canela"
+        ],
+        "tiempo": 10,
+        "dificultad": 1,
+        "receta":[
+            "Mezclar plátano, leche y azúcar en la licuadora.",
+            "Licuar hasta conseguir la consistencia de su agrado.",
+            "Servir con canela esparcida en la superficie."
+        ]
+    },
+    {
+        "id": 1,
+        "nombre": "Chocomilk",
+        "ingredientes": [
+            "Chocomilk",
+            "Leche"
+        ],
+        "tiempo": 5,
+        "dificultad":1,
+        "receta": [
+            "Mezclar leche con dos cucharadas de Chocomilk por vaso",
+            "Batir bien a mano o con licuadora."
+        ]
+    },
+    {
+        "id":2,
+        "nombre": "Naranjada",
+        "ingredientes":[
+            "Naranja",
+            "Azúcar"
+        ],
+        "tiempo":20,
+        "dificultad":1,
+        "receta":[
+            "Exprimir las naranjas",
+            "Mezclar el jugo de naranja en una jarra con agua al gusto",
+            "Endulzar con azúcar al gusto."
+        ]
+    }
+]

@@ -26,6 +26,10 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  .htmlquieto {
+    overflow: hidden;
+  }
+
   /* Contenido general y fondo de la página */
   body {
     font-family: "Montserrat";
@@ -755,6 +759,23 @@
     border-radius: 0px 4px 4px 0px;
     margin-left: 10px;
     height: 100%;
+}
+
+#TablaCompras {
+  width: 85vw;
+}
+
+th {
+  background-color: #3e3e3e80;
+}
+
+th, td {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+td {
+  background-color: var(--Cuadro-Texto);
 }
 }
 

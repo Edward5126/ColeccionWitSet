@@ -5,6 +5,7 @@ const Enlaces = document.querySelectorAll(".linkAncla");
 
 function MenuMovil() {
   NavList.classList.toggle("MenuAbierto");
+  document.querySelector("html").classList.toggle("htmlquieto");
 }
 
 Enlaces.forEach((element) => {

@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "nombre": "Tostadas francesas",
+        "ingredientes" : [
+            "Pan blanco",
+            "Leche",
+            "Huevo",
+            "Azúcar",
+            "Canela",
+            "Mantequilla",
+            "Mermelada"
+        ],
+        "tiempo": 20,
+        "dificultad": 1,
+        "receta":[
+            "Mezclar huevos, leche, azúcar, canela y un poco de mantequilla y revolver la mezcla.",
+            "Remojar las rebanadas de pan en la mezcla por unos segundos. No dejarlos remojados.",
+            "Poner las rebanadas en un sartén caliente hasta que se cocinen.",
+            "Servir con mermelada o acompañamiento al gusto."
+        ]
+    },
+    {
+        "id": 1,
+        "nombre": "Huevo con jamón",
+        "ingredientes": [
+            "Huevo",
+            "Jamón",
+            "Tortillas",
+            "Sal"
+        ],
+        "tiempo": 10,
+        "dificultad":1,
+        "receta": [
+            "Poner a calentar a fuego bajo o medio una sarten cubierta con un poco de aceite.",
+            "Cortar unas rebanadas de jamón en cuadritos.",
+            "Poner a freír el jamón en la sartén.",
+            "Un momento después, quebrar los huevos dentro de la sartén y freír revolviendo todo.",
+            "Añadir sal mientras se revuelve.",
+            "Servir con tortillas o acompañamiento al gusto."
+        ]
+    },
+    {
+        "id":2,
+        "nombre": "Desayuno Foráneo",
+        "ingredientes":[
+            "Leche",
+            "Cereal",
+            "Frutas",
+            "Galletas de avena",
+            "Jamón"
+        ],
+        "tiempo":15,
+        "dificultad":1,
+        "receta":[
+            "Cortar rebanadas de fruta al gusto en un tazón pequeño",
+            "Mezclarlo con cereal",
+            "En otro plato, servir las galletas de avena acompañadas de una o dos rebanadas de jamón y otra fruta.",
+            "Servir leche en el tazón."
+        ]
+    }
+]

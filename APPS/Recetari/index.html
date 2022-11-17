@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetari | Aliméntate fácil</title>
+    <meta name="description" content="NA">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link id="HojadeEstilo" rel="stylesheet" href="../../CSS/styles.css">
+    <link rel="stylesheet" href="CSS/stylesR.css">
+    <link rel="preload" href="../../CSS/stylesLight.css" as="style">
+    <!-- <link rel="preload" href="IMG/IllustracionOnErrorPorUnDraw.svg" as="image">
+    <link rel="preload" href="IMG/IllustracionOnErrorPorUnDrawLM.svg" as="image"> -->
+    <link rel="stylesheet" href="../../LIBS/PersonalIconCollection-v1.0/style.css">
+    <link rel="shortcut icon" href="../../IMG/Miniaturas/LogoSolo[R].svg" type="image/x-icon">
+    <!-- <link rel="manifest" href="manifest.webmanifest"> -->
+
+    <!-- Script para los íconos. Por Font Awesome. -->
+    <!-- <script src="https://kit.fontawesome.com/df1a4a0af1.js" crossorigin="anonymous"></script> -->
+
+</head>
+<body>
+    <header>
+            <nav>
+                <img id="LogoDeCabecera" src="../../IMG/Horizontales/LogoHorizontalDM[R].svg" alt="Logo de FunFact en modo oscuro">
+                    <button class="btnmenu linkAncla" aria-label="Abrir menú" id="AbrirMenu"><i class="icon icon-menu interfaz"></i></button>
+                <ul class="NavList" id="EnlacesNav">
+                    <button class="btnmenu linkAncla" id="CerrarMenu" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
+                    <li class="Separador" id="PrimerSeparador"><b>|</b></li>
+                    <li><a href="#" class="linkAncla">Inicio</a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="#ListaCompras" class="linkAncla">Compras</a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="#SobreRecetari" class="linkAncla">Sobre Recetari</a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="#Recetario" class="linkAncla">Recetario</a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="#Más" class="linkAncla">Más</a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="" title="Borrar elecciones" id="Borrar" class="linkAncla"><i class="icon icon-borrar"></i></a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="" title="Cambiar estilo" id="ToggleMode"><i class="icon icon-cambiar-estilo"></i></a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="../../" title="Volver a Wit Set"><i class="icon icon-home"></i></a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <div class="InterfazEditar">
+            <button class="btnmenu Interfaz" id="InterfazPrincipal" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
+            <div class="Ediciones">
+                <h2>Editar</h2>
+                <select name="" id="ComidasAElegir">
+                    <option value="-1" selected hidden>Comida</option>
+                </select>
+                <select name="" id="BebidasAElegir">
+                    <option value="-1" selected hidden>Bebida</option>
+                </select>
+                <button id="RegistrarElecciones" disabled>Continuar</button>
+            </div>
+            <div class="CuadroDeTexto AvisoSinElecciones">
+                <i class="icon icon-info"></i>
+                Para ver las recetas, primero elije una comida y una bebida con el botón <i>Editar ( <i class="icon icon-editar" style="font-size: 0.8em;"></i> )</i>
+            </div>
+            <div class="Receta">
+                <div class="CuadroDeTexto">
+                    <h2 class="NombreRecetaComida">Nombre de la comida</h2>
+                <details>
+                    <summary><span>Ingredientes</span></summary>
+                    <ol id="ListaIngredientes">
+                        <li>Ingrediente 1</li>
+                        <li>...</li>
+                    </ol>
+                </details>
+                <br>
+                <details open>
+                    <summary><span>Receta</span></summary>
+                    <ol id="ListaPasos">
+                        <li>Paso 1</li>
+                        <li>...</li>
+                    </ol>
+                </details>
+                </div>
+                <div class="CuadroDeTexto">
+                    <h2 class="NombreRecetaBebida">Nombre de la bebida</h2>
+                <details>
+                <summary><span>Ingredientes</span></summary>
+                <ol id="ListaIngredientes2">
+                    <li>Ingrediente 1</li>
+                    <li>...</li>
+                </ol>
+            </details>
+                <br>
+                <details open>
+                <summary><span>Receta</span></summary>
+                <ol id="ListaPasos2">
+                    <li>Paso 1</li>
+                    <li>...</li>
+                </ol>
+            </details>
+                </div>
+            </div>
+        </div>
+        <div id="NavDias">
+            <button class="BtnInterfaz RetrocederDia"><i class="icon icon-flecha-izq"></i></button>
+            <span id="DiaActual">Lunes</span>
+            <button class="BtnInterfaz AvanzarDia"><i class="icon icon-flecha-der"></i></button>
+        </div>
+        <div id="CajonDias">
+            <div class="CajaDia">
+                <div class="TituloCaja">
+                <span><span id="NombreDesayuno" class="Nombre">Desayuno</span> <span class="con">con <span id="BebidaDesayuno" class="Bebida">Bebida</span></span></span>
+                <div class="IconosBotones">
+                    <span><button class="BtnInterfaz Interfaz AbrirReceta" id="1" aria-label="Cerrar menú"><i class="icon icon-libro interfaz"  id="1"></i></button></span>
+                    <span><button class="BtnInterfaz Interfaz Editar" id="1" aria-label="Cerrar menú"><i class="icon icon-editar interfaz"  id="1"></i></button></span>
+                </div>
+                </div>
+                <hr>
+                <span id="DetallesDesayuno" class="Detalles">
+                    <ul>
+                        <li><i class="icon icon-tiempo icondetalle"></i> <span id="Tiempo1"></span> Minutos</li>
+                        <li><i class="icon icon-ingredientes icondetalle"></i> <span id="NoIngredientes1"></span> Ingredientes</li>
+                        <li><i class="icon icon-info icondetalle"></i> <span id="Dificultad1">Dificultad</span></li>
+                    </ul>
+                </span>
+            </div>
+            <div class="CajaDia">
+                <div class="TituloCaja">
+                <span><span id="NombreColacion1" class="Nombre">Colación</span> <span class="con">con <span id="BebidaColacion1" class="Bebida">Bebida</span></span></span>
+                <div class="IconosBotones">
+                    <span><button class="BtnInterfaz Interfaz AbrirReceta" id="2" aria-label="Cerrar menú"><i class="icon icon-libro interfaz"  id="2"></i></button></span>
+                    <span><button class="BtnInterfaz Interfaz Editar" id="2" aria-label="Cerrar menú"><i class="icon icon-editar interfaz"  id="2"></i></button></span>
+                </div>
+            </div>
+                <hr>
+                <span id="DetallesColacion1" class="Detalles">
+                    <ul>
+                        <li><i class="icon icon-tiempo icondetalle"></i> <span id="Tiempo2"></span> Minutos</li>
+                        <li><i class="icon icon-ingredientes icondetalle"></i> <span id="NoIngredientes2"></span> Ingredientes</li>
+                        <li><i class="icon icon-info icondetalle"></i> <span id="Dificultad2">Dificultad</span></li>
+                    </ul>
+                </span>
+            </div>
+            <div class="CajaDia">
+                <div class="TituloCaja">
+                <span><span id="NombreAlmuerzo" class="Nombre">Almuerzo</span> <span class="con">con <span id="BebidaAlmuerzo" class="Bebida">Bebida</span></span></span>
+                <div class="IconosBotones">
+                    <span><button class="BtnInterfaz Interfaz AbrirReceta" id="3" aria-label="Cerrar menú"><i class="icon icon-libro interfaz"  id="3"></i></button></span>
+                    <span><button class="BtnInterfaz Interfaz Editar" id="3" aria-label="Cerrar menú"><i class="icon icon-editar interfaz"  id="3"></i></button></span>
+                </div>
+            </div>
+                <hr>
+                <span id="DetallesAlmuerzo" class="Detalles">
+                    <ul>
+                        <li><i class="icon icon-tiempo icondetalle"></i> <span id="Tiempo3"></span> Minutos</li>
+                        <li><i class="icon icon-ingredientes icondetalle"></i> <span id="NoIngredientes3"></span> Ingredientes</li>
+                        <li><i class="icon icon-info icondetalle"></i> <span id="Dificultad3">Dificultad</span></li>
+                    </ul>
+                </span>
+            </div>
+            <div class="CajaDia">
+                <div class="TituloCaja">
+                <span><span id="NombreColacion2" class="Nombre">Colación</span> <span class="con">con <span id="BebidaColacion2" class="Bebida">Bebida</span></span></span>
+                <div class="IconosBotones">
+                    <span><button class="BtnInterfaz Interfaz AbrirReceta" id="4" aria-label="Cerrar menú"><i class="icon icon-libro interfaz"  id="4"></i></button></span>
+                    <span><button class="BtnInterfaz Interfaz Editar" id="4" aria-label="Cerrar menú"><i class="icon icon-editar interfaz"  id="4"></i></button></span>
+                </div>
+            </div>
+                <hr>
+                <span id="DetallesColacion2" class="Detalles">
+                    <ul>
+                        <li><i class="icon icon-tiempo icondetalle"></i> <span id="Tiempo4"></span> Minutos</li>
+                        <li><i class="icon icon-ingredientes icondetalle"></i> <span id="NoIngredientes4"></span> Ingredientes</li>
+                        <li><i class="icon icon-info icondetalle"></i> <span id="Dificultad4">Dificultad</span></li>
+                    </ul>
+                </span>
+            </div>
+            <div class="CajaDia">
+                <div class="TituloCaja">
+                <span><span id="NombreCena" class="Nombre">Cena</span> <span class="con">con <span id="BebidaCena" class="Bebida">Bebida</span></span></span>
+                <div class="IconosBotones">
+                    <span><button class="BtnInterfaz Interfaz AbrirReceta" id="5" aria-label="Cerrar menú"><i class="icon icon-libro interfaz"  id="5"></i></button></span>
+                    <span><button class="BtnInterfaz Interfaz Editar" id="5" aria-label="Cerrar menú"><i class="icon icon-editar interfaz"  id="5"></i></button></span>
+                </div>
+            </div>
+                <hr>
+                <span id="DetallesCena" class="Detalles">
+                    <ul>
+                        <li><i class="icon icon-tiempo icondetalle"></i> <span id="Tiempo5"></span> Minutos</li>
+                        <li><i class="icon icon-ingredientes icondetalle"></i> <span id="NoIngredientes5"></span> Ingredientes</li>
+                        <li><i class="icon icon-info icondetalle"></i> <span id="Dificultad5">Dificultad</span></li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </main>
+
+    <section class="Seccion" id="ListaCompras">
+        <h2>Lista de Compras</h2>
+        <div class="CuadroDeTexto">
+            <div class="CuadroDeTexto AvisoSinElecciones" id="AvisoCompra">
+                <i class="icon icon-info"></i>
+                Para ver la lista de compras semanal, primero haz tus elecciones para cada día con el botón <i>Editar ( <i class="icon icon-editar" style="font-size: 0.8em;"></i> )</i>
+            </div>
+            <table id="TablaCompras">
+                <tbody id="CuerpoTablaCompras">
+                <tr>
+                    <th>Ingrediente</th>
+                    <th>Usos</th>
+                </tr>
+                <tr>
+                    <td>Azucar</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Queso</td>
+                    <td>2</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <section class="Seccion SobreLaPagina" id="SobreRecetari">
+        <h2> Sobre Recetari </h2>
+        <div id="Explicacion">
+        <div class="CuadroDeTexto">
+        <p>
+            <b>Recetari está para facilitar tu alimentación. </b>
+            <br> 
+            <br>
+            Sabemos que, para algunos, la hora de cocinar es todo un momento de relajación y diversión, pero no hay que olvidar lo que viene antes de eso: ¡la planeación!
+            <br><br>
+            Si bien no te podemos ayudar con el tiempo que toma preparar tus alimentos, sí te podemos ayudar a agilizar el tiempo que usas para decidir qué comer.
+            <br><br>
+            Recetari te ofrece una herramienta de administración semanal para que planees dos colaciones y tres comidas para cada día de la semana. 
+            <br><br>
+            Para cada hora de comer, podrás elegir una comida y una bebida de entre las múltiples recetas disponibles. Además, también encontrarás una lista de compras personalizada que te indicará qué ingredientes necesitas según tus elecciones y te dirá en cuántas comidas usarás cada ingrediente.
+            <br><br>
+            Explora y planea tu semana fácilmente.
+            <br><br>
+            <span class="TextoNota">Imágenes de fondo por <a href="https://www.freepik.es/foto-gratis/parquet-negro_1034936.htm#page=1&query=fondo%20madera%20oscura&position=29" target="_blank">kues1</a> y <a href="https://unsplash.com/photos/li0iC0rjvvg" target="_blank">Augustine Wong</a>.</span>
+            
+        </p>
+        
+        </div id="LogoDeInfo">
+        <img src="../../IMG/Miniaturas/LogoSolo[R].svg" alt="Logo de Fun Fact ©" id="LogoDeInfo">
+        </div>
+    </section>
+
+    <!-- <section class="Seccion" id="Colaborar">
+        <h2 id="TituloColaborar">Colaborar</h2>
+        <form action="" method="post" id="Formulario" autocomplete="off" name="ColaborarFF">
+            <div class="Formulario">
+                <h3>¿Tienes algún conocimiento que quieras compartir con el mundo? <br> Aquí puedes hacerlo:</h3>
+                <div class="Pregunta">
+                    <input  id="ImagenSugerida" name="Imagen" type="text" required placeholder="(URL o enlace)">
+                    <label for="ImagenSugerida">Sugiere una imagen</label>
+                </div>
+                <div class="Pregunta">
+                    <textarea  name="Info" id="DatoCuriosoSugerido" cols="41" rows="5" maxlength="300" required placeholder="(Máximo 300 caracteres)"></textarea>
+                    <label for="DatoCuriosoSugerido">¡Escribe tu dato curioso!</label>
+                </div>
+                <div class="Pregunta">
+                    <input  id="CreditoDelAporte" name="Credito" type="text" maxlength="15" required placeholder="(¡Para darte los créditos del aporte!)">                  
+                    <label for="CreditoDelAporte">Anota tu nombre o apodo</label>
+                </div>
+                <div class="Pregunta">
+                    <input  id="FuenteDeDatoSugerido" name="Fuente" type="text" required placeholder="(Enlace o bibliografía)">                  
+                    <label for="FuenteDeDatoSugerido">Agrega tu fuente</label>
+                </div>
+                <h4 id="FormRespuesta"></h4>
+                <div id="EnviarDatoSugerido">
+                    <button type="submit" id="EnviarDatoSugeridob"><b>¡Enviar mi dato!</b></button>
+                </div>
+            </div>
+        </form>
+
+    </section> -->
+    <span style="opacity: 0; pointer-events: none; font-size: 0.1em;" id="linkDeEstaPagina">https://edward5126.github.io/WitSet/APPS/FunFactWeb/</span>
+    <footer id="Más">
+        <div class="Pie">
+            <a href="https://www.instagram.com/witset_oficial/" target="_blank" class="enlacesContacto"><i class="icon icon-instagram logoRedSocial"></i></a>
+            <p>&copy; Recetari & Wit Set 2022<br><br>Hecho con&nbsp&nbsp<i class="icon icon-corazon"></i>&nbsp&nbspy&nbsp&nbsp<i class="icon icon-taza-cafe"></i>&nbsp&nbsppor <i>E-nnova Design</i></i></p>
+            
+                <details class="ContenedorPie2" id="BotonListaCompartir">
+                    <summary class="enlacesContacto"><b>Compartir</b></summary>
+                    <div id="Enlaces">
+                        <a href="https://api.whatsapp.com/send?text=Explora datos curiosos en Fun Fact Web: https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-whatsapp-cuadro logoRedSocial"></i></a>
+                        <a href="https://www.facebook.com/sharer.php?u=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-facebook-cuadro logoRedSocial"></i></a>
+                        <a href="https://www.twitter.com/intent/tweet?text=Explora datos curiosos en la web de Fun Fact: &url=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/&hashtags=FunFactWeb,ProyectoSTEAMTorch" target="_blank" class="enlacesContacto"><i class="icon icon-twitter-cuadro  logoRedSocial"></i></a>
+                        <a href="#copiarEnlaceCompartir" target="_self" class="enlacesContacto" id="copiarEnlaceCompartir" title="Copiar enlace al portapapeles"><i class="icon icon-portapapeles logoRedSocial"></i></a>
+                    </div>
+                    <span id="RespuestaCopiado"></span>
+                </details>
+                <details class="ContenedorPie2">
+                    <summary class="enlacesContacto"><b>Donar</b></summary>
+                    <div id="Enlaces">
+                        <a href="https://www.buymeacoffee.com/EnnovaDesign" target="_blank" class="enlacesContacto" title="Buy Me A Coffe"><i class="icon icon-buymeacoffee  logoRedSocial"></i></a>
+                        <a href="https://paypal.me/EdChan5126?country.x=MX&locale.x=es_XC" target="_blank" class="enlacesContacto" title="PayPal"><i class="icon icon-paypal  logoRedSocial"></i></a>
+                    </div>
+                </details>
+            
+            <!-- <div class="ContenedorPie">
+                <p>Conoce las otras partes del proyecto <b><i>STEAM Torch</i></b>:</p>
+                <div id="Proyecto">
+                    <a href=""><img src="IMG/LogoHorizontalDM[ST].svg" alt="Visita el blog STEAM Torch" class="ProyectoEnlaces" id="LogoDeIndex"></a>
+                    <a href=""><img src="IMG/LogoHorizontalDM[II].svg" alt="Visita Internet Index" class="ProyectoEnlaces" id="LogoDeTorch"></a>
+                </div>
+            </div> -->
+            <p>¿Algo no anda bien? ¿Encontraste un error? ¿Eres autor de algún contenido mostrado y deseas que sea removido? <a href="../../HTML/Contacto.html" target="_blank" rel="noopener noreferrer">Contáctanos aquí</a>.</p>
+        </div>
+    </footer>
+</body>
+
+<script src="JS/ScriptR.js"></script>
+<!-- <script src="JS/ScriptDelFormulario.js"></script> -->
+<script src="../../JS/ScriptGlobal.js"></script>
+<!-- <script> 
+if (navigator.serviceWorker.controller) { 
+     console.log("ServiceWorker activo encontrado, no se necesita registrarlo"); 
+}else{ 
+ // Register the service worker 
+navigator.serviceWorker.register("serviceworker.js", { scope: "./" }).then(function (reg) { 
+    console.log("ServiceWorker registrado"); 
+});
+}
+</script> -->
+
+</html>

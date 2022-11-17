@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'PersonalIconCollection';
   src:
-    url('fonts/PersonalIconCollection.ttf?lg7ifc') format('truetype'),
-    url('fonts/PersonalIconCollection.woff?lg7ifc') format('woff'),
-    url('fonts/PersonalIconCollection.svg?lg7ifc#PersonalIconCollection') format('svg');
+    url('fonts/PersonalIconCollection.ttf?u0jevf') format('truetype'),
+    url('fonts/PersonalIconCollection.woff?u0jevf') format('woff'),
+    url('fonts/PersonalIconCollection.svg?u0jevf#PersonalIconCollection') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-borrar:before {
+  content: "\e927";
+}
+.icon-Guardar:before {
+  content: "\e926";
+}
+.icon-libro:before {
+  content: "\e925";
+}
+.icon-editar:before {
+  content: "\e922";
+}
+.icon-ingredientes:before {
+  content: "\e923";
+}
+.icon-tiempo:before {
+  content: "\e924";
+}
+.icon-DisenoPublicitario:before {
+  content: "\e919";
+}
+.icon-ExternalLink:before {
+  content: "\e91a";
+}
+.icon-Formulario:before {
+  content: "\e91b";
+}
+.icon-GitHub:before {
+  content: "\e91c";
+}
+.icon-IdentidadDeMarca:before {
+  content: "\e91d";
+}
+.icon-LandingPage:before {
+  content: "\e91e";
+}
+.icon-Mail:before {
+  content: "\e91f";
+}
+.icon-RedSocial:before {
+  content: "\e920";
+}
+.icon-WebApp:before {
+  content: "\e921";
+}
 .icon-info:before {
   content: "\e918";
 }
