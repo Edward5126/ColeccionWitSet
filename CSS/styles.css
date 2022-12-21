@@ -12,13 +12,13 @@
   --Fondo-Nota: #0f0f0f9d;
 
   --Degradado-Color: linear-gradient(to top, #656565da, #535353e2);
-  --Degradado-Principal: linear-gradient(to top, #a3a3a3, #FFFFFF);
+  --Degradado-Principal: linear-gradient(to top, #cdcdcd, #eaeaea);
   --Degradado-Click: linear-gradient(to top, #6565657a, #53535379);
 
   --Scrollbars: #adadad5a;
   --Cuadro-Texto: #5454545a;
 }
-/* --------------------------------------------------------------------------------------------------------------------------------------- Vista para celulares */
+/*  Vista para celulares ---------------------------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 800px) {
   /* Para el desplazamiento suave entre secciones */
   html {
@@ -362,10 +362,10 @@
   /* Botones: Normal */
   button {
     background: var(--Degradado-Principal);
-    padding: 9px 25px;
+    padding: 10px 25px;
     font-family: Montserrat;
     border: none;
-    border-radius: 7px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     letter-spacing: 1px;
@@ -422,6 +422,14 @@
     margin: 0% 5% 5% 5%;
   }
 
+  .CuadroDeTexto2 {
+    background-color: var(--Cuadro-Texto);
+    border-radius: 15px;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 0% 5% 5% 5%;
+  }
+
   /* Campos de texto del formulario: Normal */
   input,
   textarea {
@@ -433,14 +441,14 @@
     font-family: "Montserrat";
     font-size: 14px;
     outline: none;
-    color: var(--Texto-Nota);
+    color: var(--Texto-Principal);
     resize: none;
   }
 
   /* Barras del formulario: Al hacer click/seleccionar */
   input:focus,
   textarea:focus {
-    color: var(--Texto-Nota);
+    color: var(--Texto-Principal);
     border-bottom: 1px solid var(--Texto-Seleccionado);
   }
 
@@ -495,8 +503,8 @@
   textarea:valid ~ label {
     outline: none;
     top: -30px;
-    left: 5px;
-    font-size: 15px;
+    left: 0px;
+    font-size: 13px;
     color: var(--Texto-Seleccionado);
   }
 
@@ -557,6 +565,7 @@
     padding: 5px 10px;
     min-width: 50px;
     line-height: 1.5;
+    margin: 0 5px;
   }
 
   /* Formato de los cuadros de texto */
@@ -776,6 +785,59 @@ th, td {
 
 td {
   background-color: var(--Cuadro-Texto);
+}
+
+.Ag {
+  background: none;
+  color: var(--Texto-Principal);
+  border: solid 1px var(--Texto-Principal);
+  padding: 1px 20px;
+}
+
+.Ag:disabled {
+  background: none;
+  color: var(--Texto-Nota);
+  border-color: var(--Texto-Nota);
+}
+
+.Ag:hover {
+  background: none;
+  color:var(--Texto-Seleccionado);
+  border-color: var(--Texto-Seleccionado);
+}
+
+fieldset {
+  border-color: var(--Texto-Nota);
+  border-radius: 15px;
+  margin: 65px 15px;
+  min-height: 70px;
+}
+
+legend {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  color:var(--Texto-Seleccionado);
+  padding: 0 10px;
+}
+
+fieldset > ol > li, .Agregar {
+  background: var(--Cuadro-Texto);
+  margin-top: 10px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.Agregar {
+  color: var(--Texto-Nota);
+  text-align: center;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.Agregar:hover {
+  color: var(--Texto-Seleccionado);
 }
 }
 
@@ -1080,10 +1142,10 @@ td {
   /* Botones: Normal */
   button {
     background: var(--Degradado-Principal);
-    padding: 9px 25px;
+    padding: 10px 25px;
     font-family: Montserrat;
     border: none;
-    border-radius: 7px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     letter-spacing: 1px;
@@ -1171,14 +1233,14 @@ td {
     font-family: "Montserrat";
     font-size: 1em;
     outline: none;
-    color: var(--Texto-Nota);
+    color: var(--Texto-Principal);
     resize: none;
   }
 
   /* Barras del formulario: Al hacer click/seleccionar */
   input:focus,
   textarea:focus {
-    color: var(--Texto-Nota);
+    color: var(--Texto-Principal);
     border-bottom: 1px solid var(--Texto-Seleccionado);
   }
 
@@ -1292,6 +1354,7 @@ td {
   .btnprn {
     font-size: 1em;
     color: var(--Texto-Contrario);
+    margin: 0 5px;
   }
 
   /* Formato de los cuadros de texto */
@@ -1808,10 +1871,10 @@ td {
   /* Botones: Normal */
   button {
     background: var(--Degradado-Principal);
-    padding: 9px 25px;
+    padding: 10px 25px;
     font-family: Montserrat;
     border: none;
-    border-radius: 7px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     letter-spacing: 1px;
@@ -1897,14 +1960,14 @@ td {
     font-family: "Montserrat";
     font-size: 1em;
     outline: none;
-    color: #f5f5f56c;
+    color: var(--Texto-Principal);
     resize: none;
   }
 
   /* Barras del formulario: Al hacer click/seleccionar */
   input:focus,
   textarea:focus {
-    color: rgba(245, 245, 245, 0.616);
+    color: var(--Texto-Principal);
     border-bottom: 1px solid var(--Texto-Seleccionado);
   }
 
@@ -2014,6 +2077,7 @@ td {
   .btnprn {
     font-size: 1em;
     color: var(--Texto-Contrario);
+    margin: 0 5px;
   }
 
   /* Formato de los cuadros de texto */

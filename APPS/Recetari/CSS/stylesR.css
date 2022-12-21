@@ -53,7 +53,7 @@ main {
     display: none;
 }
 
-select {
+.Ediciones > select {
     margin-bottom: 50px;
 }
 
@@ -74,6 +74,13 @@ select {
     margin: 25px;
 }
 
+.EditarNuevo {
+    width: 90%;
+    height: auto;
+
+    display: none;
+}
+
 #AvisoCompra {
     margin: 0;
 }
@@ -81,6 +88,12 @@ select {
 .CuadroDeTexto {
     margin-bottom: 25px;
     padding: 25px;
+}
+
+.CuadroDeTexto2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .NombreRecetaComida, .NombreRecetaBebida {
@@ -210,14 +223,14 @@ color: var(--Texto-Resaltado);
 color: #414345;
 }
 
-.CheckButton {
+td > .CheckButton {
     position: relative;
     align-items: center;
     justify-content: center;
     top: 0;
 }
 
-.CheckCheck {
+td > label > .CheckCheck {
     margin: 0;
 }
 
@@ -229,6 +242,58 @@ tr {
     text-decoration: line-through;
     color: var(--Texto-Nota);
     font-size: 13px;
+}
+
+h2 {
+    padding-top: 0;
+}
+
+.Rango {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* fieldset {
+    margin: 65px 0;
+    min-height: 85px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14pxpx;
+} */
+
+.IngredienteEnlistadoRec {
+    background-color: var(--Cuadro-Texto);
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: var(--Texto-Nota);
+    font-size: 14px;
+}
+
+#EditarNuevoCampo {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    min-height: 1.2em;
+    max-height: 3.2em;
+}
+
+#AgIng {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+#AgIng > button {
+    padding: 5px 20px;
+}
+
+#IngAgred {
+    
+}
+
+.PrevInfo, #Info, #Info2 {
+    padding: 0;
+    margin: 0;
 }
 
 @media only screen and (min-width: 1040px) {

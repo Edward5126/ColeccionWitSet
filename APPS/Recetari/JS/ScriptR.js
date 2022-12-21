@@ -11,35 +11,51 @@ var Estado = false;
 var Dia = new Date();
 var DiaActual = Dia.getDay();
 
-SetUpRecetas();
+if (localStorage.getItem("ArrayComidasP") !== undefined && localStorage.getItem("ArrayComidasP")) {
+  SetUpRecetasP();
+} else {
+  SetUpRecetas();
+};
+
+function SetUpRecetasP() {
+  ListaComidas = JSON.parse(localStorage.getItem("ArrayComidasP"));
+  ListaBebidas = JSON.parse(localStorage.getItem("ArrayBebidasP"));
+  console.log("Recetarios de comidas y bebidas personalizados alcanzados");
+  CargarListas();
+  setTimeout(() => {CambiarDia(DiaActual)}, 5);
+}
 
 function SetUpRecetas() {
   fetch("API/RecetasComidas.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (ListaRecibida) {
-    ListaComidas = ListaRecibida;
-    console.log("Recetario de Comidas alcanzado.");
-  })
-  .catch(function (error) {
-    alert ("Algo parece andar mal, pero pronto estará arreglado. Intenta de nuevo más tarde o notifica este error. (Extracción Fallida)");
-    console.error("Fetch fallido");
-  });
-fetch("API/RecetasBebidas.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (ListaRecibida2) {
-    ListaBebidas = ListaRecibida2;
-    console.log("Recetario de Bebidas alcanzado.");
-    CargarListas();
-    CambiarDia(DiaActual);
-  })
-  .catch(function (error) {
-    alert ("Algo parece andar mal, pero pronto estará arreglado. Intenta de nuevo más tarde o notifica este error. (Extracción Fallida)");
-    console.error("Fetch fallido");
-  });
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (ListaRecibida) {
+      ListaComidas = ListaRecibida;
+      console.log("Recetario de Comidas alcanzado.");
+    })
+    .catch(function (error) {
+      alert(
+        "Algo parece andar mal, pero pronto estará arreglado. Intenta de nuevo más tarde o notifica este error. (Extracción Fallida)"
+      );
+      console.error("Fetch fallido");
+    });
+  fetch("API/RecetasBebidas.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (ListaRecibida2) {
+      ListaBebidas = ListaRecibida2;
+      console.log("Recetario de Bebidas alcanzado.");
+      CargarListas();
+      CambiarDia(DiaActual);
+    })
+    .catch(function (error) {
+      alert(
+        "Algo parece andar mal, pero pronto estará arreglado. Intenta de nuevo más tarde o notifica este error. (Extracción Fallida)"
+      );
+      console.error("Fetch fallido");
+    });
 }
 
 var ArrayMarcas = [];
@@ -156,6 +172,8 @@ function AbrirInterfaz() {
   document.querySelector(".Ediciones").style.display = "none";
   document.querySelector(".Receta").classList.remove("Mostrar");
   document.querySelector(".Receta").style.display = "none";
+  document.querySelector(".EditarNuevo").classList.remove("Mostrar");
+  document.querySelector(".EditarNuevo").style.display = "none";
   document.querySelector(".AvisoSinElecciones").classList.remove("Mostrar");
   document.querySelector(".AvisoSinElecciones").style.display = "none";
 
@@ -168,7 +186,7 @@ BotonesInterfazables.forEach((element) => {
   element.addEventListener("click", (e) => {
     ComidaClickeada = e.target.getAttribute("id");
     AbrirInterfaz();
-    console.log("Se ha clickeado " + ComidaClickeada);
+    // console.log("Se ha clickeado " + ComidaClickeada);
   });
 });
 
@@ -182,6 +200,12 @@ const BotonEditar = document.querySelectorAll(".Editar");
 BotonEditar.forEach((element) => {
   element.addEventListener("click", MostrarEditar);
 });
+
+//A los botones de edición del panel se les asigna su función
+function MostrarEditarNuevo() {
+  document.querySelector(".EditarNuevo").classList.add("Mostrar");
+  document.querySelector(".EditarNuevo").style.display = "block";
+}
 
 //A los títulos se les asigna su función
 function MostrarReceta() {
@@ -225,6 +249,11 @@ function MostrarReceta() {
 
     document.querySelector(".NombreRecetaComida").innerHTML =
       ListaComidas[ComidasElegidas[NumeroABuscar]].nombre;
+      let Dificults = ["Fácil", "Intermedio", "Difícil"]
+      document.getElementById("Info").innerHTML = `
+  <li><i class="icon icon-tiempo icondetalle"></i>${ListaComidas[ComidasElegidas[NumeroABuscar]].tiempo} minutos</li>
+  <li><i class="icon icon-ingredientes icondetalle"></i>${ListaComidas[ComidasElegidas[NumeroABuscar]].ingredientes.length} ingredientes</li>
+  <li><i class="icon icon-info icondetalle"></i>${Dificults[ListaComidas[ComidasElegidas[NumeroABuscar]].dificultad-1]}</li>`;
     document.getElementById("ListaIngredientes").innerHTML = "";
     ListaComidas[ComidasElegidas[NumeroABuscar]].ingredientes.forEach(
       (element) => {
@@ -241,6 +270,10 @@ function MostrarReceta() {
     document.querySelector(".NombreRecetaBebida").innerHTML =
       ListaBebidas[BebidasElegidas[NumeroABuscar]].nombre;
     document.getElementById("ListaIngredientes2").innerHTML = "";
+    document.getElementById("Info2").innerHTML = `
+  <li><i class="icon icon-tiempo icondetalle"></i>${ListaBebidas[BebidasElegidas[NumeroABuscar]].tiempo} minutos</li>
+  <li><i class="icon icon-ingredientes icondetalle"></i>${ListaBebidas[BebidasElegidas[NumeroABuscar]].ingredientes.length} ingredientes</li>
+  <li><i class="icon icon-info icondetalle"></i>${Dificults[ListaBebidas[BebidasElegidas[NumeroABuscar]].dificultad-1]}</li>`;
     ListaBebidas[BebidasElegidas[NumeroABuscar]].ingredientes.forEach(
       (element) => {
         document.getElementById(
@@ -265,10 +298,12 @@ TitulosRecetas.forEach((element) => {
 
 //Se cargan todas las recetas en la lista
 function CargarListas() {
+  document.getElementById("ComidasAElegir").innerHTML = '<option value="-1" selected hidden>Comida</option>';
   ListaComidas.forEach((element) => {
     document.getElementById("ComidasAElegir").innerHTML +=
       "<option value=" + element.id + ">" + element.nombre + "</option>";
   });
+  document.getElementById("BebidasAElegir").innerHTML = '<option value="-1" selected hidden>Bebida</option>';
   ListaBebidas.forEach((element) => {
     document.getElementById("BebidasAElegir").innerHTML +=
       "<option value=" + element.id + ">" + element.nombre + "</option>";
@@ -337,7 +372,7 @@ function RegistrarDia() {
 
     default:
       break;
-  };
+  }
 
   document.querySelectorAll(".CajaDia")[ComidaClickeada - 1].style.color =
     "var(--Texto-Principal)";
@@ -346,7 +381,7 @@ function RegistrarDia() {
   console.log("Se han guardado la comida y la bebida elegida.");
   console.groupEnd();
   GuardarCache();
-  CargarListadeCompra()
+  CargarListadeCompra();
 }
 
 function ElegirDificultad(a, b) {
@@ -368,7 +403,7 @@ function Seleccionadas() {
   ) {
     document.getElementById("RegistrarElecciones").removeAttribute("disabled");
   } else {
-    document.getElementById("RegistrarElecciones").setAttribute("disabled");
+    document.getElementById("RegistrarElecciones").setAttribute("disabled", "");
   }
 }
 
@@ -465,7 +500,7 @@ function CargarDia() {
 
       default:
         break;
-    };
+    }
 
     if (ComidasElegidas[NumeroABuscar2] != null) {
       document.querySelectorAll(".CajaDia")[element - 1].style.color =
@@ -503,36 +538,37 @@ function CargarDia() {
 }
 
 function GuardarCache() {
-    if (
-      localStorage.getItem('ArrayComida') !== undefined &&
-      localStorage.getItem('ArrayComida')
-    ) {
-      localStorage.removeItem('ArrayComida');
-      localStorage.removeItem('ArrayBebida');
-      localStorage.removeItem('ArrayMarcas');
-    }
+  if (localStorage.getItem("ArrayComida") !== undefined && localStorage.getItem("ArrayComida")) {
+    localStorage.removeItem("ArrayComida");
+    localStorage.removeItem("ArrayBebida");
+    localStorage.removeItem("ArrayMarcas");
+  }
 
-    localStorage.setItem('ArrayComida', JSON.stringify(ComidasElegidas));
-    localStorage.setItem('ArrayBebida', JSON.stringify(BebidasElegidas));
-    localStorage.setItem('ArrayMarca', JSON.stringify(ArrayMarcas));
+  localStorage.setItem("ArrayComida", JSON.stringify(ComidasElegidas));
+  localStorage.setItem("ArrayBebida", JSON.stringify(BebidasElegidas));
+  localStorage.setItem("ArrayMarca", JSON.stringify(ArrayMarcas));
 
-    console.log(
-      "Selecciones de comidas, bebidas y marcas de lista guardadas en la memoria caché."
-    );
+  console.log(
+    "Selecciones de comidas, bebidas y marcas de lista guardadas en la memoria caché."
+  );
 }
 
 function CargarCache() {
   if (
-    localStorage.getItem('ArrayComida') !== undefined &&
-    localStorage.getItem('ArrayComida')
+    localStorage.getItem("ArrayComida") !== undefined &&
+    localStorage.getItem("ArrayComida")
   ) {
-  ComidasElegidas = JSON.parse(localStorage.getItem('ArrayComida'));
-  BebidasElegidas = JSON.parse(localStorage.getItem('ArrayBebida'));
-  ArrayMarcas = JSON.parse(localStorage.getItem('ArrayMarca'));
-  console.log("Selecciones de comidas, bebidas y marcas de lista extraídas de la memoria caché.");
+    ComidasElegidas = JSON.parse(localStorage.getItem("ArrayComida"));
+    BebidasElegidas = JSON.parse(localStorage.getItem("ArrayBebida"));
+    ArrayMarcas = JSON.parse(localStorage.getItem("ArrayMarca"));
+    console.log(
+      "Selecciones de comidas, bebidas y marcas de lista extraídas de la memoria caché."
+    );
   } else {
-    console.log("Sin registros previos en la memoria caché, uno nuevo ha sido creado.");
-  } 
+    console.log(
+      "Sin registros previos en la memoria caché, uno nuevo ha sido creado."
+    );
+  }
 }
 
 document.getElementById("Borrar").addEventListener("click", (e) => {
@@ -560,9 +596,9 @@ document.getElementById("Borrar").addEventListener("click", (e) => {
 
 function AvisarSinCompras() {
   document.querySelector("#AvisoCompra").classList.add("Mostrar");
-    document.querySelector("#AvisoCompra").style.display = "block";
+  document.querySelector("#AvisoCompra").style.display = "block";
 
-    document.getElementById("CuerpoTablaCompras").innerHTML = "";
+  document.getElementById("CuerpoTablaCompras").innerHTML = "";
 }
 
 var ListaCompras = [];
@@ -570,17 +606,17 @@ var ListaCompras = [];
 function CargarListadeCompra() {
   ListaCompras = [];
 
-  ComidasElegidas.forEach(element => {
+  ComidasElegidas.forEach((element) => {
     if (element != null) {
-      ListaComidas[element].ingredientes.forEach(element2 => {
+      ListaComidas[element].ingredientes.forEach((element2) => {
         ListaCompras.push(element2);
       });
     }
   });
 
-  BebidasElegidas.forEach(element3 => {
+  BebidasElegidas.forEach((element3) => {
     if (element3 != null) {
-      ListaBebidas[element3].ingredientes.forEach(element4 => {
+      ListaBebidas[element3].ingredientes.forEach((element4) => {
         ListaCompras.push(element4);
       });
     }
@@ -591,11 +627,11 @@ function CargarListadeCompra() {
   let ArrayUnico = [];
   let ArrayRepeticiones = [];
   let Cont = 1;
-  
+
   for (let i = 0; i < ListaCompras.length; i++) {
     const element = ListaCompras[i];
-    
-    if (ListaCompras[i] == ListaCompras[i+1]) {
+
+    if (ListaCompras[i] == ListaCompras[i + 1]) {
       // console.log("Se repite el ingrediente " + element);
       Cont++;
     } else {
@@ -613,30 +649,39 @@ function CargarListadeCompra() {
 
   for (let k = 0; k < ArrayUnico.length; k++) {
     const element = ArrayUnico[k];
-    document.getElementById("CuerpoTablaCompras").innerHTML += `<tr class="Lineaxd">
+    document.getElementById(
+      "CuerpoTablaCompras"
+    ).innerHTML += `<tr class="Lineaxd">
     <td><label class="CheckButton"><input type="checkbox" id="IngredienteCompra${k}" class="CheckCompra"><span class="CheckCheck"></span></label></td>
     <td>${ArrayUnico[k]}</td>
     <td>${ArrayRepeticiones[k]}</td>
   </tr>`;
   }
 
-  document.querySelectorAll(".CheckCompra").forEach(element => {
-    element.addEventListener("click", e=> {
+  document.querySelectorAll(".CheckCompra").forEach((element) => {
+    element.addEventListener("click", (e) => {
       // alert("Una marca ha sido puesta en " + e.target.getAttribute("id").slice(17));
-      ArrayMarcas[e.target.getAttribute("id").slice(17)] = !ArrayMarcas[e.target.getAttribute("id").slice(17)];
+      ArrayMarcas[e.target.getAttribute("id").slice(17)] =
+        !ArrayMarcas[e.target.getAttribute("id").slice(17)];
 
       if (ArrayMarcas[e.target.getAttribute("id").slice(17)] == true) {
-        document.querySelectorAll(".Lineaxd")[e.target.getAttribute("id").slice(17)].classList.add("Conseguido");
+        document
+          .querySelectorAll(".Lineaxd")
+          [e.target.getAttribute("id").slice(17)].classList.add("Conseguido");
       } else {
-        document.querySelectorAll(".Lineaxd")[e.target.getAttribute("id").slice(17)].classList.remove("Conseguido");
+        document
+          .querySelectorAll(".Lineaxd")
+          [e.target.getAttribute("id").slice(17)].classList.remove(
+            "Conseguido"
+          );
       }
       GuardarCache();
-    })
+    });
   });
 
   for (let i = 0; i < ArrayMarcas.length; i++) {
     const element = ArrayMarcas[i];
-    
+
     let d = "IngredienteCompra" + i;
 
     if (element == true) {
@@ -645,10 +690,414 @@ function CargarListadeCompra() {
     }
   }
 
-  if (ListaCompras.length>0){
+  if (ListaCompras.length > 0) {
     document.querySelector("#AvisoCompra").classList.remove("Mostrar");
-  document.querySelector("#AvisoCompra").style.display = "none";
+    document.querySelector("#AvisoCompra").style.display = "none";
   } else {
     AvisarSinCompras();
   }
+}
+
+var p = 0;
+var u = 0;
+
+function AgregarIng() {
+  let Ing = prompt("Ingrediente nuevo:")
+    .trim()
+    .replace(/^\w/, (c) => c.toUpperCase());
+  if (Ing != "" && Ing != null) {
+    document.getElementById(
+      "IngredientesListaRec"
+    ).innerHTML += `<li class="IngreNuevo Item" id="NuevIng${p}">${Ing}</li>`;
+    document.querySelectorAll(".Item").forEach((element) => {
+      element.addEventListener("click", (e) => {
+        t = e.target.getAttribute("id");
+        AbrirInterfaz();
+        MostrarEditarNuevo();
+        document.getElementById("EditarNuevoCampo").value =
+          document.getElementById(t).innerHTML;
+      });
+    });
+    p++;
+  }
+}
+
+function NewAgregarIng(e) {
+  e.preventDefault();
+  let Ing = document
+    .getElementById("IngAgred")
+    .value.trim()
+    .replace(/^\w/, (c) => c.toUpperCase());
+  if (Ing != "" && Ing != null) {
+    document.getElementById(
+      "IngredientesListaRec"
+    ).innerHTML += `<li class="IngreNuevo Item" id="NuevIng${p}">${Ing}</li>`;
+    document.querySelectorAll(".Item").forEach((element) => {
+      element.addEventListener("click", (e) => {
+        t = e.target.getAttribute("id");
+        AbrirInterfaz();
+        MostrarEditarNuevo();
+        document.getElementById("EditarNuevoCampo").value =
+          document.getElementById(t).innerHTML;
+      });
+    });
+    p++;
+    document.getElementById("IngAgred").value = "";
+    document.getElementById("BotonAdd").setAttribute("disabled", "");
+  }
+}
+
+function ActivarBotonAgregar() {
+  if (document.getElementById("IngAgred").value != "") {
+    document.getElementById("BotonAdd").removeAttribute("disabled");
+  } else {
+    document.getElementById("BotonAdd").setAttribute("disabled", "");
+  }
+}
+
+function AgregarPaso() {
+  if (document.getElementById("TipoRec").value != "0") {
+    let Paso = prompt("Paso nuevo:").trim().replace(/^\w/, (c) => c.toUpperCase());
+  if (Paso != "" && Paso != null) {
+    document.getElementById("PasosListaRec").innerHTML += `<li class="PasoNuevo Item" id="NuevoPaso${u}">${Paso}</li>`;
+    document.querySelectorAll(".Item").forEach((element) => {
+      element.addEventListener("click", (e) => {
+        t = e.target.getAttribute("id");
+        AbrirInterfaz();
+        MostrarEditarNuevo();
+        document.getElementById("EditarNuevoCampo").value =
+          document.getElementById(t).innerHTML;
+      });
+    });
+    u++;
+  }
+  }
+}
+
+function HabilitarBoton() {
+  document.getElementById("RegistrarCambio").removeAttribute("disabled");
+}
+
+document.getElementById("RegistrarCambio").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementById(t).innerHTML = document
+    .getElementById("EditarNuevoCampo")
+    .value.trim()
+    .replace(/^\w/, (c) => c.toUpperCase());
+  AbrirInterfaz();
+});
+
+document.getElementById("EliminarNuevo").addEventListener("click", (e) => {
+  if (
+    confirm(
+      "¿Eliminar " + document.getElementById(t).textContent + " de la lista?"
+    )
+  ) {
+    document.getElementById(t).remove();
+    AbrirInterfaz();
+  }
+});
+
+// document.getElementById("AgIng").addEventListener("click", AgregarIng);
+document.getElementById("AgPaso").addEventListener("click", AgregarPaso);
+
+
+function Reevaluar() {
+  // document.getElementById("ObtenerDetallesDelDato").removeAttribute("disabled");
+  document.getElementById("NumeroRec").removeAttribute("disabled");
+  document.getElementById("NombreRec").removeAttribute("disabled");
+  document.getElementById("IngAgred").removeAttribute("disabled");
+  document.getElementById("TiempoRec").removeAttribute("disabled");
+  document.getElementById("DificultadRec").removeAttribute("disabled");
+  document.getElementById("NuevaEntrada").removeAttribute("disabled");
+  document.getElementById("Borrador").removeAttribute("disabled");
+  document.getElementById("ProbarRec").removeAttribute("disabled");
+  document.getElementById("NumeroRec").focus();
+  if (document.getElementById("TipoRec").value == "Comida") {
+    document
+      .getElementById("NumeroRec")
+      .setAttribute("max", ListaComidas.length);
+  }
+  if (document.getElementById("TipoRec").value == "Bebida") {
+    document
+      .getElementById("NumeroRec")
+      .setAttribute("max", ListaBebidas.length);
+  }
+}
+
+function RevNuevo(){
+  if (document.getElementById("NumeroRec").value == parseInt(document.getElementById("NumeroRec").attributes.max.value)){
+    document.getElementById("LabelNumero").innerHTML = "Número (Nueva entrada)";
+    document.getElementById("ObtenerDetallesDelDato").setAttribute("disabled", "");
+    document.getElementById("QuitarRec").setAttribute("disabled", "");
+    document.getElementById("AgregarRec").removeAttribute("disabled");
+  } else {
+    document.getElementById("LabelNumero").innerHTML = "Número";
+    document.getElementById("ObtenerDetallesDelDato").removeAttribute("disabled");
+    document.getElementById("QuitarRec").removeAttribute("disabled");
+    document.getElementById("AgregarRec").setAttribute("disabled", "");
+  };
+  if (document.getElementById("NumeroRec").value == "" || document.getElementById("NumeroRec").value == parseInt(document.getElementById("NumeroRec").attributes.max.value)){
+    document.getElementById("ObtenerDetallesDelDato").setAttribute("disabled", "");
+    document.getElementById("QuitarRec").setAttribute("disabled", "");
+  } else {
+    document.getElementById("ObtenerDetallesDelDato").removeAttribute("disabled");
+    document.getElementById("QuitarRec").removeAttribute("disabled");
+  }
+}
+
+var Tipo;
+var No;
+const Dificultades = ["Fácil", "Intermedio", "Difícil"];
+
+function Obtener(e) {
+  e.preventDefault();
+if (document.getElementById("NombreRec").value != "" || document.getElementById("IngredientesListaRec").innerHTML != '\n                        ' || document.getElementById("PasosListaRec").innerHTML != '\n                        ' || document.getElementById("TiempoRec").value != "") {
+  if(confirm("Si obtienes una receta existente, se perderán los datos que hayas escrito. ¿Continuar?")) {
+    ObtenerSi();
+    Previsualizar();
+  }
+} else {
+  ObtenerSi();
+  Previsualizar();
+}
+}
+
+function ObtenerSi() {
+  p = 0;
+  u = 0;
+  Tipo = document.getElementById("TipoRec").value;
+  No = document.getElementById("NumeroRec").value;
+  switch (Tipo) {
+    case "Comida":
+      document.getElementById("NombreRec").value = ListaComidas[No].nombre;
+      document.getElementById("IngredientesListaRec").innerHTML = "";
+      ListaComidas[No].ingredientes.forEach((element) => {
+        document.getElementById("IngredientesListaRec").innerHTML += `<li class="IngreNuevo Item" id="NuevIng${p}">${element}</li>`;
+        document.querySelectorAll(".Item").forEach((element) => {
+          element.addEventListener("click", (e) => {
+            t = e.target.getAttribute("id");
+            AbrirInterfaz();
+            MostrarEditarNuevo();
+            document.getElementById("EditarNuevoCampo").value =
+              document.getElementById(t).innerHTML;
+          });
+        });
+        p++;
+      });
+      document.getElementById("PasosListaRec").innerHTML = "";
+      ListaComidas[No].receta.forEach((element) => {
+        document.getElementById("PasosListaRec").innerHTML += `<li class="PasoNuevo Item" id="NuevoPaso${u}">${element}</li>`;
+    document.querySelectorAll(".Item").forEach((element) => {
+      element.addEventListener("click", (e) => {
+        t = e.target.getAttribute("id");
+        AbrirInterfaz();
+        MostrarEditarNuevo();
+        document.getElementById("EditarNuevoCampo").value =
+          document.getElementById(t).innerHTML;
+      });
+    });
+    u++;
+      });
+
+      document.getElementById("TiempoRec").value = ListaComidas[No].tiempo;
+      document.getElementById("DificultadRec").value =
+        Dificultades[ListaComidas[No].dificultad - 1];
+      break;
+
+    case "Bebida":
+      document.getElementById("NombreRec").value = ListaBebidas[No].nombre;
+      document.getElementById("IngredientesListaRec").innerHTML = "";
+      ListaBebidas[No].ingredientes.forEach((element) => {
+        document.getElementById("IngredientesListaRec").innerHTML += `<li class="IngreNuevo Item" id="NuevIng${p}">${element}</li>`;
+        document.querySelectorAll(".Item").forEach((element) => {
+          element.addEventListener("click", (e) => {
+            t = e.target.getAttribute("id");
+            AbrirInterfaz();
+            MostrarEditarNuevo();
+            document.getElementById("EditarNuevoCampo").value =
+              document.getElementById(t).innerHTML;
+          });
+        });
+        p++;
+      });
+      document.getElementById("PasosListaRec").innerHTML = "";
+      ListaBebidas[No].receta.forEach((element) => {
+        document.getElementById("PasosListaRec").innerHTML += `<li class="PasoNuevo Item" id="NuevoPaso${u}">${element}</li>`;
+    document.querySelectorAll(".Item").forEach((element) => {
+      element.addEventListener("click", (e) => {
+        t = e.target.getAttribute("id");
+        AbrirInterfaz();
+        MostrarEditarNuevo();
+        document.getElementById("EditarNuevoCampo").value =
+          document.getElementById(t).innerHTML;
+      });
+    });
+    u++;
+      });
+
+      document.getElementById("TiempoRec").value = ListaBebidas[No].tiempo;
+      document.getElementById("DificultadRec").value =
+        Dificultades[ListaBebidas[No].dificultad - 1];
+      break;
+
+    default:
+      break;
+  }
+}
+
+function ConfNuevo(e) {
+  e.preventDefault();
+  document.getElementById("NumeroRec").focus();
+  document.getElementById("NumeroRec").value = parseInt(document.getElementById("NumeroRec").attributes.max.value);
+  document.getElementById("LabelNumero").innerHTML = "Número (Nueva entrada)";
+  document.getElementById("AgregarRec").removeAttribute("disabled");
+};
+
+function Borrar(e){
+  e.preventDefault();
+  if (document.getElementById("NombreRec").value != "" || document.getElementById("IngredientesListaRec").innerHTML != '\n                        ' || document.getElementById("PasosListaRec").innerHTML != '\n                        ' || document.getElementById("TiempoRec").value != "") {
+    if (confirm("Se borrarán todos los datos introducidos, ¿continuar?")) {
+      
+  document.getElementById("TipoRec").value = "0";
+  document.getElementById("NumeroRec").value = "";
+  document.getElementById("NombreRec").value = "";
+  document.getElementById("IngAgred").value = "";
+  document.getElementById("IngredientesListaRec").innerHTML = "";
+  p = 0;
+  document.getElementById("PasosListaRec").innerHTML = "";
+  u = 0;
+  document.getElementById("TiempoRec").value = "";
+  document.getElementById("DificultadRec").value = "0";
+
+  document.getElementById("NumeroRec").setAttribute("disabled", "");
+  document.getElementById("NombreRec").setAttribute("disabled", "");
+  document.getElementById("IngAgred").setAttribute("disabled", "");
+  document.getElementById("TiempoRec").setAttribute("disabled", "");
+  document.getElementById("DificultadRec").setAttribute("disabled", "");
+  document.getElementById("TipoRec").focus();
+
+  document.getElementById("ObtenerDetallesDelDato").setAttribute("disabled", "");
+  document.getElementById("Borrador").setAttribute("disabled", "");
+  document.getElementById("NuevaEntrada").setAttribute("disabled", "");
+  document.getElementById("ProbarRec").setAttribute("disabled", "");
+  document.getElementById("AgregarRec").setAttribute("disabled", "");
+  document.getElementById("QuitarRec").setAttribute("disabled", "");
+    }
+  } else {
+    document.getElementById("TipoRec").value = "0";
+    document.getElementById("NumeroRec").value = "";
+    
+    document.getElementById("ObtenerDetallesDelDato").setAttribute("disabled", "");
+    document.getElementById("Borrador").setAttribute("disabled", "");
+    document.getElementById("NuevaEntrada").setAttribute("disabled", "");
+    document.getElementById("ProbarRec").setAttribute("disabled", "");
+    document.getElementById("AgregarRec").setAttribute("disabled", "");
+    document.getElementById("QuitarRec").setAttribute("disabled", "");
+  }
+}
+
+function Previsualizar() {
+  document.getElementById("PrevNom").innerHTML = document.getElementById("NombreRec").value;
+  document.getElementById("PrevReceta").style.display = "contents";
+
+  document.getElementById("PrevListaIngredientes").innerHTML = "";
+  document.querySelectorAll(".IngreNuevo").forEach(element => {
+    document.getElementById("PrevListaIngredientes").innerHTML += `<li>${element.innerHTML}</li>`;
+  });
+
+  document.getElementById("PrevListaPasos").innerHTML = "";
+  document.querySelectorAll(".PasoNuevo").forEach(element => {
+    document.getElementById("PrevListaPasos").innerHTML += `<li>${element.innerHTML}</li>`;
+  });
+
+  document.getElementById("PrevInfo").innerHTML = `
+  <li><i class="icon icon-tiempo icondetalle"></i>${document.getElementById("TiempoRec").value} minutos</li>
+  <li><i class="icon icon-ingredientes icondetalle"></i>${document.querySelectorAll(".IngreNuevo").length} ingredientes</li>
+  <li><i class="icon icon-info icondetalle"></i>${document.getElementById("DificultadRec").value}</li>`;
+}
+
+function Probar(e){
+  e.preventDefault();
+  Previsualizar();
+}
+
+function Agregar(e){
+  e.preventDefault();
+
+  if (document.getElementById("NumeroRec").value != "" && document.getElementById("NombreRec").value != "" && document.getElementById("IngredientesListaRec").innerHTML != '\n                        ' && document.getElementById("PasosListaRec").innerHTML != '\n                        ' && document.getElementById("TiempoRec").value != "" && document.getElementById("DificultadRec").value != "0") {
+    let NuevaReceta = new Object();
+
+  NuevaReceta.id = parseInt(document.getElementById("NumeroRec").value);
+  NuevaReceta.nombre = document.getElementById("NombreRec").value;
+  let ArrayIngreds = [];
+  document.querySelectorAll(".IngreNuevo").forEach(element => {
+    ArrayIngreds.push(element.innerHTML);
+  });
+  NuevaReceta.ingredientes = ArrayIngreds;
+  NuevaReceta.tiempo = parseInt(document.getElementById("TiempoRec").value);
+  switch (document.getElementById("DificultadRec").value) {
+    case "Fácil":
+      NuevaReceta.dificultad = 1;
+      break;
+  
+    case "Intermedio":
+      NuevaReceta.dificultad = 2;
+      break;
+  
+    case "Difícil":
+      NuevaReceta.dificultad = 3;
+      break;
+  
+    default:
+      break;
+  };
+
+  let ArrayPasos = [];
+  document.querySelectorAll(".PasoNuevo").forEach(element => {
+    ArrayPasos.push(element.innerHTML);
+  });
+  NuevaReceta.receta = ArrayPasos;
+
+  if (document.getElementById("TipoRec").value == "Comida") {
+    ListaComidas.push(NuevaReceta);
+  } else {
+    ListaBebidas.push(NuevaReceta);
+  }
+  GuardarCustom();
+  } else {
+    alert("Debes completar todos los campos para agregar una receta nueva.");
+  };
+};
+
+function Quitar(e){
+  e.preventDefault();
+  if (document.getElementById("TipoRec").value == "Comida") {
+    let g = parseInt(document.getElementById('NumeroRec').value);
+    if (confirm('¿Eliminar permanentemente "' + ListaComidas[g].nombre + '" de la lista de comidas? Esta acción no se puede deshacer.')) {
+      ListaComidas.splice(g, 1);
+    }
+  } else {
+    let g = parseInt(document.getElementById('NumeroRec').value);
+    if (confirm('¿Eliminar permanentemente "' + ListaBebidas[g].nombre + '" de la lista de bebidas? Esta acción no se puede deshacer.')) {
+      ListaBebidas.splice(g, 1);
+    }
+  }
+  GuardarCustom();
+  alert("Receta eliminada");
+};
+
+function GuardarCustom() {
+  
+    if(localStorage.getItem("ArrayComidasP") !== undefined && localStorage.getItem("ArrayComidasP")){
+      localStorage.removeItem("ArrayComidasP");
+    }
+    localStorage.setItem("ArrayComidasP", JSON.stringify(ListaComidas));
+  
+    if(localStorage.getItem("ArrayBebidasP") !== undefined && localStorage.getItem("ArrayBebidasP")){
+    localStorage.removeItem("ArrayBebidasP");
+    }
+    localStorage.setItem("ArrayBebidasP", JSON.stringify(ListaBebidas));
+
+  CargarListas();
 };

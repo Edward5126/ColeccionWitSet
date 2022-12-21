@@ -32,9 +32,9 @@
                     <li class="Separador"><b>|</b></li>
                     <li><a href="#ListaCompras" class="linkAncla">Compras</a></li>
                     <li class="Separador"><b>|</b></li>
-                    <li><a href="#SobreRecetari" class="linkAncla">Sobre Recetari</a></li>
-                    <li class="Separador"><b>|</b></li>
                     <li><a href="#Recetario" class="linkAncla">Recetario</a></li>
+                    <li class="Separador"><b>|</b></li>
+                    <li><a href="#SobreRecetari" class="linkAncla">Sobre Recetari</a></li>
                     <li class="Separador"><b>|</b></li>
                     <li><a href="#Más" class="linkAncla">Más</a></li>
                     <li class="Separador"><b>|</b></li>
@@ -50,6 +50,12 @@
     <main>
         <div class="InterfazEditar">
             <button class="btnmenu Interfaz" id="InterfazPrincipal" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
+            <div class="EditarNuevo">
+                <h2>Editar</h2>
+                <input type="text" id="EditarNuevoCampo" autocomplete="off" oninput="HabilitarBoton()">
+                <button id="RegistrarCambio" disabled>Guardar</button>
+                <button id="EliminarNuevo"><i class="icon icon-borrar"></i></button>
+            </div>            
             <div class="Ediciones">
                 <h2>Editar</h2>
                 <select name="" id="ComidasAElegir">
@@ -67,6 +73,11 @@
             <div class="Receta">
                 <div class="CuadroDeTexto">
                     <h2 class="NombreRecetaComida">Nombre de la comida</h2>
+                    <details>
+                        <summary><span>Resumen</span></summary>
+                        <ul id="Info"></ul>
+                    </details>
+                    <br>
                 <details>
                     <summary><span>Ingredientes</span></summary>
                     <ol id="ListaIngredientes">
@@ -85,6 +96,11 @@
                 </div>
                 <div class="CuadroDeTexto">
                     <h2 class="NombreRecetaBebida">Nombre de la bebida</h2>
+                    <details>
+                        <summary><span>Resumen</span></summary>
+                        <ul id="Info2"></ul>
+                    </details>
+                    <br>
                 <details>
                 <summary><span>Ingredientes</span></summary>
                 <ol id="ListaIngredientes2">
@@ -206,20 +222,102 @@
             </div>
             <table id="TablaCompras">
                 <tbody id="CuerpoTablaCompras">
-                <tr>
-                    <th>Ingrediente</th>
-                    <th>Usos</th>
-                </tr>
-                <tr>
-                    <td>Azucar</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Queso</td>
-                    <td>2</td>
-                </tr>
                 </tbody>
             </table>
+        </div>
+    </section>
+
+    <section class="Seccion SobreLaPagina" id="Recetario" style="padding-bottom: 50px;">
+        <h2 id="TituloColaborar">Recetario</h2>
+        <form action="" method="post" id="Formulario" autocomplete="off" name="ColaborarFF" style="max-height:none; min-width: 80%;">
+            <div style="min-width: 80%;">
+                    <h3>Añade y modifica recetas aquí</h3>
+                    <div class="Pregunta">
+                        <select name="Tipo" id="TipoRec" required onchange="Reevaluar()">
+                            <option value="0" hidden>Tipo</option>
+                            <option value="Comida">Comida</option>
+                            <option value="Bebida">Bebida</option>
+                        </select>
+                    </div>
+                    <div class="Pregunta">
+                        <input  id="NumeroRec" name="Numero" type="number" required placeholder="(Posición en la lista)" min="0" oninput="RevNuevo()" disabled>
+                        <label for="NumeroRec" id="LabelNumero">Número</label>
+                    </div>
+                    <div class="Pregunta">
+                        <input id="NombreRec" name="Nombre" type="text" required disabled>
+                        <label for="NombreRec" id="LabelNombre">Nombre</label>
+                    </div>
+                    <fieldset id="IngredientesRec">
+                        <legend>Ingredientes</legend>
+                        <ol id="IngredientesListaRec">
+                        </ol>
+                        <div class="Agregar" id="AgIng"><input type="text" name="IngAgred" id="IngAgred" placeholder="Ingrediente nuevo" oninput="ActivarBotonAgregar()" autocomplete="on" disabled><button onclick="NewAgregarIng(event)" disabled id="BotonAdd">+</button></div>
+                    </fieldset>
+                    <fieldset id="PasosRec">
+                        <legend>Pasos</legend>
+                        <ol id="PasosListaRec">
+                        </ol>
+                        <div class="Agregar" id="AgPaso">+ Agregar</div>
+                    </fieldset>
+                    <div class="Pregunta">
+                        <input  id="TiempoRec" name="Tiempo" type="number" required placeholder="(Minutos necesarios para la elaboración)" disabled>                  
+                        <label for="TiempoRec">Tiempo</label>
+                    </div>
+                    <div class="Pregunta">
+                        <select name="Dificultad" id="DificultadRec" required disabled>
+                            <option value="0" hidden>Dificultad</option>
+                            <option value="Fácil">Fácil</option>
+                            <option value="Intermedio">Intermedio</option>
+                            <option value="Difícil">Difícil</option>
+                        </select>
+                    </div>
+                    <!-- <div class="Pregunta" style="margin-bottom: 10px;">
+                    <label class="CheckButton"><input type="checkbox" id="EstadoBorrador"><span class="CheckCheck"></span>Habilitar borrado</label><br>
+                    </div>
+                    <div class="Pregunta" style="margin-top: 10px; margin-bottom: 10px;">
+                    <label class="CheckButton"><input type="checkbox" id="EstadoAgregador"><span class="CheckCheck"></span>Habilitar agregado</label><br>
+                    </div>
+                    <div class="Pregunta" style="margin-top: 10px;">
+                    <label class="CheckButton"><input type="checkbox" id="EstadoNuevo"><span class="CheckCheck"></span>Habilitar nuevo</label><br>
+                    </div> -->
+                    <h4 id="FormRespuesta"></h4>
+                    <div style="text-align: center; display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+                        <button id="ObtenerDetallesDelDato" style="margin: 7px 0; min-width: 125px;" onclick="Obtener(event)" disabled>Obtener</button>
+                        <button id="Borrador" style="margin: 7px 0; min-width: 125px;" onclick="Borrar(event)" disabled>Limpiar</button>
+                        <button id="NuevaEntrada" style="margin: 7px 0; min-width: 125px;" onclick="ConfNuevo(event)" disabled>Nuevo</button>
+                        <button id="ProbarRec" style="margin: 7px 0; min-width: 125px;" onclick="Probar(event)" disabled>Probar</button>
+                        <button id="AgregarRec" style="margin: 7px 0; min-width: 125px;" onclick="Agregar(event)" disabled>Agregar</button>
+                        <button id="QuitarRec" style="margin: 7px 0; min-width: 125px;" onclick="Quitar(event)" disabled>Quitar</button>
+                    </div>
+                </div>
+        </form>
+        <div class="CuadroDeTexto2" style="min-width: 80%;">
+            <h3>Lee y previsualiza recetas aquí</h3>
+            <div class="Receta" id="PrevReceta">
+                <div class="CuadroDeTexto">
+                    <h2 class="NombreRecetaComida" id="PrevNom">Nombre</h2>
+                    <details>
+                        <summary><span>Resumen</span></summary>
+                        <ul id="PrevInfo"></ul>
+                    </details>
+                    <br>
+                <details>
+                    <summary><span>Ingredientes</span></summary>
+                    <ol id="PrevListaIngredientes">
+                        <li>Ingrediente 1</li>
+                        <li>...</li>
+                    </ol>
+                </details>
+                <br>
+                <details open>
+                    <summary><span>Receta</span></summary>
+                    <ol id="PrevListaPasos">
+                        <li>Paso 1</li>
+                        <li>...</li>
+                    </ol>
+                </details>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -247,7 +345,7 @@
         </p>
         
         </div id="LogoDeInfo">
-        <img src="../../IMG/Miniaturas/LogoSolo[R].svg" alt="Logo de Fun Fact ©" id="LogoDeInfo">
+        <img src="../../IMG/Miniaturas/LogoSolo[R].svg" alt="Logo de Recetari ©" id="LogoDeInfo">
         </div>
     </section>
 
@@ -269,8 +367,8 @@
                     <label for="CreditoDelAporte">Anota tu nombre o apodo</label>
                 </div>
                 <div class="Pregunta">
-                    <input  id="FuenteDeDatoSugerido" name="Fuente" type="text" required placeholder="(Enlace o bibliografía)">                  
-                    <label for="FuenteDeDatoSugerido">Agrega tu fuente</label>
+                    <input  id="TiempoRec" name="Fuente" type="text" required placeholder="(Enlace o bibliografía)">                  
+                    <label for="TiempoRec">Agrega tu fuente</label>
                 </div>
                 <h4 id="FormRespuesta"></h4>
                 <div id="EnviarDatoSugerido">
