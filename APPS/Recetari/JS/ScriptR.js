@@ -576,7 +576,7 @@ document.getElementById("Borrar").addEventListener("click", (e) => {
 
   if (
     confirm(
-      "Esta acción reestablecerá tu plan semanal y borrará todas tus elecciones, ¿deseas continuar?"
+      "Esta acción reestablecerá tu plan semanal y borrará todas tus elecciones, ¿deseas continuar? \n\n (Tu recetario no se modificará)"
     )
   ) {
     let i = 0;
@@ -801,6 +801,18 @@ document.getElementById("EliminarNuevo").addEventListener("click", (e) => {
 // document.getElementById("AgIng").addEventListener("click", AgregarIng);
 document.getElementById("AgPaso").addEventListener("click", AgregarPaso);
 
+function MaxLength() {
+  if (document.getElementById("TipoRec").value == "Comida") {
+    document
+      .getElementById("NumeroRec")
+      .setAttribute("max", ListaComidas.length);
+  }
+  if (document.getElementById("TipoRec").value == "Bebida") {
+    document
+      .getElementById("NumeroRec")
+      .setAttribute("max", ListaBebidas.length);
+  }
+};
 
 function Reevaluar() {
   // document.getElementById("ObtenerDetallesDelDato").removeAttribute("disabled");
@@ -813,16 +825,7 @@ function Reevaluar() {
   document.getElementById("Borrador").removeAttribute("disabled");
   document.getElementById("ProbarRec").removeAttribute("disabled");
   document.getElementById("NumeroRec").focus();
-  if (document.getElementById("TipoRec").value == "Comida") {
-    document
-      .getElementById("NumeroRec")
-      .setAttribute("max", ListaComidas.length);
-  }
-  if (document.getElementById("TipoRec").value == "Bebida") {
-    document
-      .getElementById("NumeroRec")
-      .setAttribute("max", ListaBebidas.length);
-  }
+  MaxLength();
 }
 
 function RevNuevo(){
@@ -961,6 +964,7 @@ function Borrar(e){
       
   document.getElementById("TipoRec").value = "0";
   document.getElementById("NumeroRec").value = "";
+  document.getElementById("LabelNumero").innerHTML = "Número";
   document.getElementById("NombreRec").value = "";
   document.getElementById("IngAgred").value = "";
   document.getElementById("IngredientesListaRec").innerHTML = "";
@@ -987,6 +991,7 @@ function Borrar(e){
   } else {
     document.getElementById("TipoRec").value = "0";
     document.getElementById("NumeroRec").value = "";
+    document.getElementById("LabelNumero").innerHTML = "Número";
     
     document.getElementById("ObtenerDetallesDelDato").setAttribute("disabled", "");
     document.getElementById("Borrador").setAttribute("disabled", "");
@@ -1065,26 +1070,53 @@ function Agregar(e){
     ListaBebidas.push(NuevaReceta);
   }
   GuardarCustom();
+  RespuestaForm("¡Receta añadida a tu recetario!");
+  MaxLength();
+
+  document.getElementById("LabelNumero").innerHTML = "Número";
+  document.getElementById("QuitarRec").removeAttribute("disabled");
   } else {
-    alert("Debes completar todos los campos para agregar una receta nueva.");
+    RespuestaForm("Debes completar todos los campos para agregar una receta nueva");
   };
 };
 
 function Quitar(e){
   e.preventDefault();
+  let Dic = true;
+  
   if (document.getElementById("TipoRec").value == "Comida") {
     let g = parseInt(document.getElementById('NumeroRec').value);
-    if (confirm('¿Eliminar permanentemente "' + ListaComidas[g].nombre + '" de la lista de comidas? Esta acción no se puede deshacer.')) {
-      ListaComidas.splice(g, 1);
+    ComidasElegidas.forEach(element => {
+      if (element == g) {
+        Dic = false;
+      };
+    });
+    if (Dic == true) {
+      if (confirm('¿Eliminar permanentemente "' + ListaComidas[g].nombre + '" de la lista de comidas? Esta acción no se puede deshacer.')) {
+        ListaComidas.splice(g, 1);
+        RespuestaForm("Receta eliminada de tu recetario");
+      }
+    } else {
+      RespuestaForm("Elimina esta receta de tu planeación semanal para quitarla de tu recetario")
     }
   } else {
     let g = parseInt(document.getElementById('NumeroRec').value);
-    if (confirm('¿Eliminar permanentemente "' + ListaBebidas[g].nombre + '" de la lista de bebidas? Esta acción no se puede deshacer.')) {
-      ListaBebidas.splice(g, 1);
-    }
+    BebidasElegidas.forEach(element => {
+      if (element == g) {
+        Dic = false;
+      };
+    });
+    if (Dic == true) {
+      if (confirm('¿Eliminar permanentemente "' + ListaBebidas[g].nombre + '" de la lista de bebidas? Esta acción no se puede deshacer.')) {
+        ListaBebidas.splice(g, 1);
+        RespuestaForm("Receta eliminada de tu recetario");
+      }
+    } else {
+      RespuestaForm("Elimina esta receta de tu planeación semanal para quitarla de tu recetario")
+    };
   }
   GuardarCustom();
-  alert("Receta eliminada");
+  MaxLength();
 };
 
 function GuardarCustom() {
@@ -1101,3 +1133,11 @@ function GuardarCustom() {
 
   CargarListas();
 };
+
+function RespuestaForm(respuesta) {
+  document.getElementById("FormRespuesta").innerHTML = respuesta;
+  document.getElementById("FormRespuesta").focus();
+  setTimeout(() => {
+    document.getElementById("FormRespuesta").innerHTML = "";
+  }, 10000);
+}
