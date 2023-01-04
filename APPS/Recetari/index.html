@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetari | Aliméntate fácil</title>
-    <meta name="description" content="NA">
+    <meta name="description" content="Planea lo que comerás durante esta semana para ahorrar tiempo y esfuerzo. Aliméntate de manera fácil y cómoda con Recetari.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
     <link id="HojadeEstilo" rel="stylesheet" href="../../CSS/styles.css">
     <link rel="stylesheet" href="CSS/stylesR.css">
@@ -67,11 +67,10 @@
                 <button id="RegistrarElecciones" disabled>Continuar</button>
             </div>
             <div class="CuadroDeTexto AvisoSinElecciones">
-                <i class="icon icon-info"></i>
-                Para ver las recetas, primero elije una comida y una bebida con el botón <i>Editar ( <i class="icon icon-editar" style="font-size: 0.8em;"></i> )</i>
+                <i class="icon icon-info"></i> &nbsp Para ver las recetas, primero elije una comida y una bebida con el botón <i>Editar ( <i class="icon icon-editar" style="font-size: 0.8em;"></i> )</i>
             </div>
             <div class="Receta">
-                <div class="CuadroDeTexto">
+                <div class="CuadroDeTexto CuadroDeReceta">
                     <h2 class="NombreRecetaComida">Nombre de la comida</h2>
                     <details>
                         <summary><span>Resumen</span></summary>
@@ -94,7 +93,7 @@
                     </ol>
                 </details>
                 </div>
-                <div class="CuadroDeTexto">
+                <div class="CuadroDeTexto CuadroDeReceta">
                     <h2 class="NombreRecetaBebida">Nombre de la bebida</h2>
                     <details>
                         <summary><span>Resumen</span></summary>
@@ -217,7 +216,7 @@
         <h2>Lista de Compras</h2>
         <div class="CuadroDeTexto">
             <div class="CuadroDeTexto AvisoSinElecciones" id="AvisoCompra">
-                <i class="icon icon-info"></i>
+                <i class="icon icon-info"></i> &nbsp
                 Para ver la lista de compras semanal, primero haz tus elecciones para cada día con el botón <i>Editar ( <i class="icon icon-editar" style="font-size: 0.8em;"></i> )</i>
             </div>
             <table id="TablaCompras">
@@ -293,8 +292,8 @@
         </form>
         <div class="CuadroDeTexto2" style="min-width: 80%;">
             <h3>Lee y previsualiza recetas aquí</h3>
-            <div class="Receta" id="PrevReceta">
-                <div class="CuadroDeTexto">
+            <div class="Receta " id="PrevReceta">
+                <div class="CuadroDeTexto CuadroDeReceta">
                     <h2 class="NombreRecetaComida" id="PrevNom">Nombre</h2>
                     <details>
                         <summary><span>Resumen</span></summary>

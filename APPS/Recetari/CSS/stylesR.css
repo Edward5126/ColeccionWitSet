@@ -61,6 +61,7 @@ main {
     overflow-y: auto;
     height: auto;
     width: 90%;
+    flex-direction: column;
 
     display: none;
 }
@@ -287,10 +288,6 @@ h2 {
     padding: 5px 20px;
 }
 
-#IngAgred {
-    
-}
-
 .PrevInfo, #Info, #Info2 {
     padding: 0;
     margin: 0;
@@ -298,15 +295,120 @@ h2 {
 
 @media only screen and (min-width: 1040px) {
     main {
-        flex-direction: column;
-        padding-top: 40px;
+        flex-direction: row-reverse;
+        min-height: calc(100vh - 70px);
+        padding: 0 5%;
     }
 
     #NavDias {
-        max-width: 20vw;
+        position: absolute;
+        top: calc(70px + 15px);
+        left: calc(5% + 40px + 35vw);
+        right: 5%;
+        width: auto;
+        border-radius: 10px;
+        background-color: var(--Cuadro-Texto);
     }
+
+    .CajaDia {
+        margin: 15px 20px;
+        padding-bottom: 1px;
+        width: 35vw;
+    }
+
+    .TituloCaja {
+        align-items: center;
+        font-size: 0.9375em;
+        padding: 5px 15px;
+    }
+
+    .Detalles > ul {
+        padding-left: 15px;
+        margin: 8px 0;
+        font-size: 0.875em;
+    }
+
+    .Detalles > ul > li {
+        padding: 2px 0;
+    }
+
+    .icondetalle {
+        font-size: 0.8571em;
+    }
+
+    #InterfazPrincipal {
+        display: none;
+    }
+
+    .InterfazEditar {
+        background-color: transparent;
+        backdrop-filter: none;
+        opacity: 1;
+        pointer-events: all;
+        z-index: 2;
+        position: inherit;
+        height: calc(100vh - 155px);
+        padding: 0;
+        align-content: center;
+        overflow-y: auto;
+        align-self: flex-end;
+        margin-bottom: 15px;
+        border-radius: 15px;
+    }
+
+    .AvisoSinElecciones {
+        opacity: 1;
+        display: block;
+        max-width: 90%;
+        margin: 0;
+    }
+
+    /* .InterfazEditar::after {
+        content: "";
+        background: linear-gradient(to top, #0000003f, rgba(255, 255, 255, 0));
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        left: calc(5% + 40px + 35vw);
+        right: 5%;
+        bottom: 15px;
+        border-radius: 0 0 15px 15px;
+        mix-blend-mode: color;
+    } */
 
     .Editar {
         margin-left: 0;
+    }
+
+    .Receta {
+        /* display: flex; */
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .CuadroDeReceta {
+        flex-direction: column;
+        margin: 0;
+        max-width: none;
+        min-width: none;
+        width: auto;
+    }
+
+    .Interfaz {
+        visibility: visible;
+        background: none;
+        color: var(--Texto-Principal);
+        /* padding: 5px; */
+    }
+
+    .IconosBotones > span > button {
+        padding-top: 5px;
+        padding-bottom: 5px ;
+    }
+
+    .Interfaz:hover {
+        background: none;
+        color: var(--Texto-Resaltado);
     }
 }

@@ -245,7 +245,7 @@ function MostrarReceta() {
 
   if (ComidasElegidas[NumeroABuscar] != null) {
     document.querySelector(".Receta").classList.add("Mostrar");
-    document.querySelector(".Receta").style.display = "block";
+    document.querySelector(".Receta").style.display = "flex";
 
     document.querySelector(".NombreRecetaComida").innerHTML =
       ListaComidas[ComidasElegidas[NumeroABuscar]].nombre;
@@ -737,6 +737,7 @@ function NewAgregarIng(e) {
         t = e.target.getAttribute("id");
         AbrirInterfaz();
         MostrarEditarNuevo();
+        document.getElementById("EditarNuevoCampo").focus();
         document.getElementById("EditarNuevoCampo").value =
           document.getElementById(t).innerHTML;
       });
@@ -765,6 +766,7 @@ function AgregarPaso() {
         t = e.target.getAttribute("id");
         AbrirInterfaz();
         MostrarEditarNuevo();
+        document.getElementById("EditarNuevoCampo").focus();
         document.getElementById("EditarNuevoCampo").value =
           document.getElementById(t).innerHTML;
       });

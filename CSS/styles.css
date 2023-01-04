@@ -1560,6 +1560,76 @@ fieldset > ol > li, .Agregar {
     margin-left: 10px;
     height: 100%;
 }
+
+#TablaCompras {
+  width: 85vw;
+}
+
+th {
+  background-color: #3e3e3e80;
+}
+
+th, td {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+td {
+  background-color: var(--Cuadro-Texto);
+}
+
+.Ag {
+  background: none;
+  color: var(--Texto-Principal);
+  border: solid 1px var(--Texto-Principal);
+  padding: 1px 20px;
+}
+
+.Ag:disabled {
+  background: none;
+  color: var(--Texto-Nota);
+  border-color: var(--Texto-Nota);
+}
+
+.Ag:hover {
+  background: none;
+  color:var(--Texto-Seleccionado);
+  border-color: var(--Texto-Seleccionado);
+}
+
+fieldset {
+  border-color: var(--Texto-Nota);
+  border-radius: 15px;
+  margin: 65px 15px;
+  min-height: 70px;
+}
+
+legend {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  color:var(--Texto-Seleccionado);
+  padding: 0 10px;
+}
+
+fieldset > ol > li, .Agregar {
+  background: var(--Cuadro-Texto);
+  margin-top: 10px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.Agregar {
+  color: var(--Texto-Nota);
+  text-align: center;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.Agregar:hover {
+  color: var(--Texto-Seleccionado);
+}
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------- Vista para computadoras*/
@@ -2276,5 +2346,75 @@ fieldset > ol > li, .Agregar {
     border-radius: 0px 4px 4px 0px;
     margin-left: 10px;
     height: 100%;
+}
+
+#TablaCompras {
+  width: 85vw;
+}
+
+th {
+  background-color: #3e3e3e80;
+}
+
+th, td {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+td {
+  background-color: var(--Cuadro-Texto);
+}
+
+.Ag {
+  background: none;
+  color: var(--Texto-Principal);
+  border: solid 1px var(--Texto-Principal);
+  padding: 1px 20px;
+}
+
+.Ag:disabled {
+  background: none;
+  color: var(--Texto-Nota);
+  border-color: var(--Texto-Nota);
+}
+
+.Ag:hover {
+  background: none;
+  color:var(--Texto-Seleccionado);
+  border-color: var(--Texto-Seleccionado);
+}
+
+fieldset {
+  border-color: var(--Texto-Nota);
+  border-radius: 15px;
+  margin: 65px 15px;
+  min-height: 70px;
+}
+
+legend {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  color:var(--Texto-Seleccionado);
+  padding: 0 10px;
+}
+
+fieldset > ol > li, .Agregar {
+  background: var(--Cuadro-Texto);
+  margin-top: 10px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.Agregar {
+  color: var(--Texto-Nota);
+  text-align: center;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.Agregar:hover {
+  color: var(--Texto-Seleccionado);
 }
 }

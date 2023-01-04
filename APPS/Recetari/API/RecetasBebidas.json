@@ -44,5 +44,17 @@
             "Mezclar el jugo de naranja en una jarra con agua al gusto",
             "Endulzar con azúcar al gusto."
         ]
+    },
+    {
+        "id":3,
+        "nombre": "Horchata",
+        "ingredientes":[
+            "Concentrado de horchata"
+        ],
+        "tiempo":5,
+        "dificultad":1,
+        "receta":[
+            "Mezclar el concentrado con agua y revolver"
+        ]
     }
 ]

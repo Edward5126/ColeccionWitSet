@@ -58,5 +58,66 @@
             "En otro plato, servir las galletas de avena acompañadas de una o dos rebanadas de jamón y otra fruta.",
             "Servir leche en el tazón."
         ]
+    },
+    {
+        "id":3,
+        "nombre": "Papas empanizadas",
+        "ingredientes":[
+            "Papas",
+            "Pan para empanizar",
+            "Huevo",
+            "Sal",
+            "Queso"
+        ],
+        "tiempo":30,
+        "dificultad":1,
+        "receta":[
+            "Hervir las papas hasta que se suavicen.",
+            "Pelar las papas.",
+            "Machacar toda la papa y agregarle sal al gusto.",
+            "Con la mezcla, hacer bolitas y rellenar cada una con queso.",
+            "Empanizar y freir cada bolita.",
+            "Servir con acompañamiento al gusto."
+        ]
+    },
+    {
+        "id":4,
+        "nombre": "Hot Cakes",
+        "ingredientes":[
+            "Harina para hot cakes",
+            "Huevo",
+            "Leche",
+            "Mantequilla",
+            "Mermelada"
+        ],
+        "tiempo":40,
+        "dificultad":1,
+        "receta":[
+            "Mezclar la harina, el huevo y la leche.",
+            "Licuar la mezcla hasta que se incorpore todo.",
+            "Derretir un poco de mantequilla en una sartén caliente.",
+            "Verter la mezcla en la sartén formando los hot cakes.",
+            "Voltearlo apenas toda la superficie se cubra de burbujas.",
+            "Revisar ocasionalmente para que no se quemen.",
+            "Dejar que se cocinen y retirar de la sartén."
+        ]
+    },
+    {
+        "id":5,
+        "nombre": "Croquetas de atún",
+        "ingredientes":[
+            "Atún",
+            "Pan para empanizar",
+            "Huevo"
+        ],
+        "tiempo":10,
+        "dificultad":1,
+        "receta":[
+            "Drenar el agua del atún.",
+            "Mezclar el atún con el pan y huevo.",
+            "Hacer tortitas con la mezcla",
+            "Freírlas en una sartén",
+            "Servir con acompañamiento al gusto."
+        ]
     }
 ]
