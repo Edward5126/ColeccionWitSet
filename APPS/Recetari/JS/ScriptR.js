@@ -298,6 +298,10 @@ TitulosRecetas.forEach((element) => {
 
 //Se cargan todas las recetas en la lista
 function CargarListas() {
+  // console.log(ListaComidas);
+  // ListaComidas.sort();
+  // ListaBebidas.sort();
+  // console.log(ListaComidas);
   document.getElementById("ComidasAElegir").innerHTML = '<option value="-1" selected hidden>Comida</option>';
   ListaComidas.forEach((element) => {
     document.getElementById("ComidasAElegir").innerHTML +=
@@ -442,6 +446,15 @@ function CambiarDia(x) {
   document.getElementById("DiaActual").innerHTML = Semana[x];
 
   CargarDia();
+  for (let i = 1; i < document.querySelectorAll(".CajaDia").length+1; i++) {
+    const element = document.querySelectorAll(".CajaDia")[i-1];
+    setTimeout(e=>{
+      element.classList.add("Wave");
+      setTimeout(e=>{
+        element.classList.remove("Wave");
+      },100);
+    },100 * i);
+  }
 }
 
 //window.onload = CambiarDia(DiaActual); // <-- el problema se origina aquí a

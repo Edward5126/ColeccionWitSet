@@ -132,6 +132,11 @@ ol > li {
     border-radius: 15px;
     text-align: justify;
     margin: 20px;
+    transition: ease all 0.3s;
+}
+
+.Wave {
+    transform: scale(1.04);
 }
 
 .Nombre {
@@ -314,6 +319,7 @@ h2 {
         margin: 15px 20px;
         padding-bottom: 1px;
         width: 35vw;
+        transition: ease all 0.3s;
     }
 
     .TituloCaja {

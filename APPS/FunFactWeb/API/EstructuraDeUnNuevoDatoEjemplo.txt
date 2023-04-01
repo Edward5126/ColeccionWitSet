@@ -1,19 +1,4 @@
-,
-
-    {
-        "No": "0",
-        "Imagen": "link",
-        "URLAutorImagen": "EnlaceALaPagina",
-        "AutorImagen":"NombreDelFotógrafo",
-        "Info":"Información",
-        "Fuente":"Título de la fuente",
-        "URLFuente":"Fuente",
-        "Credito": "-"
-    }
-
-
-
-
+Dame un dato curioso de máximo 400 caracteres escritos con el siguiente formato de objeto JSON:
 
 ,
     {
@@ -32,10 +17,19 @@
         "Categoría": "Animales",
         "Claves": [
             "*",
-            "",
             ""
         ]
     }
+
+Sigue las siguientes instrucciones y restricciones:
+1. Asegúrate de que la fuente esté disponible en español. 
+2. No modifiques las cadenas o valores vacíos.
+3. Coloca el dato curioso en "Info".
+4. Coloca el nombre de la fuente en "fuente".
+5. Coloca la URL de la fuente en "URLFuente".
+6. Agrega las palabras claves en "Claves" sin borrar la cadena de texto "*". 
+7. El número actual es 43. Por cada dato curioso aumenta el número en uno y escríbelo en "No".
+
 
 
 

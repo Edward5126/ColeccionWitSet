@@ -889,5 +889,28 @@
             "*",
             "dimorfismo"
         ]
+    },
+    {
+        "No": "42",
+        "Imagenes": [
+            {
+                "url": "https://hkust.edu.hk/sites/default/files/inline-images/scaly-foot%20snail_4.jpg",
+                "Autor": "The Hong Kong University of Science and Technology",
+                "urlOrig": "https://hkust.edu.hk/newsresearch-and-innovation/hkust-researchers-unlock-genomic-secrets-scaly-foot-snail"
+            }
+        ],
+        "Info": "Este no es cualquier caracol, se le conoce como <b>Caracol Volcánico</b> y vive, por supuesto, en las profundidades de los respiraderos volcánicos hidrotermales del Océano Índico, un hábitat difícil con al rededor de 400 °C. Además, su caparazón está compuesto en parte de hierro y es la única criatura conocida que incorpora este metal en su cuerpo.",
+        "Fuente": "ABC Noticias",
+        "URLFuente": "https://abcnoticias.mx/tendencia/2021/2/9/conoce-al-caracol-volcanico-con-armadura-de-hierro-132447.html",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "Caracol",
+            "Volcán",
+            "Volcanes",
+            "Hierro",
+            "Animales"
+        ]
     }
 ]

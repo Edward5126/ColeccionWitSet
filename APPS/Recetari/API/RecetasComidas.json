@@ -119,5 +119,23 @@
             "Freírlas en una sartén",
             "Servir con acompañamiento al gusto."
         ]
+    },
+    {
+        "id":6,
+        "nombre": "Sándwich de huevo",
+        "ingredientes":[
+            "Pan blanco",
+            "Mayonesa",
+            "Huevo"
+        ],
+        "tiempo":10,
+        "dificultad":1,
+        "receta":[
+            "Drenar el agua del atún.",
+            "Mezclar el atún con el pan y huevo.",
+            "Hacer tortitas con la mezcla",
+            "Freírlas en una sartén",
+            "Servir con acompañamiento al gusto."
+        ]
     }
-]
+    ]
