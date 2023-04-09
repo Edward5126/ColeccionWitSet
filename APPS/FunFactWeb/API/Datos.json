@@ -1138,5 +1138,96 @@
             "insectos",
             "mielera"
         ]
+    },
+    {
+        "No": "53",
+        "Imagenes": [
+            {
+                "url": "https://steemitimages.com/0x0/http://3.bp.blogspot.com/-PJQkcK5_9x4/U2MfCmGF52I/AAAAAAAAt0A/87_NDt1MOBQ/s1600/2.gif",
+                "Autor": "Desconocido",
+                "urlOrig": "https://steemit.com/spanish/@flamingirl/naturaleza-asombrosa-140-el-increible-escarabajo-bombardero"
+            }
+        ],
+        "Info": "Este es el <b>escarabajo bombardero</b>. Tiene la capacidad de expulsar una sustancia química a alta temperatura (de hasta 100 grados Celsius) y a alta velocidad, con lo que se defiende de sus atacantes y logra sobrevivir.",
+        "Fuente": "Answers in Genesis",
+        "URLFuente": "https://answersingenesis.org/es/creacion/escarabajo-bombardero-insecto-arsenal/",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "escarabajo",
+            "bombarder",
+            "insectos",
+            "mecanismo",
+            "defensa"
+        ]
+    },
+    {
+        "No": "54",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1605639743310-db006cc1b95a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Raimond Klavins",
+                "urlOrig": "https://unsplash.com/es/fotos/mV8RSZLvaJA"
+            }
+        ],
+        "Info": "El lago Baikal, ubicado en Rusia, es el lago más profundo del mundo, con una profundidad máxima de 1,642 metros. De hecho, su profundidad es tan grande que contiene alrededor del 20% del agua dulce no congelada del planeta. Además, es uno de los lagos más antiguos del mundo, con una edad estimada de al menos 25 millones de años.",
+        "Fuente": "National Geographic",
+        "URLFuente": "https://viajes.nationalgeographic.com.es/ubicacion-exacta/reserva-acuifera-siberiana_15581",
+        "Credito": "-",
+        "Categoría": "Lugares",
+        "Claves": [
+            "*",
+            "lago",
+            "baikal",
+            "rusia",
+            "agua",
+            "antigüo",
+            "dulce"
+        ]
+    },
+    {
+        "No": "55",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1626248575958-7e923159cfa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Vincent van Zalinge",
+                "urlOrig": "https://unsplash.com/es/fotos/TW4Lh4vX2LE"
+            }
+        ],
+        "Info": "El animal más rápido del mundo es el halcón peregrino, que puede alcanzar velocidades de hasta 389 kilómetros por hora durante una caída en picada. Esta velocidad lo convierte en el animal más rápido del planeta.",
+        "Fuente": "Animalia",
+        "URLFuente": "https://animalia.bio/es/peregrine-falcon?environment=83",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "halcón",
+            "peregrino",
+            "veloz",
+            "rápido"
+        ]
+    },
+    {
+        "No": "56",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1177&q=80",
+                "Autor": " Mylon Ollila",
+                "urlOrig": "https://unsplash.com/es/fotos/j4ocWYAP_cs"
+            }
+        ],
+        "Info": "Algunas manadas de elefantes han logrado coordinarse incluso con grandes distancias de separación, ¿cómo lo hicieron? Resultó que, durante algunos estudios, se encontró la posibilidad de que los elefantes sean capaces de comunicarse mediante infrasonidos, cuya frecuencia es inferior a la que los humanos podemos oír.",
+        "Fuente": "Universidad de Murcia",
+        "URLFuente": "https://www.um.es/lafem/DivulgacionCientifica/CienciaySalud/Portalyblog/cienciaysalud.laverdad.es/8_2_6.html",
+        "Credito": "-",
+        "Categoría": "0",
+        "Claves": [
+            "*",
+            "elefantes",
+            "comunicación",
+            "distancia",
+            "infrasonido"
+        ]
     }
 ]
