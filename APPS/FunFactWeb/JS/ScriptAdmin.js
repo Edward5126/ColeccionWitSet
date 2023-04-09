@@ -586,3 +586,7 @@ document.getElementById("Categoria").oninput = function() {
 window.onload = function() {
             document.getElementById("Conteo").innerHTML = DatosTotales;
     }
+
+setTimeout(() => {
+    document.querySelector(".SaludoPrincipal").innerHTML = "¡<i>" + DatosTotales +"</i> datos curiosos disponibles actualmente!"
+}, 250);
