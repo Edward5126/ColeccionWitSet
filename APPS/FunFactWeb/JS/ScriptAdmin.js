@@ -588,5 +588,5 @@ window.onload = function() {
     }
 
 setTimeout(() => {
-    document.querySelector(".SaludoPrincipal").innerHTML = "¡<i>" + DatosTotales +"</i> datos curiosos disponibles actualmente!"
+    document.querySelector("title").innerHTML = "[" + DatosTotales + "] Panel de Administración | Fun Fact";
 }, 250);
