@@ -582,3 +582,7 @@ document.getElementById("Categoria").oninput = function() {
         this.value = nuevo;
     }
 }
+
+window.onload = function() {
+    document.getElementById("Conteo").innerHTML = DatosTotales;
+}
