@@ -583,9 +583,6 @@ document.getElementById("Categoria").oninput = function() {
     }
 }
 
-console.log("Datos: "+ DatosTotales);
-
 window.onload = function() {
-    document.getElementById("Conteo").innerHTML = DatosTotales;
-    console.log("Datos222: "+ DatosTotales);
-}
+            document.getElementById("Conteo").innerHTML = DatosTotales;
+    }
