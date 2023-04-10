@@ -1360,5 +1360,124 @@
             "pulpo",
             "corazones"
         ]
+    },
+    {
+        "No": "63",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1541279764806-7c7f1d7367ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+                "Autor": "Carles Rabada",
+                "urlOrig": "https://unsplash.com/es/fotos/UW1n_bcAWdg"
+            }
+        ],
+        "Info": "La famosa Gran Barrera de Coral se ubica en Australia y es el sistema de arrecifes de corales más grande del mundo, con una extensión aproximada de 2300 kilómetros y compuesta por más de 2900 arrecifes y 900 islas.",
+        "Fuente": "La Vanguardia",
+        "URLFuente": "https://www.lavanguardia.com/participacion/lectores-corresponsales/20210715/7600098/gran-barrera-coral-esta-peligro.html#:~:text=La%20Gran%20Barrera%20de%20Coral%20es%20el%20sistema%20de%20arrecifes,2.900%20arrecifes%20y%20900%20islas.",
+        "Credito": "-",
+        "Categoría": "Lugares",
+        "Claves": [
+            "*",
+            "arrecife",
+            "barrera",
+            "coral",
+            "australia"
+        ]
+    },
+    {
+        "No": "64",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1549619856-ac562a3ed1a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Dominik Van Opdenbosch",
+                "urlOrig": "https://unsplash.com/es/fotos/lNeIjS1rXus"
+            }
+        ],
+        "Info": "Los ojos del búho son tan grandes en relación con su cabeza que no pueden moverlos en sus órbitas. En cambio, giran la cabeza hasta 270 grados para ver lo que sucede a su alrededor.",
+        "Fuente": "National Geographic",
+        "URLFuente": "https://www.nationalgeographic.es/animales/por-que-los-buhos-giran-su-cuello",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "búhos",
+            "girar",
+            "cabeza",
+            "órbita",
+            "ojos"
+        ]
+    },
+    {
+        "No": "65",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Arwin Neil Baichoo",
+                "urlOrig": "https://unsplash.com/es/fotos/yQzrDgU-KAI"
+            }
+        ],
+        "Info": "La miel nunca se echa a perder. Los científicos han encontrado, en repetidas ocasiones, frascos sellados de miel en tumbas egipcias que aún eran comestibles en la actualidad.",
+        "Fuente": "BBC News",
+        "URLFuente": "https://www.bbc.com/mundo/noticias-40732588",
+        "Credito": "-",
+        "Categoría": "Alimentos",
+        "Claves": [
+            "*",
+            "miel",
+            "conservación"
+        ]
+    },
+    {
+        "No": "66",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1671846626135-1dd273961d94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+                "Autor": "David Clode",
+                "urlOrig": "https://unsplash.com/es/fotos/IKKV3pBgBuY"
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1583684488328-977154f6de64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
+                "Autor": " Lingchor",
+                "urlOrig": "https://unsplash.com/es/fotos/-aTwPsTweJs"
+            }
+        ],
+        "Info": "El título de la serpiente más grande del mundo es, en realidad, un título compartido, dado que se puede tomar según dos criterios: Si consideramos la longitud, el título se lo lleva la pitón reticulada (primera imagen); si consideramos el peso, se lo lleva la anaconda verde (segunda imagen).",
+        "Fuente": "Ecología Verde",
+        "URLFuente": "https://www.ecologiaverde.com/la-serpiente-mas-grande-del-mundo-3886.html",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "serpiente",
+            "pitón",
+            "anaconda",
+            "más grande",
+            "grande",
+            "longitud",
+            "peso"
+        ]
+    },
+    {
+        "No": "67",
+        "Imagenes": [
+            {
+                "url": "https://lab.rtve.es/fotogaleria/public/data/media/images/zoom/ocelos-ojos-simples-de-avispa5c23c6c3bf5f4.jpg",
+                "Autor": "Ángel Navarro",
+                "urlOrig": "https://lab.rtve.es/fotogaleria/artropodos-lo-que-el-ojo-no-ve/ocelos-ojos-simples-avispa/"
+            }
+        ],
+        "Info": "Las abejas, como varios otros insectos, tienen cinco ojos: dos grandes ojos compuestos y tres ojos simples ubicados en la parte superior de su cabeza.",
+        "Fuente": "Mi Abeja",
+        "URLFuente": "https://www.miabeja.com/sabias-que-las-abejas-tienen-5-ojos/",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "abejas",
+            "ojos",
+            "insectos",
+            "ocelos",
+            "compuestos",
+            "simples"
+        ]
     }
 ]
