@@ -1479,5 +1479,223 @@
             "compuestos",
             "simples"
         ]
+    },
+    {
+        "No": "68",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1607571183710-82fbb3b57f02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Deon De Villiers",
+                "urlOrig": "https://unsplash.com/es/fotos/7HRHhcueqZ8"
+            }
+        ],
+        "Info": "La majestuosidad de los elefantes no solo radica en su imponente físico, sino también en su prodigiosa capacidad de recordar. Estos animales son dotados de una memoria excepcional, capaces de distinguir a sus congéneres, humanos y áreas de interés, aun después de un prolongado tiempo.",
+        "Fuente": "OK Diario",
+        "URLFuente": "https://okdiario.com/curiosidades/realmente-buena-memoria-elefantes-594211",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "elefantes",
+            "memoria",
+            "recordar"
+        ]
+    },
+    {
+        "No": "69",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1459262838948-3e2de6c1ec80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+                "Autor": "Jordan Whitt",
+                "urlOrig": "https://unsplash.com/es/fotos/EerxztHCjM8"
+            }
+        ],
+        "Info": "¡Los koalas son campeones del sueño! Pasan casi 20 horas diarias durmiendo porque su cuerpo se adapta a su dieta de hojas de eucalipto, lo que hace que su metabolismo sea más lento. ¡Así que no te sorprendas si encuentras a estos adorables animales dormidos la próxima vez que los veas!",
+        "Fuente": "Animalia",
+        "URLFuente": "https://www.animalia.bio/es/koala?environment=223",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "koala",
+            "dormir",
+            "eucalipto"
+        ]
+    },
+    {
+        "No": "70",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1501348291533-cb233b7d4cc0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+                "Autor": "Ayo Ogunseinde",
+                "urlOrig": "https://unsplash.com/es/fotos/1Dsvt_XAclw"
+            }
+        ],
+        "Info": "¿Te has preguntado alguna vez quiénes tienen una memoria más poderosa, hombres o mujeres? Según estudios, las mujeres tienen una capacidad de memoria promedio superior a la de los hombres.",
+        "Fuente": "infobae",
+        "URLFuente": "https://www.infobae.com/america/ciencia-america/2022/10/27/un-estudio-demostro-que-las-mujeres-tienen-mas-memoria-que-los-hombres/",
+        "Credito": "-",
+        "Categoría": "Generales",
+        "Claves": [
+            "*",
+            "memoria",
+            "hombres",
+            "mujeres",
+            "capacidad"
+        ]
+    },
+    {
+        "No": "71",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1472926373053-51b220987527?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+                "Autor": "Mike Kenneally",
+                "urlOrig": "https://unsplash.com/es/fotos/d825JrXvun8"
+            }
+        ],
+        "Info": "El aceite de oliva es altamente recomendado por su perfil nutricional. Es rico en grasas monoinsaturadas que ayudan a reducir el colesterol malo y aumentar el bueno. Además, tiene propiedades antiinflamatorias y antioxidantes que lo hacen beneficioso para prevenir enfermedades crónicas. Como resultado, el aceite de oliva es uno de los más saludables para cocinar.",
+        "Fuente": "Mayo Clinic",
+        "URLFuente": "https://www.mayoclinic.org/es-es/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/cooking-oil/faq-20058170#:~:text=Los%20aceites%20m%C3%A1s%20saludables%20son,reemplazo%20de%20las%20grasas%20saturadas.",
+        "Credito": "-",
+        "Categoría": "Alimentos",
+        "Claves": [
+            "*",
+            "aceite",
+            "oliva",
+            "saludable",
+            "cocinar"
+        ]
+    },
+    {
+        "No": "72",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1599866193011-348f9eb29868?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Rachel Loughman",
+                "urlOrig": "https://unsplash.com/es/fotos/EjmcT09e3Jg"
+            }
+        ],
+        "Info": "Numerosos estudios han demostrado que la música clásica puede tener un impacto positivo en el rendimiento de los estudiantes en matemáticas. Se cree que la complejidad y estructura de la música clásica ayuda a desarrollar habilidades cognitivas como la concentración, la memoria y la resolución de problemas, que son cruciales en el aprendizaje de las matemáticas.",
+        "Fuente": "El Blog de Trinity",
+        "URLFuente": "https://elblogdetrinity.com/relacion-de-la-musica-con-las-matematicas/",
+        "Credito": "-",
+        "Categoría": "Educación",
+        "Claves": [
+            "*",
+            "música",
+            "clásica",
+            "rendimiento",
+            "estudiantes"
+        ]
+    },
+    {
+        "No": "73",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1561113500-8f4ad4f80a93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Febiyan",
+                "urlOrig": "https://unsplash.com/es/fotos/-hwDGRQzAeM"
+            }
+        ],
+        "Info": "La ciudad de Copenhague, ubicada en Dinamarca, se destaca por el uso masivo de la bicicleta como medio de transporte, siendo esta la opción preferida por más de la mitad de sus habitantes. Esta práctica no solo fomenta un estilo de vida activo y saludable, sino que también contribuye a reducir la congestión vehicular y disminuir la huella de carbono en la ciudad.",
+        "Fuente": "El CEO",
+        "URLFuente": "https://elceo.com/bienes-raices/dinamarca-el-ejemplo-a-seguir-en-movilidad-ciclista/#:~:text=La%20ciudad%20de%20Copenhague%2C%20Dinamarca,d%C3%ADas%20en%20sus%20actividades%20cotidianas.",
+        "Credito": "-",
+        "Categoría": "Lugares",
+        "Claves": [
+            "*",
+            "copenhague",
+            "bicicleta",
+            "dinamarca"
+        ]
+    },
+    {
+        "No": "74",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1539734710025-9ebbe24f22f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Austin Elder",
+                "urlOrig": "https://unsplash.com/es/fotos/tXobkDrTgjE"
+            }
+        ],
+        "Info": "Debido a su estructura anatómica, los canguros tienen dificultades para caminar hacia atrás. Las patas traseras de estos marsupiales están diseñadas para facilitar saltos potentes y rápidos hacia adelante, lo que les permite moverse con gran velocidad y agilidad. Por tanto, los canguros son animales que solo pueden avanzar y saltar en una dirección determinada.",
+        "Fuente": "Farmacia Cinca",
+        "URLFuente": "https://www.farmaciacinca.es/pueden-los-canguros-caminar-hacia-atras-no-heres-why/",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "canguros",
+            "saltar",
+            "caminar",
+            "retroceder",
+            "avanzar"
+        ]
+    },
+    {
+        "No": "75",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1587491273677-be8b7c944cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+                "Autor": "Yossi goldberg",
+                "urlOrig": "https://unsplash.com/es/fotos/3_5gHWWBfi8"
+            }
+        ],
+        "Info": "En Suiza, la tenencia individual de conejos está prohibida debido a que son animales sociales que requieren de la compañía de otros de su especie. Esta medida busca proteger el bienestar de los conejos y garantizar su calidad de vida. Es importante que los dueños de mascotas se informen sobre las necesidades específicas de sus animales para brindarles un ambiente adecuado y saludable.",
+        "Fuente": "Conesalud",
+        "URLFuente": "https://conesalud.com/puede-mi-conejo-vivir-solo/#:~:text=En%20Austria%20y%20Suiza%20es,naturalmente%20en%20grupos%20familiares%20grandes.",
+        "Credito": "-",
+        "Categoría": "Generales",
+        "Claves": [
+            "*",
+            "conejo",
+            "suiza",
+            "compañía",
+            "ley"
+        ]
+    },
+    {
+        "No": "76",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1548645933-c62d4468cbb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Qijin Xu",
+                "urlOrig": "https://unsplash.com/es/fotos/pSmXVhWr9kE"
+            }
+        ],
+        "Info": "La sangre de los pulpos tiene un color azul distintivo, esto se debe a la presencia de cobre en lugar de hierro en su estructura molecular. El cobre les permite transportar oxígeno en condiciones de baja concentración y temperatura, lo que los convierte en excelentes buceadores.",
+        "Fuente": "El Mundo",
+        "URLFuente": "https://www.elmundo.es/ciencia/2015/03/11/54ff2803e2704e8c528b457a.html#:~:text=Los%20pulpos%20tienen%20tres%20corazones,vez%20de%20hierro%2C%20contiene%20cobre.",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "pulpo",
+            "sangre",
+            "azul",
+            "cobre"
+        ]
+    },
+    {
+        "No": "77",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1610384116578-9824d77a8fc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+                "Autor": "Chris K",
+                "urlOrig": "https://unsplash.com/es/fotos/X9l2k_yNHpc"
+            }
+        ],
+        "Info": "¿Alguna vez has visto a la luna durante una mañana o tarde con el cielo ya iluminado por el día y te has preguntado por qué es posible? Bueno, esto ocurre porque, a diferencia de las estrellas, la luna se encuentra más cerca a la Tierra, lo que permite que la luz del sol la ilumine, incluso siendo de día, siempre y cuando ésta se encuentre en la parte derecha del cielo, durante la Luna Llena.",
+        "Fuente": "laSexta",
+        "URLFuente": "https://www.lasexta.com/tecnologia-tecnoxplora/ciencia/que-veces-vemos-luna-cuando-dia_2023020663e130a07b624e00019d5c36.html#:~:text=Porque%20a%20diferencia%20de%20las,al%20Sol%20en%20el%20cielo.",
+        "Credito": "-",
+        "Categoría": "Astronomía",
+        "Claves": [
+            "*",
+            "luna",
+            "sol",
+            "cielo",
+            "visible"
+        ]
     }
 ]
