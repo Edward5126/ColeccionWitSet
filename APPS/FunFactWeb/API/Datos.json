@@ -1697,5 +1697,144 @@
             "cielo",
             "visible"
         ]
+    },
+    {
+        "No": "78",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1642425149556-b6f90e946859?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                "Autor": "Andrew Svk",
+                "urlOrig": "https://unsplash.com/es/fotos/REwZEYzw19g"
+            }
+        ],
+        "Info": "La isla de Socotra, en Yemen, es hogar de plantas y animales únicos que no se encuentran en ninguna otra parte del mundo. Entre ellos está el árbol de sangre de dragón, cuya resina se ha usado como medicina durante siglos.",
+        "Fuente": "National Geographic",
+        "URLFuente": "https://www.nationalgeographic.com.es/naturaleza/grandes-reportajes/socotora-la-isla-misteriosa-2_5989",
+        "Credito": "-",
+        "Categoría": "Lugares",
+        "Claves": [
+            "*",
+            "yemen",
+            "socotra",
+            "árbol",
+            "rareza",
+            "isla",
+            "dragón"
+        ]
+    },
+    {
+        "No": "79",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1485199692108-c3b5069de6a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "freestocks",
+                "urlOrig": "https://unsplash.com/es/fotos/ujdUqduwCls"
+            }
+        ],
+        "Info": "En Islandia, cada persona tiene un apellido que se deriva del nombre de su padre o madre, seguido de 'dottir' (hija) o 'son' (hijo), respectivamente. Esto permite conocer la genealogía de alguien con solo ver su nombre completo.",
+        "Fuente": "La Vanguardia",
+        "URLFuente": "https://www.lavanguardia.com/internacional/20200214/473542991666/islandia-nombres-hijos-legislacion-restricciones.html",
+        "Credito": "-",
+        "Categoría": "Generales",
+        "Claves": [
+            "*",
+            "islandia",
+            "nombre",
+            "apellido",
+            "dottir",
+            "son",
+            "hija",
+            "hijo"
+        ]
+    },
+    {
+        "No": "80",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1493328967571-819121ed5085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+                "Autor": "Cassie Matias",
+                "urlOrig": "https://unsplash.com/es/fotos/IkJC9YAar-8"
+            }
+        ],
+        "Info": "A pesar de estar permanentemente cubierta de nieve y hielo, a la Antártida se le considera un <b>desierto</b> polar. Irónico, ¿no?",
+        "Fuente": "GEOenciclopedia",
+        "URLFuente": "https://www.geoenciclopedia.com/antartida-70.html",
+        "Credito": "-",
+        "Categoría": "Geografía",
+        "Claves": [
+            "*",
+            "antártida",
+            "hielo",
+            "nieve",
+            "desierto",
+            "polar"
+        ]
+    },
+    {
+        "No": "81",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1597181884890-36d38deb8b7f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+                "Autor": "Joshua J. Cotten",
+                "urlOrig": "https://unsplash.com/es/fotos/9K1m1w9_z3c"
+            }
+        ],
+        "Info": "El Cangrejo Violinista se caracteriza por tener una de sus pinzas mucho más grande que la otra y, si perdiera la grande, la pequeña crecería y la otra se regeneraría, pero se quedaría pequeña. Además, dado que es capaz de regenerar sus patas, usa esta habilidad para sobrevivir ante posibles depredadores. ",
+        "Fuente": "Peces de Acuarios",
+        "URLFuente": "https://www.pecesdeacuarios.net/invertebrados-marinos/crustaceos/cangrejo-violinista-uca-tangeri/",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "cangrejo",
+            "violinista",
+            "regeneración",
+            "supervivencia",
+            "adaptación"
+        ]
+    },
+    {
+        "No": "82",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1609865047731-789bfa7c0e1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Nils Bouillard",
+                "urlOrig": "https://unsplash.com/es/fotos/QLDqJV5CEWY"
+            }
+        ],
+        "Info": "El murciélago de la fruta es capaz de detectar objetos tan finos como un cabello humano en plena oscuridad gracias a su sistema de ecolocalización.",
+        "Fuente": "Arizona State University - Ask A Biologist",
+        "URLFuente": "https://askabiologist.asu.edu/eco-localizacion",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "murciélago",
+            "fruta",
+            "ecolocalización",
+            "fino"
+        ]
+    },
+    {
+        "No": "83",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1625869581767-c36368b25fd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1091&q=80",
+                "Autor": "Lex Melony",
+                "urlOrig": "https://unsplash.com/es/fotos/5JB_c7BAdvM"
+            }
+        ],
+        "Info": "Cuando piensas en flamencos, ¿te los imaginas descansando sobre una sola pata? Este peculiar comportamiento se mantuvo sin explicación por mucho tiempo, pero después de varios estudios, se encontró una explicación: lo hacen para ahorrar energía, pues poseen un mecanismo pasivo que no necesita de más esfuerzo para mantener esa famosa posición. Incluso pueden dormir así.",
+        "Fuente": "BBC News",
+        "URLFuente": "https://www.bbc.com/mundo/noticias-40029018",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "flamenco",
+            "flamingo",
+            "descansar",
+            "pata"
+        ]
     }
 ]

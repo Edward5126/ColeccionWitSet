@@ -67,7 +67,7 @@ const filtrar = ()=> {
 
 BotonBusqueda.addEventListener("click", filtrar);
 
-    var Categorias = ["Alimentos","Algas","Animales","Astronomía","Competencias","Condiciones","Educación","Fenómenos naturales","Gastronomía","Generales","Lugares","Plantas","Salud"];
+    var Categorias = ["Alimentos","Algas","Animales","Astronomía","Competencias","Condiciones","Educación","Fenómenos naturales","Gastronomía","Generales","Geografía","Lugares","Plantas","Salud"];
     
     CargarCategorías();
 
