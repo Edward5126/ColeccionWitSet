@@ -1836,5 +1836,113 @@
             "descansar",
             "pata"
         ]
+    },
+    {
+        "No": "84",
+        "Imagenes": [
+            {
+                "url": "https://live.staticflickr.com/65535/52721433593_ca1ae288ed_k.jpg",
+                "Autor": "NordGen",
+                "urlOrig": "https://www.flickr.com/photos/nordgen/52721433593/in/album-72157708987909041/"
+            }
+        ],
+        "Info": "La Bóveda Global de Semillas en Svalbard es una estructura subterránea que alberga muestras de semillas de plantas de todo el mundo. Es importante porque asegura la preservación de la diversidad genética de las plantas y protege la seguridad alimentaria global en caso de desastres naturales o eventos catastróficos.",
+        "Fuente": "Información",
+        "URLFuente": "https://www.informacion.es/medio-ambiente/2023/03/13/boveda-mundo-salvar-humanidad-62824784.html",
+        "Credito": "-",
+        "Categoría": "Lugares",
+        "Claves": [
+            "*",
+            "svalbard",
+            "bóveda",
+            "semillas",
+            "búnker"
+        ]
+    },
+    {
+        "No": "85",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1491723203629-ac87f78dc19b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Mikhail Vasilyev",
+                "urlOrig": "https://unsplash.com/es/fotos/Vf1JrKMUS0Q"
+            }
+        ],
+        "Info": "La reina de las hormigas ostenta el récord de la expectativa de vida más prolongada entre los insectos, alcanzando hasta los 30 años de edad como máximo. En cambio, las hembras obreras tienen una vida efímera de 1 a 3 años.",
+        "Fuente": "National Geographic",
+        "URLFuente": "https://www.nationalgeographic.com.es/naturaleza/cuanto-sabes-sobre-hormigas_16085/1",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "hormigas",
+            "vida",
+            "esperanza",
+            "reina",
+            "obreras"
+        ]
+    },
+    {
+        "No": "86",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1655857072503-01e4fdd00e90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Rejaul Karim",
+                "urlOrig": "https://unsplash.com/es/fotos/mGiEEoZ5vmk"
+            }
+        ],
+        "Info": "La lluvia de peces es un hecho meteorológico insólito, en el cual pequeños tornados succionan a los peces de su hábitat y los transportan a nubes de tormenta. Posteriormente, estos peces son liberados al caer la lluvia. Este fenómeno, aunque extraño, ha sido reportado en diversas partes del mundo.",
+        "Fuente": "Ecología Verde",
+        "URLFuente": "https://www.ecologiaverde.com/que-es-la-lluvia-de-peces-y-por-que-sucede-1959.html#:~:text=La%20lluvia%20de%20peces%20es,caen%20en%20forma%20de%20lluvia.",
+        "Credito": "-",
+        "Categoría": "Fenómenos naturales",
+        "Claves": [
+            "*",
+            "lluvia",
+            "peces"
+        ]
+    },
+    {
+        "No": "87",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1485527635306-8345d2288961?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80",
+                "Autor": "Karen Cantú Q",
+                "urlOrig": "https://unsplash.com/es/fotos/VyhSVRaZIxA"
+            }
+        ],
+        "Info": "Las estrellas de mar poseen una habilidad sorprendente: la regeneración de sus extremidades perdidas. Además, algunas especies tienen la capacidad de crear una nueva estrella de mar a partir de un solo brazo conectado al disco central. Este fenómeno fascinante es posible gracias a la capacidad de estas criaturas marinas de regenerar tejidos y órganos dañados.",
+        "Fuente": "Denver Zoo",
+        "URLFuente": "https://denverzoo.org/es/animals/sea-stars/#:~:text=Algunas%20especies%20de%20estrellas%20de,una%20parte%20del%20disco%20central.",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "estrellas",
+            "mar",
+            "regeneración"
+        ]
+    },
+    {
+        "No": "88",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1577114995803-d8ce0e2b4aa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80",
+                "Autor": "Wolfgang Hasselmann",
+                "urlOrig": "https://unsplash.com/es/fotos/yB4U2crh-mU"
+            }
+        ],
+        "Info": "La lengua de las jirafas puede medir hasta 50 centímetros y su color azul oscuro tiene una función importante, ya que les sirve para protegerla del sol y evitar quemaduras en su órgano más importante para comer.",
+        "Fuente": "La Sexta",
+        "URLFuente": "https://www.lasexta.com/como-que-cuando/que-jirafas-otros-animales-tienen-lengua-azul_202302016384a4b328ddf8000148e998.html#:~:text=Por%20qu%C3%A9%20las%20jirafas%20tienen%20la%20lengua%20azul&text=A%20d%C3%ADa%20de%20hoy%20se,las%20copas%20de%20los%20%C3%A1rboles.",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "jirafa",
+            "lengua",
+            "larga",
+            "azul"
+        ]
     }
 ]
