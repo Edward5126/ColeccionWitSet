@@ -3,6 +3,14 @@
 // console.log(ListaComidas);
 // import ListaBebidas from ".././API/RecetasBebidas.json" assert { type: "json" };
 // console.log(ListaBebidas);
+ImagenesRecursos = [
+  "../../CSS/styles.css",
+  "../../CSS/stylesLight.css",
+  "../../IMG/Horizontales/LogoHorizontalDM[R].svg",
+  "../../IMG/Horizontales/LogoHorizontalLM[R].svg",
+  "IMG/IllustracionPorUnDraw.svg",
+  "IMG/IllustracionPorUnDraw.svg",
+];
 
 var ListaComidas = [];
 var ListaBebidas = [];
@@ -303,12 +311,36 @@ function CargarListas() {
   // ListaBebidas.sort();
   // console.log(ListaComidas);
   document.getElementById("ComidasAElegir").innerHTML = '<option value="-1" selected hidden>Comida</option>';
-  ListaComidas.forEach((element) => {
+  let ComidasIndexables = ListaComidas;
+  ComidasIndexables.sort(function(a, b) {
+    var nombreA = a.nombre.toLowerCase();
+    var nombreB = b.nombre.toLowerCase();
+    if (nombreA < nombreB) {
+      return -1;
+    }
+    if (nombreA > nombreB) {
+      return 1;
+    }
+    return 0;
+  });
+  ComidasIndexables.forEach((element) => {
     document.getElementById("ComidasAElegir").innerHTML +=
       "<option value=" + element.id + ">" + element.nombre + "</option>";
   });
   document.getElementById("BebidasAElegir").innerHTML = '<option value="-1" selected hidden>Bebida</option>';
-  ListaBebidas.forEach((element) => {
+  let BebidasIndexables = ListaBebidas;
+  BebidasIndexables.sort(function(a, b) {
+    var nombreA = a.nombre.toLowerCase();
+    var nombreB = b.nombre.toLowerCase();
+    if (nombreA < nombreB) {
+      return -1;
+    }
+    if (nombreA > nombreB) {
+      return 1;
+    }
+    return 0;
+  });
+  BebidasIndexables.forEach((element) => {
     document.getElementById("BebidasAElegir").innerHTML +=
       "<option value=" + element.id + ">" + element.nombre + "</option>";
   });

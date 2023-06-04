@@ -16,7 +16,7 @@
   --Degradado-Click: linear-gradient(to top, #6565657a, #53535379);
 
   --Scrollbars: #adadad5a;
-  --Cuadro-Texto: #5454545a;
+  --Cuadro-Texto: #30303080;
 }
 /*  Vista para celulares ---------------------------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 800px) {
