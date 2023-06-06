@@ -28,6 +28,28 @@ if (localStorage.getItem("ArrayComidasP") !== undefined && localStorage.getItem(
 function SetUpRecetasP() {
   ListaComidas = JSON.parse(localStorage.getItem("ArrayComidasP"));
   ListaBebidas = JSON.parse(localStorage.getItem("ArrayBebidasP"));
+  ListaComidas.sort(function(a, b) {
+    var nombreA = a.nombre.toLowerCase();
+    var nombreB = b.nombre.toLowerCase();
+    if (nombreA < nombreB) {
+      return -1;
+    }
+    if (nombreA > nombreB) {
+      return 1;
+    }
+    return 0;
+  });
+  ListaBebidas.sort(function(a, b) {
+    var nombreA = a.nombre.toLowerCase();
+    var nombreB = b.nombre.toLowerCase();
+    if (nombreA < nombreB) {
+      return -1;
+    }
+    if (nombreA > nombreB) {
+      return 1;
+    }
+    return 0;
+  });
   console.log("Recetarios de comidas y bebidas personalizados alcanzados");
   CargarListas();
   setTimeout(() => {CambiarDia(DiaActual)}, 5);
@@ -40,6 +62,18 @@ function SetUpRecetas() {
     })
     .then(function (ListaRecibida) {
       ListaComidas = ListaRecibida;
+      
+  ListaComidas.sort(function(a, b) {
+    var nombreA = a.nombre.toLowerCase();
+    var nombreB = b.nombre.toLowerCase();
+    if (nombreA < nombreB) {
+      return -1;
+    }
+    if (nombreA > nombreB) {
+      return 1;
+    }
+    return 0;
+  });
       console.log("Recetario de Comidas alcanzado.");
     })
     .catch(function (error) {
@@ -54,6 +88,18 @@ function SetUpRecetas() {
     })
     .then(function (ListaRecibida2) {
       ListaBebidas = ListaRecibida2;
+      
+  ListaBebidas.sort(function(a, b) {
+    var nombreA = a.nombre.toLowerCase();
+    var nombreB = b.nombre.toLowerCase();
+    if (nombreA < nombreB) {
+      return -1;
+    }
+    if (nombreA > nombreB) {
+      return 1;
+    }
+    return 0;
+  });
       console.log("Recetario de Bebidas alcanzado.");
       CargarListas();
       CambiarDia(DiaActual);
@@ -256,14 +302,14 @@ function MostrarReceta() {
     document.querySelector(".Receta").style.display = "flex";
 
     document.querySelector(".NombreRecetaComida").innerHTML =
-      ListaComidas[ComidasElegidas[NumeroABuscar]].nombre;
+      ListaComidas.find(Receta => EncontrarID(Receta, ComidasElegidas[NumeroABuscar])).nombre;
       let Dificults = ["Fácil", "Intermedio", "Difícil"]
       document.getElementById("Info").innerHTML = `
-  <li><i class="icon icon-tiempo icondetalle"></i>${ListaComidas[ComidasElegidas[NumeroABuscar]].tiempo} minutos</li>
-  <li><i class="icon icon-ingredientes icondetalle"></i>${ListaComidas[ComidasElegidas[NumeroABuscar]].ingredientes.length} ingredientes</li>
-  <li><i class="icon icon-info icondetalle"></i>${Dificults[ListaComidas[ComidasElegidas[NumeroABuscar]].dificultad-1]}</li>`;
+  <li><i class="icon icon-tiempo icondetalle"></i>${ListaComidas.find(Receta => EncontrarID(Receta, ComidasElegidas[NumeroABuscar])).tiempo} minutos</li>
+  <li><i class="icon icon-ingredientes icondetalle"></i>${ListaComidas.find(Receta => EncontrarID(Receta, ComidasElegidas[NumeroABuscar])).ingredientes.length} ingredientes</li>
+  <li><i class="icon icon-info icondetalle"></i>${Dificults[ListaComidas.find(Receta => EncontrarID(Receta, ComidasElegidas[NumeroABuscar])).dificultad-1]}</li>`;
     document.getElementById("ListaIngredientes").innerHTML = "";
-    ListaComidas[ComidasElegidas[NumeroABuscar]].ingredientes.forEach(
+    ListaComidas.find(Receta => EncontrarID(Receta, ComidasElegidas[NumeroABuscar])).ingredientes.forEach(
       (element) => {
         document.getElementById(
           "ListaIngredientes"
@@ -271,18 +317,18 @@ function MostrarReceta() {
       }
     );
     document.getElementById("ListaPasos").innerHTML = "";
-    ListaComidas[ComidasElegidas[NumeroABuscar]].receta.forEach((element) => {
+    ListaComidas.find(Receta => EncontrarID(Receta, ComidasElegidas[NumeroABuscar])).receta.forEach((element) => {
       document.getElementById("ListaPasos").innerHTML += `<li>${element}</li>`;
     });
 
     document.querySelector(".NombreRecetaBebida").innerHTML =
-      ListaBebidas[BebidasElegidas[NumeroABuscar]].nombre;
+      ListaBebidas.find(Receta => EncontrarID(Receta, BebidasElegidas[NumeroABuscar])).nombre;
     document.getElementById("ListaIngredientes2").innerHTML = "";
     document.getElementById("Info2").innerHTML = `
-  <li><i class="icon icon-tiempo icondetalle"></i>${ListaBebidas[BebidasElegidas[NumeroABuscar]].tiempo} minutos</li>
-  <li><i class="icon icon-ingredientes icondetalle"></i>${ListaBebidas[BebidasElegidas[NumeroABuscar]].ingredientes.length} ingredientes</li>
-  <li><i class="icon icon-info icondetalle"></i>${Dificults[ListaBebidas[BebidasElegidas[NumeroABuscar]].dificultad-1]}</li>`;
-    ListaBebidas[BebidasElegidas[NumeroABuscar]].ingredientes.forEach(
+  <li><i class="icon icon-tiempo icondetalle"></i>${ListaBebidas.find(Receta => EncontrarID(Receta, BebidasElegidas[NumeroABuscar])).tiempo} minutos</li>
+  <li><i class="icon icon-ingredientes icondetalle"></i>${ListaBebidas.find(Receta => EncontrarID(Receta, BebidasElegidas[NumeroABuscar])).ingredientes.length} ingredientes</li>
+  <li><i class="icon icon-info icondetalle"></i>${Dificults[ListaBebidas.find(Receta => EncontrarID(Receta, BebidasElegidas[NumeroABuscar])).dificultad-1]}</li>`;
+    ListaBebidas.find(Receta => EncontrarID(Receta, BebidasElegidas[NumeroABuscar])).ingredientes.forEach(
       (element) => {
         document.getElementById(
           "ListaIngredientes2"
@@ -290,7 +336,7 @@ function MostrarReceta() {
       }
     );
     document.getElementById("ListaPasos2").innerHTML = "";
-    ListaBebidas[BebidasElegidas[NumeroABuscar]].receta.forEach((element) => {
+    ListaBebidas.find(Receta => EncontrarID(Receta, BebidasElegidas[NumeroABuscar])).receta.forEach((element) => {
       document.getElementById("ListaPasos2").innerHTML += `<li>${element}</li>`;
     });
   } else {
@@ -306,68 +352,44 @@ TitulosRecetas.forEach((element) => {
 
 //Se cargan todas las recetas en la lista
 function CargarListas() {
-  // console.log(ListaComidas);
-  // ListaComidas.sort();
-  // ListaBebidas.sort();
-  // console.log(ListaComidas);
   document.getElementById("ComidasAElegir").innerHTML = '<option value="-1" selected hidden>Comida</option>';
-  let ComidasIndexables = ListaComidas;
-  ComidasIndexables.sort(function(a, b) {
-    var nombreA = a.nombre.toLowerCase();
-    var nombreB = b.nombre.toLowerCase();
-    if (nombreA < nombreB) {
-      return -1;
-    }
-    if (nombreA > nombreB) {
-      return 1;
-    }
-    return 0;
-  });
-  ComidasIndexables.forEach((element) => {
+  ListaComidas.forEach((element) => {
     document.getElementById("ComidasAElegir").innerHTML +=
       "<option value=" + element.id + ">" + element.nombre + "</option>";
   });
   document.getElementById("BebidasAElegir").innerHTML = '<option value="-1" selected hidden>Bebida</option>';
-  let BebidasIndexables = ListaBebidas;
-  BebidasIndexables.sort(function(a, b) {
-    var nombreA = a.nombre.toLowerCase();
-    var nombreB = b.nombre.toLowerCase();
-    if (nombreA < nombreB) {
-      return -1;
-    }
-    if (nombreA > nombreB) {
-      return 1;
-    }
-    return 0;
-  });
-  BebidasIndexables.forEach((element) => {
+  ListaBebidas.forEach((element) => {
     document.getElementById("BebidasAElegir").innerHTML +=
       "<option value=" + element.id + ">" + element.nombre + "</option>";
   });
   console.log("Se han enlistado todas las opciones disponibles.");
 }
 
+function EncontrarID(Objeto, InId) {
+  return Objeto.id === InId;
+}
+
 function RegistrarDia() {
   AbrirInterfaz();
-  var ComidaElegida = document.getElementById("ComidasAElegir").value;
-  var BebidaElegida = document.getElementById("BebidasAElegir").value;
+  var ComidaElegida = parseInt(document.getElementById("ComidasAElegir").value);
+  var BebidaElegida = parseInt(document.getElementById("BebidasAElegir").value);
   console.group("Registro de comida");
   console.log("Comida: " + ComidaElegida + " Bebida: " + BebidaElegida);
-  console.log("Día: " + ComidaClickeada);
+  console.log("Horario: " + ComidaClickeada);
 
   document.getElementById(NombresComidas[ComidaClickeada - 1]).innerHTML =
-    ListaComidas[ComidaElegida].nombre;
+  ListaComidas.find(Receta => EncontrarID(Receta, ComidaElegida)).nombre;
   document.getElementById(NombresBebidas[ComidaClickeada - 1]).innerHTML =
-    ListaBebidas[BebidaElegida].nombre;
+  ListaBebidas.find(Receta => EncontrarID(Receta, BebidaElegida)).nombre;
   document.getElementById(Tiempos[ComidaClickeada - 1]).innerHTML =
-    ListaComidas[ComidaElegida].tiempo + ListaBebidas[BebidaElegida].tiempo;
+  ListaComidas.find(Receta => EncontrarID(Receta, ComidaElegida)).tiempo + ListaBebidas.find(Receta => EncontrarID(Receta, BebidaElegida)).tiempo;
   document.getElementById(NosIngredientes[ComidaClickeada - 1]).innerHTML =
-    ListaComidas[ComidaElegida].ingredientes.length +
-    ListaBebidas[BebidaElegida].ingredientes.length;
+  ListaComidas.find(Receta => EncontrarID(Receta, ComidaElegida)).ingredientes.length +
+  ListaBebidas.find(Receta => EncontrarID(Receta, BebidaElegida)).ingredientes.length;
   document.getElementById(IDDificultades[ComidaClickeada - 1]).innerHTML =
     ElegirDificultad(
-      ListaComidas[ComidaElegida].dificultad,
-      ListaBebidas[BebidaElegida].dificultad
+      ListaComidas.find(Receta => EncontrarID(Receta, ComidaElegida)).dificultad,
+      ListaBebidas.find(Receta => EncontrarID(Receta, BebidaElegida)).dificultad
     );
 
   switch (DiaActual) {
@@ -489,8 +511,6 @@ function CambiarDia(x) {
   }
 }
 
-//window.onload = CambiarDia(DiaActual); // <-- el problema se origina aquí a
-
 document.querySelector(".RetrocederDia").addEventListener("click", () => {
   DiaActual = DiaActual - 1;
   RevisarSemana();
@@ -546,24 +566,24 @@ function CargarDia() {
       default:
         break;
     }
-
+    
     if (ComidasElegidas[NumeroABuscar2] != null) {
       document.querySelectorAll(".CajaDia")[element - 1].style.color =
         "var(--Texto-Principal)";
       document.getElementById(NombresComidas[element - 1]).innerHTML =
-        ListaComidas[ComidasElegidas[NumeroABuscar2]].nombre;
+      ListaComidas.find(Receta => EncontrarID(Receta, ComidasElegidas[NumeroABuscar2])).nombre;
       document.getElementById(NombresBebidas[element - 1]).innerHTML =
-        ListaBebidas[BebidasElegidas[NumeroABuscar2]].nombre;
+        ListaBebidas.find(Receta => EncontrarID(Receta, BebidasElegidas[NumeroABuscar2])).nombre;
       document.getElementById(Tiempos[element - 1]).innerHTML =
-        ListaComidas[ComidasElegidas[NumeroABuscar2]].tiempo +
-        ListaBebidas[BebidasElegidas[NumeroABuscar2]].tiempo;
+        ListaComidas.find(Receta => EncontrarID(Receta, ComidasElegidas[NumeroABuscar2])).tiempo +
+        ListaBebidas.find(Receta => EncontrarID(Receta, BebidasElegidas[NumeroABuscar2])).tiempo;
       document.getElementById(NosIngredientes[element - 1]).innerHTML =
-        ListaComidas[ComidasElegidas[NumeroABuscar2]].ingredientes.length +
-        ListaBebidas[BebidasElegidas[NumeroABuscar2]].ingredientes.length;
+        ListaComidas.find(Receta => EncontrarID(Receta, ComidasElegidas[NumeroABuscar2])).ingredientes.length +
+        ListaBebidas.find(Receta => EncontrarID(Receta, BebidasElegidas[NumeroABuscar2])).ingredientes.length;
       document.getElementById(IDDificultades[element - 1]).innerHTML =
         ElegirDificultad(
-          ListaComidas[ComidasElegidas[NumeroABuscar2]].dificultad,
-          ListaBebidas[BebidasElegidas[NumeroABuscar2]].dificultad
+          ListaComidas.find(Receta => EncontrarID(Receta, ComidasElegidas[NumeroABuscar2])).dificultad,
+          ListaBebidas.find(Receta => EncontrarID(Receta, BebidasElegidas[NumeroABuscar2])).dificultad
         );
     } else {
       document.querySelectorAll(".CajaDia")[element - 1].style.color =
@@ -653,7 +673,7 @@ function CargarListadeCompra() {
 
   ComidasElegidas.forEach((element) => {
     if (element != null) {
-      ListaComidas[element].ingredientes.forEach((element2) => {
+      ListaComidas.find(Receta => EncontrarID(Receta, element)).ingredientes.forEach((element2) => {
         ListaCompras.push(element2);
       });
     }
@@ -661,7 +681,7 @@ function CargarListadeCompra() {
 
   BebidasElegidas.forEach((element3) => {
     if (element3 != null) {
-      ListaBebidas[element3].ingredientes.forEach((element4) => {
+      ListaBebidas.find(Receta => EncontrarID(Receta, element3)).ingredientes.forEach((element4) => {
         ListaCompras.push(element4);
       });
     }
@@ -917,12 +937,12 @@ function ObtenerSi() {
   p = 0;
   u = 0;
   Tipo = document.getElementById("TipoRec").value;
-  No = document.getElementById("NumeroRec").value;
+  No = parseInt(document.getElementById("NumeroRec").value);
   switch (Tipo) {
     case "Comida":
-      document.getElementById("NombreRec").value = ListaComidas[No].nombre;
+      document.getElementById("NombreRec").value = ListaComidas.find(Receta => EncontrarID(Receta, No)).nombre;
       document.getElementById("IngredientesListaRec").innerHTML = "";
-      ListaComidas[No].ingredientes.forEach((element) => {
+      ListaComidas.find(Receta => EncontrarID(Receta, No)).ingredientes.forEach((element) => {
         document.getElementById("IngredientesListaRec").innerHTML += `<li class="IngreNuevo Item" id="NuevIng${p}">${element}</li>`;
         document.querySelectorAll(".Item").forEach((element) => {
           element.addEventListener("click", (e) => {
@@ -936,7 +956,7 @@ function ObtenerSi() {
         p++;
       });
       document.getElementById("PasosListaRec").innerHTML = "";
-      ListaComidas[No].receta.forEach((element) => {
+      ListaComidas.find(Receta => EncontrarID(Receta, No)).receta.forEach((element) => {
         document.getElementById("PasosListaRec").innerHTML += `<li class="PasoNuevo Item" id="NuevoPaso${u}">${element}</li>`;
     document.querySelectorAll(".Item").forEach((element) => {
       element.addEventListener("click", (e) => {
@@ -950,15 +970,15 @@ function ObtenerSi() {
     u++;
       });
 
-      document.getElementById("TiempoRec").value = ListaComidas[No].tiempo;
+      document.getElementById("TiempoRec").value = ListaComidas.find(Receta => EncontrarID(Receta, No)).tiempo;
       document.getElementById("DificultadRec").value =
-        Dificultades[ListaComidas[No].dificultad - 1];
+        Dificultades[ListaComidas.find(Receta => EncontrarID(Receta, No)).dificultad - 1];
       break;
 
     case "Bebida":
-      document.getElementById("NombreRec").value = ListaBebidas[No].nombre;
+      document.getElementById("NombreRec").value = ListaBebidas.find(Receta => EncontrarID(Receta, No)).nombre;
       document.getElementById("IngredientesListaRec").innerHTML = "";
-      ListaBebidas[No].ingredientes.forEach((element) => {
+      ListaBebidas.find(Receta => EncontrarID(Receta, No)).ingredientes.forEach((element) => {
         document.getElementById("IngredientesListaRec").innerHTML += `<li class="IngreNuevo Item" id="NuevIng${p}">${element}</li>`;
         document.querySelectorAll(".Item").forEach((element) => {
           element.addEventListener("click", (e) => {
@@ -972,7 +992,7 @@ function ObtenerSi() {
         p++;
       });
       document.getElementById("PasosListaRec").innerHTML = "";
-      ListaBebidas[No].receta.forEach((element) => {
+      ListaBebidas.find(Receta => EncontrarID(Receta, No)).receta.forEach((element) => {
         document.getElementById("PasosListaRec").innerHTML += `<li class="PasoNuevo Item" id="NuevoPaso${u}">${element}</li>`;
     document.querySelectorAll(".Item").forEach((element) => {
       element.addEventListener("click", (e) => {
@@ -986,9 +1006,9 @@ function ObtenerSi() {
     u++;
       });
 
-      document.getElementById("TiempoRec").value = ListaBebidas[No].tiempo;
+      document.getElementById("TiempoRec").value = ListaBebidas.find(Receta => EncontrarID(Receta, No)).tiempo;
       document.getElementById("DificultadRec").value =
-        Dificultades[ListaBebidas[No].dificultad - 1];
+        Dificultades[ListaBebidas.find(Receta => EncontrarID(Receta, No)).dificultad - 1];
       break;
 
     default:
@@ -1116,6 +1136,28 @@ function Agregar(e){
   } else {
     ListaBebidas.push(NuevaReceta);
   }
+  ListaComidas.sort(function(a, b) {
+    var nombreA = a.nombre.toLowerCase();
+    var nombreB = b.nombre.toLowerCase();
+    if (nombreA < nombreB) {
+      return -1;
+    }
+    if (nombreA > nombreB) {
+      return 1;
+    }
+    return 0;
+  });
+  ListaBebidas.sort(function(a, b) {
+    var nombreA = a.nombre.toLowerCase();
+    var nombreB = b.nombre.toLowerCase();
+    if (nombreA < nombreB) {
+      return -1;
+    }
+    if (nombreA > nombreB) {
+      return 1;
+    }
+    return 0;
+  });
   GuardarCustom();
   RespuestaForm("¡Receta añadida a tu recetario!");
   MaxLength();
@@ -1139,8 +1181,8 @@ function Quitar(e){
       };
     });
     if (Dic == true) {
-      if (confirm('¿Eliminar permanentemente "' + ListaComidas[g].nombre + '" de la lista de comidas? Esta acción no se puede deshacer.')) {
-        ListaComidas.splice(g, 1);
+      if (confirm('¿Eliminar permanentemente "' + ListaComidas.find(Receta => EncontrarID(Receta, g)).nombre + '" de la lista de comidas? Esta acción no se puede deshacer.')) {
+        ListaComidas.splice(ListaComidas.indexOf(ListaComidas.find(Receta => EncontrarID(Receta, g))), 1);
         RespuestaForm("Receta eliminada de tu recetario");
       }
     } else {
@@ -1154,8 +1196,8 @@ function Quitar(e){
       };
     });
     if (Dic == true) {
-      if (confirm('¿Eliminar permanentemente "' + ListaBebidas[g].nombre + '" de la lista de bebidas? Esta acción no se puede deshacer.')) {
-        ListaBebidas.splice(g, 1);
+      if (confirm('¿Eliminar permanentemente "' + ListaBebidas.find(Receta => EncontrarID(Receta, g)).nombre + '" de la lista de bebidas? Esta acción no se puede deshacer.')) {
+        ListaBebidas.splice(ListaBebidas.indexOf(ListaBebidas.find(Receta => EncontrarID(Receta, g))), 1);
         RespuestaForm("Receta eliminada de tu recetario");
       }
     } else {
