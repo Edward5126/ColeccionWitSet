@@ -1944,5 +1944,48 @@
             "larga",
             "azul"
         ]
+    },
+    {
+        "No": "89",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1600633660236-f6f61d5f155d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+                "Autor": "Valeriia Miller",
+                "urlOrig": "https://unsplash.com/es/fotos/EunXEkpIWYI"
+            }
+        ],
+        "Info": "Los koalas, al igual que algunos primates, tienen huellas dactilares únicas, ¡como los humanos! Pero, curiosamente, los koalas desarrollaron esta característica de forma independiente hace 70 millones de años, cuando su evolución se separó de nuestros antepasados. Además, sus parientes más cercanos, como los canguros, no tienen huellas dactilares.",
+        "Fuente": "Muy Interesante",
+        "URLFuente": "https://www.muyinteresante.es/curiosidades/15464.html#:~:text=Porque%20estos%20marsupiales%20que%20trepan,Universidad%20de%20Adelaida%20en%20Australia.",
+        "Credito": "-",
+        "Categoría": "Animales",
+        "Claves": [
+            "*",
+            "Koala",
+            "koalas",
+            "huellas",
+            "dactilares"
+        ]
+    },
+    {
+        "No": "90",
+        "Imagenes": [
+            {
+                "url": "https://images.unsplash.com/photo-1578142880638-9fc9aba285c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                "Autor": "Florida-Guidebook.com",
+                "urlOrig": "https://unsplash.com/es/fotos/2Bdln1-BtUA"
+            }
+        ],
+        "Info": "¿Conocías los manglares? Son ecosistemas conformados principalmente por mangles, como su nombre sugiere. Estos árboles ofrecen muchos beneficios para la naturaleza, como ser zona de crianza para especies importantes de peces, servir como amortiguadores naturales contra las mareas más violentas, evitando así la erosión del suelo o tener una sobresaliente capacidad para almacenar carbono.",
+        "Fuente": "ONU",
+        "URLFuente": "https://www.unep.org/es/noticias-y-reportajes/reportajes/manglares-una-super-solucion-contra-el-cambio-climatico",
+        "Credito": "-",
+        "Categoría": "Plantas",
+        "Claves": [
+            "*",
+            "Mangle",
+            "Mangles",
+            "Manglares"
+        ]
     }
 ]

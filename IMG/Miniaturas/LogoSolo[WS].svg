@@ -6,40 +6,37 @@
 <style type="text/css">
 	.st0{display:none;}
 	.st1{display:inline;}
-	.st2{display:inline;fill:#2F2F2F;}
+	.st2{fill:#2F2F2F;}
 	.st3{display:inline;fill:#FFFFFF;}
-	.st4{display:inline;fill:url(#Marco_con_fondo_2_);}
-	.st5{fill:url(#SVGID_1_);}
-	.st6{fill:url(#SVGID_2_);}
-	.st7{fill:#FFFFFF;}
-	.st8{fill:#2F2F2F;}
-	.st9{fill:url(#Marco_con_fondo_3_);}
-	.st10{fill:url(#Fondo_del_marco_1_);}
-	.st11{fill:url(#Marco_3_);}
-	.st12{fill:url(#SVGID_3_);}
-	.st13{fill:url(#SVGID_4_);}
-	.st14{fill:url(#SVGID_5_);}
-	.st15{fill:url(#SVGID_6_);}
-	.st16{fill:url(#SVGID_7_);}
-	.st17{fill:url(#SVGID_8_);}
-	.st18{fill:url(#SVGID_9_);}
-	.st19{fill:url(#SVGID_10_);}
-	.st20{fill:url(#SVGID_11_);}
-	.st21{fill:url(#SVGID_12_);}
-	.st22{fill:url(#SVGID_13_);}
-	.st23{fill:url(#SVGID_14_);}
-	.st24{fill:url(#SVGID_15_);}
-	.st25{fill:url(#SVGID_16_);}
-	.st26{display:none;opacity:0.3;fill:url(#Área_estandarizada_para_el_ícono_1_);}
-	.st27{fill:#1F1F1F;}
-	.st28{fill:url(#Degradado_Oscuro_1_);}
-	.st29{fill:#B8B8B8;}
-	.st30{fill:url(#Degradado_Claro_1_);}
-	.st31{fill:none;stroke:#000000;stroke-miterlimit:10;}
-	.st32{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
-	.st33{fill:none;stroke:url(#Degradado_Principal_1_);stroke-miterlimit:10;}
-	.st34{display:inline;fill:none;stroke:#EDFF00;stroke-miterlimit:10;}
-	.st35{fill:#999999;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:url(#Marco_con_fondo_2_);}
+	.st6{fill:url(#SVGID_1_);}
+	.st7{fill:url(#SVGID_2_);}
+	.st8{fill:url(#Marco_con_fondo_3_);}
+	.st9{fill:url(#Fondo_del_marco_1_);}
+	.st10{fill:url(#Marco_3_);}
+	.st11{fill:url(#SVGID_3_);}
+	.st12{fill:url(#SVGID_4_);}
+	.st13{fill:url(#SVGID_5_);}
+	.st14{fill:url(#SVGID_6_);}
+	.st15{fill:url(#SVGID_7_);}
+	.st16{fill:url(#SVGID_8_);}
+	.st17{fill:url(#SVGID_9_);}
+	.st18{fill:url(#SVGID_10_);}
+	.st19{fill:url(#SVGID_11_);}
+	.st20{fill:url(#SVGID_12_);}
+	.st21{fill:url(#SVGID_13_);}
+	.st22{fill:url(#SVGID_14_);}
+	.st23{fill:url(#SVGID_15_);}
+	.st24{fill:url(#SVGID_16_);}
+	.st25{display:none;opacity:0.3;fill:url(#Área_estandarizada_para_el_ícono_1_);}
+	.st26{fill:#1F1F1F;}
+	.st27{fill:url(#Degradado_Oscuro_1_);}
+	.st28{fill:#B8B8B8;}
+	.st29{fill:url(#Degradado_Claro_1_);}
+	.st30{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st31{fill:none;stroke:url(#Degradado_Principal_1_);stroke-miterlimit:10;}
+	.st32{fill:#8C8C8C;}
 </style>
 <g id="Fondos_1_" class="st0">
 	<rect class="st1" width="500" height="500"/>
@@ -51,7 +48,7 @@
 			<stop  offset="0.5303" style="stop-color:#292929"/>
 			<stop  offset="1" style="stop-color:#1F1F1F"/>
 		</linearGradient>
-		<path class="st5" d="M380.3,37.9H119.7c-45.2,0-81.8,36.6-81.8,81.8v260.6c0,45.2,36.6,81.8,81.8,81.8h260.6
+		<path class="st6" d="M380.3,37.9H119.7c-45.2,0-81.8,36.6-81.8,81.8v260.6c0,45.2,36.6,81.8,81.8,81.8h260.6
 			c45.2,0,81.8-36.6,81.8-81.8V119.7C462.1,74.5,425.5,37.9,380.3,37.9z"/>
 		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="250" y1="487.3403" x2="250" y2="12.6597">
 			<stop  offset="0" style="stop-color:#B8B8B8"/>
@@ -62,38 +59,59 @@
 			<stop  offset="0.5651" style="stop-color:#FDFDFD"/>
 			<stop  offset="1" style="stop-color:#FFFFFF"/>
 		</linearGradient>
-		<path class="st6" d="M380.3,37.9c45.2,0,81.8,36.6,81.8,81.8v260.6c0,45.2-36.6,81.8-81.8,81.8H119.7c-45.2,0-81.8-36.6-81.8-81.8
+		<path class="st7" d="M380.3,37.9c45.2,0,81.8,36.6,81.8,81.8v260.6c0,45.2-36.6,81.8-81.8,81.8H119.7c-45.2,0-81.8-36.6-81.8-81.8
 			V119.7c0-45.2,36.6-81.8,81.8-81.8H380.3 M380.3,12.7H119.7C91.1,12.7,64.2,23.8,44,44c-20.2,20.2-31.4,47.1-31.4,75.7v260.6
 			c0,28.6,11.1,55.5,31.4,75.7c20.2,20.2,47.1,31.4,75.7,31.4h260.6c28.6,0,55.5-11.1,75.7-31.4s31.4-47.1,31.4-75.7V119.7
 			c0-28.6-11.1-55.5-31.4-75.7S408.9,12.7,380.3,12.7L380.3,12.7z"/>
 	</g>
-	<g id="Ícono_3_">
+	<g id="Ícono_4_" class="st0">
+		<g class="st1">
+			<circle class="st4" cx="138.5" cy="138.5" r="35"/>
+		</g>
+		<g class="st1">
+			<circle class="st4" cx="250" cy="138.5" r="35"/>
+		</g>
+		<g class="st1">
+			<circle class="st4" cx="361.5" cy="138.5" r="35"/>
+		</g>
+		<g class="st1">
+			<circle class="st4" cx="138.5" cy="361.5" r="35"/>
+		</g>
+		<g class="st1">
+			<circle class="st4" cx="250" cy="361.5" r="35"/>
+		</g>
+		<g class="st1">
+			<circle class="st4" cx="361.5" cy="361.5" r="35"/>
+		</g>
+		<g class="st1">
+			<circle class="st4" cx="138.5" cy="250" r="35"/>
+		</g>
+		<g class="st1">
+			<circle class="st4" cx="250" cy="250" r="35"/>
+		</g>
+		<g class="st1">
+			<circle class="st4" cx="361.5" cy="250" r="35"/>
+		</g>
+	</g>
+	<g id="Ícono_2_3_">
 		<g>
-			<circle class="st7" cx="138.5" cy="138.5" r="35"/>
+			<path class="st4" d="M208.3,231.1h-82c-12.5,0-22.8-10.2-22.8-22.8v-82c0-12.5,10.2-22.8,22.8-22.8h82
+				c12.5,0,22.8,10.2,22.8,22.8v82C231.1,220.8,220.8,231.1,208.3,231.1z"/>
 		</g>
 		<g>
-			<circle class="st7" cx="250" cy="138.5" r="35"/>
+			<path class="st4" d="M373.7,116.4c5.5,0,9.9,4.4,9.9,9.9v82c0,5.5-4.4,9.9-9.9,9.9h-82c-5.5,0-9.9-4.4-9.9-9.9v-82
+				c0-5.5,4.4-9.9,9.9-9.9H373.7 M373.7,103.5h-82c-12.5,0-22.8,10.2-22.8,22.8v82c0,12.5,10.2,22.8,22.8,22.8h82
+				c12.5,0,22.8-10.2,22.8-22.8v-82C396.5,113.8,386.2,103.5,373.7,103.5L373.7,103.5z"/>
 		</g>
 		<g>
-			<circle class="st7" cx="361.5" cy="138.5" r="35"/>
+			<path class="st4" d="M208.3,281.8c5.5,0,9.9,4.4,9.9,9.9v82c0,5.5-4.4,9.9-9.9,9.9h-82c-5.5,0-9.9-4.4-9.9-9.9v-82
+				c0-5.5,4.4-9.9,9.9-9.9H208.3 M208.3,268.9h-82c-12.5,0-22.8,10.2-22.8,22.8v82c0,12.5,10.2,22.8,22.8,22.8h82
+				c12.5,0,22.8-10.2,22.8-22.8v-82C231.1,279.2,220.8,268.9,208.3,268.9L208.3,268.9z"/>
 		</g>
 		<g>
-			<circle class="st7" cx="138.5" cy="361.5" r="35"/>
-		</g>
-		<g>
-			<circle class="st7" cx="250" cy="361.5" r="35"/>
-		</g>
-		<g>
-			<circle class="st7" cx="361.5" cy="361.5" r="35"/>
-		</g>
-		<g>
-			<circle class="st7" cx="138.5" cy="250" r="35"/>
-		</g>
-		<g>
-			<circle class="st7" cx="250" cy="250" r="35"/>
-		</g>
-		<g>
-			<circle class="st7" cx="361.5" cy="250" r="35"/>
+			<path class="st4" d="M373.7,281.8c5.5,0,9.9,4.4,9.9,9.9v82c0,5.5-4.4,9.9-9.9,9.9h-82c-5.5,0-9.9-4.4-9.9-9.9v-82
+				c0-5.5,4.4-9.9,9.9-9.9H373.7 M373.7,268.9h-82c-12.5,0-22.8,10.2-22.8,22.8v82c0,12.5,10.2,22.8,22.8,22.8h82
+				c12.5,0,22.8-10.2,22.8-22.8v-82C396.5,279.2,386.2,268.9,373.7,268.9L373.7,268.9z"/>
 		</g>
 	</g>
 </g>
