@@ -1,0 +1,11 @@
+1. Usar Recetari directo desde Live Server y agregar todas las recetas necesarias con la herramienta de administración
+2. Una vez que todas las recetas hayan sido agregadas, DESACTIVAR LIVE SERVER
+3. Abrir las herramientas de desarrollador y acceder a la consola. Ahí escribir JSON.stringify(ListaComidas) y copiar el resultado
+4. Ir al archivo Formateo.json dentro de Visual Studio Code y pegarlo
+5. Usar Shift + Ctrl + P y seleccionar "Dar formato"
+6. Seleccionar todo el texto ya formateadao y cortarlo
+7. Ir a https://codeshack.io/json-sorter/ y pegarlo
+8. Configurar "Sort Method" en "Key Value" y "Key Name" en "id"
+9. Copiar el resultado.
+10. Reemplazar todo el texto actual del archivo RecetasComidas.json con el texto nuevo copiado.
+11. Repetir desde el paso 3 pero con ListaBebidas.

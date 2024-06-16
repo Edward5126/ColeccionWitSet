@@ -1,261 +1,346 @@
 [
-    {
-        "id": 0,
-        "nombre": "Tostadas francesas",
-        "ingredientes": [
-            "Pan blanco",
-            "Leche",
-            "Huevo",
-            "Azúcar",
-            "Canela",
-            "Mantequilla",
-            "Mermelada"
-        ],
-        "tiempo": 20,
-        "dificultad": 1,
-        "receta": [
-            "Mezclar huevos, leche, azúcar, canela y un poco de mantequilla y revolver la mezcla.",
-            "Remojar las rebanadas de pan en la mezcla por unos segundos. No dejarlos remojados.",
-            "Poner las rebanadas en un sartén caliente hasta que se cocinen.",
-            "Servir con mermelada o acompañamiento al gusto."
-        ]
-    },
-    {
-        "id": 1,
-        "nombre": "Huevo con jamón",
-        "ingredientes": [
-            "Huevo",
-            "Jamón",
-            "Tortillas",
-            "Sal"
-        ],
-        "tiempo": 10,
-        "dificultad": 1,
-        "receta": [
-            "Poner a calentar a fuego bajo o medio una sarten cubierta con un poco de aceite.",
-            "Cortar unas rebanadas de jamón en cuadritos.",
-            "Poner a freír el jamón en la sartén.",
-            "Un momento después, quebrar los huevos dentro de la sartén y freír revolviendo todo.",
-            "Añadir sal mientras se revuelve.",
-            "Servir con tortillas o acompañamiento al gusto."
-        ]
-    },
-    {
-        "id": 2,
-        "nombre": "Desayuno Foráneo",
-        "ingredientes": [
-            "Leche",
-            "Cereal",
-            "Frutas",
-            "Galletas de avena",
-            "Jamón"
-        ],
-        "tiempo": 15,
-        "dificultad": 1,
-        "receta": [
-            "Cortar rebanadas de fruta al gusto en un tazón pequeño",
-            "Mezclarlo con cereal",
-            "En otro plato, servir las galletas de avena acompañadas de una o dos rebanadas de jamón y otra fruta.",
-            "Servir leche en el tazón."
-        ]
-    },
-    {
-        "id": 3,
-        "nombre": "Papas empanizadas",
-        "ingredientes": [
-            "Papas",
-            "Pan para empanizar",
-            "Huevo",
-            "Sal",
-            "Queso"
-        ],
-        "tiempo": 30,
-        "dificultad": 1,
-        "receta": [
-            "Hervir las papas hasta que se suavicen.",
-            "Pelar las papas.",
-            "Machacar toda la papa y agregarle sal al gusto.",
-            "Con la mezcla, hacer bolitas y rellenar cada una con queso.",
-            "Empanizar y freir cada bolita.",
-            "Servir con acompañamiento al gusto."
-        ]
-    },
-    {
-        "id": 4,
-        "nombre": "Hot Cakes",
-        "ingredientes": [
-            "Harina para hot cakes",
-            "Huevo",
-            "Leche",
-            "Mantequilla",
-            "Mermelada"
-        ],
-        "tiempo": 40,
-        "dificultad": 1,
-        "receta": [
-            "Mezclar la harina, el huevo y la leche.",
-            "Licuar la mezcla hasta que se incorpore todo.",
-            "Derretir un poco de mantequilla en una sartén caliente.",
-            "Verter la mezcla en la sartén formando los hot cakes.",
-            "Voltearlo apenas toda la superficie se cubra de burbujas.",
-            "Revisar ocasionalmente para que no se quemen.",
-            "Dejar que se cocinen y retirar de la sartén."
-        ]
-    },
-    {
-        "id": 5,
-        "nombre": "Croquetas de atún",
-        "ingredientes": [
-            "Atún",
-            "Pan para empanizar",
-            "Huevo"
-        ],
-        "tiempo": 10,
-        "dificultad": 1,
-        "receta": [
-            "Drenar el agua del atún.",
-            "Mezclar el atún con el pan y huevo.",
-            "Hacer tortitas con la mezcla",
-            "Freírlas en una sartén",
-            "Servir con acompañamiento al gusto."
-        ]
-    },
-    {
-        "id": 6,
-        "nombre": "Sándwich de huevo",
-        "ingredientes": [
-            "Pan blanco",
-            "Mayonesa",
-            "Huevo"
-        ],
-        "tiempo": 10,
-        "dificultad": 1,
-        "receta": [
-            "Drenar el agua del atún.",
-            "Mezclar el atún con el pan y huevo.",
-            "Hacer tortitas con la mezcla",
-            "Freírlas en una sartén",
-            "Servir con acompañamiento al gusto."
-        ]
-    },
-    {
-        "id": 7,
-        "nombre": "Burritas",
-        "ingredientes": [
-            "Jamón",
-            "Queso",
-            "Tortilla de Harina",
-            "Mayonesa"
-        ],
-        "tiempo": 15,
-        "dificultad": 1,
-        "receta": [
-            "Armar las burritas poniendo jamón y queso dentro de la tortilla doblada",
-            "Calentarla en una sartén, al gusto",
-            "Servir acompañada de mayonesa al gusto"
-        ]
-    },
-    {
-        "id": 8,
-        "nombre": "Albóndigas a la carbonara",
-        "ingredientes": [
-            "Carne picada",
-            "Huevo",
-            "Sal",
-            "Pan rallado",
-            "Perejil",
-            "Tocino",
-            "Nata",
-            "Queso parmesano"
-        ],
-        "tiempo": 30,
-        "dificultad": 2,
-        "receta": [
-            "Mezclar 400 g de carne picada, 1 huevo, sal, 2 cucharadas de pan rallado y perejil en un traste",
-            "Freír las albóndigas en una sartén",
-            "Empezar a freír el tocino en otra sartén",
-            "Agregar 500ml de nata y 100 g de parmesano",
-            "Agregar las albóndigas y cocinar a fuego medio por 5 minutos, moviéndolo.",
-            "Servir al gusto"
-        ]
-    },
-    {
-        "id": 9,
-        "nombre": "Chuletas con verduras  y arroz",
-        "ingredientes": [
-            "Chuletas",
-            "Brócoli",
-            "Zanahoria",
-            "Arroz"
-        ],
-        "tiempo": 60,
-        "dificultad": 1,
-        "receta": [
-            "Freír las chuletas en una sartén con poco aceite",
-            "Picar en trozos al gusto el brócoli y la zanahoria",
-            "Hervir las verduras al vapor",
-            "Servir y acompañar con arroz"
-        ]
-    },
-    {
-        "id": 10,
-        "nombre": "Paté",
-        "ingredientes": [
-            "Jamón",
-            "Salchichas",
-            "Chipotle",
-            "Media crema"
-        ],
-        "tiempo": 30,
-        "dificultad": 1,
-        "receta": [
-            "Cortar y picar en trozos pequeños el jamón y las salchichas",
-            "Mezclar todos los ingredientes en una licuadora",
-            "Licuar procurando que se incorpore toda la mezcla y acabe como una pasta",
-            "Servir y acompañar con galletas"
-        ]
-    },
-    {
-        "id": 11,
-        "nombre": "Picadillo",
-        "ingredientes": [
-            "Carne Molida",
-            "Papas",
-            "Zanahoria",
-            "Pasas",
-            "Cebolla",
-            "Ajo"
-        ],
-        "tiempo": 90,
-        "dificultad": 2,
-        "receta": [
-            "Picar rodajas de cebolla y dos dientes de ajo. Picar en cubos pequeños tres papas y dos zanahorias. Mantener separados.",
-            "Mezclar la cebolla y el ajo.",
-            "En una cacerola con aceite, revolver la cebolla y el ajo y sofreír un poco.",
-            "Retirar los excesos de cebolla y ajo que quedan.",
-            "Preparar 1 kg de carne molida e incorporar a la cacerola.",
-            "Añadir a la mezcla la papa y la zanahoria.",
-            "En un poco de agua, preparar un poco de achiote y agregar a la cacerola.",
-            "Revolver hasta integrar todos los ingredientes mientras se cocina.",
-            "Servir con acompañamiento al gusto."
-        ]
-    },
-    {
-        "id": 12,
-        "nombre": "Yogurt con frutas",
-        "ingredientes": [
-            "Yogurt",
-            "Manzana",
-            "Plátano",
-            "Granola",
-            "Galletas de avena"
-        ],
-        "tiempo": 15,
-        "dificultad": 1,
-        "receta": [
-            "Picar la manzana y el plátano",
-            "Revolver las frutas, cubrir con yogurt y después cubrir con granola",
-            "Acompañar con galletas de avena"
-        ]
-    }
+	{
+		"id": 0,
+		"nombre": "Tostadas francesas",
+		"ingredientes": [
+			"Pan blanco",
+			"Leche",
+			"Huevo",
+			"Azúcar",
+			"Canela",
+			"Mantequilla",
+			"Mermelada"
+		],
+		"tiempo": 20,
+		"dificultad": 1,
+		"receta": [
+			"Mezclar huevos, leche, azúcar, canela y un poco de mantequilla y revolver la mezcla.",
+			"Remojar las rebanadas de pan en la mezcla por unos segundos. No dejarlos remojados.",
+			"Poner las rebanadas en un sartén caliente hasta que se cocinen.",
+			"Servir con mermelada o acompañamiento al gusto."
+		]
+	},
+	{
+		"id": 1,
+		"nombre": "Huevo con jamón",
+		"ingredientes": [
+			"Huevo",
+			"Jamón",
+			"Tortillas",
+			"Sal"
+		],
+		"tiempo": 10,
+		"dificultad": 1,
+		"receta": [
+			"Poner a calentar a fuego bajo o medio una sarten cubierta con un poco de aceite.",
+			"Cortar unas rebanadas de jamón en cuadritos.",
+			"Poner a freír el jamón en la sartén.",
+			"Un momento después, quebrar los huevos dentro de la sartén y freír revolviendo todo.",
+			"Añadir sal mientras se revuelve.",
+			"Servir con tortillas o acompañamiento al gusto."
+		]
+	},
+	{
+		"id": 2,
+		"nombre": "Desayuno Foráneo",
+		"ingredientes": [
+			"Leche",
+			"Cereal",
+			"Frutas",
+			"Galletas de avena",
+			"Jamón"
+		],
+		"tiempo": 15,
+		"dificultad": 1,
+		"receta": [
+			"Cortar rebanadas de fruta al gusto en un tazón pequeño",
+			"Mezclarlo con cereal",
+			"En otro plato, servir las galletas de avena acompañadas de una o dos rebanadas de jamón y otra fruta.",
+			"Servir leche en el tazón."
+		]
+	},
+	{
+		"id": 3,
+		"nombre": "Papas empanizadas",
+		"ingredientes": [
+			"Papas",
+			"Pan para empanizar",
+			"Huevo",
+			"Sal",
+			"Queso"
+		],
+		"tiempo": 30,
+		"dificultad": 1,
+		"receta": [
+			"Hervir las papas hasta que se suavicen.",
+			"Pelar las papas.",
+			"Machacar toda la papa y agregarle sal al gusto.",
+			"Con la mezcla, hacer bolitas y rellenar cada una con queso.",
+			"Empanizar y freir cada bolita.",
+			"Servir con acompañamiento al gusto."
+		]
+	},
+	{
+		"id": 4,
+		"nombre": "Hot Cakes",
+		"ingredientes": [
+			"Harina para hot cakes",
+			"Huevo",
+			"Leche",
+			"Mantequilla",
+			"Mermelada"
+		],
+		"tiempo": 40,
+		"dificultad": 1,
+		"receta": [
+			"Mezclar la harina, el huevo y la leche.",
+			"Licuar la mezcla hasta que se incorpore todo.",
+			"Derretir un poco de mantequilla en una sartén caliente.",
+			"Verter la mezcla en la sartén formando los hot cakes.",
+			"Voltearlo apenas toda la superficie se cubra de burbujas.",
+			"Revisar ocasionalmente para que no se quemen.",
+			"Dejar que se cocinen y retirar de la sartén."
+		]
+	},
+	{
+		"id": 5,
+		"nombre": "Croquetas de atún",
+		"ingredientes": [
+			"Atún",
+			"Pan para empanizar",
+			"Huevo"
+		],
+		"tiempo": 10,
+		"dificultad": 1,
+		"receta": [
+			"Drenar el agua del atún.",
+			"Mezclar el atún con el pan y huevo.",
+			"Hacer tortitas con la mezcla",
+			"Freírlas en una sartén",
+			"Servir con acompañamiento al gusto."
+		]
+	},
+	{
+		"id": 6,
+		"nombre": "Sándwich de huevo",
+		"ingredientes": [
+			"Pan blanco",
+			"Mayonesa",
+			"Huevo"
+		],
+		"tiempo": 10,
+		"dificultad": 1,
+		"receta": [
+			"Drenar el agua del atún.",
+			"Mezclar el atún con el pan y huevo.",
+			"Hacer tortitas con la mezcla",
+			"Freírlas en una sartén",
+			"Servir con acompañamiento al gusto."
+		]
+	},
+	{
+		"id": 7,
+		"nombre": "Burritas",
+		"ingredientes": [
+			"Jamón",
+			"Queso",
+			"Tortilla de Harina",
+			"Mayonesa"
+		],
+		"tiempo": 15,
+		"dificultad": 1,
+		"receta": [
+			"Armar las burritas poniendo jamón y queso dentro de la tortilla doblada",
+			"Calentarla en una sartén, al gusto",
+			"Servir acompañada de mayonesa al gusto"
+		]
+	},
+	{
+		"id": 8,
+		"nombre": "Albóndigas a la carbonara",
+		"ingredientes": [
+			"Carne picada",
+			"Huevo",
+			"Sal",
+			"Pan rallado",
+			"Perejil",
+			"Tocino",
+			"Nata",
+			"Queso parmesano"
+		],
+		"tiempo": 30,
+		"dificultad": 2,
+		"receta": [
+			"Mezclar 400 g de carne picada, 1 huevo, sal, 2 cucharadas de pan rallado y perejil en un traste",
+			"Freír las albóndigas en una sartén",
+			"Empezar a freír el tocino en otra sartén",
+			"Agregar 500ml de nata y 100 g de parmesano",
+			"Agregar las albóndigas y cocinar a fuego medio por 5 minutos, moviéndolo.",
+			"Servir al gusto"
+		]
+	},
+	{
+		"id": 9,
+		"nombre": "Chuletas con verduras  y arroz",
+		"ingredientes": [
+			"Chuletas",
+			"Brócoli",
+			"Zanahoria",
+			"Arroz"
+		],
+		"tiempo": 60,
+		"dificultad": 1,
+		"receta": [
+			"Freír las chuletas en una sartén con poco aceite",
+			"Picar en trozos al gusto el brócoli y la zanahoria",
+			"Hervir las verduras al vapor",
+			"Servir y acompañar con arroz"
+		]
+	},
+	{
+		"id": 10,
+		"nombre": "Paté",
+		"ingredientes": [
+			"Jamón",
+			"Salchichas",
+			"Chipotle",
+			"Media crema"
+		],
+		"tiempo": 30,
+		"dificultad": 1,
+		"receta": [
+			"Cortar y picar en trozos pequeños el jamón y las salchichas",
+			"Mezclar todos los ingredientes en una licuadora",
+			"Licuar procurando que se incorpore toda la mezcla y acabe como una pasta",
+			"Servir y acompañar con galletas"
+		]
+	},
+	{
+		"id": 11,
+		"nombre": "Picadillo",
+		"ingredientes": [
+			"Carne Molida",
+			"Papas",
+			"Zanahoria",
+			"Pasas",
+			"Cebolla",
+			"Ajo"
+		],
+		"tiempo": 90,
+		"dificultad": 2,
+		"receta": [
+			"Picar rodajas de cebolla y dos dientes de ajo. Picar en cubos pequeños tres papas y dos zanahorias. Mantener separados.",
+			"Mezclar la cebolla y el ajo.",
+			"En una cacerola con aceite, revolver la cebolla y el ajo y sofreír un poco.",
+			"Retirar los excesos de cebolla y ajo que quedan.",
+			"Preparar 1 kg de carne molida e incorporar a la cacerola.",
+			"Añadir a la mezcla la papa y la zanahoria.",
+			"En un poco de agua, preparar un poco de achiote y agregar a la cacerola.",
+			"Revolver hasta integrar todos los ingredientes mientras se cocina.",
+			"Servir con acompañamiento al gusto."
+		]
+	},
+	{
+		"id": 12,
+		"nombre": "Yogurt con frutas",
+		"ingredientes": [
+			"Yogurt",
+			"Manzana",
+			"Plátano",
+			"Granola",
+			"Galletas de avena"
+		],
+		"tiempo": 15,
+		"dificultad": 1,
+		"receta": [
+			"Picar la manzana y el plátano",
+			"Revolver las frutas, cubrir con yogurt y después cubrir con granola",
+			"Acompañar con galletas de avena"
+		]
+	},
+	{
+		"id": 13,
+		"nombre": "Pastelito de Plátano",
+		"ingredientes": [
+			"Plátano",
+			"Mantequilla de maní",
+			"Cereal"
+		],
+		"tiempo": 20,
+		"dificultad": 1,
+		"receta": [
+			"Hacer puré con dos de los tres plátanos.",
+			"Mezclar el puré con media taza de mantequilla de maní y dos tazas de cereal.",
+			"En moldes para cupcake, cubrir las paredes con la mezcla, dejando espacio en el centro para rellenar.",
+			"Rellenar con más mantequlla de maní.",
+			"Decorar con rebanadas de plátano encima.",
+			"Refrigerar."
+		]
+	},
+	{
+		"id": 14,
+		"nombre": "Frasco de avena",
+		"ingredientes": [
+			"Avena",
+			"Leche",
+			"Chía",
+			"Cacao Amargo",
+			"Yogurt natural",
+			"Frutas",
+			"Granola"
+		],
+		"tiempo": 15,
+		"dificultad": 1,
+		"receta": [
+			"Añadir todos los ingredientes en un frasco y revolver",
+			"Refrigerar",
+			"Al consumir, añadir un poco más de yogurt y cereal o granola"
+		]
+	},
+	{
+		"id": 15,
+		"nombre": "Sándwich Isidoro",
+		"ingredientes": [
+			"Pan blanco",
+			"Huevos",
+			"Queso",
+			"Jamón",
+			"Cebolla",
+			"Orégano"
+		],
+		"tiempo": 15,
+		"dificultad": 1,
+		"receta": [
+			"Batir dos huevos",
+			"Poner a freir en una sartén con dos rebanadas de pan blanco encima",
+			"Cubrir con un poco de orégano molido",
+			"Voltear el huevo con pan",
+			"Sobre uno de los panes, poner queso, jamón, cebolla, otro queso y más orégano",
+			"Doblar el huevo para acomodarlo dentro de los panes",
+			"Cerrar los panes a modo de sándwich",
+			"Terminar de freír al gusto y servir"
+		]
+	},
+	{
+		"id": 16,
+		"nombre": "Bolitas de Pollo",
+		"ingredientes": [
+			"Pechuga de pollo",
+			"Huevos",
+			"Queso",
+			"Jamón",
+			"Pan rallado",
+			"Arroz"
+		],
+		"tiempo": 30,
+		"dificultad": 2,
+		"receta": [
+			"Picar la pechuga de pollo hasta que quede 'molida'",
+			"Condimentar con pimienta, sal y ajo",
+			"Agregar huevo y pan rallado",
+			"Con la mezcla formar bolitas, hacerles un hueco y rellenar con jamón y queso",
+			"Freír en una sartén",
+			"Acompañar con arroz y servir"
+		]
+	}
 ]
