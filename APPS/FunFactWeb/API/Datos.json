@@ -1796,5 +1796,165 @@
     "Credito": "-",
     "Categoría": "Animales",
     "Claves": ["*", "elefantes"]
+  },
+  {
+    "No": "102",
+    "Imagenes": [
+      {
+        "url": "https://live.staticflickr.com/1212/887841274_f992012ef9_c.jpg",
+        "Autor": "Christopher Eliot",
+        "urlOrig": "https://www.flickr.com/photos/eliotc/887841274"
+      }
+    ],
+    "Info": "Hace casi 2,000 años en Alemania, un grupo de gentes se instalaron juntas en un lugar nuevo al que llamaron Colonia. De ahí viene nombrar colonias a grupos de personas que viven en diversos lugares.",
+    "Fuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22.",
+    "URLFuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22. (2013). Ciudad de México, México: Corporativo Mina S. A. de C. V.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Geografía",
+    "Claves": ["*", "Colonia", "Alemania", "geografía"]
+  },
+  {
+    "No": "103",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1711821495027-e1043141f59a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
+        "Autor": "Melanie Giordano",
+        "urlOrig": "https://unsplash.com/es/fotos/una-estatua-de-una-mujer-vestida-de-negro-y-oro-qJjqj5ASC8Q"
+      }
+    ],
+    "Info": "En la España del siglo XIX secuestraron al príncipe Fernando II y pidieron de rescate un collar de perlas de la virgen de la Macarena. De ahí nació la expresión “costó las perlas de la virgen” para indicar que algo salió muy caro.",
+    "Fuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22. (2013).",
+    "URLFuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22. (2013). Ciudad de México, México: Corporativo Mina S. A. de C. V.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "Historia", "Virgen", "Perlas", "Dicho"]
+  },
+  {
+    "No": "104",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470",
+        "Autor": "Mathew MacQuarrie",
+        "urlOrig": "https://unsplash.com/es/fotos/figurilla-de-calavera-blanca-y-negra-sobre-superficie-negra-u6OnpbMuZAs"
+      }
+    ],
+    "Info": "El término morbo proviene del latín <i>morbus</i> y significa \"enfermedad\" aunque comúnmente se ha usado el termino para referirse a la atracción o deseo por lo \"desagradable\" o lo \"prohibido\". Aunque también es usado como sinónimo para describir a aquello delicado, de ahí que en algunos textos literarios su uso pueda darse para decir expresiones como <i>\"la morbidez del cuerpo\" </i>",
+    "Fuente": "Algarabía, léeme y sabrás: 146 morbo y salud",
+    "URLFuente": "https://algarabia.com/morbo-y-salud/",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "morbo", "enfermedad", "lenguaje"]
+  },
+  {
+    "No": "105",
+    "Imagenes": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Philwiki1.jpg/500px-Philwiki1.jpg?20190517122705",
+        "Autor": "Sebastian Wallroth",
+        "urlOrig": "https://commons.wikimedia.org/wiki/File:Philwiki1.jpg"
+      }
+    ],
+    "Info": "El graduado de Harvard Phil Harvey era un filántropo y educador sexual que creó la organización internacional sin fines de lucro <i>Dharmendra Kumar Tyagy</i>, que impulsaba programas de salud sexual en todo el mundo. Hoy en día es recordado por ser el dueño de la marca de condones Prudence. ",
+    "Fuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado",
+    "URLFuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado. (2017). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Salud",
+    "Claves": ["*", "salud", "sexo", "filántropo", "organización"]
+  },
+  {
+    "No": "106",
+    "Imagenes": [
+      {
+        "url": "https://cdn.pixabay.com/photo/2021/03/21/14/28/tutankhamun-6112236_1280.jpg",
+        "Autor": "Alexandra_Koch",
+        "urlOrig": "https://pixabay.com/es/photos/tutankam%C3%B3n-egipcios-momia-de-oro-6112236/"
+      }
+    ],
+    "Info": "Aunque sea un mito muy famoso y popular, la verdad es que nunca se ha encontrado ninguna inscripción maldita en ninguna tumba egipcia. El mito se hizo popular principalmente por la novela <i>La momia</i> (1828) de Jane. L. Webb, libro que fue un best seller de la época. ",
+    "Fuente": "Algarabía, léeme y sabrás: 134 Charlie Brown infancia es destino.",
+    "URLFuente": "Algarabía, léeme y sabrás: 134 Charlie Brown infancia es destino. (2015). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "momia", "malición", "mito"]
+  },
+  {
+    "No": "107",
+    "Imagenes": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Prince_1980.jpg/500px-Prince_1980.jpg?20231028025624",
+        "Autor": "Warner Bros Records",
+        "urlOrig": "https://commons.wikimedia.org/wiki/File:Prince_1980.jpg"
+      }
+    ],
+    "Info": "Tras el fallecimiento del famoso cantante y músico Prince, se dio a conocer una carta dirigida a Paul McCartney (ex-integrante de los Beatles) donde pedía que hiciera una donación al instituto de Artes Escénicas de Liverpool. Se sabe que el exintegrante de los Beatles realizó la donación, pero nunca se supo el monto. Lo que si se supo fue que la carta se subastó en casi 15 mil dólares.",
+    "Fuente": "Algarabía, léeme y sabrás: 144 Spider-Man La Reinvención del Cómic.",
+    "URLFuente": "Algarabía, léeme y sabrás: 144 Spider-Man La Reinvención del Cómic. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "Prince", "música", "carta", "fallecimiento"]
+  },
+  {
+    "No": "108",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1640091777650-5706c3180d72?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1156",
+        "Autor": "Jakub Pabis",
+        "urlOrig": "https://unsplash.com/es/fotos/un-edificio-que-tiene-un-monton-de-dibujos-en-el-m4-7DngV2Yo"
+      }
+    ],
+    "Info": "El astrónomo griego Claudio fue quien, en el siglo II después de Cristo, se encargó de enumerar los doce signos del zodiaco tal y como ahora todos los conocemos en nuestro tiempo. ",
+    "Fuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22.",
+    "URLFuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22. (2013). Ciudad de México, México: Corporativo Mina S. A. de C. V.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Astronomía",
+    "Claves": ["*", "zodiaco", "signos", "astros", "grecia"]
+  },
+  {
+    "No": "109",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1699208214924-3983ad02cdc5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470",
+        "Autor": "Rafael Albaladejo",
+        "urlOrig": "https://unsplash.com/es/fotos/una-pila-de-pimientos-rojos-encima-de-un-mostrador-V8sm3yFgD-0"
+      }
+    ],
+    "Info": "El estrés solo aumenta la secreción de acido en el estómago de forma temporal. Mientras que consumir irritantes ayuda a la producción de reflujo gastroesofágico, provocando ardor y acidez estomacal, pero en realidad, ninguna (ni estrés, ni irritantes) provocan la gastritis. Ésta en realidad es provocada por una infección bacteriana y se creé que está presente en la mitad de la población humana.  ",
+    "Fuente": "Algarabía, léeme y sabrás: 146 morbo y salud",
+    "URLFuente": "Algarabía, léeme y sabrás: 146 morbo y salud. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Salud",
+    "Claves": ["*", "gastritis", "acidez", "estómago", "estrés", "irritantes"]
+  },
+  {
+    "No": "110",
+    "Imagenes": [
+      {
+        "url": "https://images.pexels.com/photos/1444417/pexels-photo-1444417.jpeg",
+        "Autor": "Lisa from Pexels",
+        "urlOrig": "https://www.pexels.com/es-es/foto/fotografia-en-primer-plano-de-persona-vestida-con-zapatillas-rosadas-1444417/"
+      }
+    ],
+    "Info": "La palabra <i>Pantufla</i> proviene del francés <i>Pantoufle</i> , que significa 'pedazo de tela inflado'. Y las pantuflas más antigua de la que hay registro datan del siglo XVII, de textos provenientes de la Dinastía Song, donde se decía eran usadas por las concubinas del sultán de Vietnam.",
+    "Fuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado",
+    "URLFuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado. (2017). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "pantuflas", "pantufla", "vietman"]
+  },
+  {
+    "No": "111",
+    "Imagenes": [
+      {
+        "url": "https://cdn.pixabay.com/photo/2022/09/21/09/48/hooded-pitohui-7469903_1280.jpg",
+        "Autor": "PrafulPawar",
+        "urlOrig": "https://pixabay.com/photos/hooded-pitohui-7469903/"
+      }
+    ],
+    "Info": "El Pitohui, pese a su peculiar nombre, no debe tomarse a la ligera. Es una ave de Centro y Sudamérica, cuya particularidad es que su piel y plumaje tienen un potente veneno que ataca al sistema nervioso central provocando la muerte con solo tocarlo. Es la única ave de la que se tiene registro que sea venenosa.",
+    "Fuente": "Algarabía, léeme y sabrás: 134 Charlie Brown infancia es destino",
+    "URLFuente": "Algarabía, léeme y sabrás: 134 Charlie Brown infancia es destino. (2015). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "ave", "veneno", "pájaro", "venenoso"]
   }
 ]

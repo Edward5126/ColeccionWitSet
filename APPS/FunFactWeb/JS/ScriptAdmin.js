@@ -289,10 +289,21 @@ BotonBusqueda.addEventListener("click", filtrar);
 
   document.getElementById("DatoPresentado").innerHTML =
     JSONP.Info;
-  document.getElementById("FuentePresentada").href =
-    JSONP.URLFuente;
-  document.getElementById("FuentePresentada").innerHTML =
+  if (ValidarURLoBib(JSONP.URLFuente)) {
+    document.getElementById("FuentePresentada").href =
+      JSONP.URLFuente;
+    document.getElementById("FuentePresentadaB").innerHTML =
+      "";
+    document.getElementById("FuentePresentada").innerHTML =
     JSONP.Fuente;
+  } else {
+    document.getElementById("FuentePresentada").href =
+      "";
+    document.getElementById("FuentePresentadaB").innerHTML =
+      JSONP.URLFuente;
+    document.getElementById("FuentePresentada").innerHTML =
+    "";
+  }
   document.getElementById("CreditosDelDato").innerHTML =
     JSONP.Credito;
 
@@ -310,6 +321,15 @@ BotonBusqueda.addEventListener("click", filtrar);
         // document.getElementById("CreditosDelDato").innerHTML = document.getElementById("CreditoDelAporte").value;
 
     }
+
+function ValidarURLoBib(URLDat) {
+  try {
+    new URL(URLDat);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
     function CrearObjetoPrueba() {
         var JSONNuevo = new Object();

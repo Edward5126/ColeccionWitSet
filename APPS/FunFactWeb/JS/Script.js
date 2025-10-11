@@ -152,14 +152,34 @@ function CambiarDatos(ListaDatos, NumeroDato) {
 
   document.getElementById("DatoPresentado").innerHTML =
     ListaDatos[NumeroDato].Info;
-  document.getElementById("FuentePresentada").href =
-    ListaDatos[NumeroDato].URLFuente;
-  document.getElementById("FuentePresentada").innerHTML =
+  if (ValidarURLoBib(ListaDatos[NumeroDato].URLFuente)) {
+    document.getElementById("FuentePresentada").href =
+      ListaDatos[NumeroDato].URLFuente;
+    document.getElementById("FuentePresentadaB").innerHTML =
+      "";
+    document.getElementById("FuentePresentada").innerHTML =
     ListaDatos[NumeroDato].Fuente;
+  } else {
+    document.getElementById("FuentePresentada").href =
+      "";
+    document.getElementById("FuentePresentadaB").innerHTML =
+      ListaDatos[NumeroDato].URLFuente;
+    document.getElementById("FuentePresentada").innerHTML =
+    "";
+  }
   document.getElementById("CreditosDelDato").innerHTML =
     ListaDatos[NumeroDato].Credito;
 
   setTimeout(NarradorPlay, 50);
+}
+
+function ValidarURLoBib(URLDat) {
+  try {
+    new URL(URLDat);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function RandomNum(Min, Max) {
