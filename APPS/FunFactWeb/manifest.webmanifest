@@ -9,12 +9,12 @@
   "theme_color": "#2b2b2b",
   "icons": [
     {
-      "src": "../../IMG/Miniaturas/icon-192x192.png",
+      "src": "../../IMG/Miniaturas/PWA/FunFact/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "../../IMG/Miniaturas/icon-512x512.png",
+      "src": "../../IMG/Miniaturas/PWA/FunFact/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     },

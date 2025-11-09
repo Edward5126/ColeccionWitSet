@@ -4,8 +4,8 @@ var ImagenesRecursos = [
   "../../CSS/stylesLight.css",
   "../../IMG/Horizontales/LogoHorizontalDM[FF].svg",
   "../../IMG/Horizontales/LogoHorizontalLM[FF].svg",
-  "IMG/IllustracionPorUnSplash.svg",
-  "IMG/IllustracionPorUnSplashLM.svg",
+  "IMG/IllustracionporUnSplash.svg",
+  "IMG/IllustracionporUnSplashLM.svg",
 ];
 
 class FunFactApp {
