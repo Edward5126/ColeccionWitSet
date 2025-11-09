@@ -22,8 +22,8 @@ const urlsToCache = [
   '../../IMG/Miniaturas/LogoSolo[FF].svg',
 
   // Los iconos que creaste en el Paso 1 (ahora con la ruta global)
-  '../../IMG/Miniaturas/icon-192x192.png',
-  '../../IMG/Miniaturas/icon-512x512.png'
+  '../../IMG/Miniaturas/PWA/FunFact/icon-192x192.png',
+  '../../IMG/Miniaturas/PWA/FunFact/icon-512x512.png'
 ];
 
 // Evento 'install': Se dispara cuando el Service Worker se instala por primera vez.
