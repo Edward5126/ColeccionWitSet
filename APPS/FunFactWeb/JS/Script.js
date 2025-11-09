@@ -8,6 +8,7 @@ var Narrador;
 var RunNav = true;
 var VocesNarrador;
 var ListaExterna = [];
+var JSONActual;
 
 ImagenesRecursos = [
   "../../CSS/styles.css",
@@ -124,6 +125,7 @@ function FetchCambiarDato(NumeroDato) {
 }
 
 function CambiarDatos(ListaDatos, NumeroDato) {
+  JSONActual = ListaDatos[NumeroDato];
   document.getElementById("ImagenDelDato").src =
     ListaDatos[NumeroDato].Imagenes[0].url;
   document.getElementById("ImagenDelDato").classList.add("ImgNoToggleMode");

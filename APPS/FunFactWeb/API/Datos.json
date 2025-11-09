@@ -1956,5 +1956,366 @@
     "Credito": "Dato aportado por: Axel M.",
     "Categoría": "Generales",
     "Claves": ["*", "ave", "veneno", "pájaro", "venenoso"]
+  },
+  {
+    "No": "112",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1752306639329-02e07c8ec4cd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=748",
+        "Autor": "Europeana",
+        "urlOrig": "https://unsplash.com/es/fotos/gmeFvXrFN5I"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1604342767712-f7448911dc51?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "Autor": "Daniel Seßler",
+        "urlOrig": "https://unsplash.com/es/fotos/arboles-verdes-y-marrones-durante-el-dia-_3DI_vx2ygg"
+      }
+    ],
+    "Info": "Durante el tiempo en que Hitler se dedicó a la pintura, los temas favoritos para sus cuadros eran las figuras femeninas, la naturaleza y los perros. \n(Imágenes de referencia. No pinturas oficiales)",
+    "Fuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22.",
+    "URLFuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22. (2013). Ciudad de México, México: Corporativo Mina S. A. de C. V.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "Pinturas"]
+  },
+  {
+    "No": "113",
+    "Imagenes": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Siemiginowski_John_III_Sobieski_with_a_baton.jpg",
+        "Autor": " Jerzy Siemiginowski-Eleuter",
+        "urlOrig": "https://commons.wikimedia.org/wiki/File:Siemiginowski_John_III_Sobieski_with_a_baton.jpg"
+      }
+    ],
+    "Info": "El rey polaco Juan III Sobieski nació el 17 de junio de 1629, fue coronado el 17 de junio de 1674 (siendo elegido el 21 de mayo), se casó el 17 de junio de 1665 y murió el 17 de junio de 1696. ",
+    "Fuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22.",
+    "URLFuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22. (2013). Ciudad de México, México: Corporativo Mina S. A. de C. V.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "rey", "polaco", "17 de junio", "juan"]
+  },
+  {
+    "No": "114",
+    "Imagenes": [
+      {
+        "url": "https://cdn.pixabay.com/photo/2016/03/31/19/27/stone-fish-1295032_1280.jpg",
+        "Autor": "Wildfaces",
+        "urlOrig": "https://pixabay.com/photos/stone-fish-old-quaint-fish-1295032/"
+      }
+    ],
+    "Info": "Pese a su apariencia regordeta, se esconde uno de los animales más venenosos del mundo. Con púas en su aleta dorsal, el Pez Piedra lleva consigo un letal veneno que, se dice, produce el peor dolor conocido.",
+    "Fuente": "Algarabía, léeme y sabrás: 134 Charlie Brown infancia es destino.",
+    "URLFuente": "Algarabía, léeme y sabrás: 134 Charlie Brown infancia es destino. (2015). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Animales",
+    "Claves": ["*", "veneno", "pez", "piedra"]
+  },
+  {
+    "No": "115",
+    "Imagenes": [
+      {
+        "url": "https://cdn.pixabay.com/photo/2016/10/23/19/51/halloween-1764282_1280.jpg",
+        "Autor": "Geordie",
+        "urlOrig": "https://pixabay.com/photos/thanksgiving-pumpkin-halloween-1764282/"
+      }
+    ],
+    "Info": "Durante la 2da guerra mundial, un joven retraído se enlisto en la guerra. Este llevaba consigo una ametralladora y al toparse con un nazi, asustado por el tamaño del arma, el enemigo se rindió sin disparar. Posteriormente, el joven se dio cuenta de que su arma estaba descargada. Vivió por suerte. Este joven retraído se llamaba Charles M. Schulz, creador de Charlie Brown y Snoopy.",
+    "Fuente": "Algarabía, léeme y sabrás: 134 Charlie Brown infancia es destino.",
+    "URLFuente": "Algarabía, léeme y sabrás: 134 Charlie Brown infancia es destino. (2015). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "snoopy", "guerra mundial", "charlie brown"]
+  },
+  {
+    "No": "116",
+    "Imagenes": [
+      {
+        "url": "https://images.pexels.com/photos/32591593/pexels-photo-32591593.jpeg",
+        "Autor": "Valeska Huyskens",
+        "urlOrig": "https://www.pexels.com/es-es/foto/mural-de-arte-callejero-colorido-en-montmartre-paris-32591593/"
+      }
+    ],
+    "Info": "A principios de la década de los 90's, el príncipe del Pop, Michael Jackson, quiso comprar la empresa de cómics Marvel para producir su propia película de Spiderman e interpretar él mismo al famoso trepa-redes arácnido. ",
+    "Fuente": "Algarabía, léeme y sabrás: 144 Spider-Man La Reinvención del Cómic. ",
+    "URLFuente": "Algarabía, léeme y sabrás: 144 Spider-Man La Reinvención del Cómic. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "Michael", "Jackson", "Spiderman", "Marvel"]
+  },
+  {
+    "No": "117",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1659626983055-7ee4e8a71f7a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "Autor": "Chandler Cruttenden",
+        "urlOrig": "https://unsplash.com/es/fotos/un-caballo-y-un-cerdo-en-un-campo-ldS9W1Z9UDk"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1286",
+        "Autor": "Krista Mangulsone",
+        "urlOrig": "https://unsplash.com/es/fotos/perro-blanco-y-gato-gris-abrazandose-en-la-hierba-9gz3wfHr65U"
+      }
+    ],
+    "Info": "Se creé que el perro se aprendió a domesticar entre un periodo de hace 30,000 - 15,000 años a. n. e. (Antes de Nuestra Era), para la compañía, el pastoreo y protección. El gato hace unos 7,500 años a. n. e. para la compañía y el control de plagas. Y el caballo hace apenas 4,000 años a. n. e. para transporte y comida. ",
+    "Fuente": "Algarabía, léeme y sabrás: 144 Spider-Man La Reinvención del Cómic. ",
+    "URLFuente": "Algarabía, léeme y sabrás: 144 Spider-Man La Reinvención del Cómic. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Animales",
+    "Claves": ["*", "perros", "gatos", "caballos", "domesticación"]
+  },
+  {
+    "No": "118",
+    "Imagenes": [
+      {
+        "url": "https://cdn.pixabay.com/photo/2018/01/17/14/28/food-3088309_1280.jpg",
+        "Autor": "putiru1",
+        "urlOrig": "https://pixabay.com/photos/food-plate-epicure-meal-delicious-3088309/"
+      }
+    ],
+    "Info": "El <i>Strüdel</i> (en alemán) es un postre muy común que significa <i>'remolino'</i> y es de origen turco, bizantino y armenio que data del 1696. Básicamente se compone de un hojaldre relleno de puré de manzana con pasas, canela y ron, que se sirve caliente y puede estar acompañado de crema batida o helado, y que por dentro puede ser acompañado con requesón y frutos secos.",
+    "Fuente": "Algarabía, léeme y sabrás: 146 morbo y salud.",
+    "URLFuente": "Algarabía, léeme y sabrás: 146 morbo y salud. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Alimentos",
+    "Claves": ["*", "strudel", "comida", "postre"]
+  },
+  {
+    "No": "119",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
+        "Autor": "NASA",
+        "urlOrig": "https://unsplash.com/es/fotos/earth-with-clouds-above-the-african-continent-vhSz50AaFAs"
+      },
+      {
+        "url": "https://images.unsplash.com/flagged/photo-1552863473-6e5ffe5e052f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1031",
+        "Autor": "Johannes Plenio",
+        "urlOrig": "https://unsplash.com/es/fotos/foto-de-la-silueta-de-la-gente-del-grupo-de-pie-sobre-la-hierba-aWDgqexSxA0"
+      },
+      {
+        "url": "https://images.unsplash.com/vector-1740023895239-5e4664841c21?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880",
+        "Autor": "Gilang Fahmi",
+        "urlOrig": "https://unsplash.com/es/ilustraciones/un-poster-de-la-cabeza-de-un-hombre-con-una-partida-por-la-mitad-9TJq9rmVkuA"
+      }
+    ],
+    "Info": "El ser humano, a lo largo de toda su historia, ha desarrollado 3 heridas narcisistas: La primera hecha por Copérnico al asegurar que la Tierra no es el centro del universo; la segunda por Darwin al afirmar que el humano no es el centro de la creación (sino producto de la evolución); y la tercera por Sigmund Freud al aclarar que el humano no es ni el centro de sí mismo (sino el inconsciente).",
+    "Fuente": "Algarabía, léeme y sabrás: 146 morbo y salud.",
+    "URLFuente": "Algarabía, léeme y sabrás: 146 morbo y salud. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "humanidad", "heridas", "Freud", "Copérnico", "Darwin"]
+  },
+  {
+    "No": "120",
+    "Imagenes": [
+      {
+        "url": "https://cdn.pixabay.com/photo/2016/01/19/13/33/ant-1148816_1280.jpg",
+        "Autor": "bpn",
+        "urlOrig": "https://pixabay.com/photos/ant-ants-eggs-insect-nature-1148816/"
+      },
+      {
+        "url": "https://images.pexels.com/photos/7601334/pexels-photo-7601334.jpeg ",
+        "Autor": "Los Muertos Crew",
+        "urlOrig": "https://www.pexels.com/es-es/foto/comida-rustico-bol-tazon-7601334/"
+      }
+    ],
+    "Info": "Considerada como comida exótica, en Francia se comen los caracoles con sus babas y ancas de rana; en Camboya arañas asadas; en África central cocodrilo; en Groenlandia la grasa y piel de ballena congelada;  en Japón ojos gigantes de atún; y en México los escamoles (larvas de hormiga) y el Huitlacoche (un hongo parásito del maíz). ",
+    "Fuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado.",
+    "URLFuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado. (2017). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Alimentos",
+    "Claves": ["*", "escamoles", "huitlacoche", "comida", "exótica"]
+  },
+  {
+    "No": "121",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1706403615881-d83dc2067c5d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "Autor": "zhendong wang",
+        "urlOrig": "https://unsplash.com/es/fotos/un-grupo-de-globos-de-dialogo-de-colores-en-una-pared-de-madera-ZMsywu80JcM"
+      }
+    ],
+    "Info": "Se estima que el idioma más hablado en todo el mundo es el Chino, hablado en 37 países con un aproximado de 1,287 millones de personas. Seguido del Español hablado en 31 países por 438 millones de personas. Y en tercer lugar el Inglés, hablado en 106 países con un aproximado de 372 millones. ",
+    "Fuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado.",
+    "URLFuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado. (2017). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "idioma", "español", "inglés", "chino"]
+  },
+  {
+    "No": "122",
+    "Imagenes": [
+      {
+        "url": "https://images.pexels.com/photos/9775729/pexels-photo-9775729.jpeg",
+        "Autor": "SHVETS production",
+        "urlOrig": "https://www.pexels.com/es-es/foto/gente-ojos-labios-mirando-9775729/"
+      }
+    ],
+    "Info": "Antiguamente se creía que los ojos rasgados (<i>o brida mongólica</i>), era a causa de una diferencia ósea o una mutación genética que hacía a los glóbulos oculares ovalados. En la actualidad se sabe que este peculiar rasgo fenotípico se debe a un pliegue del epicanto, una arruga en el párpado superior que va desde el lagrimal hasta el borde extremo. ",
+    "Fuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado.",
+    "URLFuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado. (2017). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "ojos", "rasgados", "fenotipo"]
+  },
+  {
+    "No": "123",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1558443638-09fabd3e3daa?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "Autor": "Nour Wageh",
+        "urlOrig": "https://unsplash.com/es/fotos/gato-atigrado-gris-79cORSUwP0c"
+      }
+    ],
+    "Info": "La palabra <i>acedo</i> (del latin \"<i>acētum</i>\" que significa 'vinagre') se usaba antiguamente para decir que un caldo se amargó, aunque también era usada para hablar de una persona de carácter amargado o que padecía acidez estomacal. Si conoces a alguien amargado y se lo quieres decir sin que se enteré, dile que es es muy acedo.",
+    "Fuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado.",
+    "URLFuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado. (2017). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "ácido", "agrio", "acedo", "amargado"]
+  },
+  {
+    "No": "124",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1599140782241-144735f5949a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "Autor": "Maria Lysenko",
+        "urlOrig": "https://unsplash.com/es/fotos/mujer-con-camisa-negra-de-cuello-redondo-5miAc099lMc"
+      }
+    ],
+    "Info": "Si ya estás cansado de los insultos convencionales, aquí te compartimos un par de improperios poco usados: <i>bembo, a</i>: bobo, simple, falto de entendimiento o razón; <i>allegador, a</i>: Hurgón; <i>jallo, a</i>:  presumido, ostentoso; <i>basto, a</i>: Ordinario o vulgar, sin educación, grosero o soez; <i>quídam</i>: sujeto despreciable, cuyo nombre se quiere omitir. ",
+    "Fuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado.",
+    "URLFuente": "Algarabía, léeme y sabrás: 153 Wonder Woman Feminismo ilustrado. (2017). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Educación",
+    "Claves": ["*", "insulto", "improperios"]
+  },
+  {
+    "No": "125",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1600091474842-83bb9c05a723?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
+        "Autor": "Kristine Wook",
+        "urlOrig": "https://unsplash.com/es/fotos/una-bolsa-de-pastillas-un-estetoscopio-y-un-botiquin-de-primeros-auxilios-ZyxNWi3JCto"
+      }
+    ],
+    "Info": "Un botiquín básico de primeros auxilios debe contener: <b>antisépticos</b> como alcohol, agua oxigenada o jabón; <b>material de curación</b> como gasas, vendas, curitas, algodón o tablitas de madera; <b>instrumental</b> como tijeras, nava, termómetro, linterna, pañuelos desechables, guantes quirúrgicos y gotero; además de <b>analgésicos, sueros y antihistamínicos</b>. ",
+    "Fuente": "Algarabía, léeme y sabrás: 146 morbo y salud.",
+    "URLFuente": "Algarabía, léeme y sabrás: 146 morbo y salud. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Salud",
+    "Claves": ["*", "botiquín", "primeros", "auxilios"]
+  },
+  {
+    "No": "126",
+    "Imagenes": [
+      {
+        "url": "https://images.pexels.com/photos/7472646/pexels-photo-7472646.jpeg",
+        "Autor": "beytlik",
+        "urlOrig": "https://www.pexels.com/es-es/foto/escrito-a-mano-vintage-medicina-medieval-7472646/"
+      }
+    ],
+    "Info": "En el siglo XIII, las boticas eran lugares donde la gente acudía a buscar alivio para sus dolores y enfermedades, muchas veces remedios recetados por el mismo boticario. Entre las cosas que se podían hallar en una botica estaban: <b>especias</b> (como la pimienta negra, nuez moscada), <b>raíces</b> (como jengibre, amoniaco) o <b>piedras preciosas</b> (como topacios, rubíes, esmeraldas). ",
+    "Fuente": "Algarabía, léeme y sabrás: 146 morbo y salud.",
+    "URLFuente": "Algarabía, léeme y sabrás: 146 morbo y salud. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Salud",
+    "Claves": ["*", "botica", "XIII", "boticario"]
+  },
+  {
+    "No": "127",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1702132825923-142667c3ace0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "Autor": "Michel Meuleman",
+        "urlOrig": "https://unsplash.com/es/fotos/una-estatua-de-un-bebe-en-una-cueva-BRn4J9mhJ9Y"
+      }
+    ],
+    "Info": "La progeria es una enfermedad genética que se desarrolla desde los dos primeros años de vida. Se caracteriza por degenerar rápidamente los tejidos del cuerpo, lo que provoca que este envejezca desde que nace, acortando drásticamente la esperanza de vida del paciente en cuestión.",
+    "Fuente": "Algarabía, léeme y sabrás: 146 morbo y salud.",
+    "URLFuente": "Algarabía, léeme y sabrás: 146 morbo y salud. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Salud",
+    "Claves": ["*", "progeria", "enfermedad", "envejecer"]
+  },
+  {
+    "No": "128",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1545529468-42764ef8c85f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
+        "Autor": " Humberto Arellano",
+        "urlOrig": "https://unsplash.com/es/fotos/mujer-y-gato-se-dan-la-mano-N_G2Sqdy9QY"
+      }
+    ],
+    "Info": "La palabra <b>mascota</b> fue incorporada a la <i>RAE</i> apenas en el año de 1970, cuya primera acepción a la palabra es “Persona, animal o cosa que sirve de talismán” debido a que la palabra era asociada a una obra francesa (<i>La Mascotte</i>) donde una mujer era considerada un talismán de la buena suerte, de ahí que antiguamente se creyera que tener una mascota traía fortuna.  ",
+    "Fuente": "Algarabía, léeme y sabrás: 144 Spider-Man La Reinvención del Cómic. ",
+    "URLFuente": "Algarabía, léeme y sabrás: 144 Spider-Man La Reinvención del Cómic. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Animales",
+    "Claves": ["*", "mascota", "RAE", "talisman", "fortuna"]
+  },
+  {
+    "No": "129",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1607482369189-a53b6e71fa48?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "Autor": "Lan Gao",
+        "urlOrig": "https://unsplash.com/es/fotos/velas-encendidas-en-pastel-marron-mo28-RNn8j4"
+      }
+    ],
+    "Info": "La tradición de colocar velas en los pasteles de cumpleaños surgió en la Antigua Grecia, donde celebraban a la diosa Artemisa con un pastel y velas que simbolizaban la luz de la luna. El hábito de pedir un deseo al soplar las velas viene de las creencias de que el humo lleva las plegarias al cielo.",
+    "Fuente": "Algarabía, léeme y sabrás: 144 Spider-Man La Reinvención del Cómic. ",
+    "URLFuente": "Algarabía, léeme y sabrás: 144 Spider-Man La Reinvención del Cómic. (2016). Ciudad de México: Editorial Otras Inquisiciones.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "velas", "cumpleaños", "deseo", "tradición"]
+  },
+  {
+    "No": "130",
+    "Imagenes": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/El_Greco_%28Domenikos_Theotokopoulos%29_-_Laoco%C3%B6n_-_Google_Art_Project.jpg/960px-El_Greco_%28Domenikos_Theotokopoulos%29_-_Laoco%C3%B6n_-_Google_Art_Project.jpg?20121010074132",
+        "Autor": "El Greco",
+        "urlOrig": "https://commons.wikimedia.org/wiki/File:El_Greco_(Domenikos_Theotokopoulos)_-_Laoco%C3%B6n_-_Google_Art_Project.jpg"
+      }
+    ],
+    "Info": "En 1540, el Greco (famoso pintor cretense del Renacimiento) fue acusado por el tribunal de la Inquisición como sospechoso de herejía porque ‘Las alas de los ángeles que pintaba no guardaban relación con las descritas en La Biblia’. ",
+    "Fuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.75",
+    "URLFuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.75. (2017). Ciudad de México: Corporativo Mina S. A. de C. V.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Generales",
+    "Claves": ["*", "Greco", "alas", "ángeles", "renacimiento"]
+  },
+  {
+    "No": "131",
+    "Imagenes": [
+      {
+        "url": "https://images.unsplash.com/photo-1644422432157-a52d524a5846?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
+        "Autor": "Mayank Goyal",
+        "urlOrig": "https://unsplash.com/es/fotos/un-primer-plano-de-una-mosca-sobre-una-superficie-blanca-CRV8FbJCG5M"
+      }
+    ],
+    "Info": "Potencialmente la mosca doméstica es el insecto más peligroso del mundo, ya que puede transmitir más de 30 enfermedades y lombrices parasitarias a los seres humanos. ",
+    "Fuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22.",
+    "URLFuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22. (2013). Ciudad de México, México: Corporativo Mina S. A. de C. V.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Salud",
+    "Claves": ["*", "mosca", "insecto", "peligroso"]
+  },
+  {
+    "No": "132",
+    "Imagenes": [
+      {
+        "url": "https://cdn.pixabay.com/photo/2018/03/05/19/35/bastet-cat-3201562_1280.jpg",
+        "Autor": "Katzenfee50",
+        "urlOrig": "https://pixabay.com/photos/bastet-cat-egypt-cat-sculpture-3201562/"
+      }
+    ],
+    "Info": "En el Antiguo Egipto los gatos eran dioses y el que matara uno, pagaba su osadía con la muerte. Cuando fallecía un felino, todos los miembros de la casa se rasuraban las cejas en señal de duelo.",
+    "Fuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22.",
+    "URLFuente": "¿LO SABÍA...? Casos y Cosas Asombrosas de Nuestro Mundo No.22. (2013). Ciudad de México, México: Corporativo Mina S. A. de C. V.",
+    "Credito": "Dato aportado por: Axel M.",
+    "Categoría": "Animales",
+    "Claves": ["*", "gatos", "divinos", "Egipto"]
   }
 ]
