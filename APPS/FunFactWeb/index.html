@@ -14,97 +14,98 @@
     <link rel="preload" href="IMG/IllustracionOnErrorPorUnDrawLM.svg" as="image">
     <link rel="stylesheet" href="../../LIBS/PersonalIconCollection-v1.0/style.css">
     <link rel="shortcut icon" href="../../IMG/Miniaturas/LogoSolo[FF].svg" type="image/x-icon">
-    <!-- <link rel="manifest" href="manifest.webmanifest"> -->
-
-    <!-- Script para los íconos. Por Font Awesome. -->
-    <!-- <script src="https://kit.fontawesome.com/df1a4a0af1.js" crossorigin="anonymous"></script> -->
-
 </head>
 <body>
     <header>
-            <nav>
-                <img id="LogoDeCabecera" src="../../IMG/Horizontales/LogoHorizontalDM[FF].svg" alt="Logo de FunFact en modo oscuro">
-                    <button class="btnmenu linkAncla" aria-label="Abrir menú" id="AbrirMenu"><i class="icon icon-menu interfaz"></i></button>
-                <ul class="NavList" id="EnlacesNav">
-                    <button class="btnmenu linkAncla" id="CerrarMenu" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
-                    <li class="Separador" id="PrimerSeparador"><b>|</b></li>
-                    <li><a href="#" class="linkAncla">Inicio</a></li>
-                    <li class="Separador"><b>|</b></li>
-                    <li><a href="#SobreFunFact" class="linkAncla">Sobre Fun Fact</a></li>
-                    <li class="Separador"><b>|</b></li>
-                    <li><a href="#Colaborar" class="linkAncla">Colaborar</a></li>
-                    <li class="Separador"><b>|</b></li>
-                    <li><a href="#Más" class="linkAncla">Más</a></li>
-                    <li class="Separador"><b>|</b></li>
-                    <li><a href="" title="Tu dispositivo no es compatible con el narrador" id="ToggleVoice" style="pointer-events:none;"><i class="icon icon-nonarrador"></i></a></li>
-                    <li class="Separador"><b>|</b></li>
-                    <li><a href="" title="Cambiar estilo" id="ToggleMode"><i class="icon icon-cambiar-estilo"></i></a></li>
-                    <li class="Separador"><b>|</b></li>
-                    <li><a href="../../" title="Volver a Wit Set"><i class="icon icon-home"></i></a></li>
-                </ul>
-            </nav>
+        <nav>
+            <img id="LogoDeCabecera" src="../../IMG/Horizontales/LogoHorizontalDM[FF].svg" alt="Logo de FunFact en modo oscuro">
+            <button class="btnmenu linkAncla" aria-label="Abrir menú" id="AbrirMenu"><i class="icon icon-menu interfaz"></i></button>
+            <ul class="NavList" id="EnlacesNav">
+                <button class="btnmenu linkAncla" id="CerrarMenu" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
+                <li class="Separador" id="PrimerSeparador"><b>|</b></li>
+                <li><a href="#" class="linkAncla">Inicio</a></li>
+                <li class="Separador"><b>|</b></li>
+                <li><a href="#SobreFunFact" class="linkAncla">Sobre Fun Fact</a></li>
+                <li class="Separador"><b>|</b></li>
+                <li><a href="#Colaborar" class="linkAncla">Colaborar</a></li>
+                <li class="Separador"><b>|</b></li>
+                <li><a href="#Más" class="linkAncla">Más</a></li>
+                <li class="Separador"><b>|</b></li>
+                <li><a href="" title="Tu dispositivo no es compatible con el narrador" id="ToggleVoice" style="pointer-events:none;"><i class="icon icon-nonarrador"></i></a></li>
+                <li class="Separador"><b>|</b></li>
+                <li><a href="" title="Cambiar estilo" id="ToggleMode"><i class="icon icon-cambiar-estilo"></i></a></li>
+                <li class="Separador"><b>|</b></li>
+                <li><a href="../../" title="Volver a Wit Set"><i class="icon icon-home"></i></a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <h1 hidden>Dato Curioso del Día</h1>
         <div class="PresentacionDeLaPagina">
             <div id="ContenedorGeneralImagenDato">
-            <div id="ContenedorImagenTooltip">
-                <div id="Carga" class="NoCargando"></div>
-                <div id="ContenedorCarga"></div>
-                <div id="NavImg" >
-                    <i class="icon icon-flecha-izq flechanavimg" id="CambiarIMGIzq" onclick="PrevIMG()"></i>
-                    <i class="icon icon-flecha-der flechanavimg" id="CambiarIMGDer" onclick="SigIMG()"></i>
+                <div id="ContenedorImagenTooltip">
+                    <div id="Carga" class="NoCargando"></div>
+                    <div id="ContenedorCarga"></div>
+                    <div id="NavImg">
+                        <i class="icon icon-flecha-izq flechanavimg" id="CambiarIMGIzq"></i>
+                        <i class="icon icon-flecha-der flechanavimg" id="CambiarIMGDer"></i>
+                    </div>
+                    <img id="ImagenDelDato" class="IlustracionPrincipalDeLaPagina" src="IMG/IllustracionporUnSplash.svg" alt="">
+                    <span class="tooltip" id="CreditosDeLaFotoDelDato">
+                        <span id="TituloTooltipxd">¿Preparado(a) para explorar?</span>
+                        <a id="URLCreditosTooltip" target="_blank"></a>
+                    </span>
                 </div>
-                <img id="ImagenDelDato" class="IlustracionPrincipalDeLaPagina" src="IMG/IllustracionporUnSplash.svg" alt="" onerror="ErrorImagen();">
-                <span class="tooltip" id="CreditosDeLaFotoDelDato"><span id="TituloTooltipxd">¿Preparado(a) para explorar?</span><a id="URLCreditosTooltip" target="_blank"></a></span>
-            </div>
             </div>
             <div class="InformacionDeLaPagina">
                 <p class="TituloOSubtitulo">
                     <b class="SaludoPrincipal">Dato Curioso:</b> <br>
                     <div id="DatoPresentado" class="ExplicacionDeLaPagina">
-                    <br>
-                    Visita la página cada mañana para descubrir más datos curiosos.
-                    <br>
-                    ¡Da click en los botones para comenzar a explorar!
+                        <br>
+                        Visita la página cada mañana para descubrir más datos curiosos.
+                        <br>
+                        ¡Da click en los botones para comenzar a explorar!
                     </div>
                 </p>
             </div>
-        <div>
-            <p id="TituloOSubtitulo"><span class="TextoNota">Fuente: </span><span><a id="FuentePresentada" class="TextoNota" href="#" target="_blank" rel="noopener noreferrer">¡Muchas fuentes!</a><span id="FuentePresentadaB" class="TextoNota"></span></span><br>
-            <span id="CreditosDelDato" class="TextoNota">-</span></p>
-        </div>
-        <div>
-            <a href="#" target="_self" id="DatoAnterior" onclick="TraerAnterior()"><button class="btnprn" id="BotonAnterior" disabled title="Dato anterior (Flecha izquierda)"><i class="icon icon-flecha-izq"></i></button></a>
-            <a href="#" target="_self" id="SiguienteDato" onclick="TraerRandom()"><button class="btnprn" id="BotonRandom" title="Dato aleatorio (R)"><i class="icon icon-aleatorio"></i></button></a>
-            <a href="#" target="_self" id="DatoSiguiente" onclick="TraerSiguiente()"><button class="btnprn" id="BotonSiguiente" title="Dato siguiente (Flecha derecha)"><i class="icon icon-flecha-der"></i></i></button></a>
-        </div>
+            <div>
+                <p id="TituloOSubtitulo">
+                    <span class="TextoNota">Fuente: </span>
+                    <span>
+                        <a id="FuentePresentada" class="TextoNota" href="#" target="_blank" rel="noopener noreferrer">¡Muchas fuentes!</a>
+                        <span id="FuentePresentadaB" class="TextoNota"></span>
+                    </span><br>
+                    <span id="CreditosDelDato" class="TextoNota">-</span>
+                </p>
+            </div>
+            <div>
+                <a href="#" target="_self" id="DatoAnterior"><button class="btnprn" id="BotonAnterior" disabled title="Dato anterior (Flecha izquierda)"><i class="icon icon-flecha-izq"></i></button></a>
+                <a href="#" target="_self" id="SiguienteDato"><button class="btnprn" id="BotonRandom" title="Dato aleatorio (R)"><i class="icon icon-aleatorio"></i></button></a>
+                <a href="#" target="_self" id="DatoSiguiente"><button class="btnprn" id="BotonSiguiente" title="Dato siguiente (Flecha derecha)"><i class="icon icon-flecha-der"></i></button></a>
+            </div>
         </div>
     </main>
 
     <section class="Seccion SobreLaPagina" id="SobreFunFact">
         <h2> Sobre Fun Fact </h2>
         <div id="Explicacion">
-        <div class="CuadroDeTexto">
-        <p>
-            <b>Fun Fact surgió de una sola idea: conocer.</b>
-            <br> 
-            <br>
-            ¿Te has preguntado alguna vez qué tanto sabes sobre... todo? Pues si no, déjame decirte que es una duda muy difícil de contestar porque ni siquiera sabemos qué es todo lo que podemos saber. Pero, al menos, podemos conocer pequeñas partes de este mundo, pequeños... <i>datos curiosos</i>.
-            <br> <br>
-            Así, Fun Fact© es el resultado de mucha lectura y exploración que reunieron un montón de conocimiento sobre el mundo. Conocimiento que no queda nada mal compartir. 
-            <br><br>
-            ¡Explora todo lo que quieras y conoce algo nuevo cada día!
-            <br><br>
-            <b>Aviso:</b> Las imagenes presentadas junto con los datos curiosos fueron recolectadas de Internet y le pertenecen a sus respectivos autores. Los enlaces para consultar las fuentes de los datos y los créditos de las imagenes dirigen hacia páginas web que son totalmente ajenas al sitio web de <i>Fun Fact</i>.
-            <br><br>
-            <span class="TextoNota">Imágenes de fondo por <a href="https://www.freepik.es/foto-gratis/parquet-negro_1034936.htm#page=1&query=fondo%20madera%20oscura&position=29" target="_blank">kues1</a> y <a href="https://unsplash.com/photos/li0iC0rjvvg" target="_blank">Augustine Wong</a>.</span>
-            
-        </p>
-        
-        </div id="LogoDeInfo">
-        <img src="../../IMG/Miniaturas/LogoSolo[FF].svg" alt="Logo de Fun Fact ©" id="LogoDeInfo">
+            <div class="CuadroDeTexto">
+                <p>
+                    <b>Fun Fact surgió de una sola idea: conocer.</b>
+                    <br><br>
+                    ¿Te has preguntado alguna vez qué tanto sabes sobre... todo? Pues si no, déjame decirte que es una duda muy difícil de contestar porque ni siquiera sabemos qué es todo lo que podemos saber. Pero, al menos, podemos conocer pequeñas partes de este mundo, pequeños... <i>datos curiosos</i>.
+                    <br><br>
+                    Así, Fun Fact© es el resultado de mucha lectura y exploración que reunieron un montón de conocimiento sobre el mundo. Conocimiento que no queda nada mal compartir.
+                    <br><br>
+                    ¡Explora todo lo que quieras y conoce algo nuevo cada día!
+                    <br><br>
+                    <b>Aviso:</b> Las imagenes presentadas junto con los datos curiosos fueron recolectadas de Internet y le pertenecen a sus respectivos autores. Los enlaces para consultar las fuentes de los datos y los créditos de las imagenes dirigen hacia páginas web que son totalmente ajenas al sitio web de <i>Fun Fact</i>.
+                    <br><br>
+                    <span class="TextoNota">Imágenes de fondo por <a href="https://www.freepik.es/foto-gratis/parquet-negro_1034936.htm#page=1&query=fondo%20madera%20oscura&position=29" target="_blank">kues1</a> y <a href="https://unsplash.com/photos/li0iC0rjvvg" target="_blank">Augustine Wong</a>.</span>
+                </p>
+            </div>
+            <img src="../../IMG/Miniaturas/LogoSolo[FF].svg" alt="Logo de Fun Fact ©" id="LogoDeInfo">
         </div>
     </section>
 
@@ -114,19 +115,19 @@
             <div class="Formulario">
                 <h3>¿Tienes algún conocimiento que quieras compartir con el mundo? <br> Aquí puedes hacerlo:</h3>
                 <div class="Pregunta">
-                    <input  id="ImagenSugerida" name="Imagen" type="text" required placeholder="(URL o enlace)">
+                    <input id="ImagenSugerida" name="Imagen" type="text" required placeholder="(URL o enlace)">
                     <label for="ImagenSugerida">Sugiere una imagen</label>
                 </div>
                 <div class="Pregunta">
-                    <textarea  name="Info" id="DatoCuriosoSugerido" cols="41" rows="5" maxlength="300" required placeholder="(Máximo 300 caracteres)"></textarea>
+                    <textarea name="Info" id="DatoCuriosoSugerido" cols="41" rows="5" maxlength="300" required placeholder="(Máximo 300 caracteres)"></textarea>
                     <label for="DatoCuriosoSugerido">¡Escribe tu dato curioso!</label>
                 </div>
                 <div class="Pregunta">
-                    <input  id="CreditoDelAporte" name="Credito" type="text" maxlength="15" required placeholder="(¡Para darte los créditos del aporte!)">                  
+                    <input id="CreditoDelAporte" name="Credito" type="text" maxlength="15" required placeholder="(¡Para darte los créditos del aporte!)">
                     <label for="CreditoDelAporte">Anota tu nombre o apodo</label>
                 </div>
                 <div class="Pregunta">
-                    <input  id="FuenteDeDatoSugerido" name="Fuente" type="text" required placeholder="(Enlace o bibliografía)">                  
+                    <input id="FuenteDeDatoSugerido" name="Fuente" type="text" required placeholder="(Enlace o bibliografía)">
                     <label for="FuenteDeDatoSugerido">Agrega tu fuente</label>
                 </div>
                 <h4 id="FormRespuesta"></h4>
@@ -135,39 +136,33 @@
                 </div>
             </div>
         </form>
-
     </section>
+
     <span style="opacity: 0; pointer-events: none; font-size: 0.1em;" id="linkDeEstaPagina">https://edward5126.github.io/WitSet/APPS/FunFactWeb/</span>
+
     <footer id="Más">
         <div class="Pie">
             <a href="https://www.instagram.com/witset_oficial/" target="_blank" class="enlacesContacto"><i class="icon icon-instagram logoRedSocial"></i></a>
-            <p>&copy; Fun Fact & Wit Set 2022<br><br>Hecho con&nbsp&nbsp<i class="icon icon-corazon"></i>&nbsp&nbspy&nbsp&nbsp<i class="icon icon-taza-cafe"></i>&nbsp&nbsppor <i>E-nnova Design</i></i></p>
-            
-                <details class="ContenedorPie2" id="BotonListaCompartir">
-                    <summary class="enlacesContacto"><b>Compartir</b></summary>
-                    <div id="Enlaces">
-                        <a href="https://api.whatsapp.com/send?text=Explora datos curiosos en Fun Fact Web: https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-whatsapp-cuadro logoRedSocial"></i></a>
-                        <a href="https://www.facebook.com/sharer.php?u=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-facebook-cuadro logoRedSocial"></i></a>
-                        <a href="https://www.twitter.com/intent/tweet?text=Explora datos curiosos en la web de Fun Fact: &url=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/&hashtags=FunFactWeb,ProyectoSTEAMTorch" target="_blank" class="enlacesContacto"><i class="icon icon-twitter-cuadro  logoRedSocial"></i></a>
-                        <a href="#copiarEnlaceCompartir" target="_self" class="enlacesContacto" id="copiarEnlaceCompartir" title="Copiar enlace al portapapeles"><i class="icon icon-portapapeles logoRedSocial"></i></a>
-                    </div>
-                    <span id="RespuestaCopiado"></span>
-                </details>
-                <details class="ContenedorPie2">
-                    <summary class="enlacesContacto"><b>Donar</b></summary>
-                    <div id="Enlaces">
-                        <a href="https://www.buymeacoffee.com/EnnovaDesign" target="_blank" class="enlacesContacto" title="Buy Me A Coffe"><i class="icon icon-buymeacoffee  logoRedSocial"></i></a>
-                        <a href="https://paypal.me/EdChan5126?country.x=MX&locale.x=es_XC" target="_blank" class="enlacesContacto" title="PayPal"><i class="icon icon-paypal  logoRedSocial"></i></a>
-                    </div>
-                </details>
-            
-            <!-- <div class="ContenedorPie">
-                <p>Conoce las otras partes del proyecto <b><i>STEAM Torch</i></b>:</p>
-                <div id="Proyecto">
-                    <a href=""><img src="IMG/LogoHorizontalDM[ST].svg" alt="Visita el blog STEAM Torch" class="ProyectoEnlaces" id="LogoDeIndex"></a>
-                    <a href=""><img src="IMG/LogoHorizontalDM[II].svg" alt="Visita Internet Index" class="ProyectoEnlaces" id="LogoDeTorch"></a>
+            <p>&copy; Fun Fact & Wit Set 2022<br><br>Hecho con&nbsp&nbsp<i class="icon icon-corazon"></i>&nbsp&nbspy&nbsp&nbsp<i class="icon icon-taza-cafe"></i>&nbsp&nbsppor <i>E-nnova Design</i></p>
+
+            <details class="ContenedorPie2" id="BotonListaCompartir">
+                <summary class="enlacesContacto"><b>Compartir</b></summary>
+                <div id="Enlaces">
+                    <a href="https://api.whatsapp.com/send?text=Explora datos curiosos en Fun Fact Web: https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-whatsapp-cuadro logoRedSocial"></i></a>
+                    <a href="https://www.facebook.com/sharer.php?u=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-facebook-cuadro logoRedSocial"></i></a>
+                    <a href="https://www.twitter.com/intent/tweet?text=Explora datos curiosos en la web de Fun Fact: &url=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/&hashtags=FunFactWeb,ProyectoSTEAMTorch" target="_blank" class="enlacesContacto"><i class="icon icon-twitter-cuadro  logoRedSocial"></i></a>
+                    <a href="#copiarEnlaceCompartir" target="_self" class="enlacesContacto" id="copiarEnlaceCompartir" title="Copiar enlace al portapapeles"><i class="icon icon-portapapeles logoRedSocial"></i></a>
                 </div>
-            </div> -->
+                <span id="RespuestaCopiado"></span>
+            </details>
+            <details class="ContenedorPie2">
+                <summary class="enlacesContacto"><b>Donar</b></summary>
+                <div id="Enlaces">
+                    <a href="https://www.buymeacoffee.com/EnnovaDesign" target="_blank" class="enlacesContacto" title="Buy Me A Coffe"><i class="icon icon-buymeacoffee  logoRedSocial"></i></a>
+                    <a href="https://paypal.me/EdChan5126?country.x=MX&locale.x=es_XC" target="_blank" class="enlacesContacto" title="PayPal"><i class="icon icon-paypal  logoRedSocial"></i></a>
+                </div>
+            </details>
+
             <p>¿Algo no anda bien? ¿Encontraste un error? ¿Eres autor de algún contenido mostrado y deseas que sea removido? <a href="../../HTML/Contacto.html" target="_blank" rel="noopener noreferrer">Contáctanos aquí</a>.</p>
         </div>
     </footer>
@@ -176,15 +171,4 @@
 <script src="JS/Script.js"></script>
 <script src="JS/ScriptDelFormulario.js"></script>
 <script src="../../JS/ScriptGlobal.js"></script>
-<!-- <script> 
-if (navigator.serviceWorker.controller) { 
-     console.log("ServiceWorker activo encontrado, no se necesita registrarlo"); 
-}else{ 
- // Register the service worker 
-navigator.serviceWorker.register("serviceworker.js", { scope: "./" }).then(function (reg) { 
-    console.log("ServiceWorker registrado"); 
-});
-}
-</script> -->
-
 </html>

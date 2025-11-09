@@ -1,16 +1,5 @@
-// Se declaran variables globales
-var DatoActual = -1; //Se inicia en la posición de presentación. Ningún dato mostrado.
-var DatosTotales; //Variable para contar cuántos datos existen.
-var ImgActual = 0;
-var ImgSubTotales;
-var Texto = new SpeechSynthesisUtterance();
-var Narrador;
-var RunNav = true;
-var VocesNarrador;
-var ListaExterna = [];
-var JSONActual;
-
-ImagenesRecursos = [
+// Definición global necesaria para ScriptGlobal.js
+var ImagenesRecursos = [
   "../../CSS/styles.css",
   "../../CSS/stylesLight.css",
   "../../IMG/Horizontales/LogoHorizontalDM[FF].svg",
@@ -19,352 +8,311 @@ ImagenesRecursos = [
   "IMG/IllustracionPorUnSplashLM.svg",
 ];
 
-// ImagenesSelectores.push("", "");
+class FunFactApp {
+    constructor() {
+        // Estado de la aplicación
+        this.datos = [];
+        this.datoActivo = null; // Objeto del dato actualmente mostrado
+        this.indiceActual = -1;
+        this.indiceImagenActual = 0;
+        this.totalDatos = 0;
+        this.narradorActivo = false;
+        this.speechSynthesisUtterance = new SpeechSynthesisUtterance();
 
-SetUpDatos(); // Se realiza el primer fetch para contar cuántos datos existen.
+        // Referencias al DOM (Caché)
+        this.dom = {
+            imagenDato: document.getElementById("ImagenDelDato"),
+            tituloTooltip: document.getElementById("TituloTooltipxd"),
+            urlCreditosTooltip: document.getElementById("URLCreditosTooltip"),
+            navImg: document.getElementById("NavImg"),
+            btnImgIzquierda: document.getElementById("CambiarIMGIzq"),
+            btnImgDerecha: document.getElementById("CambiarIMGDer"),
+            datoPresentado: document.getElementById("DatoPresentado"),
+            fuentePresentada: document.getElementById("FuentePresentada"),
+            fuentePresentadaB: document.getElementById("FuentePresentadaB"),
+            creditosDato: document.getElementById("CreditosDelDato"),
+            btnAnterior: document.getElementById("BotonAnterior"),
+            linkAnterior: document.getElementById("DatoAnterior"),
+            btnSiguiente: document.getElementById("BotonSiguiente"),
+            linkSiguiente: document.getElementById("DatoSiguiente"),
+            btnRandom: document.getElementById("BotonRandom"),
+            contenedorCarga: document.getElementById("ContenedorCarga"),
+            carga: document.getElementById("Carga"),
+            linkEstaPagina: document.getElementById("linkDeEstaPagina"),
+            toggleVoice: document.getElementById("ToggleVoice")
+        };
 
-// Se escribe la función encargada de inicializar el conteo de datos y la revisión de la posición del dato actual.
-function SetUpDatos() {
-  fetch("API/Datos.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (ListaDatos) {
-      console.log("Lista de datos cargada.");
-      ListaExterna = ListaDatos;
-      DatosTotales = Object.keys(ListaDatos).length;
-    })
-    .catch(function (error) {
-      alert(
-        "Algo parece andar mal... Te agradeceríamos si nos notificas que existe un error. :)"
-      );
-      console.error("Fetch fallido");
-    });
-
-  // FetchCambiarDato(37);
-  // DatoActual = 37;
-
-  document.getElementById("BotonRandom").focus();
-  RevisarInicioFin();
-  RevisarURLDato();
-}
-
-function RevisarURLDato() {
-  var loc = document.location.href;
-
-  if (loc.indexOf("?") > 0) {
-    var getDatoURL = loc.split("=")[1];
-    FetchCambiarDato(getDatoURL);
-
-    DatoActual = getDatoURL;
-    console.log("Dato encontrado en la URL: " + getDatoURL);
-
-    history.replaceState(null, "", "index.html");
-  }
-}
-
-function RevisarInicioFin() {
-  if (DatoActual == -1 || DatoActual == 0) {
-    document.getElementById("BotonAnterior").setAttribute("disabled", "");
-    document
-      .getElementById("DatoAnterior")
-      .setAttribute("class", "Btndisabled");
-  } else {
-    document.getElementById("BotonAnterior").removeAttribute("disabled");
-    document.getElementById("DatoAnterior").removeAttribute("class");
-  }
-
-  if (DatoActual == DatosTotales - 1) {
-    document.getElementById("BotonSiguiente").setAttribute("disabled", "");
-    document
-      .getElementById("DatoSiguiente")
-      .setAttribute("class", "Btndisabled");
-  } else {
-    document.getElementById("BotonSiguiente").removeAttribute("disabled");
-    document.getElementById("DatoSiguiente").removeAttribute("class");
-  }
-  console.log("Dato Actual: " + DatoActual);
-}
-
-function TransicionCarga() {
-  var ContenedorCargaxd = document.getElementById("ContenedorCarga");
-  var Cargaxd = document.getElementById("Carga");
-  var Imgxd = document.getElementById("ImagenDelDato");
-
-  if (
-    Imgxd.alt == "" ||
-    Imgxd.alt == "Conéctate a Internet para mostrar imágenes de los datos"
-  ) {
-    Cargaxd.style.opacity = "1";
-  } else {
-    ContenedorCargaxd.style.opacity = "1";
-    Cargaxd.style.opacity = "1";
-  }
-
-  Imgxd.onload = function () {
-    ContenedorCargaxd.style.opacity = "0";
-    Cargaxd.style.opacity = "0";
-  };
-}
-
-function FetchCambiarDato(NumeroDato) {
-  var NumeroDato;
-
-  fetch("API/Datos.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (ListaDatos) {
-      CambiarDatos(ListaDatos, NumeroDato);
-      console.log("Fetch exitoso");
-    })
-    .catch(function (error) {
-      alert("Algo parece andar mal, pero pronto estará arreglado. :)");
-      console.error("Fetch fallido");
-    });
-}
-
-function CambiarDatos(ListaDatos, NumeroDato) {
-  JSONActual = ListaDatos[NumeroDato];
-  document.getElementById("ImagenDelDato").src =
-    ListaDatos[NumeroDato].Imagenes[0].url;
-  document.getElementById("ImagenDelDato").classList.add("ImgNoToggleMode");
-  document.getElementById("ImagenDelDato").alt =
-    "Imagen ilustrativa del dato - Créditos a sus respectivos autores";
-
-  document.getElementById("TituloTooltipxd").innerHTML = "Imagen: ";
-  document.getElementById("URLCreditosTooltip").href =
-    ListaDatos[NumeroDato].Imagenes[0].urlOrig;
-  document.getElementById("URLCreditosTooltip").innerHTML =
-    ListaDatos[NumeroDato].Imagenes[0].Autor;
-
-  if (ListaDatos[NumeroDato].Imagenes.length > 1) {
-    document.getElementById("NavImg").classList.add("MasImg");
-
-    ImgSubTotales = ListaDatos[NumeroDato].Imagenes.length;
-
-    if (ImgActual == 0) {
-      document.getElementById("CambiarIMGIzq").style.color =
-        "var(--Texto-Nota)";
-      document.getElementById("CambiarIMGIzq").style.pointerEvents = "none";
+        this.inicializar();
     }
-  } else {
-    document.getElementById("NavImg").classList.remove("MasImg");
-  }
 
-  document.getElementById("DatoPresentado").innerHTML =
-    ListaDatos[NumeroDato].Info;
-  if (ValidarURLoBib(ListaDatos[NumeroDato].URLFuente)) {
-    document.getElementById("FuentePresentada").href =
-      ListaDatos[NumeroDato].URLFuente;
-    document.getElementById("FuentePresentadaB").innerHTML =
-      "";
-    document.getElementById("FuentePresentada").innerHTML =
-    ListaDatos[NumeroDato].Fuente;
-  } else {
-    document.getElementById("FuentePresentada").href =
-      "";
-    document.getElementById("FuentePresentadaB").innerHTML =
-      ListaDatos[NumeroDato].URLFuente;
-    document.getElementById("FuentePresentada").innerHTML =
-    "";
-  }
-  document.getElementById("CreditosDelDato").innerHTML =
-    ListaDatos[NumeroDato].Credito;
+    async inicializar() {
+        try {
+            const response = await fetch("API/Datos.json");
+            this.datos = await response.json();
+            this.totalDatos = Object.keys(this.datos).length;
+            console.log(`FunFactApp: ${this.totalDatos} datos cargados.`);
 
-  setTimeout(NarradorPlay, 50);
-}
+            this.configurarNarrador();
+            this.configurarEventos();
+            this.revisarURLInicial();
 
-function ValidarURLoBib(URLDat) {
-  try {
-    new URL(URLDat);
-    return true;
-  } catch {
-    return false;
-  }
-}
+            // Exponer instancia globalmente para extensiones (ej. ScriptAdmin.js)
+            window.funFactApp = this;
+            // Disparar evento personalizado por si otros scripts esperan la inicialización
+            window.dispatchEvent(new CustomEvent('funFactAppReady', { detail: this }));
 
-function RandomNum(Min, Max) {
-  return Math.floor(Math.random() * (Max - Min + 1)) + Min;
-}
-
-function TraerAnterior() {
-  DatoActual = DatoActual - 1;
-  FetchCambiarDato(DatoActual);
-  TransicionCarga();
-  RevisarInicioFin();
-
-  document.getElementById("linkDeEstaPagina").innerHTML =
-    window.location + "?dato=" + DatoActual;
-}
-
-function TraerRandom() {
-  do {
-    var Random = RandomNum(0, DatosTotales - 1);
-  } while (Random == DatoActual);
-  DatoActual = Random;
-
-  FetchCambiarDato(DatoActual);
-  TransicionCarga();
-  RevisarInicioFin();
-
-  document.getElementById("linkDeEstaPagina").innerHTML =
-    window.location + "?dato=" + DatoActual;
-}
-
-function TraerSiguiente() {
-  DatoActual = DatoActual + 1;
-  FetchCambiarDato(DatoActual);
-  TransicionCarga();
-  RevisarInicioFin();
-
-  document.getElementById("linkDeEstaPagina").innerHTML =
-    window.location + "?dato=" + DatoActual;
-}
-
-function NavTeclas() {
-  if (document.activeElement.parentElement.className != "Pregunta") {
-    TeclaPresionada = event.keyCode;
-    if (RunNav == true) {
-      RunNav = false;
-      setTimeout(function () {
-        RunNav = true;
-      }, 250);
-      if (TeclaPresionada == 37 && DatoActual != -1 && DatoActual != 0) {
-        document.getElementById("BotonAnterior").focus();
-        TraerAnterior();
-      }
-
-      if (TeclaPresionada == 27) {
-        document.getElementById("BotonRandom").focus();
-        TraerRandom();
-      }
-
-      if (TeclaPresionada == 39 && DatoActual != DatosTotales - 1) {
-        document.getElementById("BotonSiguiente").focus();
-        TraerSiguiente();
-      }
+        } catch (error) {
+            console.error("FunFactApp Error:", error);
+            alert("No se pudieron cargar los datos curiosos. Verifica tu conexión y recarga.");
+        }
     }
-  }
+
+    configurarEventos() {
+        this.dom.linkAnterior.addEventListener('click', (e) => { e.preventDefault(); this.navegar(-1); });
+        this.dom.linkSiguiente.addEventListener('click', (e) => { e.preventDefault(); this.navegar(1); });
+        
+        // Manejo robusto del botón random (por si cambia la estructura HTML)
+        const randomTarget = this.dom.btnRandom.closest('a') || this.dom.btnRandom;
+        randomTarget.addEventListener('click', (e) => { e.preventDefault(); this.datoAleatorio(); });
+
+        this.dom.btnImgIzquierda.addEventListener('click', () => this.cambiarImagen(-1));
+        this.dom.btnImgDerecha.addEventListener('click', () => this.cambiarImagen(1));
+        this.dom.toggleVoice.addEventListener('click', (e) => { e.preventDefault(); this.alternarNarrador(); });
+
+        window.addEventListener('keydown', (e) => this.manejarTeclado(e));
+
+        this.dom.imagenDato.addEventListener('load', () => this.finalizarTransicionCarga());
+        this.dom.imagenDato.addEventListener('error', () => this.manejarErrorImagen());
+    }
+
+    configurarNarrador() {
+        if ('speechSynthesis' in window) {
+            this.speechSynthesisUtterance.lang = "es-MX";
+            this.dom.toggleVoice.style.pointerEvents = "all";
+            this.actualizarIconoNarrador();
+
+            // Intentar cargar voz preferida cuando estén disponibles
+            const cargarVoz = () => {
+                const voces = window.speechSynthesis.getVoices();
+                const vozMX = voces.find(v => v.lang === 'es-MX' && (v.name.includes('Mexico') || v.name.includes('Paulina')));
+                if (vozMX) this.speechSynthesisUtterance.voice = vozMX;
+            };
+            
+            if (speechSynthesis.onvoiceschanged !== undefined) {
+                speechSynthesis.onvoiceschanged = cargarVoz;
+            }
+            cargarVoz(); // Intento inicial
+        }
+    }
+
+    revisarURLInicial() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const datoURL = parseInt(urlParams.get('dato'));
+
+        if (!isNaN(datoURL) && datoURL >= 0 && datoURL < this.totalDatos) {
+            this.mostrarDato(indice);
+             // Limpiar URL para evitar inconsistencias al recargar
+             window.history.replaceState({}, document.title, window.location.pathname);
+        } else {
+            this.actualizarEstadoBotones();
+        }
+    }
+
+    mostrarDato(indice) {
+        indice = parseInt(indice);
+        if (isNaN(indice) || indice < 0 || indice >= this.totalDatos) return;
+
+        this.indiceActual = indice;
+        this.datoActivo = this.datos[this.indiceActual];
+        this._actualizarVistaConDatoActivo();
+    }
+
+    // Método para uso administrativo (Vista Previa)
+    mostrarDatoTemporal(datoObjeto) {
+        this.indiceActual = -1; // -1 indica que no está en la lista principal
+        this.datoActivo = datoObjeto;
+        
+        this._actualizarVistaConDatoActivo();
+
+        // Forzar deshabilitado de navegación principal
+        this.alternarBoton(this.dom.btnAnterior, this.dom.linkAnterior, true);
+        this.alternarBoton(this.dom.btnSiguiente, this.dom.linkSiguiente, true);
+    }
+
+    _actualizarVistaConDatoActivo() {
+        if (!this.datoActivo) return;
+
+        this.indiceImagenActual = 0;
+        this.iniciarTransicionCarga();
+
+        // Actualizar textos
+        this.dom.datoPresentado.innerHTML = this.datoActivo.Info;
+        this.dom.creditosDato.innerHTML = this.datoActivo.Credito;
+        this.actualizarFuente(this.datoActivo);
+
+        // Actualizar imagen e interfaz
+        this.actualizarImagen();
+        if (this.indiceActual !== -1) this.actualizarEstadoBotones(); // Solo si es dato real
+        this.actualizarEstadoNavegacionImagenes();
+        this.actualizarLinkCompartir();
+
+        this.reproducirNarracion();
+    }
+
+    actualizarFuente(dato) {
+        const tieneURL = this.validarURL(dato.URLFuente);
+        if (tieneURL) {
+            this.dom.fuentePresentada.href = dato.URLFuente;
+            this.dom.fuentePresentada.innerHTML = dato.Fuente;
+            this.dom.fuentePresentadaB.innerHTML = "";
+        } else {
+            this.dom.fuentePresentada.removeAttribute("href");
+            this.dom.fuentePresentada.innerHTML = "";
+            this.dom.fuentePresentadaB.innerHTML = dato.URLFuente || dato.Fuente;
+        }
+    }
+
+    actualizarImagen() {
+        if (!this.datoActivo || !this.datoActivo.Imagenes) return;
+        
+        const imagen = this.datoActivo.Imagenes[this.indiceImagenActual];
+        if (!imagen) return;
+
+        this.dom.imagenDato.src = imagen.url;
+        this.dom.imagenDato.classList.add("ImgNoToggleMode");
+        this.dom.imagenDato.alt = "Imagen ilustrativa del dato";
+
+        this.dom.tituloTooltip.innerHTML = "Imagen: ";
+        this.dom.urlCreditosTooltip.href = imagen.urlOrig;
+        this.dom.urlCreditosTooltip.innerHTML = imagen.Autor;
+    }
+
+    cambiarImagen(direccion) {
+        if (!this.datoActivo || !this.datoActivo.Imagenes) return;
+
+        const nuevoIndex = this.indiceImagenActual + direccion;
+        if (nuevoIndex >= 0 && nuevoIndex < this.datoActivo.Imagenes.length) {
+            this.iniciarTransicionCarga();
+            this.indiceImagenActual = nuevoIndex;
+            this.actualizarImagen();
+            this.actualizarEstadoNavegacionImagenes();
+        }
+    }
+
+    navegar(direccion) {
+        this.mostrarDato(this.indiceActual + direccion);
+    }
+
+    datoAleatorio() {
+        let nuevoIndice;
+        do {
+            nuevoIndice = Math.floor(Math.random() * this.totalDatos);
+        } while (nuevoIndice === this.indiceActual && this.totalDatos > 1);
+        this.mostrarDato(nuevoIndice);
+        this.dom.btnRandom.focus();
+    }
+
+    actualizarEstadoBotones() {
+        const esPrimero = this.indiceActual <= 0;
+        const esUltimo = this.indiceActual >= this.totalDatos - 1;
+        const ningunDato = this.indiceActual === -1;
+
+        this.alternarBoton(this.dom.btnAnterior, this.dom.linkAnterior, esPrimero || ningunDato);
+        this.alternarBoton(this.dom.btnSiguiente, this.dom.linkSiguiente, esUltimo);
+    }
+
+    alternarBoton(boton, link, deshabilitar) {
+        if (deshabilitar) {
+            boton.setAttribute("disabled", "");
+            link.classList.add("Btndisabled");
+        } else {
+            boton.removeAttribute("disabled");
+            link.classList.remove("Btndisabled");
+        }
+    }
+
+    actualizarEstadoNavegacionImagenes() {
+        const multiple = this.datoActivo && this.datoActivo.Imagenes.length > 1;
+
+        if (multiple) {
+            this.dom.navImg.classList.add("MasImg");
+            this.habilitarNavImagen(this.dom.btnImgIzquierda, this.indiceImagenActual > 0);
+            this.habilitarNavImagen(this.dom.btnImgDerecha, this.indiceImagenActual < this.datoActivo.Imagenes.length - 1);
+        } else {
+            this.dom.navImg.classList.remove("MasImg");
+        }
+    }
+
+    habilitarNavImagen(boton, habilitar) {
+        boton.style.color = habilitar ? "var(--Texto-Principal)" : "var(--Texto-Nota)";
+        boton.style.pointerEvents = habilitar ? "all" : "none";
+    }
+
+    alternarNarrador() {
+        this.narradorActivo = !this.narradorActivo;
+        this.actualizarIconoNarrador();
+        this.narradorActivo ? this.reproducirNarracion() : window.speechSynthesis.cancel();
+    }
+
+    actualizarIconoNarrador() {
+        this.dom.toggleVoice.title = this.narradorActivo ? "Desactivar narración" : "Activar narración";
+        this.dom.toggleVoice.innerHTML = `<i class="icon icon-narrador${this.narradorActivo ? 'on' : 'off'}"></i>`;
+    }
+
+    reproducirNarracion() {
+        window.speechSynthesis.cancel();
+        if (this.narradorActivo && this.dom.datoPresentado.textContent) {
+            // Pequeño delay para asegurar renderizado del texto
+            setTimeout(() => {
+                this.speechSynthesisUtterance.text = this.dom.datoPresentado.innerText;
+                window.speechSynthesis.speak(this.speechSynthesisUtterance);
+            }, 100);
+        }
+    }
+
+    iniciarTransicionCarga() {
+        this.dom.contenedorCarga.style.opacity = "1";
+        this.dom.carga.style.opacity = "1";
+    }
+
+    finalizarTransicionCarga() {
+        this.dom.contenedorCarga.style.opacity = "0";
+        this.dom.carga.style.opacity = "0";
+    }
+
+    manejarErrorImagen() {
+        const modoOscuro = (typeof Modo !== 'undefined') ? Modo : true;
+        this.dom.imagenDato.src = modoOscuro ? "IMG/IllustracionOnErrorPorUnDraw.svg" : "IMG/IllustracionOnErrorPorUnDrawLM.svg";
+        this.dom.imagenDato.classList.remove("ImgNoToggleMode");
+        this.dom.imagenDato.alt = "No se pudo cargar la imagen.";
+        this.dom.tituloTooltip.innerHTML = "Error de imagen";
+        this.dom.urlCreditosTooltip.removeAttribute("href");
+        this.dom.urlCreditosTooltip.innerHTML = "";
+        this.finalizarTransicionCarga();
+    }
+
+    actualizarLinkCompartir() {
+        const baseUrl = window.location.href.split('?')[0];
+        // Si es dato temporal (-1), no ponemos parámetro dato
+        const param = this.indiceActual !== -1 ? `?dato=${this.indiceActual}` : '';
+        this.dom.linkEstaPagina.innerHTML = `${baseUrl}${param}`;
+    }
+
+    manejarTeclado(e) {
+        // Ignorar si el usuario está escribiendo en un formulario
+        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+
+        switch(e.key) {
+            case 'ArrowLeft': if (this.indiceActual > 0) this.navegar(-1); break;
+            case 'ArrowRight': if (this.indiceActual < this.totalDatos - 1) this.navegar(1); break;
+            case 'Escape': this.datoAleatorio(); break;
+        }
+    }
+
+    validarURL(str) {
+        try { new URL(str); return true; } catch { return false; }
+    }
 }
 
-window.onkeydown = NavTeclas;
-
-function ErrorImagen() {
-  console.log(Modo);
-
-  if (Modo == true) {
-    document.getElementById("ImagenDelDato").src =
-      "IMG/IllustracionOnErrorPorUnDraw.svg";
-  } else {
-    document.getElementById("ImagenDelDato").src =
-      "IMG/IllustracionOnErrorPorUnDrawLM.svg";
-  }
-
-  document.getElementById("TituloTooltipxd").innerHTML =
-    "Conéctate a Internet para ver imágenes sobre los datos curiosos";
-  document.getElementById("URLCreditosTooltip").innerHTML = "";
-  document.getElementById("ImagenDelDato").alt =
-    "Conéctate a Internet para mostrar imágenes de los datos";
-}
-
-function RevisarVoces() {
-  if (typeof speechSynthesis === "undefined") {
-    return;
-  }
-  var Voces = speechSynthesis.getVoices();
-  VocesNarrador = Voces.length;
-
-  if (VocesNarrador > 0) {
-    console.log("Voces disponibles encontradas");
-  }
-  NarradorSetUp();
-}
-
-RevisarVoces();
-if (
-  typeof speechSynthesis !== "undefined" &&
-  speechSynthesis.onvoiceschanged !== undefined
-) {
-  speechSynthesis.onvoiceschanged = RevisarVoces;
-}
-
-function NarradorSetUp() {
-  if ("speechSynthesis" in window && VocesNarrador > 0) {
-    document.getElementById("ToggleVoice").style.pointerEvents = "all";
-    document.getElementById("ToggleVoice").title = "Activar narrador";
-    document.getElementById("ToggleVoice").innerHTML =
-      '<i class="icon icon-narradoroff"></i>';
-  }
-
-  Texto.lang = "es-Mx";
-  Texto.voiceURI = "Microsoft Raul - Spanish (Mexico)";
-  Narrador = false;
-}
-
-function NarradorPlay() {
-  window.speechSynthesis.cancel();
-  if (Narrador == true) {
-    Texto.text = document.getElementById("DatoPresentado").innerHTML;
-    window.speechSynthesis.speak(Texto);
-  }
-}
-
-document.getElementById("ToggleVoice").addEventListener("click", (e) => {
-  e.preventDefault();
-
-  Narrador = !Narrador;
-
-  if (Narrador == false) {
-    document.getElementById("ToggleVoice").title = "Activar narración";
-    document.getElementById("ToggleVoice").innerHTML =
-      '<i class="icon icon-narradoroff"></i>';
-    window.speechSynthesis.cancel();
-  } else {
-    document.getElementById("ToggleVoice").title = "Desactivar narración";
-    document.getElementById("ToggleVoice").innerHTML =
-      '<i class="icon icon-narradoron"></i>';
-  }
-});
-
-function PrevIMG() {
-  TransicionCarga();
-  document.getElementById("CambiarIMGDer").style.color =
-    "var(--Texto-Principal)";
-  document.getElementById("CambiarIMGDer").style.pointerEvents = "all";
-
-  document.getElementById("ImagenDelDato").src =
-    ListaExterna[DatoActual].Imagenes[ImgActual - 1].url;
-  document.getElementById("URLCreditosTooltip").href =
-    ListaExterna[DatoActual].Imagenes[ImgActual - 1].urlOrig;
-  document.getElementById("URLCreditosTooltip").innerHTML =
-    ListaExterna[DatoActual].Imagenes[ImgActual - 1].Autor;
-
-  ImgActual -= 1;
-
-  if (ImgActual == 0) {
-    document.getElementById("CambiarIMGIzq").style.color = "var(--Texto-Nota)";
-    document.getElementById("CambiarIMGIzq").style.pointerEvents = "none";
-  }
-}
-
-function SigIMG() {
-  TransicionCarga();
-  document.getElementById("CambiarIMGIzq").style.color =
-    "var(--Texto-Principal)";
-  document.getElementById("CambiarIMGIzq").style.pointerEvents = "all";
-
-  document.getElementById("ImagenDelDato").src =
-    ListaExterna[DatoActual].Imagenes[ImgActual + 1].url;
-  document.getElementById("URLCreditosTooltip").href =
-    ListaExterna[DatoActual].Imagenes[ImgActual + 1].urlOrig;
-  document.getElementById("URLCreditosTooltip").innerHTML =
-    ListaExterna[DatoActual].Imagenes[ImgActual + 1].Autor;
-
-  ImgActual += 1;
-
-  if (ImgActual == ImgSubTotales - 1) {
-    document.getElementById("CambiarIMGDer").style.color = "var(--Texto-Nota)";
-    document.getElementById("CambiarIMGDer").style.pointerEvents = "none";
-  }
-}
+// Iniciar App
+document.addEventListener('DOMContentLoaded', () => new FunFactApp());

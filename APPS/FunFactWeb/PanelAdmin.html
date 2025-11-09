@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración | Fun Fact</title>
-    <!-- <meta name="description" content="El mundo está lleno de cosas curiosas y muy interesantes, ¿Qué datos curiosos conocerás hoy? ¡Descúbre algo nuevo cada día en la web de Fun Fact!"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
     <link id="HojadeEstilo" rel="stylesheet" href="../../CSS/styles.css">
     <link rel="stylesheet" href="CSS/stylesFF.css">
@@ -14,14 +13,12 @@
     <link rel="preload" href="IMG/IllustracionOnErrorPorUnDrawLM.svg" as="image">
     <link rel="stylesheet" href="../../LIBS/PersonalIconCollection-v1.0/style.css">
     <link rel="shortcut icon" href="../../IMG/Miniaturas/LogoSolo[FF].svg" type="image/x-icon">
-    <!-- <link rel="manifest" href="../manifest.webmanifest"> -->
-
 </head>
 <body>
     <header>
         <nav>
             <img id="LogoDeCabecera" src="../../IMG/Horizontales/LogoHorizontalDM[FF].svg" alt="Logo de FunFact en modo oscuro">
-                <button class="btnmenu linkAncla" aria-label="Abrir menú" id="AbrirMenu"><i class="icon icon-menu interfaz"></i></button>
+            <button class="btnmenu linkAncla" aria-label="Abrir menú" id="AbrirMenu"><i class="icon icon-menu interfaz"></i></button>
             <ul class="NavList" id="EnlacesNav">
                 <button class="btnmenu linkAncla" id="CerrarMenu" aria-label="Cerrar menú"><i class="icon icon-x-cerrar interfaz"></i></button>
                 <li class="Separador" id="PrimerSeparador"><b>|</b></li>
@@ -48,37 +45,46 @@
         <h1 hidden>Dato Curioso del Día</h1>
         <div class="PresentacionDeLaPagina">
             <div id="ContenedorGeneralImagenDato">
-            <div id="ContenedorImagenTooltip">
-                <div id="Carga" class="NoCargando"></div>
-                <div id="ContenedorCarga"></div>
-                <div id="NavImg" >
-                    <i class="icon icon-flecha-izq flechanavimg" id="CambiarIMGIzq" onclick="PPrevIMG()"></i>
-                    <i class="icon icon-flecha-der flechanavimg" id="CambiarIMGDer" onclick="PSigIMG()"></i>
+                <div id="ContenedorImagenTooltip">
+                    <div id="Carga" class="NoCargando"></div>
+                    <div id="ContenedorCarga"></div>
+                    <div id="NavImg">
+                        <i class="icon icon-flecha-izq flechanavimg" id="CambiarIMGIzq"></i>
+                        <i class="icon icon-flecha-der flechanavimg" id="CambiarIMGDer"></i>
+                    </div>
+                    <img id="ImagenDelDato" class="IlustracionPrincipalDeLaPagina" src="IMG/IllustracionporUnSplash.svg" alt="">
+                    <span class="tooltip" id="CreditosDeLaFotoDelDato">
+                        <span id="TituloTooltipxd">¿Preparado(a) para explorar?</span>
+                        <a id="URLCreditosTooltip" target="_blank"></a>
+                    </span>
                 </div>
-                <img id="ImagenDelDato" class="IlustracionPrincipalDeLaPagina" src="IMG/IllustracionporUnSplash.svg" alt="" onerror="ErrorImagen();">
-                <span class="tooltip" id="CreditosDeLaFotoDelDato"><span id="TituloTooltipxd">¿Preparado(a) para explorar?</span><a id="URLCreditosTooltip" target="_blank"></a></span>
-            </div>
             </div>
             <div class="InformacionDeLaPagina">
                 <p class="TituloOSubtitulo">
                     <b class="SaludoPrincipal">Dato Curioso:</b> <br>
                     <div id="DatoPresentado" class="ExplicacionDeLaPagina">
-                    <br>
-                    Visita la página cada mañana para descubrir más datos curiosos.
-                    <br>
-                    ¡Da click en los botones para comenzar a explorar!
+                        <br>
+                        Visita la página cada mañana para descubrir más datos curiosos.
+                        <br>
+                        ¡Da click en los botones para comenzar a explorar!
                     </div>
                 </p>
             </div>
-        <div>
-            <p id="TituloOSubtitulo"><span class="TextoNota">Fuente: </span><span><a id="FuentePresentada" class="TextoNota" href="#" target="_blank" rel="noopener noreferrer">¡Muchas fuentes!</a><span id="FuentePresentadaB" class="TextoNota"></span></span><br>
-            <span id="CreditosDelDato" class="TextoNota">-</span></p>
-        </div>
-        <div>
-            <a href="#" target="_self" id="DatoAnterior" onclick="TraerAnterior()"><button class="btnprn" id="BotonAnterior" disabled title="Dato anterior (Flecha izquierda)"><i class="icon icon-flecha-izq"></i></button></a>
-            <a href="#" target="_self" id="SiguienteDato" onclick="TraerRandom()"><button class="btnprn" id="BotonRandom" title="Dato aleatorio (R)"><i class="icon icon-aleatorio"></i></button></a>
-            <a href="#" target="_self" id="DatoSiguiente" onclick="TraerSiguiente()"><button class="btnprn" id="BotonSiguiente" title="Dato siguiente (Flecha derecha)"><i class="icon icon-flecha-der"></i></i></button></a>
-        </div>
+            <div>
+                <p id="TituloOSubtitulo">
+                    <span class="TextoNota">Fuente: </span>
+                    <span>
+                        <a id="FuentePresentada" class="TextoNota" href="#" target="_blank" rel="noopener noreferrer">¡Muchas fuentes!</a>
+                        <span id="FuentePresentadaB" class="TextoNota"></span>
+                    </span><br>
+                    <span id="CreditosDelDato" class="TextoNota">-</span>
+                </p>
+            </div>
+            <div>
+                <a href="#" target="_self" id="DatoAnterior"><button class="btnprn" id="BotonAnterior" disabled title="Dato anterior (Flecha izquierda)"><i class="icon icon-flecha-izq"></i></button></a>
+                <a href="#" target="_self" id="SiguienteDato"><button class="btnprn" id="BotonRandom" title="Dato aleatorio (R)"><i class="icon icon-aleatorio"></i></button></a>
+                <a href="#" target="_self" id="DatoSiguiente"><button class="btnprn" id="BotonSiguiente" title="Dato siguiente (Flecha derecha)"><i class="icon icon-flecha-der"></i></button></a>
+            </div>
         </div>
     </main>
 
@@ -86,94 +92,78 @@
         <h2 id="TituloColaborar">Detalles</h2>
         <form action="" method="post" id="Formulario" autocomplete="off" name="ColaborarFF" style="max-height:none; min-width: 80%;">
             <div style="min-width: 80%;">
-                    <h3>Detalles del dato curioso:</h3>
-                    <div class="Pregunta">
-                        <input  id="NumeroDato" name="Numero" type="number" required placeholder="(Posición en la lista)" value="0" min="0">
-                        <label for="NumeroDato" id="LabelNumero">Número</label>
-                    </div>
-                    <fieldset style="border-color: var(--Texto-Nota); border-radius: 15px; padding: 0;" id="Imagenes">
-                        <legend style="color: var(--Texto-Seleccionado); padding: 0 15px; text-align:center"><button id="QuitarImagen" onclick="QuitarIMG(event)" disabled>-</button> Imágenes <button id="AgregarImagen" onclick="AgregarIMG(event)">+</button></legend>
-                        <div id="ListaImagenes">
-                            <div class="ConjuntoImg">
-                                <div class="Pregunta">
-                                    <input  id="ImagenSugerida1" name="Imagen" type="text" required placeholder="(URL a la imagen)">
-                                    <label for="ImagenSugerida1">Imagen</label>
-                                </div>
-                                <div class="Pregunta">
-                                    <input  id="URLCreditosImagen1" name="URLdeCreditosdeImagen" type="text" required placeholder="(URL a la página donde el fotógrafo publicó su imagen)">
-                                    <label for="URLCreditosImagen1">URL de publicación</label>
-                                </div>
-                                <div class="Pregunta">
-                                    <input  id="CreditosImagen1" name="CreditosdeImagen" type="text" required placeholder="(Nombre de la persona o institución)">
-                                    <label for="CreditosImagen1">Nombre del fotógrafo</label>
-                                </div>
-                            </div>
+                <h3>Detalles del dato curioso:</h3>
+                <div class="Pregunta">
+                    <input id="NumeroDato" name="Numero" type="number" required placeholder="(Posición en la lista)" value="0" min="0">
+                    <label for="NumeroDato" id="LabelNumero">Número</label>
+                </div>
+                <fieldset style="border-color: var(--Texto-Nota); border-radius: 15px; padding: 0;" id="Imagenes">
+                    <legend style="color: var(--Texto-Seleccionado); padding: 0 15px; text-align:center">
+                        <button id="QuitarImagen" disabled>-</button> Imágenes <button id="AgregarImagen">+</button>
+                    </legend>
+                    <div id="ListaImagenes">
                         </div>
-                    </fieldset>
-                    <div class="Pregunta">
-                        <textarea  name="Info" id="DatoCuriosoSugerido" cols="41" rows="5" maxlength="400" required placeholder="(Máximo 400 caracteres)"></textarea>
-                        <label for="DatoCuriosoSugerido">Información</label>
-                    </div>
-                    <div class="Pregunta">
-                        <input  id="FuenteDeDatoSugerido" name="Fuente" type="text" required placeholder="(Nombre del artículo, persona, libro o página web)">                  
-                        <label for="FuenteDeDatoSugerido">Nombre de la fuente</label>
-                    </div>
-                    <div class="Pregunta">
-                        <input  id="URLFuenteDeDatoSugerido" name="URLFuente" type="text" required placeholder="(Enlace o bibliografía)">                  
-                        <label for="URLFuenteDeDatoSugerido">URL de la fuente</label>
-                    </div>
-                    <div class="Pregunta">
-                        <input  id="CreditoDelAporte" name="Credito" type="text" maxlength="15" required placeholder="(Nombre o apodo)" value="-">                  
-                        <label for="CreditoDelAporte">Crédito del dato</label>
-                    </div>
-                    <div class="Pregunta">
-                        <select name="Categoria" id="Categoria" required>
-                            <option value="0" hidden>Categoria</option>
-                            <option value="+">[Agregar otra]</option>
+                </fieldset>
+                <div class="Pregunta">
+                    <textarea name="Info" id="DatoCuriosoSugerido" cols="41" rows="5" maxlength="400" required placeholder="(Máximo 400 caracteres)"></textarea>
+                    <label for="DatoCuriosoSugerido">Información</label>
+                </div>
+                <div class="Pregunta">
+                    <input id="FuenteDeDatoSugerido" name="Fuente" type="text" required placeholder="(Nombre del artículo, persona, libro o página web)">
+                    <label for="FuenteDeDatoSugerido">Nombre de la fuente</label>
+                </div>
+                <div class="Pregunta">
+                    <input id="URLFuenteDeDatoSugerido" name="URLFuente" type="text" required placeholder="(Enlace o bibliografía)">
+                    <label for="URLFuenteDeDatoSugerido">URL de la fuente</label>
+                </div>
+                <div class="Pregunta">
+                    <input id="CreditoDelAporte" name="Credito" type="text" maxlength="15" required placeholder="(Nombre o apodo)" value="-">
+                    <label for="CreditoDelAporte">Crédito del dato</label>
+                </div>
+                <div class="Pregunta">
+                    <select name="Categoria" id="Categoria" required>
                         </select>
-                    </div>
-                    <div class="Pregunta">
-                        <label for="CreditoDelAporte" style="top: -25px;">Etiquetas</label>
-                        <div style="text-align: center; display: flex; flex-wrap: wrap; justify-content:flex-start; align-items: center; gap: 14px; font-size: 0.9em;" id="CajonEtiquetas">
-                        <button id="AgregarEtiqueta" onclick="AgregarEt(event)">+</button>
+                </div>
+                <div class="Pregunta">
+                    <label for="CreditoDelAporte" style="top: -25px;">Etiquetas</label>
+                    <div style="text-align: center; display: flex; flex-wrap: wrap; justify-content:flex-start; align-items: center; gap: 14px; font-size: 0.9em;" id="CajonEtiquetas">
+                        <button id="AgregarEtiqueta">+</button>
                         <span class="Etiqueta">*</span>
-                        </div>
-                    </div>
-                    <div class="Pregunta" style="margin-bottom: 10px;">
-                    <label class="CheckButton"><input type="checkbox" id="EstadoBorrador"><span class="CheckCheck"></span>Habilitar borrado</label><br>
-                    </div>
-                    <div class="Pregunta" style="margin-top: 10px; margin-bottom: 10px;">
-                    <label class="CheckButton"><input type="checkbox" id="EstadoAgregador"><span class="CheckCheck"></span>Habilitar agregado</label><br>
-                    </div>
-                    <div class="Pregunta" style="margin-top: 10px;">
-                    <label class="CheckButton"><input type="checkbox" id="EstadoNuevo"><span class="CheckCheck"></span>Habilitar nuevo</label><br>
-                    </div>
-                    <h4 id="FormRespuesta"></h4>
-                    <div style="text-align: center; display: flex; flex-wrap: wrap; justify-content: space-between;">
-                        <button id="ObtenerDetallesDelDato" style="margin: 7px 0; min-width: 125px;">Obtener</button>
-                        <button id="Borrador" style="margin: 7px 0; min-width: 125px;" disabled>Borrar</button>
-                        <button id="NuevaEntrada" style="margin: 7px 0; min-width: 125px;" disabled>Nuevo</button>
-                        <button id="ProbarDetallesDelDato" style="margin: 7px 0; min-width: 125px;">Probar</button>
-                        <button id="AgregarDato" style="margin: 7px 0; min-width: 125px;" disabled>Agregar</button>
                     </div>
                 </div>
+                <div class="Pregunta" style="margin-bottom: 10px;">
+                    <label class="CheckButton"><input type="checkbox" id="EstadoBorrador"><span class="CheckCheck"></span>Habilitar borrado</label><br>
+                </div>
+                <div class="Pregunta" style="margin-top: 10px; margin-bottom: 10px;">
+                    <label class="CheckButton"><input type="checkbox" id="EstadoAgregador"><span class="CheckCheck"></span>Habilitar agregado</label><br>
+                </div>
+                <div class="Pregunta" style="margin-top: 10px;">
+                    <label class="CheckButton"><input type="checkbox" id="EstadoNuevo"><span class="CheckCheck"></span>Habilitar nuevo</label><br>
+                </div>
+                <h4 id="FormRespuesta"></h4>
+                <div style="text-align: center; display: flex; flex-wrap: wrap; justify-content: space-between;">
+                    <button id="ObtenerDetallesDelDato" style="margin: 7px 0; min-width: 125px;">Obtener</button>
+                    <button id="Borrador" style="margin: 7px 0; min-width: 125px;" disabled>Borrar</button>
+                    <button id="NuevaEntrada" style="margin: 7px 0; min-width: 125px;" disabled>Nuevo</button>
+                    <button id="ProbarDetallesDelDato" style="margin: 7px 0; min-width: 125px;">Probar</button>
+                    <button id="AgregarDato" style="margin: 7px 0; min-width: 125px;" disabled>Agregar</button>
+                </div>
+            </div>
         </form>
-
     </section>
 
     <section class="Seccion" id="JSON" style="align-items: center;">
         <h2 id="TituloColaborar">JSON Generado</h2>
         <div class="CuadroDeTexto" style="box-shadow: 0 4px 12px #00000014, 0 0 1px #0100001a; width: 80%;  flex-direction: column; padding: 25px;">
-        <textarea style="min-height: 50vh; margin-bottom: 20px;" id="ContenedorJSON" cols="999" placeholder='xd'>
-</textarea>
-<!-- </pre> -->
-    <a href="#Colaborar" target="_self" class="enlacesContacto" id="copiarJSONGenerado" title="Copiar JSON al portapapeles" style="padding-top: 2em;"><span><i class="icon icon-portapapeles logoRedSocial" style="padding-right: 10px;"></i></span> <span>Copiar código</span></a>
-    </div>
-
+            <textarea style="min-height: 50vh; margin-bottom: 20px;" id="ContenedorJSON" cols="999" placeholder='El JSON generado aparecerá aquí'></textarea>
+            <a href="#Colaborar" target="_self" class="enlacesContacto" id="copiarJSONGenerado" title="Copiar JSON al portapapeles" style="padding-top: 2em;">
+                <span><i class="icon icon-portapapeles logoRedSocial" style="padding-right: 10px;"></i></span> <span>Copiar código</span>
+            </a>
+        </div>
     </section>
 
     <section class="Seccion" id="Buscar" style="text-align: center; gap: 50px;">
-        <div  id="CajaPrincipal">
+        <div id="CajaPrincipal">
             <p class="TituloOSubtitulo">
                 <b class="SaludoPrincipal">Búsqueda de datos curiosos por palabras clave</b>
             </p>
@@ -182,52 +172,40 @@
                 <a href="#Buscar" class="Btndisabled" id="ABtnBuscar"><button id="BtnBuscar" disabled><i class="icon icon-lupa"></i></button></a>
             </div>
         </div>
-
         <div class="CuadroDeTexto" id="CajonApps">
-            <p>Realiza una <a href="#">búsqueda</a> con palabras clave para encontrar resultados</p>
+            <p>Realiza una búsqueda con palabras clave para encontrar resultados</p>
         </div>
     </section>
 
     <span style="opacity: 0; pointer-events: none; font-size: 0.1em;" id="linkDeEstaPagina">https://edward5126.github.io/WitSet/APPS/FunFactWeb/</span>
+
     <footer id="Más">
         <div class="Pie">
             <a href="https://www.instagram.com/funfact_web/" target="_blank" class="enlacesContacto"><i class="icon icon-instagram logoRedSocial"></i></a>
-            <p>&copy; Fun Fact & Wit Set 2022<br><br>Hecho con&nbsp&nbsp<i class="icon icon-corazon"></i>&nbsp&nbspy&nbsp&nbsp<i class="icon icon-taza-cafe"></i>&nbsp&nbsppor <i>E-nnova Design</i></i></p>
-            
-                <details class="ContenedorPie2" id="BotonListaCompartir">
-                    <summary class="enlacesContacto"><b>Compartir</b></summary>
-                    <div id="Enlaces">
-                        <a href="https://api.whatsapp.com/send?text=Explora datos curiosos en Fun Fact Web: https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-whatsapp-cuadro logoRedSocial"></i></a>
-                        <a href="https://www.facebook.com/sharer.php?u=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-facebook-cuadro logoRedSocial"></i></a>
-                        <a href="https://www.twitter.com/intent/tweet?text=Explora datos curiosos en la web de Fun Fact: &url=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/&hashtags=FunFactWeb,ProyectoSTEAMTorch" target="_blank" class="enlacesContacto"><i class="icon icon-twitter-cuadro  logoRedSocial"></i></a>
-                        <a href="#copiarEnlaceCompartir" target="_self" class="enlacesContacto" id="copiarEnlaceCompartir" title="Copiar enlace al portapapeles"><i class="icon icon-portapapeles logoRedSocial"></i></a>
-                    </div>
-                    <span id="RespuestaCopiado"></span>
-                </details>
-                <details class="ContenedorPie2">
-                    <summary class="enlacesContacto"><b>Donar</b></summary>
-                    <div id="Enlaces">
-                        <a href="https://www.buymeacoffee.com/EnnovaDesign" target="_blank" class="enlacesContacto" title="Buy Me A Coffe"><i class="icon icon-buymeacoffee  logoRedSocial"></i></a>
-                        <a href="https://paypal.me/EdChan5126?country.x=MX&locale.x=es_XC" target="_blank" class="enlacesContacto" title="PayPal"><i class="icon icon-paypal  logoRedSocial"></i></a>
-                    </div>
-                </details>
+            <p>&copy; Fun Fact & Wit Set 2022<br><br>Hecho con&nbsp&nbsp<i class="icon icon-corazon"></i>&nbsp&nbspy&nbsp&nbsp<i class="icon icon-taza-cafe"></i>&nbsp&nbsppor <i>E-nnova Design</i></p>
+            <details class="ContenedorPie2" id="BotonListaCompartir">
+                <summary class="enlacesContacto"><b>Compartir</b></summary>
+                <div id="Enlaces">
+                    <a href="https://api.whatsapp.com/send?text=Explora datos curiosos en Fun Fact Web: https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-whatsapp-cuadro logoRedSocial"></i></a>
+                    <a href="https://www.facebook.com/sharer.php?u=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/" target="_blank" class="enlacesContacto"><i class="icon icon-facebook-cuadro logoRedSocial"></i></a>
+                    <a href="https://www.twitter.com/intent/tweet?text=Explora datos curiosos en la web de Fun Fact: &url=https://edward5126.github.io/FunFactWeb_STEAM_Torch/HTML/&hashtags=FunFactWeb,ProyectoSTEAMTorch" target="_blank" class="enlacesContacto"><i class="icon icon-twitter-cuadro  logoRedSocial"></i></a>
+                    <a href="#copiarEnlaceCompartir" target="_self" class="enlacesContacto" id="copiarEnlaceCompartir" title="Copiar enlace al portapapeles"><i class="icon icon-portapapeles logoRedSocial"></i></a>
+                </div>
+                <span id="RespuestaCopiado"></span>
+            </details>
+            <details class="ContenedorPie2">
+                <summary class="enlacesContacto"><b>Donar</b></summary>
+                <div id="Enlaces">
+                    <a href="https://www.buymeacoffee.com/EnnovaDesign" target="_blank" class="enlacesContacto" title="Buy Me A Coffe"><i class="icon icon-buymeacoffee  logoRedSocial"></i></a>
+                    <a href="https://paypal.me/EdChan5126?country.x=MX&locale.x=es_XC" target="_blank" class="enlacesContacto" title="PayPal"><i class="icon icon-paypal  logoRedSocial"></i></a>
+                </div>
+            </details>
             <p>¿Algo no anda bien? ¿Encontraste un error? ¿Eres autor de algún contenido mostrado y deseas que sea removido? <a href="../../HTML/Contacto.html" target="_blank" rel="noopener noreferrer">Contáctanos aquí</a>.</p>
         </div>
     </footer>
 </body>
 
 <script src="JS/Script.js"></script>
-<!-- <script src="JS/ScriptDelFormulario.js"></script> -->
 <script src="../../JS/ScriptGlobal.js"></script>
 <script src="JS/ScriptAdmin.js"></script>
-<!-- <script> 
-if (navigator.serviceWorker.controller) { 
-     console.log("ServiceWorker activo encontrado, no se necesita registrarlo"); 
-}else{ 
- // Register the service worker 
-navigator.serviceWorker.register("../serviceworker.js", { scope: "./" }).then(function (reg) { 
-    console.log("ServiceWorker registrado"); 
-});
-}
-</script> -->
 </html>
