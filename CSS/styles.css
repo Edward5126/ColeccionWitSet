@@ -167,7 +167,7 @@
     text-align: center;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 100dvh;
 
     display: flex;
     align-items: center;
@@ -178,7 +178,7 @@
   /* Contenedor general para las secciones */
   .Seccion {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 100dvh;
     margin-bottom: 20vh;
     display: flex;
     flex-direction: column;

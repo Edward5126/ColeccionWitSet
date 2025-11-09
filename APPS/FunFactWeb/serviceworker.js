@@ -1,216 +1,78 @@
-// // This is the service worker with the Cache-first network
+// Define un nombre y versión para la caché
+const CACHE_NAME = 'funfact-cache-v1';
 
-// const CACHE = "pwabuilder-precache";
+// Lista de archivos clave (el "App Shell") que la PWA necesita para funcionar offline
+const urlsToCache = [
+  './',
+  './index.html',
+  './manifest.webmanifest',
+  './CSS/stylesFF.css',
+  '../../CSS/styles.css',
+  '../../CSS/stylesLight.css',
+  '../../LIBS/PersonalIconCollection-v1.0/style.css',
+  './JS/Script.js',
+  '../../JS/ScriptGlobal.js',
+  './API/Datos.json', // ¡Muy importante! Cacheamos los datos.
 
-// importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+  // Imágenes del App Shell
+  './IMG/IllustracionporUnSplash.svg',
+  './IMG/IllustracionporUnSplashLM.svg',
+  './IMG/IllustracionOnErrorPorUnDraw.svg',
+  './IMG/IllustracionOnErrorPorUnDrawLM.svg',
+  '../../IMG/Miniaturas/LogoSolo[FF].svg',
 
-// self.addEventListener("message", (event) => {
-//   if (event.data && event.data.type === "SKIP_WAITING") {
-//     self.skipWaiting();
-//   }
-// });
+  // Los iconos que creaste en el Paso 1 (ahora con la ruta global)
+  '../../IMG/Miniaturas/icon-192x192.png',
+  '../../IMG/Miniaturas/icon-512x512.png'
+];
 
-// workbox.routing.registerRoute(
-//   new RegExp('/*'),
-//   new workbox.strategies.CacheFirst({
-//     cacheName: CACHE
-//   })
-// );
+// Evento 'install': Se dispara cuando el Service Worker se instala por primera vez.
+self.addEventListener('install', (event) => {
+  console.log('Service Worker: Instalando...');
+  // Espera a que la promesa de 'install' se complete
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log('Service Worker: Abriendo caché y guardando App Shell');
+        return cache.addAll(urlsToCache);
+      })
+      .then(() => {
+        self.skipWaiting(); // Fuerza al SW a activarse inmediatamente
+      })
+  );
+});
 
-// This is the "Offline copy of assets" service worker
+// Evento 'fetch': Se dispara cada vez que la app pide un recurso (CSS, JS, imagen, fetch API).
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    // Estrategia: "Cache First"
+    // 1. Intenta encontrar el recurso en la caché
+    caches.match(event.request)
+      .then((response) => {
+        // 2. Si está en caché, lo devuelve.
+        //    Si no, intenta buscarlo en la red.
+        return response || fetch(event.request);
+      })
+  );
+});
 
-//  const CACHE = "pwabuilder-offline";
-//  const QUEUE_NAME = "bgSyncQueue";
+// Evento 'activate': Se dispara cuando el Service Worker se activa (reemplaza a uno antiguo).
+self.addEventListener('activate', (event) => {
+  console.log('Service Worker: Activando...');
+  const cacheWhitelist = [CACHE_NAME];
 
-//  importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-
-//  self.addEventListener("message", (event) => {
-//    if (event.data && event.data.type === "SKIP_WAITING") {
-//      self.skipWaiting();
-//    }
-//  });
-
-//  const bgSyncPlugin = new workbox.backgroundSync.BackgroundSyncPlugin(QUEUE_NAME, {
-//    maxRetentionTime: 24 * 60 // Retry for max of 24 Hours (specified in minutes)
-//  });
-
-//  workbox.routing.registerRoute(
-//    new RegExp('/*'),
-//    new workbox.strategies.StaleWhileRevalidate({
-//      cacheName: CACHE,
-//      plugins: [
-//        bgSyncPlugin
-//      ]
-//    })
-//  );
-
- //This is the service worker with the Advanced caching
-
- importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-
- const HTML_CACHE = "html";
- const JS_CACHE = "javascript";
- const STYLE_CACHE = "stylesheets";
- const IMAGE_CACHE = "images";
- const FONT_CACHE = "fonts";
- const JSON_CACHE = "json";
-
- self.addEventListener("message", (event) => {
-   if (event.data && event.data.type === "SKIP_WAITING") {
-     self.skipWaiting();
-   }
- });
-
- workbox.routing.registerRoute(
-   ({event}) => event.request.destination === 'document',
-   new workbox.strategies.NetworkFirst({
-     cacheName: HTML_CACHE,
-     plugins: [
-       new workbox.expiration.ExpirationPlugin({
-         maxEntries: 2,
-       }),
-     ],
-   })
- );
-
- workbox.routing.registerRoute(
-  /.*\.json/,
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: JSON_CACHE,
-    plugins: [
-      new workbox.expiration.ExpirationPlugin({
-        maxEntries: 1,
-      }),
-    ],
-  }),
-);
-
- workbox.routing.registerRoute(
-   ({event}) => event.request.destination === 'script',
-   new workbox.strategies.StaleWhileRevalidate({
-     cacheName: JS_CACHE,
-     plugins: [
-       new workbox.expiration.ExpirationPlugin({
-         maxEntries: 3,
-       }),
-     ],
-   })
- );
-
- workbox.routing.registerRoute(
-   ({event}) => event.request.destination === 'style',
-   new workbox.strategies.CacheFirst({
-     cacheName: STYLE_CACHE,
-     plugins: [
-       new workbox.expiration.ExpirationPlugin({
-         maxEntries: 3,
-       }),
-     ],
-   })
- );
-
- workbox.routing.registerRoute(
-   ({event}) => event.request.destination === 'image',
-   new workbox.strategies.CacheFirst({
-     cacheName: IMAGE_CACHE,
-     plugins: [
-       new workbox.expiration.ExpirationPlugin({
-         maxEntries: 14,
-       }),
-     ],
-   })
- );
-
- workbox.routing.registerRoute(
-   ({event}) => event.request.destination === 'font',
-   new workbox.strategies.StaleWhileRevalidate({
-     cacheName: FONT_CACHE,
-     plugins: [
-       new workbox.expiration.ExpirationPlugin({
-         maxEntries: 2,
-       }),
-     ],
-   })
- );
-
-// 'use strict';
-
-// // CODELAB: Update cache names any time any of the cached files change.
-// const CACHE_NAME = 'static-cache-v9';
-
-// // CODELAB: Add list of files to cache here.
-// const FILES_TO_CACHE = [
-//   '/HTML/index.html',
-//   '/API/Datos.json',
-//   '/CSS/styles.css',
-//   '/CSS/stylesLight.css',
-//   '/IMG/Fondo.jpg',
-//   '/IMG/FondoLight.jpg',
-//   '/IMG/IllustracionOnErrorPorUnDraw.svg',
-//   '/IMG/IllustracionOnErrorPorUnDrawLM.svg',
-//   '/IMG/IllustracionporUnSplash.svg',
-//   '/IMG/IllustracionporUnSplashLM.svg',
-//   '/IMG/LogoHorizontalDM[FF].svg',
-//   '/IMG/LogoHorizontalDM[II].svg',
-//   '/IMG/LogoHorizontalDM[ST].svg',
-//   '/IMG/LogoHorizontalLM[FF].svg',
-//   '/IMG/LogoHorizontalLM[II].svg',
-//   '/IMG/LogoHorizontalLM[ST].svg',
-//   '/IMG/LogoSolo[FF].svg',
-//   '/IMG/LogoSoloFF.png',
-//   '/JS/Script.js',
-//   '/JS/ScriptDelFormulario.js',
-//   '/JS/ScriptFuncionesIndividuales.js',
-//   '/LIBS/PersonalIconCollection-v1.0/style.css',
-//   '/LIBS/PersonalIconCollection-v1.0/fonts/PersonalIconCollection.ttf?2uzjs3',
-//   '/LIBS/PersonalIconCollection-v1.0/selection.json',
-//   '/manifest.webmanifest',
-//   '/serviceworker.js'
-// ];
-
-// self.addEventListener('install', (evt) => {
-//   console.log('[ServiceWorker] Instalación');
-//   // CODELAB: Precache static resources here.
-//   evt.waitUntil(
-//       caches.open(CACHE_NAME).then((cache) => {
-//         console.log('[ServiceWorker] Pre-cacheando página fuera de línea');
-//         return cache.addAll(FILES_TO_CACHE);
-//       })
-//   );
-//   self.skipWaiting();
-// });
-
-// self.addEventListener('activate', (evt) => {
-//   console.log('[ServiceWorker] Activación');
-//   // CODELAB: Remove previous cached data from disk.
-//   evt.waitUntil(
-//       caches.keys().then((keyList) => {
-//         return Promise.all(keyList.map((key) => {
-//           if (key !== CACHE_NAME) {
-//             console.log('[ServiceWorker] Removiendo caché anterior', key);
-//             return caches.delete(key);
-//           }
-//         }));
-//       })
-//   );
-//   self.clients.claim();
-// });
-
-// self.addEventListener('fetch', (evt) => {
-//   // CODELAB: Add fetch event handler here.
-//   // if (evt.request.mode !== 'navigate') {
-//   //   // Not a page navigation, bail.
-//   //   console.log("Fetch no navigate");
-//   //   return;
-//   // }
-//   console.log('[ServiceWorker] Fetch', evt.request.url);
-//   evt.respondWith(
-//       caches.open(CACHE_NAME).then((cache) => {
-//         return cache.match(evt.request)
-//             .then((response) => {
-//               console.log("RESP", response);
-//               return response || fetch(evt.request);
-//             });
-//       })
-//   );
-// });
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          // Si la caché no es la actual, la borra.
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            console.log('Service Worker: Borrando caché antigua:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+    .then(() => self.clients.claim()) // Toma control de la página inmediatamente
+  );
+});
