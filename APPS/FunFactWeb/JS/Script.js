@@ -285,7 +285,7 @@ class FunFactApp {
         this.dom.imagenDato.src = modoOscuro ? "IMG/IllustracionOnErrorPorUnDraw.svg" : "IMG/IllustracionOnErrorPorUnDrawLM.svg";
         this.dom.imagenDato.classList.remove("ImgNoToggleMode");
         this.dom.imagenDato.alt = "No se pudo cargar la imagen.";
-        this.dom.tituloTooltip.innerHTML = "Error de imagen";
+        this.dom.tituloTooltip.innerHTML = "Imagen no disponible";
         this.dom.urlCreditosTooltip.removeAttribute("href");
         this.dom.urlCreditosTooltip.innerHTML = "";
         this.finalizarTransicionCarga();
